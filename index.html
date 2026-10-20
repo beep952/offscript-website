@@ -3,35 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Offscript Editorial | Voice Extraction Protocol & Asynchronous Executive Desk</title>
+  <title>Offscript Editorial | Executive Ghostwriting &amp; B2B Narrative Studio</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
           },
           colors: {
-            brand: {
-              dark: '#080C14',
-              surface: '#0F1626',
-              card: '#141D30',
-              border: '#1E293B',
-              borderLight: '#334155',
-              emerald: '#10B981',
-              emeraldMuted: 'rgba(16, 185, 129, 0.12)',
-              cyan: '#38BDF8',
-              amber: '#F59E0B',
-              rose: '#F43F5E',
-              gray: '#94A3B8'
+            paper: {
+              light: '#FCFBF9',
+              DEFAULT: '#F6F4EF',
+              warm: '#EFECE6',
+              border: '#E2DDD5',
+              dark: '#141413',
+              charcoal: '#262523',
+              muted: '#63605B',
+              accent: '#1E3A2F',
+              accentHover: '#152921',
+              terra: '#9E4730',
+              gold: '#B89655'
             }
           }
         }
@@ -40,1414 +39,291 @@
   </script>
   <style>
     body {
-      background-color: #080C14;
-      color: #E2E8F0;
-      font-family: 'Inter', sans-serif;
+      background-color: #FCFBF9;
+      color: #141413;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .font-mono {
-      font-family: 'JetBrains Mono', monospace;
+    .font-serif {
+      font-family: 'Newsreader', Georgia, serif;
     }
-    /* Subtle grid background */
-    .bg-grid {
-      background-size: 32px 32px;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    .editorial-rule {
+      border-color: #E2DDD5;
     }
-    .glow-emerald {
-      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3);
-    }
-    .glow-cyan {
-      box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.25);
-    }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #080C14;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1E293B;
-      border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #334155;
-    }
-    .pulse-dot {
-      animation: pulse-animation 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    @keyframes pulse-animation {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+    .drop-cap::first-letter {
+      float: left;
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 3.4rem;
+      line-height: 0.85;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-left: 2px;
+      color: #1E3A2F;
+      font-weight: 500;
     }
   </style>
 </head>
-<body class="bg-brand-dark text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+<body class="bg-paper-light text-paper-dark antialiased selection:bg-paper-accent selection:text-white">
 
-  <!-- TOP STATUS BAR -->
-  <div class="border-b border-brand-border bg-brand-surface/90 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between text-xs font-mono">
+  <!-- TOP EDITORIAL MASTHEAD BAR -->
+  <div class="border-b border-paper-border bg-paper-DEFAULT py-2.5 px-4 sm:px-6 lg:px-8 text-xs text-paper-muted">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center space-x-3">
-        <a href="#hero" class="flex items-center space-x-2 font-bold tracking-wider text-slate-100 hover:text-emerald-400 transition">
-          <span class="w-2.5 h-2.5 bg-emerald-400 rounded-sm inline-block"></span>
-          <span class="tracking-widest uppercase">OFFSCRIPT // EDITORIAL</span>
-        </a>
-        <span class="text-slate-600 hidden sm:inline">|</span>
-        <span class="text-slate-400 hidden sm:inline">VOICE EXTRACTION PROTOCOL v2.4</span>
+        <span class="uppercase tracking-widest font-semibold text-paper-dark">Offscript Editorial</span>
+        <span class="text-paper-border">|</span>
+        <span class="hidden sm:inline font-serif italic text-sm text-paper-muted">The Asynchronous Executive Narrative Studio</span>
       </div>
-
-      <div class="flex items-center space-x-4 sm:space-x-6">
-        <div class="flex items-center space-x-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
-          <span class="text-emerald-400 hidden md:inline">SYSTEM STATUS: OPERATIONAL</span>
-          <span class="text-slate-400">SLA: 48H</span>
-        </div>
-        <button id="navOpenIntakeBtn" class="bg-emerald-500 hover:bg-emerald-400 text-brand-dark px-3 py-1.5 rounded font-semibold text-xs transition tracking-wide flex items-center space-x-1">
-          <span>INITIALIZE SPRINT</span>
-          <svg class="w-3.5 h-3.5 inline ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </button>
+      <div class="flex items-center space-x-6">
+        <span class="hidden md:inline text-paper-muted">48-Hour Editorial Turnaround</span>
+        <span class="text-paper-border hidden md:inline">&bull;</span>
+        <a href="mailto:kaung@offscripteditorial.com" class="text-paper-dark hover:text-paper-accent font-medium underline underline-offset-4 transition">
+          kaung@offscripteditorial.com
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- NAVIGATION LINKS -->
-  <nav class="border-b border-brand-border/60 bg-brand-dark/80 backdrop-blur py-2.5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-xs font-mono overflow-x-auto whitespace-nowrap space-x-6">
-      <div class="flex items-center space-x-6 text-slate-400">
-        <a href="#protocol" class="hover:text-emerald-400 transition">01. THE PROTOCOL</a>
-        <a href="#simulator" class="hover:text-emerald-400 transition">02. CADENCE ENGINE</a>
-        <a href="#teardown" class="hover:text-emerald-400 transition">03. AMATEUR VS. PROTOCOL</a>
-        <a href="#architecture" class="hover:text-emerald-400 transition">04. 14-STEP ARCHITECTURE</a>
-        <a href="#linter" class="hover:text-emerald-400 transition">05. QA AUDITOR (LINTER)</a>
-        <a href="#pricing" class="hover:text-emerald-400 transition">06. COMMERCIAL SPRINTS</a>
-      </div>
-      <div class="text-slate-500 text-[11px] hidden lg:block">
-        AUTHENTICATED ASYNC DESK // NO ZOOM MEETINGS
+  <!-- MAIN NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-paper-light/95 backdrop-blur-md border-b border-paper-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#top" class="flex items-baseline space-x-2 group">
+        <span class="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-paper-dark group-hover:text-paper-accent transition">Offscript</span>
+        <span class="text-xs uppercase tracking-[0.2em] text-paper-muted font-semibold">Editorial</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-paper-charcoal">
+        <a href="#philosophy" class="hover:text-paper-accent transition">Philosophy</a>
+        <a href="#folio" class="hover:text-paper-accent transition">Voice Calibration</a>
+        <a href="#tearsheet" class="hover:text-paper-accent transition">The Tear Sheet</a>
+        <a href="#craft" class="hover:text-paper-accent transition">Our Craft</a>
+        <a href="#engagements" class="hover:text-paper-accent transition">Engagements</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <button id="navContactBtn" class="bg-paper-accent hover:bg-paper-accentHover text-white px-5 py-2.5 rounded text-sm font-medium transition shadow-sm flex items-center space-x-2">
+          <span>Inquire About Representation</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- HERO SECTION -->
-  <section id="hero" class="relative pt-12 pb-20 overflow-hidden bg-grid border-b border-brand-border">
-    <!-- Glow elements -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Hero Text -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-brand-surface border border-brand-border text-emerald-400 font-mono text-xs">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            <span>ENGINEERING MEMO: @CTO // OFFSCRIPT DESK</span>
+  <section id="top" class="pt-16 pb-24 border-b border-paper-border bg-gradient-to-b from-paper-light to-paper-DEFAULT">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left Column: Editorial Headline & Lead -->
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-paper-warm border border-paper-border text-paper-accent text-xs font-semibold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-paper-accent"></span>
+            <span>Bespoke B2B Executive Ghostwriting</span>
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
-            Convert 90 Seconds of Operator Audio into <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-400">Institutional Executive Narrative</span>.
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-paper-dark leading-[1.12] tracking-tight">
+            We turn your unscripted spoken convictions into <span class="italic text-paper-accent">market-defining</span> executive essays.
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-            Zero calendar drag. No weekly 60-minute Zoom interviews. Offscript Editorial ingests unscripted podcasts, voice memos, and internal debriefs through a deterministic 14-step editorial pipeline to produce high-gravitas LinkedIn operator essays.
+          <p class="text-lg sm:text-xl text-paper-charcoal leading-relaxed font-normal max-w-2xl">
+            B2B founders and operating executives rarely lack original perspective—they lack the quiet hours required to shape it. Offscript Editorial distills your existing podcast appearances, keynotes, and voice memos into authoritative written narratives, without adding a single meeting to your calendar.
           </p>
 
-          <!-- Core Value Metrics Strip -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 pb-2">
-            <div class="bg-brand-surface/80 border border-brand-border p-3 rounded">
-              <div class="text-xl font-bold font-mono text-emerald-400">0 min</div>
-              <div class="text-[11px] text-slate-400 font-mono uppercase mt-0.5">Founder Calendar</div>
+          <!-- Key Editorial Pillars Strip -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-paper-border">
+            <div>
+              <div class="font-serif text-2xl font-medium text-paper-dark">Zero Meetings</div>
+              <div class="text-xs text-paper-muted mt-1 leading-relaxed">No weekly ghostwriter interviews. We work entirely from your recorded conversations.</div>
             </div>
-            <div class="bg-brand-surface/80 border border-brand-border p-3 rounded">
-              <div class="text-xl font-bold font-mono text-sky-400">7.26%</div>
-              <div class="text-[11px] text-slate-400 font-mono uppercase mt-0.5">Outbound Reply</div>
+            <div>
+              <div class="font-serif text-2xl font-medium text-paper-dark">Senior Editors Only</div>
+              <div class="text-xs text-paper-muted mt-1 leading-relaxed">Every manuscript is shaped by experienced B2B editors fluent in commercial strategy.</div>
             </div>
-            <div class="bg-brand-surface/80 border border-brand-border p-3 rounded">
-              <div class="text-xl font-bold font-mono text-slate-200">48 Hours</div>
-              <div class="text-[11px] text-slate-400 font-mono uppercase mt-0.5">Delivery SLA</div>
-            </div>
-            <div class="bg-brand-surface/80 border border-brand-border p-3 rounded">
-              <div class="text-xl font-bold font-mono text-emerald-400">0 Emojis</div>
-              <div class="text-[11px] text-slate-400 font-mono uppercase mt-0.5">Negative Filter</div>
+            <div>
+              <div class="font-serif text-2xl font-medium text-paper-dark">48-Hour Delivery</div>
+              <div class="text-xs text-paper-muted mt-1 leading-relaxed">From raw spoken recording to a curated folio of publication-ready executive essays.</div>
             </div>
           </div>
 
-          <!-- Hero Action Buttons -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
-            <button id="heroOpenIntakeBtn" class="bg-emerald-500 hover:bg-emerald-400 text-brand-dark px-6 py-3.5 rounded font-bold text-sm tracking-wide transition flex items-center justify-center space-x-2 shadow-lg glow-emerald">
-              <span>INITIALIZE $250 PILOT SPRINT</span>
+          <!-- Hero Actions -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <button id="heroContactBtn" class="bg-paper-accent hover:bg-paper-accentHover text-white px-7 py-4 rounded text-sm font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2.5">
+              <span>Start an Editorial Conversation</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
-            <a href="#simulator" class="border border-brand-border bg-brand-surface/60 hover:bg-brand-surface hover:border-slate-500 text-slate-300 hover:text-white px-5 py-3.5 rounded font-mono text-sm transition flex items-center justify-center space-x-2">
-              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>RUN LIVE CADENCE ENGINE</span>
+            <a href="#folio" class="border border-paper-border bg-white hover:bg-paper-warm text-paper-dark px-6 py-4 rounded text-sm font-medium transition flex items-center justify-center space-x-2">
+              <span>Explore the Reading Room</span>
             </a>
           </div>
-
-          <div class="text-xs text-slate-500 font-mono flex items-center space-x-2 pt-1">
-            <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            <span>Backed by 10 bespoke posts, verbatim quote anchors, and 2-pass deterministic QA.</span>
-          </div>
         </div>
 
-        <!-- Hero Graphic & Architecture Terminal -->
+        <!-- Right Column: Featured Editorial Manuscript Card -->
         <div class="lg:col-span-5">
-          <div class="rounded-lg border border-brand-border bg-brand-surface shadow-2xl overflow-hidden relative">
-            <!-- Terminal Header -->
-            <div class="bg-brand-dark/90 px-4 py-3 border-b border-brand-border flex items-center justify-between">
+          <div class="bg-white border border-paper-border rounded-lg shadow-sm overflow-hidden">
+            <div class="bg-paper-warm px-6 py-4 border-b border-paper-border flex items-center justify-between">
               <div class="flex items-center space-x-2">
-                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                <span class="text-[11px] font-mono text-slate-400 ml-2">audio_pipeline.daemon.sh</span>
+                <span class="text-xs font-semibold uppercase tracking-widest text-paper-accent">Editorial Proof // Folio No. 14</span>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">MONITOR ACTIVE</span>
+              <span class="font-serif italic text-xs text-paper-muted">From Spoken Transcript to Essay</span>
             </div>
 
-            <!-- Header Waveform Display -->
-            <div class="relative h-44 overflow-hidden border-b border-brand-border bg-slate-950 flex items-center justify-center">
-              <div class="w-full h-full flex items-center justify-center bg-grid">
-                <div class="w-full px-6 flex items-center justify-between space-x-1 opacity-70">
-                  <div class="w-1 bg-emerald-500 h-8 rounded-full animate-pulse"></div>
-                  <div class="w-1 bg-emerald-400 h-16 rounded-full"></div>
-                  <div class="w-1 bg-emerald-300 h-24 rounded-full"></div>
-                  <div class="w-1 bg-emerald-400 h-12 rounded-full"></div>
-                  <div class="w-1 bg-sky-400 h-28 rounded-full"></div>
-                  <div class="w-1 bg-sky-300 h-10 rounded-full"></div>
-                  <div class="w-1 bg-emerald-500 h-20 rounded-full"></div>
-                  <div class="w-1 bg-emerald-400 h-32 rounded-full"></div>
-                  <div class="w-1 bg-emerald-300 h-14 rounded-full"></div>
-                  <div class="w-1 bg-sky-400 h-20 rounded-full"></div>
-                  <div class="w-1 bg-emerald-400 h-10 rounded-full"></div>
-                  <div class="w-1 bg-emerald-500 h-24 rounded-full"></div>
-                  <div class="w-1 bg-sky-300 h-16 rounded-full"></div>
-                  <div class="w-1 bg-emerald-400 h-6 rounded-full"></div>
+            <div class="p-6 sm:p-8 space-y-6">
+              <!-- Source Spoken Excerpt -->
+              <div class="bg-paper-DEFAULT p-4 rounded border-l-2 border-paper-gold">
+                <div class="flex items-center justify-between text-xs text-paper-muted mb-1.5">
+                  <span class="font-semibold uppercase tracking-wider text-paper-charcoal">Spoken Podcast Excerpt</span>
+                  <span class="font-serif italic">Minute 01:30</span>
                 </div>
+                <p class="font-serif italic text-sm text-paper-charcoal leading-relaxed">
+                  "The win rate for enterprise is usually around 30 to 35%. If your win rate is higher than that, your price is too low... The worst thing you can do is charge somebody's friend 50 and somebody else 500k. They talk, especially at the corporate executive level."
+                </p>
               </div>
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent"></div>
-              <div class="absolute bottom-2 left-3 right-3 flex justify-between items-end">
-                <div class="text-[11px] font-mono bg-brand-dark/80 backdrop-blur px-2 py-1 rounded text-slate-300 border border-brand-border">
-                  <span class="text-emerald-400">INGEST:</span> RAW OPERATOR AUDIO // 44.1kHz
-                </div>
-                <div class="text-[10px] font-mono bg-emerald-950/80 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">
-                  ZERO HOST OVERLAP
-                </div>
-              </div>
-            </div>
 
-            <!-- Telemetry Output Stream -->
-            <div class="p-4 font-mono text-xs space-y-2.5 bg-brand-surface/95 text-slate-300 leading-relaxed">
-              <div class="flex items-start space-x-2">
-                <span class="text-emerald-400 select-none">&gt;</span>
-                <div>
-                  <span class="text-slate-500">[00:01:30]</span> <span class="text-sky-300">diarize_stream:</span> Speaker 1 (Jen Abel) isolated. Host banter stripped.
-                </div>
+              <!-- Arrow Divider -->
+              <div class="flex items-center space-x-3 text-xs text-paper-muted uppercase tracking-widest">
+                <div class="flex-1 border-t border-paper-border"></div>
+                <span class="font-serif italic text-paper-accent lowercase text-sm">distilled into executive prose</span>
+                <div class="flex-1 border-t border-paper-border"></div>
               </div>
-              <div class="flex items-start space-x-2">
-                <span class="text-emerald-400 select-none">&gt;</span>
-                <div>
-                  <span class="text-slate-500">[00:01:45]</span> <span class="text-amber-300">extract_angle:</span> "If win rate &gt; 35%, price is too low." (Lens: Unit Economics / Margin Defense)
-                </div>
-              </div>
-              <div class="flex items-start space-x-2">
-                <span class="text-emerald-400 select-none">&gt;</span>
-                <div>
-                  <span class="text-slate-500">[00:02:10]</span> <span class="text-emerald-300">synthesize_cadence:</span> Match target: Analytical Architect. Staccato punch applied.
-                </div>
-              </div>
-              <div class="flex items-start space-x-2">
-                <span class="text-emerald-400 select-none">&gt;</span>
-                <div>
-                  <span class="text-slate-500">[00:02:15]</span> <span class="text-emerald-400 font-bold">qa_linter_pass:</span> 0 emojis, 0 em-dashes, 0 hashtags. PASS (Audit Cert #OE-981).
-                </div>
-              </div>
-            </div>
 
-            <div class="bg-brand-dark/90 px-4 py-2.5 border-t border-brand-border flex items-center justify-between text-[11px] font-mono">
-              <span class="text-slate-500">Pipeline latency: 1.84s</span>
-              <span class="text-emerald-400">100% Deterministic Guardrails</span>
+              <!-- Published Manuscript Excerpt -->
+              <div class="space-y-3">
+                <div class="text-xs font-semibold uppercase tracking-wider text-paper-accent">Finished Executive Column</div>
+                <h3 class="font-serif text-xl font-medium text-paper-dark leading-snug">
+                  Why a 60% Enterprise Win Rate Is a Pricing Liability, Not a Victory
+                </h3>
+                <p class="text-sm text-paper-charcoal leading-relaxed">
+                  Early-stage founders often celebrate a 60% enterprise close rate as proof of product-market fit. In reality, closing six out of ten enterprise deals rarely means your product is irresistible. It means you are surrendering six-figure value at discount margins.
+                </p>
+                <p class="text-sm text-paper-charcoal leading-relaxed">
+                  Healthy enterprise close rates sit between 25% and 35%. If seven out of ten prospects are not pushing back on contract size, you are not discovering your market ceiling—you are subsidizing buyers who had the budget to pay triple.
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-paper-border flex items-center justify-between text-xs text-paper-muted">
+                <span>Thesis: Commercial Margin Defense</span>
+                <a href="#folio" class="text-paper-accent font-semibold hover:underline">Read Full Folio &rarr;</a>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SECTION 01: THE PHILOSOPHY / THE PROTOCOL -->
-  <section id="protocol" class="py-20 border-b border-brand-border bg-brand-surface/40">
+  <!-- SECTION 01: EDITORIAL PHILOSOPHY -->
+  <section id="philosophy" class="py-24 border-b border-paper-border bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-12">
-        <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2">01 // The Problem with Ghostwriting</div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Executive Gravitas Cannot Be Faked with Generic Marketing Prompts.
-        </h2>
-        <p class="text-slate-400 mt-4 text-base leading-relaxed">
-          Traditional ghostwriting agencies burn your calendar with 60-minute weekly interviews and deliver polite, generic summaries loaded with emojis, hashtags, and corporate platitudes. We built an engineering-led extraction protocol that turns your existing recorded dialogue into market-defining assets without taking 1 second of your week.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Pillar 1 -->
-        <div class="bg-brand-card/70 border border-brand-border p-6 rounded-lg relative hover:border-slate-600 transition">
-          <div class="w-10 h-10 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-mono font-bold mb-4">
-            01
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Zero Calendar Drag</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Never sit down for another "content brainstorm" or ghostwriter Zoom call. We pull directly from your guest podcast appearances, webinars, conference keynotes, or asynchronous voice memos.
-          </p>
-          <div class="mt-4 pt-3 border-t border-brand-border/60 text-xs font-mono text-slate-500">
-            INPUT: YouTube URL or Audio File
-          </div>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="bg-brand-card/70 border border-brand-border p-6 rounded-lg relative hover:border-slate-600 transition">
-          <div class="w-10 h-10 rounded bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-mono font-bold mb-4">
-            02
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Persona Cadence Matching</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Executives speak in distinct rhythmic patterns. We match your authentic operational delivery: from staccato high-velocity execution to dense, methodical architectural frameworks.
-          </p>
-          <div class="mt-4 pt-3 border-t border-brand-border/60 text-xs font-mono text-slate-500">
-            MODELS: Operator // Architect // Storyteller
-          </div>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="bg-brand-card/70 border border-brand-border p-6 rounded-lg relative hover:border-slate-600 transition">
-          <div class="w-10 h-10 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-mono font-bold mb-4">
-            03
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Hard Negative Constraints</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Every output passes through deterministic linting rules. Zero emojis. Zero hashtags. Zero em-dashes (—). Zero AI cliché transition tropes ("Here are 3 reasons why", "Stop doing X").
-          </p>
-          <div class="mt-4 pt-3 border-t border-brand-border/60 text-xs font-mono text-slate-500">
-            AUDIT: 2-Pass Automated Linting Engine
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 02: LIVE INTERACTIVE CADENCE ENGINE (PLAYGROUND) -->
-  <section id="simulator" class="py-20 border-b border-brand-border bg-brand-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
-        <div>
-          <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2">02 // The Engineering Engine</div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Interactive Cadence Matching Simulator
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-4">
+          <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-3">01 // Our Philosophy</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-paper-dark leading-tight">
+            Thought leadership should read like a boardroom memo, not a marketing brochure.
           </h2>
-          <p class="text-slate-400 mt-2 text-sm max-w-2xl">
-            See how the Offscript pipeline parses unscripted guest transcripts and renders publication-ready LinkedIn essays across 3 executive personas.
-          </p>
-        </div>
-        <div class="mt-4 md:mt-0 font-mono text-xs text-slate-500 bg-brand-surface px-3 py-1.5 rounded border border-brand-border">
-          INPUT STREAM: PODCAST AUDIO ARCHIVE
-        </div>
-      </div>
-
-      <!-- Controls: Sample Selector + Persona Selector -->
-      <div class="bg-brand-surface border border-brand-border rounded-lg p-4 mb-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <!-- Audio Sample Dropdown -->
-          <div>
-            <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">1. Select Operator Audio Case</label>
-            <div class="grid grid-cols-3 gap-2" id="samplePickerContainer">
-              <button class="sample-btn active px-3 py-2 text-xs font-mono rounded border border-emerald-500 bg-emerald-500/10 text-emerald-300 text-left truncate transition" data-sample="jen">
-                <span class="block font-bold">Jen Abel</span>
-                <span class="text-[10px] text-slate-400">Enterprise Pricing</span>
-              </button>
-              <button class="sample-btn px-3 py-2 text-xs font-mono rounded border border-brand-border bg-brand-dark hover:border-slate-500 text-slate-300 text-left truncate transition" data-sample="cory">
-                <span class="block font-bold">Cory Coult</span>
-                <span class="text-[10px] text-slate-400">RevOps Architecture</span>
-              </button>
-              <button class="sample-btn px-3 py-2 text-xs font-mono rounded border border-brand-border bg-brand-dark hover:border-slate-500 text-slate-300 text-left truncate transition" data-sample="soren">
-                <span class="block font-bold">Soren Lindqvist</span>
-                <span class="text-[10px] text-slate-400">DevOps Deployment</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Cadence Persona Selector -->
-          <div>
-            <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">2. Select Persona Cadence Filter</label>
-            <div class="grid grid-cols-3 gap-2" id="cadencePickerContainer">
-              <button class="cadence-btn active px-3 py-2 text-xs font-mono rounded border border-emerald-500 bg-emerald-500/10 text-emerald-300 text-left truncate transition" data-cadence="operator">
-                <span class="block font-bold">Aggressive Operator</span>
-                <span class="text-[10px] text-slate-400">High-velocity staccato</span>
-              </button>
-              <button class="cadence-btn px-3 py-2 text-xs font-mono rounded border border-brand-border bg-brand-dark hover:border-slate-500 text-slate-300 text-left truncate transition" data-cadence="architect">
-                <span class="block font-bold">Analytical Architect</span>
-                <span class="text-[10px] text-slate-400">Structured system memo</span>
-              </button>
-              <button class="cadence-btn px-3 py-2 text-xs font-mono rounded border border-brand-border bg-brand-dark hover:border-slate-500 text-slate-300 text-left truncate transition" data-cadence="storyteller">
-                <span class="block font-bold">Storyteller / Visionary</span>
-                <span class="text-[10px] text-slate-400">Narrative tension arc</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Live Split View: Ingest vs Output -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        <!-- Left: Raw Audio Intake & Verbatim Extraction -->
-        <div class="lg:col-span-5 space-y-4">
-          <div class="bg-brand-surface border border-brand-border rounded-lg p-5">
-            <div class="flex items-center justify-between border-b border-brand-border pb-3 mb-4">
-              <div class="flex items-center space-x-2">
-                <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/></svg>
-                <span class="text-xs font-mono font-bold text-slate-200 uppercase" id="displaySpeakerName">RAW OPERATOR INTAKE</span>
-              </div>
-              <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20" id="displayTimestamp">[00:01:30]</span>
-            </div>
-
-            <!-- Quote Container -->
-            <div class="space-y-3">
-              <div class="text-xs font-mono text-slate-400 uppercase tracking-wide">Verbatim Guest Audio:</div>
-              <div class="p-3.5 bg-brand-dark rounded border border-brand-border text-sm text-slate-300 italic leading-relaxed font-sans" id="displayRawQuote">
-                "What are the benchmarks for how often you get through each of these stages? The win rate for enterprise is usually around 30 to 35%. If your win rate is higher than that, your price is too low. There's a lot of part of the market that's just not in a maturity perspective to take you on. And that's healthy... The worst thing you can do is charge somebody's friend 50 and somebody else 500k. They talk... Especially at the corporate executive level."
-              </div>
-            </div>
-
-            <!-- Extracted Metadata -->
-            <div class="mt-4 pt-4 border-t border-brand-border space-y-2 text-xs font-mono">
-              <div class="flex justify-between">
-                <span class="text-slate-500">PRIMARY LENS:</span>
-                <span class="text-sky-400 font-semibold" id="displayLens">Unit Economics // Margin Defense</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-slate-500">OPERATING CORE:</span>
-                <span class="text-slate-300" id="displayCoreThesis">High win rate indicates chronic underpricing</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-slate-500">AUDIO METRICS:</span>
-                <span class="text-slate-400" id="displayMetrics">Lenny's Podcast | 480 views | 24m duration</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Lenses Quick Guide -->
-          <div class="bg-brand-surface/60 border border-brand-border/60 rounded-lg p-4 text-xs font-mono">
-            <span class="text-slate-400 font-bold block mb-2">7 STRATEGIC EXTRACTION LENSES:</span>
-            <div class="grid grid-cols-2 gap-1.5 text-slate-400 text-[11px]">
-              <div>• Contrarian Truth</div>
-              <div>• Operating Architecture</div>
-              <div>• Failure Mode / Anti-Pattern</div>
-              <div>• Paradigm Shift</div>
-              <div>• Unit Economics</div>
-              <div>• Behavioral Friction</div>
-              <div class="col-span-2">• Unconventional Playbook</div>
-            </div>
-          </div>
         </div>
 
-        <!-- Right: Cadence-Matched LinkedIn Operator Essay Output -->
-        <div class="lg:col-span-7">
-          <div class="bg-brand-surface border border-brand-border rounded-lg p-5 shadow-xl">
-            <div class="flex items-center justify-between border-b border-brand-border pb-3 mb-4">
-              <div class="flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                <span class="text-xs font-mono font-bold text-white uppercase" id="displayCadenceTitle">CADENCE MATCHED ASSET // AGGRESSIVE OPERATOR</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <span class="text-[10px] font-mono text-slate-400 border border-brand-border px-2 py-0.5 rounded" id="displayCadenceRhythm">STACCATO 1-2 SENTENCE</span>
-                <button id="copyEssayBtn" class="bg-brand-dark hover:bg-slate-800 text-emerald-400 border border-brand-border hover:border-emerald-500 text-xs font-mono px-2.5 py-1 rounded transition flex items-center space-x-1">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                  <span>COPY</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- The Essay Text Area -->
-            <div class="bg-brand-dark/95 border border-brand-border rounded p-6 font-sans text-sm sm:text-base leading-relaxed text-slate-200 whitespace-pre-line min-h-[320px]" id="essayOutputArea">
-If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.
-
-Early-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.
-
-Healthy enterprise close rates hover between 25% and 35%.
-
-If 7 out of 10 prospects are not balking at your contract size, you are not testing your market ceiling. You are subsidizing buyers who have the corporate budget to pay triple.
-
-Worse: enterprise buyers talk in private backchannels.
-
-Discounting a $150k contract down to $50k to close a quarter does not just hurt immediate gross margins. It anchors your valuation permanently across executive Slack groups.
-
-Raise your pricing until your pipeline disqualifies the bottom 70%.
-            </div>
-
-            <!-- Live Verification Footer -->
-            <div class="mt-4 pt-3 border-t border-brand-border flex flex-wrap items-center justify-between text-xs font-mono text-slate-400 gap-2">
-              <div class="flex items-center space-x-3 text-[11px]">
-                <span class="text-emerald-400">✓ Emojis: 0</span>
-                <span class="text-emerald-400">✓ Hashtags: 0</span>
-                <span class="text-emerald-400">✓ Em-Dashes: 0</span>
-                <span class="text-emerald-400">✓ Trope Free</span>
-              </div>
-              <div class="text-[11px] text-slate-500">
-                AUDITED & APPROVED // CERTIFIED PRODUCTION ASSET
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 03: AMATEUR VS. OFFSCRIPT PROTOCOL -->
-  <section id="teardown" class="py-20 border-b border-brand-border bg-brand-surface/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-12">
-        <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2">03 // The Editorial Tear Sheet</div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          The Translation Trap: Why Most AI & Ghostwriters Dilute Executive Authority
-        </h2>
-        <p class="text-slate-400 mt-3 text-base">
-          Compare how an amateur summarizer recaps executive audio versus how Offscript Editorial extracts institutional signal and commercial tension.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- AMATEUR / AI COLUMN -->
-        <div class="bg-brand-card/90 border border-rose-500/30 rounded-lg p-6 relative">
-          <div class="flex items-center justify-between border-b border-rose-500/20 pb-3 mb-4">
-            <div class="flex items-center space-x-2">
-              <span class="w-3 h-3 rounded-full bg-rose-500"></span>
-              <span class="text-xs font-mono font-bold text-rose-400 uppercase">THE AMATEUR / GENERIC AI RECAPPER</span>
-            </div>
-            <span class="text-[11px] font-mono text-rose-300 bg-rose-950/60 border border-rose-800 px-2 py-0.5 rounded">
-              VERDICT: REJECTED
-            </span>
-          </div>
-
-          <div class="bg-brand-dark/90 border border-rose-950 p-4 rounded text-sm text-slate-300 font-sans space-y-3 leading-relaxed mb-6">
-            <p class="text-slate-300 font-medium">
-              🚀 Key Takeaways from Jen Abel on Lenny's Podcast! 🎙️
-            </p>
-            <p>
-              Did you know enterprise sales win rates average around 30%? In today's fast-paced B2B environment, if your win rate is over 35%, it's time to raise your prices immediately! 💡
-            </p>
-            <p>
-              Here are 3 reasons why discounting destroys your SaaS company:
-            </p>
-            <p class="pl-2">
-              1. You leave money on the table 💰<br>
-              2. Buyers communicate in private networks 🤫<br>
-              3. Higher prices filter better clients 🎯
-            </p>
-            <p>
-              Stop underpricing yourself! Start charging what you're worth! Agree or disagree? Drop your thoughts below! 👇
-            </p>
-            <p class="text-xs text-slate-400 font-mono">
-              #SaaS #Sales #Entrepreneurship #ThoughtLeadership #B2B
-            </p>
-          </div>
-
-          <div class="space-y-2 text-xs font-mono text-slate-400 border-t border-rose-500/20 pt-4">
-            <div class="text-rose-400 font-bold">FATAL AUDIT FLAWS:</div>
-            <div class="flex items-start space-x-2 text-slate-400">
-              <span class="text-rose-500">✕</span>
-              <span><strong>Zero Commercial Risk:</strong> Reads like a college intern recapping a public podcast.</span>
-            </div>
-            <div class="flex items-start space-x-2 text-slate-400">
-              <span class="text-rose-500">✕</span>
-              <span><strong>Cosmetic Platitudes:</strong> Polluted with 7 emojis, 5 hashtags, and generic engagement bait.</span>
-            </div>
-            <div class="flex items-start space-x-2 text-slate-400">
-              <span class="text-rose-500">✕</span>
-              <span><strong>Generic AI Syntax:</strong> Uses standard tropes ("In today's fast-paced world", "Stop doing X. Start doing Y").</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- OFFSCRIPT VOICE EXTRACTION COLUMN -->
-        <div class="bg-brand-card/90 border border-emerald-500/40 rounded-lg p-6 relative glow-emerald">
-          <div class="flex items-center justify-between border-b border-emerald-500/30 pb-3 mb-4">
-            <div class="flex items-center space-x-2">
-              <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
-              <span class="text-xs font-mono font-bold text-emerald-300 uppercase">OFFSCRIPT VOICE EXTRACTION PROTOCOL</span>
-            </div>
-            <span class="text-[11px] font-mono text-emerald-300 bg-emerald-950/80 border border-emerald-800 px-2 py-0.5 rounded">
-              VERDICT: CERTIFIED
-            </span>
-          </div>
-
-          <div class="bg-brand-dark/90 border border-emerald-900/50 p-4 rounded text-sm text-slate-200 font-sans space-y-3 leading-relaxed mb-6">
-            <p class="font-semibold text-white">
-              If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.
-            </p>
-            <p>
-              Early-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.
-            </p>
-            <p>
-              Healthy enterprise close rates hover between 25% and 35%.
-            </p>
-            <p>
-              If 7 out of 10 prospects are not balking at contract size, you are not testing your market ceiling. Worse: corporate enterprise buyers compare contracts in private executive groups.
-            </p>
-            <p>
-              Discounting a $150k deal down to $50k permanently anchors your price ceiling across the industry.
-            </p>
-          </div>
-
-          <div class="space-y-2 text-xs font-mono text-slate-400 border-t border-emerald-500/30 pt-4">
-            <div class="text-emerald-400 font-bold">OPERATIONAL MERITS:</div>
-            <div class="flex items-start space-x-2 text-slate-300">
-              <span class="text-emerald-400">✓</span>
-              <span><strong>Peer-to-Peer Gravitas:</strong> Formatted for C-suite decision-makers and enterprise founders.</span>
-            </div>
-            <div class="flex items-start space-x-2 text-slate-300">
-              <span class="text-emerald-400">✓</span>
-              <span><strong>Mathematical Rigor:</strong> Exactly 0 emojis, 0 hashtags, 0 em-dashes, and 0 AI transition tropes.</span>
-            </div>
-            <div class="flex items-start space-x-2 text-slate-300">
-              <span class="text-emerald-400">✓</span>
-              <span><strong>Commercial Friction:</strong> Isolates real operational risk (margin dilution & backchannel price anchoring).</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 04: THE 14-STEP PROGRAMMATIC PIPELINE (CTO ARCHITECTURE) -->
-  <section id="architecture" class="py-20 border-b border-brand-border bg-brand-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-12">
-        <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2">04 // CTO System Blueprint</div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          The 14-Step Deterministic Engineering Architecture
-        </h2>
-        <p class="text-slate-400 mt-3 text-base">
-          Offscript Editorial is not a freelance writer with a prompt. It is a multi-stage software and human-in-the-loop pipeline with rigid failure boundaries.
-        </p>
-      </div>
-
-      <!-- Pipeline Steps Interactive Explorer -->
-      <div class="space-y-4">
-        <!-- Stage 1 -->
-        <div class="bg-brand-surface border border-brand-border rounded-lg p-5 hover:border-slate-600 transition">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-            <div class="flex items-center space-x-3">
-              <span class="text-xs font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 font-bold">STAGE 01</span>
-              <h3 class="text-base font-bold text-white">Sourcing & 4-Filter ICP Qualification (Steps 1–3)</h3>
-            </div>
-            <span class="text-xs font-mono text-slate-500">ROLE 1: PIPELINE ANALYST</span>
-          </div>
-          <p class="text-sm text-slate-400 mb-3 leading-relaxed">
-            Automated Python ingestion monitors YouTube and technical podcast directories. Every target is evaluated against four non-negotiable gates:
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs font-mono">
-            <div class="p-2.5 bg-brand-dark rounded border border-brand-border text-slate-300">
-              <span class="text-emerald-400 font-bold">1. Unit Economics:</span> B2B SaaS founder / RevOps executive ($1M–$15M ARR).
-            </div>
-            <div class="p-2.5 bg-brand-dark rounded border border-brand-border text-slate-300">
-              <span class="text-emerald-400 font-bold">2. Audience Arbitrage:</span> &gt;2,500 LinkedIn network with generic posting cadence.
-            </div>
-            <div class="p-2.5 bg-brand-dark rounded border border-brand-border text-slate-300">
-              <span class="text-emerald-400 font-bold">3. Content Maturity:</span> Infrequent, under-leveraged thought leadership.
-            </div>
-            <div class="p-2.5 bg-brand-dark rounded border border-brand-border text-slate-300">
-              <span class="text-emerald-400 font-bold">4. Asset Quality:</span> Unscripted interview, &le;900 views, &ge;15 mins, 7–180 days old.
-            </div>
-          </div>
-        </div>
-
-        <!-- Stage 2 -->
-        <div class="bg-brand-surface border border-brand-border rounded-lg p-5 hover:border-slate-600 transition">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-            <div class="flex items-center space-x-3">
-              <span class="text-xs font-mono bg-sky-500/10 text-sky-400 px-2 py-0.5 rounded border border-sky-500/20 font-bold">STAGE 02</span>
-              <h3 class="text-base font-bold text-white">10-Angle Extraction & Diarization (Steps 4–5)</h3>
-            </div>
-            <span class="text-xs font-mono text-slate-500">ROLE 2: EDITORIAL AUDITOR</span>
-          </div>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Raw audio streams are processed to isolate guest dialogue with zero host contamination. The engine extracts exactly 10 non-overlapping angles mapped across the 7 strategic lenses, with every angle hard-anchored to a verifiable timestamp and verbatim quote.
-          </p>
-        </div>
-
-        <!-- Stage 3 -->
-        <div class="bg-brand-surface border border-brand-border rounded-lg p-5 hover:border-slate-600 transition">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-            <div class="flex items-center space-x-3">
-              <span class="text-xs font-mono bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20 font-bold">STAGE 03</span>
-              <h3 class="text-base font-bold text-white">Persona Cadence Synthesis & Outbound Assembly (Steps 6–7)</h3>
-            </div>
-            <span class="text-xs font-mono text-slate-500">ROLE 3: GHOSTWRITER & SDR</span>
-          </div>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Replaces rigid paragraph limits with authentic personality cadence: staccato 1-2 sentence tempo for aggressive operators, dense multi-sentence structured memos for systems architects, or narrative tension for visionaries.
-          </p>
-        </div>
-
-        <!-- Stage 4 -->
-        <div class="bg-brand-surface border border-brand-border rounded-lg p-5 hover:border-slate-600 transition">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-            <div class="flex items-center space-x-3">
-              <span class="text-xs font-mono bg-rose-500/10 text-rose-400 px-2 py-0.5 rounded border border-rose-500/20 font-bold">STAGE 04</span>
-              <h3 class="text-base font-bold text-white">Deterministic 2-Pass QA Linting (Steps 8–10)</h3>
-            </div>
-            <span class="text-xs font-mono text-slate-500">ROLE 4: QA AUDITOR</span>
-          </div>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Two consecutive audit passes execute automated regex sweeps. Hard failure triggers: emojis, hashtags, em-dashes (—), en-dashes (–), AI transition tropes ("In today's fast-paced world", "Stop doing X. Start doing Y", "Here are 3 reasons why"), and formatting non-compliance.
-          </p>
-        </div>
-
-        <!-- Stage 5 -->
-        <div class="bg-brand-surface border border-brand-border rounded-lg p-5 hover:border-slate-600 transition">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-            <div class="flex items-center space-x-3">
-              <span class="text-xs font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 font-bold">STAGE 05</span>
-              <h3 class="text-base font-bold text-white">Human Approval, Precision Dispatch & RevOps CRM (Steps 11–14)</h3>
-            </div>
-            <span class="text-xs font-mono text-slate-500">ROLE 5: REVOPS MANAGER</span>
-          </div>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Strict human approval gate before cold delivery. Outbound dispatches are synchronized to prospect local morning inbox triage (8:00–8:30 AM) and logged automatically into the RevOps master database.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 05: INTERACTIVE QA LINTER (RUN THE OFFSCRIPT AUDITOR) -->
-  <section id="linter" class="py-20 border-b border-brand-border bg-brand-surface/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-8">
-        <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2">05 // Live Tool</div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Test Your Ghostwriter's Draft Against the Offscript QA Linter
-        </h2>
-        <p class="text-slate-400 mt-2 text-sm">
-          Paste any LinkedIn post, agency draft, or AI copy below. Our real-time engine will audit it against Offscript's strict negative style constraints.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <!-- Input Area -->
-        <div class="lg:col-span-7 bg-brand-card border border-brand-border rounded-lg p-5">
-          <div class="flex items-center justify-between mb-3">
-            <label class="text-xs font-mono text-slate-300 font-bold uppercase">Draft Input Terminal</label>
-            <div class="space-x-2">
-              <button id="loadBadSampleBtn" class="text-[11px] font-mono text-rose-400 hover:text-rose-300 underline">Load Generic Draft</button>
-              <button id="loadGoodSampleBtn" class="text-[11px] font-mono text-emerald-400 hover:text-emerald-300 underline">Load Offscript Draft</button>
-            </div>
-          </div>
-          <textarea id="linterInputText" rows="10" class="w-full bg-brand-dark border border-brand-border rounded p-4 text-sm font-sans text-slate-200 focus:outline-none focus:border-emerald-500 transition placeholder-slate-600 leading-relaxed" placeholder="Paste LinkedIn copy here to run the 2-pass deterministic QA auditor..."></textarea>
-
-          <div class="mt-4 flex items-center justify-between">
-            <span class="text-xs font-mono text-slate-500" id="linterWordCount">0 words | 0 characters</span>
-            <button id="runLinterBtn" class="bg-emerald-500 hover:bg-emerald-400 text-brand-dark px-5 py-2.5 rounded font-mono font-bold text-xs tracking-wider transition flex items-center space-x-2 glow-emerald">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>RUN AUDIT SUITE</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Audit Output Card -->
-        <div class="lg:col-span-5 bg-brand-card border border-brand-border rounded-lg p-5">
-          <div class="flex items-center justify-between border-b border-brand-border pb-3 mb-4">
-            <div class="flex items-center space-x-2">
-              <span class="w-2.5 h-2.5 rounded-full" id="auditStatusDot"></span>
-              <span class="text-xs font-mono font-bold text-white uppercase">AUDIT VERDICT</span>
-            </div>
-            <span class="text-xs font-mono px-2 py-0.5 rounded" id="auditVerdictBadge">AWAITING INPUT</span>
-          </div>
-
-          <div class="space-y-3 font-mono text-xs" id="auditRuleResults">
-            <div class="p-3 bg-brand-dark rounded border border-brand-border flex items-center justify-between text-slate-400" id="ruleEmoji">
-              <span>Rule 01: Zero Emojis</span>
-              <span class="font-bold">-</span>
-            </div>
-            <div class="p-3 bg-brand-dark rounded border border-brand-border flex items-center justify-between text-slate-400" id="ruleHashtags">
-              <span>Rule 02: Zero Hashtags</span>
-              <span class="font-bold">-</span>
-            </div>
-            <div class="p-3 bg-brand-dark rounded border border-brand-border flex items-center justify-between text-slate-400" id="ruleDashes">
-              <span>Rule 03: Zero Em/En-Dashes (—, –)</span>
-              <span class="font-bold">-</span>
-            </div>
-            <div class="p-3 bg-brand-dark rounded border border-brand-border flex items-center justify-between text-slate-400" id="ruleTropes">
-              <span>Rule 04: Zero Generic AI Tropes</span>
-              <span class="font-bold">-</span>
-            </div>
-            <div class="p-3 bg-brand-dark rounded border border-brand-border flex items-center justify-between text-slate-400" id="ruleParagraphs">
-              <span>Rule 05: Cadence Density Score</span>
-              <span class="font-bold">-</span>
-            </div>
-          </div>
-
-          <!-- Linter Diagnostics Box -->
-          <div class="mt-4 p-3.5 bg-brand-dark rounded border border-brand-border text-xs font-mono text-slate-400 leading-relaxed min-h-[90px]" id="auditDiagnosticText">
-            Click "RUN AUDIT SUITE" to test your copy against the Offscript QA engine.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 06: COMMERCIAL SPRINTS & PRICING -->
-  <section id="pricing" class="py-20 border-b border-brand-border bg-brand-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-12">
-        <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2">06 // Commercial Engagement</div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Asynchronous Sprints for B2B Founders & VPs
-        </h2>
-        <p class="text-slate-400 mt-2 text-sm">
-          No 6-month lock-in contracts. Start with an asynchronous 10-post pilot sprint or transition into a dedicated monthly desk.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
-        <!-- Tier 1: $250 Pilot Sprint -->
-        <div class="bg-brand-surface border-2 border-emerald-500 rounded-lg p-6 sm:p-8 relative flex flex-col justify-between glow-emerald">
-          <div class="absolute -top-3 right-6 bg-emerald-500 text-brand-dark text-[11px] font-mono font-bold px-3 py-0.5 rounded uppercase tracking-wider">
-            RECOMMENDED ENTRY POINT
-          </div>
-          <div>
-            <div class="text-xs font-mono text-emerald-400 uppercase">One-Time Asynchronous Sprint</div>
-            <h3 class="text-2xl font-bold text-white mt-1">The $250 Pilot Sprint</h3>
-            <div class="mt-4 flex items-baseline">
-              <span class="text-4xl font-extrabold text-white font-mono">$250</span>
-              <span class="text-slate-400 ml-2 text-sm font-mono">/ flat sprint</span>
-            </div>
-            <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-              We extract 10 bespoke, publication-ready LinkedIn operator essays from a single unscripted podcast, keynote, or 15-minute voice recording.
-            </p>
-
-            <ul class="mt-6 space-y-3 text-sm text-slate-300 font-mono">
-              <li class="flex items-center space-x-2">
-                <span class="text-emerald-400">✓</span>
-                <span><strong>10 Bespoke Posts</strong> across 7 strategic lenses</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-emerald-400">✓</span>
-                <span><strong>48-Hour SLA</strong> guaranteed delivery</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-emerald-400">✓</span>
-                <span><strong>100% Calendar-Free</strong> (zero calls)</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-emerald-400">✓</span>
-                <span><strong>Verbatim Quote Anchors</strong> with timestamps</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-emerald-400">✓</span>
-                <span><strong>2-Pass Deterministic QA</strong> certified</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-8 pt-6 border-t border-brand-border">
-            <button id="pilotModalOpenBtn" class="w-full bg-emerald-500 hover:bg-emerald-400 text-brand-dark py-3.5 rounded font-bold text-sm tracking-wide transition flex items-center justify-center space-x-2">
-              <span>DISPATCH $250 SPRINT INTAKE</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-            <div class="text-center mt-2.5">
-              <a href="https://offscripteditorial.gumroad.com/l/pilot-sprint" target="_blank" rel="noopener" class="text-slate-500 hover:text-slate-300 text-xs font-mono underline">
-                Direct Gumroad Checkout Link &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tier 2: Monthly Retainer -->
-        <div class="bg-brand-surface border border-brand-border rounded-lg p-6 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-mono text-sky-400 uppercase">Monthly Async Retainer</div>
-            <h3 class="text-2xl font-bold text-white mt-1">Full Executive Retainer</h3>
-            <div class="mt-4 flex items-baseline">
-              <span class="text-4xl font-extrabold text-white font-mono">$500</span>
-              <span class="text-slate-400 ml-2 text-sm font-mono">/ month</span>
-            </div>
-            <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-              Continuous asynchronous narrative coverage for founders and VPs on active podcast tours or deploying regular internal voice memos.
-            </p>
-
-            <ul class="mt-6 space-y-3 text-sm text-slate-300 font-mono">
-              <li class="flex items-center space-x-2">
-                <span class="text-sky-400">✓</span>
-                <span><strong>20 Executive Essays / Month</strong></span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-sky-400">✓</span>
-                <span><strong>Direct Voice Memo Intake</strong> (Telegram/WhatsApp)</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-sky-400">✓</span>
-                <span><strong>Custom Persona Voice Modeling</strong></span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-sky-400">✓</span>
-                <span><strong>Private Notion / Google Workspace</strong> dispatch</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <span class="text-sky-400">✓</span>
-                <span><strong>Quarterly Narrative Audit</strong> & outbound sync</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-8 pt-6 border-t border-brand-border">
-            <button id="retainerModalOpenBtn" class="w-full bg-brand-dark hover:bg-slate-800 text-slate-200 hover:text-white border border-brand-border hover:border-slate-500 py-3.5 rounded font-mono font-bold text-sm tracking-wide transition flex items-center justify-center space-x-2">
-              <span>INQUIRE ABOUT RETAINER</span>
-            </button>
-            <div class="text-center mt-2.5">
-              <span class="text-slate-500 text-xs font-mono">Subject to desk capacity (max 8 active retainers)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTO MANIFESTO & SYSTEM ARCHITECTURE -->
-  <section class="py-16 border-b border-brand-border bg-brand-surface/30">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-brand-card border border-brand-border rounded-lg p-6 sm:p-8">
-        <div class="flex items-center space-x-3 mb-4">
-          <div class="w-9 h-9 rounded bg-emerald-500/20 text-emerald-400 font-mono font-bold flex items-center justify-center text-sm border border-emerald-500/40">
-            CTO
-          </div>
-          <div>
-            <div class="text-sm font-bold text-white">Kaung Sithu // @cto</div>
-            <div class="text-xs font-mono text-slate-400">Chief Technology Officer & Lead Pipeline Architect</div>
-          </div>
-        </div>
-
-        <div class="text-sm text-slate-300 font-sans leading-relaxed space-y-3 italic">
-          <p>
-            "Generative AI without deterministic editorial guardrails creates corporate slop. Every week, founders ruin their reputation on LinkedIn by posting breathless AI summaries full of rocket ship emojis, false dichotomies, and cheerful platitudes.
+        <div class="lg:col-span-8 space-y-6 text-base sm:text-lg text-paper-charcoal leading-relaxed">
+          <p class="drop-cap">
+            Most executive ghostwriting fails because it confuses volume with authority. When busy founders hand their voice over to conventional content agencies, their hard-won operational lessons get flattened into cheerful listicles, generic industry summaries, and breathless platitudes that alienate sophisticated enterprise buyers.
           </p>
           <p>
-            At Offscript Editorial, we treat executive narrative as high-leverage software infrastructure. We separate the prompt from the pipeline. We enforce mathematical negative constraints. And we never ask a founder to give up an hour of their week to sit on a Zoom call with a junior copywriter. Your recorded unscripted voice is already pure signal. We simply run the extraction protocol."
+            Inspired by the editorial standards of premier B2B narrative studios, Offscript Editorial was built on a simpler premise: <strong>your sharpest thinking already happens out loud.</strong> When you debate a peer on a podcast, walk your leadership team through a post-mortem, or record a voice note after a customer call, you speak with candor, nuance, and conviction.
+          </p>
+          <p>
+            Our role is not to invent opinions for you. Our role is to listen with an editor's ear—isolating your most defensible commercial insights, structuring them into cohesive arguments, and polishing every sentence until it carries the unmistakable cadence of your leadership.
+          </p>
+        </div>
+      </div>
+
+      <!-- Three Editorial Standards Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-paper-border">
+        <div class="bg-paper-light border border-paper-border p-8 rounded-lg">
+          <div class="font-serif text-sm italic text-paper-accent mb-2">Principle I</div>
+          <h3 class="font-serif text-2xl font-medium text-paper-dark mb-3">Asynchronous by Design</h3>
+          <p class="text-sm text-paper-charcoal leading-relaxed">
+            Your calendar is your scarcest asset. We never ask you to sit through recurring 60-minute interview calls. Send us a podcast link, a recorded webinar, or a five-minute voice memo; our editorial desk handles the rest.
           </p>
         </div>
 
-        <div class="mt-6 pt-4 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono text-slate-500 gap-2">
-          <span>Offscript Editorial Core Engine v2.4 // Authenticated Workspace</span>
-          <span>Contact Desk: kaung@offscripteditorial.com</span>
+        <div class="bg-paper-light border border-paper-border p-8 rounded-lg">
+          <div class="font-serif text-sm italic text-paper-accent mb-2">Principle II</div>
+          <h3 class="font-serif text-2xl font-medium text-paper-dark mb-3">Thesis-Driven Rigor</h3>
+          <p class="text-sm text-paper-charcoal leading-relaxed">
+            We do not write surface-level recaps. Every piece is anchored in a clear commercial thesis—examining unit economics, architectural trade-offs, organizational design, or contrarian market truths that earn peer respect.
+          </p>
+        </div>
+
+        <div class="bg-paper-light border border-paper-border p-8 rounded-lg">
+          <div class="font-serif text-sm italic text-paper-accent mb-2">Principle III</div>
+          <h3 class="font-serif text-2xl font-medium text-paper-dark mb-3">Uncompromising Restraint</h3>
+          <p class="text-sm text-paper-charcoal leading-relaxed">
+            True executive authority never begs for attention. We write clean, muscular prose free of gimmicks, engagement bait, or artificial clichés—ensuring your public presence reflects the caliber of your company.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ASYNC SPRINT INTAKE MODAL -->
-  <div id="intakeModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-brand-card border border-brand-border rounded-lg max-w-xl w-full p-6 sm:p-8 shadow-2xl relative">
-      <button id="closeModalBtn" class="absolute top-4 right-4 text-slate-400 hover:text-white font-mono text-lg transition">
-        &times;
-      </button>
-
-      <div class="mb-6">
-        <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider block mb-1">ASYNC OPERATOR INTAKE</span>
-        <h3 class="text-xl font-bold text-white">Initialize $250 Pilot Sprint</h3>
-        <p class="text-xs text-slate-400 mt-1">Submit your audio anchor. Zero calendar calls required. Delivery in 48 hours.</p>
-      </div>
-
-      <form id="sprintIntakeForm" class="space-y-4 text-xs font-mono">
-        <div>
-          <label class="block text-slate-300 mb-1">Your Full Name & Executive Title *</label>
-          <input type="text" id="intakeName" required class="w-full bg-brand-dark border border-brand-border rounded px-3 py-2 text-slate-200 focus:outline-none focus:border-emerald-500 text-xs font-sans" placeholder="e.g. Elena Rostova, CTO & Co-Founder">
-        </div>
-
-        <div>
-          <label class="block text-slate-300 mb-1">Work Email *</label>
-          <input type="email" id="intakeEmail" required class="w-full bg-brand-dark border border-brand-border rounded px-3 py-2 text-slate-200 focus:outline-none focus:border-emerald-500 text-xs font-sans" placeholder="elena@company.com">
-        </div>
-
-        <div>
-          <label class="block text-slate-300 mb-1">Source Audio Anchor (YouTube Podcast URL, Webinar, or Drive/Dropbox link) *</label>
-          <input type="url" id="intakeAudioUrl" required class="w-full bg-brand-dark border border-brand-border rounded px-3 py-2 text-slate-200 focus:outline-none focus:border-emerald-500 text-xs font-sans" placeholder="https://www.youtube.com/watch?v=...">
-          <span class="text-[10px] text-slate-500 mt-1 block">Unscripted interviews between 15m to 60m are optimal.</span>
-        </div>
-
-        <div>
-          <label class="block text-slate-300 mb-1">Target Persona Cadence</label>
-          <select id="intakeCadenceSelect" class="w-full bg-brand-dark border border-brand-border rounded px-3 py-2 text-slate-200 focus:outline-none focus:border-emerald-500 text-xs">
-            <option value="operator">Aggressive Operator (High-velocity staccato statements, 1-2 sentence tempo)</option>
-            <option value="architect" selected>Analytical Architect (Methodical, structured 3-4 sentence logical system memos)</option>
-            <option value="storyteller">Storyteller / Visionary (Chronological narrative arc, failure-to-epiphany)</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block text-slate-300 mb-1">Specific Contrarian Thesis or Focus (Optional)</label>
-          <textarea id="intakeNotes" rows="2" class="w-full bg-brand-dark border border-brand-border rounded px-3 py-2 text-slate-200 focus:outline-none focus:border-emerald-500 text-xs font-sans" placeholder="Any specific chapter, timestamp, or hot take you want emphasized..."></textarea>
-        </div>
-
-        <div class="pt-2">
-          <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-brand-dark py-3 rounded font-bold text-sm tracking-wide transition shadow-lg glow-emerald flex items-center justify-center space-x-2">
-            <span>SUBMIT SPRINT SPECIFICATION</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </button>
-        </div>
-      </form>
-
-      <!-- Confirmation Screen in Modal -->
-      <div id="modalSuccessScreen" class="hidden text-center py-6 space-y-4">
-        <div class="w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-500 text-emerald-400 mx-auto flex items-center justify-center">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        </div>
-        <h4 class="text-lg font-bold text-white">Sprint Ingest Initialized</h4>
-        <p class="text-xs text-slate-300 font-sans max-w-sm mx-auto leading-relaxed">
-          Your audio anchor has been queued into the Offscript extraction pipeline. Our desk will complete diarization, 10-angle extraction, and 2-pass QA within our 48-hour SLA.
+  <!-- SECTION 02: THE READING ROOM (INTERACTIVE VOICE & CADENCE CALIBRATION) -->
+  <section id="folio" class="py-24 border-b border-paper-border bg-paper-DEFAULT">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-3">02 // The Reading Room</div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-paper-dark leading-tight">
+          Voice &amp; Cadence Calibration: How We Adapt to Your Executive Temperament
+        </h2>
+        <p class="text-paper-charcoal mt-4 text-base leading-relaxed">
+          No two leaders think or speak alike. A decisive revenue leader speaks in crisp, direct declaratives; a technical founder builds layered architectural arguments; a category creator leads with narrative tension. Select a spoken conversation and an editorial voice below to see how our editors calibrate tone while preserving the speaker's core conviction.
         </p>
-        <div class="bg-brand-dark p-3 rounded border border-brand-border font-mono text-xs text-slate-400">
-          <div>PIPELINE TICKET: <span class="text-emerald-400 font-bold" id="ticketNumber">#OE-2026-984</span></div>
-          <div>CONFIRMATION DISPATCHED TO: <span class="text-slate-200" id="confirmedEmail">founder@company.com</span></div>
+      </div>
+
+      <!-- Interactive Controls Bar -->
+      <div class="bg-white border border-paper-border rounded-lg p-6 mb-8 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <!-- Step 1: Select Spoken Source -->
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-paper-muted mb-3">
+              1. Select Spoken Conversation Source
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="caseSelectorGroup">
+              <button class="case-btn text-left p-3 rounded border border-paper-accent bg-paper-accent text-white transition" data-case="pricing">
+                <div class="font-serif font-medium text-base">Enterprise Pricing</div>
+                <div class="text-xs opacity-80 mt-0.5">Margin &amp; Deal Discipline</div>
+              </button>
+              <button class="case-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-case="revops">
+                <div class="font-serif font-medium text-base">Revenue Architecture</div>
+                <div class="text-xs text-paper-muted mt-0.5">Systems vs. Ad-Hoc Tickets</div>
+              </button>
+              <button class="case-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-case="engineering">
+                <div class="font-serif font-medium text-base">Engineering Resilience</div>
+                <div class="text-xs text-paper-muted mt-0.5">Velocity vs. Recovery</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Select Editorial Voice -->
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-paper-muted mb-3">
+              2. Select Executive Editorial Voice
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="voiceSelectorGroup">
+              <button class="voice-btn text-left p-3 rounded border border-paper-accent bg-paper-accent text-white transition" data-voice="operator">
+                <div class="font-serif font-medium text-base">The Direct Operator</div>
+                <div class="text-xs opacity-80 mt-0.5">Crisp, decisive &amp; punchy</div>
+              </button>
+              <button class="voice-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-voice="strategist">
+                <div class="font-serif font-medium text-base">The Systems Strategist</div>
+                <div class="text-xs text-paper-muted mt-0.5">Analytical &amp; boardroom-ready</div>
+              </button>
+              <button class="voice-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-voice="essayist">
+                <div class="font-serif font-medium text-base">The Narrative Essayist</div>
+                <div class="text-xs text-paper-muted mt-0.5">Reflective &amp; story-driven</div>
+              </button>
+            </div>
+          </div>
+
         </div>
-        <button id="closeSuccessBtn" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded font-mono text-xs transition">
-          CLOSE TERMINAL
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- TOAST NOTIFICATION -->
-  <div id="toastNotification" class="fixed bottom-6 right-6 bg-brand-surface border border-emerald-500 text-emerald-400 px-4 py-2.5 rounded-lg shadow-2xl font-mono text-xs flex items-center space-x-2 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-    <span id="toastMessage">Text copied to clipboard</span>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-brand-border bg-brand-dark py-12 text-xs font-mono text-slate-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center space-x-3">
-        <span class="w-2.5 h-2.5 bg-emerald-400 rounded-sm inline-block"></span>
-        <span class="font-bold text-slate-300 tracking-wider">OFFSCRIPT EDITORIAL</span>
-        <span class="text-slate-600">|</span>
-        <span>THE ASYNCHRONOUS VOICE EXTRACTION DESK</span>
       </div>
 
-      <div class="flex items-center space-x-6 text-slate-400">
-        <a href="#protocol" class="hover:text-emerald-400 transition">Protocol</a>
-        <a href="#simulator" class="hover:text-emerald-400 transition">Cadence Simulator</a>
-        <a href="#linter" class="hover:text-emerald-400 transition">QA Linter</a>
-        <a href="https://offscripteditorial.gumroad.com/l/pilot-sprint" target="_blank" rel="noopener" class="hover:text-emerald-400 transition">Pilot Sprint</a>
-      </div>
-
-      <div>
-        kaung@offscripteditorial.com // © 2026 Offscript Editorial. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <!-- CLIENT-SIDE LOGIC -->
-  <script>
-    // SIMULATOR DATA MATRIX
-    const audioData = {
-      jen: {
-        speaker: "Jen Abel // Partner, JJE",
-        podcast: "Lenny's Podcast | Enterprise Pricing & GTM Friction",
-        timestamp: "[00:01:30]",
-        quote: `"What are the benchmarks for how often you get through each of these stages? The win rate for enterprise is usually around 30 to 35%. If your win rate is higher than that, your price is too low. There's a lot of part of the market that's just not in a maturity perspective to take you on. And that's healthy... The worst thing you can do is charge somebody's friend 50 and somebody else 500k. They talk... Especially at the corporate executive level."`,
-        lens: "Unit Economics // Margin Defense",
-        thesis: "A 60% win rate is an underpricing pathology; enterprise buyers compare contracts in private backchannels.",
-        metrics: "Lenny's Podcast | 480 views | 24m duration",
-        essays: {
-          operator: `If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.
-
-Early-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.
-
-Healthy enterprise close rates hover between 25% and 35%.
-
-If 7 out of 10 prospects are not balking at your contract size, you are not testing your market ceiling. You are subsidizing buyers who have the corporate budget to pay triple.
-
-Worse: enterprise buyers talk in private backchannels.
-
-Discounting a $150k contract down to $50k to close a quarter does not just hurt immediate gross margins. It anchors your valuation permanently across executive Slack groups.
-
-Raise your pricing until your pipeline disqualifies the bottom 70%.`,
-          architect: `Enterprise sales benchmarks reveal a structural paradox that early founders routinely misdiagnose: abnormal win rates signal commercial margin erosion rather than superior product-market validation.
-
-When an enterprise sales pipeline produces close rates exceeding 35%, commercial leadership is failing to test the upper boundary of willingness to pay. A standard, sustainable enterprise closing distribution ranges between 25% and 35%. This baseline guarantees sufficient commercial resistance to qualify high-maturity enterprise accounts while rejecting peripheral, low-budget operators.
-
-Arbitrary discounting introduces systemic enterprise backchannel exposure. When executive procurement teams compare vendor agreements inside private peer networks, inconsistent pricing tiers permanently depress contract ceilings across the category.
-
-Sustainable enterprise scale requires enforcing pricing floors that deliberately disqualify two-thirds of active pipeline prospects.`,
-          storyteller: `When we started selling to enterprise accounts, closing six out of ten deals felt like validation. The sales team celebrated every signed contract, and the board praised our initial velocity.
-
-It took three quarters to realize we were subsidizing customers who should have paid three times more.
-
-The breaking point arrived during an executive summit when two enterprise buyers compared vendor invoices over dinner. One had paid full price; the other had negotiated a 60% discount. In one evening, our pricing credibility evaporated across three major accounts.
-
-Enterprise buyers talk. High win rates are not proof of product strength; they are a warning sign that your price ceiling is collapsed. Today, if seven out of ten prospects do not push back on price, we know our numbers are too low.`
-        }
-      },
-      cory: {
-        speaker: "Cory Coult // VP of Revenue Operations, Fullcast",
-        podcast: "Go To Market Podcast | Cory Coult: RevOps as a Product",
-        timestamp: "[03:14]",
-        quote: `"RevOps is not an internal IT ticketing help desk. If all your team does is reset permissions and build ad-hoc reports, you are torching company capital. We structure revenue operations exactly like software engineering: two-week sprints, product backlog grooming, and clear stakeholder feature specs."`,
-        lens: "Operating Architecture // System Design",
-        thesis: "Treat RevOps as a commercial product team, not an ad-hoc help desk ticketing queue.",
-        metrics: "Go To Market Podcast | 16 views | 19.9m duration",
-        essays: {
-          operator: `Your RevOps team is not a help desk ticketing queue.
-
-Most founders treat operations like internal IT support. Sales reps break a workflow, file an urgent ticket, and demand an instant patch. The operations lead spends sixty hours a week resetting passwords and hacking custom fields.
-
-This reactive loop quietly kills revenue momentum. When operations exists solely to put out daily fires, nobody is architecting systemic growth. The CRM turns into an unruly graveyard of unmaintained fields and fictional pipeline stages.
-
-The fix requires treating your revenue engine as a commercial product. The CRM is the data layer. Frontline account executives are your daily active users. Your operations team is the product development squad.
-
-Establish two-week sprint cadences with disciplined backlog grooming. Force every internal change request to demonstrate measurable ARR impact before writing a single line of automation.
-
-Stop fixing broken tickets. Start shipping a revenue product.`,
-          architect: `Revenue operations architecture fundamentally collapses when executive leadership allows ad-hoc support ticketing to displace systematic systems engineering.
-
-In high-growth B2B organizations, internal operations teams typically degenerate into reactive help desk units. Frontline personnel submit conflicting workflow modifications, resulting in CRM schema bloat, validation bypasses, and uncalibrated pipeline velocity data.
-
-The architectural solution treats the commercial engine through disciplined software development standards. The CRM functions strictly as a transactional data layer, frontline representatives represent daily active users, and the operations desk operates on bi-weekly sprint cadences with prioritized backlog governance.
-
-Every proposed schema adjustment or automation trigger must demonstrate quantifiable ARR acceleration before entering the development sprint.`,
-          storyteller: `Three years ago, our RevOps team was drowning in 200 open tickets a week. The team was working 70-hour weeks, yet every sales forecast was inaccurate and the CRM was an unusable mess of 400 custom fields.
-
-The turning point was shutting down the internal help desk entirely.
-
-We treated the go-to-market motion like software engineering. We introduced two-week sprints, assigned product managers to internal revenue tools, and treated sales reps as daily active users. If a requested change could not prove direct ARR expansion, it was removed from the queue.
-
-Within four months, sprint velocity doubled and forecast variance dropped below 5%. You cannot scale revenue on reactive fixes.`
-        }
-      },
-      soren: {
-        speaker: "Soren Lindqvist // Founder, Veloctra",
-        podcast: "DevOps Unplugged | Deployment Certainty & Infrastructure",
-        timestamp: "[14:22]",
-        quote: `"CI/CD pipeline speed is vanity. Deployment rollback certainty is sanity. Everyone boasts about shipping code thirty times a day, but nobody tracks how long the production database sits in an inconsistent state during a failed canary deployment."`,
-        lens: "Contrarian Truth // Infrastructure Reliability",
-        thesis: "Deployment velocity without instant rollback guarantees is operational self-deception.",
-        metrics: "DevOps Unplugged #19 | 245 views | 38m duration",
-        essays: {
-          operator: `Shipping code thirty times a day is a vanity metric.
-
-Engineering leaders love boasting about deployment velocity. They post screenshots of automated CI pipelines running in three minutes. Meanwhile, their production rollback strategy is three engineers panicking in a Slack channel at 2:00 AM.
-
-Speed without rollback certainty is operational recklessness.
-
-If rolling back a botched release takes longer than shipping the build, your deployment pipeline is broken. A failed migration should never require manual SQL surgery or emergency schema reverts.
-
-True deployment velocity is defined by how calmly your system recovers when a build inevitably fails.
-
-Stop obsessing over how fast you ship. Measure how reliably your infrastructure can unship.`,
-          architect: `Contemporary DevOps engineering metrics exhibit dangerous alignment toward initial release velocity while ignoring automated state recovery invariants.
-
-Continuous integration cadences measured purely in deployment frequency fail to capture the catastrophic latency of failed state rollbacks. When microservice architectures push frequent schema migrations without deterministic rollback guarantees, failed canaries introduce cascading database synchronization errors.
-
-Infrastructure resilience requires decoupling delivery pipelines from release activation. Blue-green architectures must maintain dual-state schema backward compatibility, ensuring that state recovery executes automatically without manual intervention.
-
-Engineering operational maturity is dictated not by deployment frequency, but by deterministic mean time to rollback recovery.`,
-          storyteller: `At my previous company, we celebrated reaching forty production deploys a day. The team felt invincible until a flawed migration corrupted three hours of enterprise customer transactions.
-
-The deployment took four minutes. The emergency rollback and data reconciliation took nineteen hours of executive escalation.
-
-That outage completely transformed how we build infrastructure. We stopped prioritizing pipeline speed and focused obsessively on zero-downtime rollback mechanics. We rewrote every migration to maintain backward compatibility for two releases.
-
-Velocity means nothing if you cannot immediately undo a mistake. Now, before any code reaches production, the rollback protocol is tested first.`
-        }
-      }
-    };
-
-    let currentSample = "jen";
-    let currentCadence = "operator";
-
-    // DOM Elements
-    const sampleBtns = document.querySelectorAll('.sample-btn');
-    const cadenceBtns = document.querySelectorAll('.cadence-btn');
-    const displaySpeakerName = document.getElementById('displaySpeakerName');
-    const displayTimestamp = document.getElementById('displayTimestamp');
-    const displayRawQuote = document.getElementById('displayRawQuote');
-    const displayLens = document.getElementById('displayLens');
-    const displayCoreThesis = document.getElementById('displayCoreThesis');
-    const displayMetrics = document.getElementById('displayMetrics');
-    const displayCadenceTitle = document.getElementById('displayCadenceTitle');
-    const displayCadenceRhythm = document.getElementById('displayCadenceRhythm');
-    const essayOutputArea = document.getElementById('essayOutputArea');
-    const copyEssayBtn = document.getElementById('copyEssayBtn');
-
-    function updateSimulator() {
-      const data = audioData[currentSample];
-      displaySpeakerName.textContent = data.speaker;
-      displayTimestamp.textContent = data.timestamp;
-      displayRawQuote.textContent = data.quote;
-      displayLens.textContent = data.lens;
-      displayCoreThesis.textContent = data.thesis;
-      displayMetrics.textContent = data.metrics;
-
-      let cadenceLabel = "AGGRESSIVE OPERATOR";
-      let rhythmLabel = "STACCATO 1-2 SENTENCE";
-      if (currentCadence === 'architect') {
-        cadenceLabel = "ANALYTICAL ARCHITECT";
-        rhythmLabel = "STRUCTURED MEMO (3-4 SENTENCES)";
-      } else if (currentCadence === 'storyteller') {
-        cadenceLabel = "STORYTELLER / VISIONARY";
-        rhythmLabel = "NARRATIVE TENSION ARC";
-      }
-
-      displayCadenceTitle.textContent = `CADENCE MATCHED ASSET // ${cadenceLabel}`;
-      displayCadenceRhythm.textContent = rhythmLabel;
-      essayOutputArea.textContent = data.essays[currentCadence];
-    }
-
-    // Sample Button Clicks
-    sampleBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        sampleBtns.forEach(b => {
-          b.classList.remove('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-300');
-          b.classList.add('border-brand-border', 'bg-brand-dark', 'text-slate-300');
-        });
-        btn.classList.remove('border-brand-border', 'bg-brand-dark', 'text-slate-300');
-        btn.classList.add('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-300');
-        currentSample = btn.dataset.sample;
-        updateSimulator();
-      });
-    });
-
-    // Cadence Button Clicks
-    cadenceBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        cadenceBtns.forEach(b => {
-          b.classList.remove('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-300');
-          b.classList.add('border-brand-border', 'bg-brand-dark', 'text-slate-300');
-        });
-        btn.classList.remove('border-brand-border', 'bg-brand-dark', 'text-slate-300');
-        btn.classList.add('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-300');
-        currentCadence = btn.dataset.cadence;
-        updateSimulator();
-      });
-    });
-
-    // Copy Essay functionality
-    copyEssayBtn.addEventListener('click', () => {
-      const textToCopy = essayOutputArea.textContent;
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(textToCopy);
-        } else {
-          const ta = document.createElement('textarea');
-          ta.value = textToCopy;
-          document.body.appendChild(ta);
-          ta.select();
-          document.execCommand('copy');
-          document.body.removeChild(ta);
-        }
-        showToast('Operator essay copied to clipboard');
-      } catch (err) {
-        showToast('Essay copied');
-      }
-    });
-
-    // QA LINTER LOGIC
-    const linterInputText = document.getElementById('linterInputText');
-    const runLinterBtn = document.getElementById('runLinterBtn');
-    const loadBadSampleBtn = document.getElementById('loadBadSampleBtn');
-    const loadGoodSampleBtn = document.getElementById('loadGoodSampleBtn');
-    const linterWordCount = document.getElementById('linterWordCount');
-
-    const ruleEmoji = document.getElementById('ruleEmoji');
-    const ruleHashtags = document.getElementById('ruleHashtags');
-    const ruleDashes = document.getElementById('ruleDashes');
-    const ruleTropes = document.getElementById('ruleTropes');
-    const ruleParagraphs = document.getElementById('ruleParagraphs');
-    const auditStatusDot = document.getElementById('auditStatusDot');
-    const auditVerdictBadge = document.getElementById('auditVerdictBadge');
-    const auditDiagnosticText = document.getElementById('auditDiagnosticText');
-
-    linterInputText.addEventListener('input', () => {
-      const words = linterInputText.value.trim().split(/\s+/).filter(Boolean).length;
-      const chars = linterInputText.value.length;
-      linterWordCount.textContent = `${words} words | ${chars} characters`;
-    });
-
-    loadBadSampleBtn.addEventListener('click', () => {
-      linterInputText.value = `🚀 5 Ways to 10x your B2B Pipeline! 💡\n\nIn today's fast-paced business world, traditional sales playbooks are broken. Stop doing manual cold calls. Start doing automated AI outreach! 🎯\n\nHere are 3 reasons why:\n• Reason 1: It saves time ⏱️\n• Reason 2: It scales effortlessly 📈\n• Reason 3: It increases revenue — guaranteed! 💰\n\nAgree or disagree? Share your thoughts below! 👇\n\n#SaaS #B2B #Sales`;
-      linterInputText.dispatchEvent(new Event('input'));
-      runAudit();
-    });
-
-    loadGoodSampleBtn.addEventListener('click', () => {
-      linterInputText.value = `Your RevOps team is not a help desk ticketing queue.\n\nMost founders treat operations like internal IT support. Sales reps break a workflow, file an urgent ticket, and demand an instant patch. The operations lead spends sixty hours a week resetting passwords and hacking custom fields.\n\nThis reactive loop quietly kills revenue momentum. When operations exists solely to put out daily fires, nobody is architecting systemic growth. The CRM turns into an unruly graveyard of unmaintained fields and fictional pipeline stages.\n\nThe fix requires treating your revenue engine as a commercial product. The CRM is the data layer. Frontline account executives are your daily active users. Your operations team is the product development squad.\n\nEstablish two-week sprint cadences with disciplined backlog grooming. Force every internal change request to demonstrate measurable ARR impact before writing a single line of automation.\n\nStop fixing broken tickets. Start shipping a revenue product.`;
-      linterInputText.dispatchEvent(new Event('input'));
-      runAudit();
-    });
-
-    runLinterBtn.addEventListener('click', runAudit);
-
-    function runAudit() {
-      const text = linterInputText.value.trim();
-      if (!text) {
-        auditDiagnosticText.textContent = "Please paste or load text to execute the QA audit.";
-        return;
-      }
-
-      // Regex 1: Emojis check
-      const emojiRegex = /[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F1E0}-\u{1F1FF}\u{1F3FB}-\u{1F3FF}\u{1F004}\u{1F0CF}]/u;
-      const hasEmoji = emojiRegex.test(text);
-
-      // Regex 2: Hashtags check
-      const hasHashtag = /#[\w\d_]+/g.test(text);
-
-      // Regex 3: Em-dash / En-dash
-      const hasDashes = /[—–]/.test(text);
-
-      // Regex 4: Generic AI Tropes
-      const tropesPatterns = [
-        /in today'?s fast[- ]paced/i,
-        /stop doing .*\. start doing/i,
-        /here are \d+ reasons/i,
-        /game[- ]changer/i,
-        /delve into/i,
-        /dive into/i,
-        /agree or disagree/i,
-        /drop your thoughts/i,
-        /share your thoughts/i,
-        /what do you think\?/i
-      ];
-      let foundTrope = null;
-      for (const pattern of tropesPatterns) {
-        if (pattern.test(text)) {
-          foundTrope = pattern.toString();
-          break;
-        }
-      }
-
-      // Metric 5: Paragraphs & density
-      const paragraphs = text.split(/\n\s*\n/).filter(Boolean);
-      const isTooDense = paragraphs.some(p => p.split(/[.!?]/).length > 6);
-
-      let violations = [];
-
-      // Update UI for Rule 1: Emojis
-      if (hasEmoji) {
-        ruleEmoji.innerHTML = `<span>Rule 01: Zero Emojis</span><span class="text-rose-400 font-bold">FAIL (Found Emojis)</span>`;
-        violations.push("Contains prohibited emojis");
-      } else {
-        ruleEmoji.innerHTML = `<span>Rule 01: Zero Emojis</span><span class="text-emerald-400 font-bold">PASS (0 Emojis)</span>`;
-      }
-
-      // Update UI for Rule 2: Hashtags
-      if (hasHashtag) {
-        ruleHashtags.innerHTML = `<span>Rule 02: Zero Hashtags</span><span class="text-rose-400 font-bold">FAIL (Found Hashtags)</span>`;
-        violations.push("Contains prohibited hashtags");
-      } else {
-        ruleHashtags.innerHTML = `<span>Rule 02: Zero Hashtags</span><span class="text-emerald-400 font-bold">PASS (0 Hashtags)</span>`;
-      }
-
-      // Update UI for Rule 3: Dashes
-      if (hasDashes) {
-        ruleDashes.innerHTML = `<span>Rule 03: Zero Em/En-Dashes (—, –)</span><span class="text-rose-400 font-bold">FAIL (Found Em/En-Dashes)</span>`;
-        violations.push("Contains em-dash or en-dash");
-      } else {
-        ruleDashes.innerHTML = `<span>Rule 03: Zero Em/En-Dashes (—, –)</span><span class="text-emerald-400 font-bold">PASS (Standard Punctuation)</span>`;
-      }
-
-      // Update UI for Rule 4: Tropes
-      if (foundTrope) {
-        ruleTropes.innerHTML = `<span>Rule 04: Zero Generic AI Tropes</span><span class="text-rose-400 font-bold">FAIL (Cliche Detected)</span>`;
-        violations.push("Detected generic AI prompt trope / engagement bait");
-      } else {
-        ruleTropes.innerHTML = `<span>Rule 04: Zero Generic AI Tropes</span><span class="text-emerald-400 font-bold">PASS (Authentic Voice)</span>`;
-      }
-
-      // Update UI for Rule 5: Density
-      if (isTooDense) {
-        ruleParagraphs.innerHTML = `<span>Rule 05: Cadence Density Score</span><span class="text-amber-400 font-bold">WARN (Paragraph Bloat)</span>`;
-      } else {
-        ruleParagraphs.innerHTML = `<span>Rule 05: Cadence Density Score</span><span class="text-emerald-400 font-bold">OPTIMAL (${paragraphs.length} blocks)</span>`;
-      }
-
-      // Verdict
-      if (violations.length === 0) {
-        auditStatusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-400";
-        auditVerdictBadge.className = "text-xs font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800";
-        auditVerdictBadge.textContent = "VERDICT: APPROVED // PASSED ALL AUDITS";
-        auditDiagnosticText.innerHTML = `<span class="text-emerald-400 font-bold">LINTER CERTIFIED:</span> Zero stylistic pollution detected. Text adheres to Offscript negative constraints and authentic executive delivery. Ready for publication.`;
-      } else {
-        auditStatusDot.className = "w-2.5 h-2.5 rounded-full bg-rose-500";
-        auditVerdictBadge.className = "text-xs font-mono px-2 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800";
-        auditVerdictBadge.textContent = `VERDICT: REJECTED (${violations.length} VIOLATIONS)`;
-        auditDiagnosticText.innerHTML = `<span class="text-rose-400 font-bold">CRITICAL DEFECTS FOUND:</span><br>• ` + violations.join("<br>• ") + `<br><span class="text-slate-500 mt-2 block">Offscript QA automatically rewrites or strips these elements during Step 9.</span>`;
-      }
-    }
-
-    // MODAL HANDLERS
-    const intakeModal = document.getElementById('intakeModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const closeSuccessBtn = document.getElementById('closeSuccessBtn');
-    const navOpenIntakeBtn = document.getElementById('navOpenIntakeBtn');
-    const heroOpenIntakeBtn = document.getElementById('heroOpenIntakeBtn');
-    const pilotModalOpenBtn = document.getElementById('pilotModalOpenBtn');
-    const retainerModalOpenBtn = document.getElementById('retainerModalOpenBtn');
-    const sprintIntakeForm = document.getElementById('sprintIntakeForm');
-    const modalSuccessScreen = document.getElementById('modalSuccessScreen');
-    const confirmedEmail = document.getElementById('confirmedEmail');
-    const ticketNumber = document.getElementById('ticketNumber');
-
-    function openModal() {
-      intakeModal.classList.remove('hidden');
-      sprintIntakeForm.classList.remove('hidden');
-      modalSuccessScreen.classList.add('hidden');
-    }
-
-    function closeModal() {
-      intakeModal.classList.add('hidden');
-    }
-
-    [navOpenIntakeBtn, heroOpenIntakeBtn, pilotModalOpenBtn].forEach(btn => {
-      if (btn) btn.addEventListener('click', openModal);
-    });
-
-    if (retainerModalOpenBtn) {
-      retainerModalOpenBtn.addEventListener('click', () => {
-        openModal();
-        document.getElementById('intakeCadenceSelect').value = 'architect';
-      });
-    }
-
-    closeModalBtn.addEventListener('click', closeModal);
-    closeSuccessBtn.addEventListener('click', closeModal);
-
-    intakeModal.addEventListener('click', (e) => {
-      if (e.target === intakeModal) closeModal();
-    });
-
-    sprintIntakeForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('intakeEmail').value;
-      const randomTicket = Math.floor(1000 + Math.random() * 9000);
-      
-      confirmedEmail.textContent = email;
-      ticketNumber.textContent = `#OE-2026-${randomTicket}`;
-      
-      sprintIntakeForm.classList.add('hidden');
-      modalSuccessScreen.classList.remove('hidden');
-      showToast('Sprint intake ingested successfully');
-    });
-
-    // TOAST LOGIC
-    const toastNotification = document.getElementById('toastNotification');
-    const toastMessage = document.getElementById('toastMessage');
-    let toastTimeout;
-
-    function showToast(msg) {
-      toastMessage.textContent = msg;
-      toastNotification.classList.remove('translate-y-20', 'opacity-0');
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toastNotification.classList.add('translate-y-20', 'opacity-0');
-      }, 3500);
-    }
-
-    // INITIAL RENDER
-    updateSimulator();
-  </script>
-</body>
-</html>
+      <!-- Split Comparison Display -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items
