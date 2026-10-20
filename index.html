@@ -4,12 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Offscript Editorial | Executive Ghostwriting &amp; B2B Narrative Studio</title>
-  <!-- Tailwind CSS -->
+  <meta name="description" content="Offscript Editorial transforms unscripted podcast appearances, keynotes, and voice memos into market-defining executive memos for B2B founders. Principal-led craft. 48-hour turnaround.">
+  <link rel="canonical" href="https://offscripteditorial.com/" />
+  <link rel="icon" type="image/png" href="/assets/os-monogram.png" />
+  <link rel="apple-touch-icon" href="/assets/os-monogram.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Offscript Editorial | The Asynchronous Executive Narrative Studio" />
+  <meta property="og:description" content="We turn your unscripted spoken convictions into market-defining executive memos. Principal-led craft with zero calendar drag." />
+  <meta property="og:url" content="https://offscripteditorial.com/" />
+  <meta property="og:image" content="https://offscripteditorial.com/assets/og-card-offscript.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Offscript Editorial","url":"https://offscripteditorial.com","logo":"https://offscripteditorial.com/assets/os-monogram.png","image":"https://offscripteditorial.com/assets/og-card-offscript.jpg","founder":{"@type":"Person","name":"Kaung Sithu","jobTitle":"Founder & Editorial Director"},"description":"Principal-led B2B executive ghostwriting studio transforming unscripted operator audio into market-defining executive memos, operator perspectives, and boardroom briefs."}
+  </script>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -17,20 +28,13 @@
           fontFamily: {
             serif: ['"Newsreader"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
             paper: {
-              light: '#FCFBF9',
-              DEFAULT: '#F6F4EF',
-              warm: '#EFECE6',
-              border: '#E2DDD5',
-              dark: '#141413',
-              charcoal: '#262523',
-              muted: '#63605B',
-              accent: '#1E3A2F',
-              accentHover: '#152921',
-              terra: '#9E4730',
-              gold: '#B89655'
+              canvas: '#fbfbf9', card: '#ffffff', warm: '#f4f3ef', border: '#e5e4de', borderStrong: '#d1cfc7',
+              ink: '#121316', muted: '#575a65', faint: '#8a8d98', gold: '#92642a', goldLight: '#fef8ee',
+              crimson: '#b91c1c', emerald: '#047857', dark: '#141618', darkText: '#f8fafc'
             }
           }
         }
@@ -38,851 +42,708 @@
     }
   </script>
   <style>
-    body {
-      background-color: #FCFBF9;
-      color: #141413;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+    :root {
+      --bg-canvas: #fbfbf9;
+      --bg-card: #ffffff;
+      --bg-card-warm: #f4f3ef;
+      --border-subtle: #e5e4de;
+      --border-strong: #d1cfc7;
+      --text-primary: #121316;
+      --text-muted: #575a65;
+      --text-faint: #8a8d98;
+      --accent-gold: #92642a;
+      --accent-gold-light: #fef8ee;
+      --accent-crimson: #b91c1c;
+      --accent-emerald: #047857;
+      --dark-surface: #141618;
+      --dark-text: #f8fafc;
     }
-    .font-serif {
-      font-family: 'Newsreader', Georgia, serif;
-    }
-    .editorial-rule {
-      border-color: #E2DDD5;
-    }
-    .drop-cap::first-letter {
-      float: left;
-      font-family: 'Newsreader', Georgia, serif;
-      font-size: 3.4rem;
-      line-height: 0.85;
-      padding-top: 4px;
-      padding-right: 12px;
-      padding-left: 2px;
-      color: #1E3A2F;
-      font-weight: 500;
-    }
+    body { background-color: var(--bg-canvas); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; caret-color: var(--accent-gold); }
+    ::selection { background-color: var(--accent-gold); color: #ffffff; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: var(--bg-card-warm); }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; border: 2px solid var(--bg-card-warm); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
+    :focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+    .font-serif { font-family: 'Newsreader', Georgia, serif; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .balance-text { text-wrap: balance; }
+    .editorial-shadow { box-shadow: 0 12px 32px -12px rgba(18, 19, 22, 0.06), 0 2px 6px -1px rgba(18, 19, 22, 0.03); }
+    .drop-cap::first-letter { float: left; font-family: 'Newsreader', Georgia, serif; font-size: 3.4rem; line-height: 0.85; padding: 4px 12px 0 2px; color: var(--accent-gold); font-weight: 500; }
   </style>
 </head>
-<body class="bg-paper-light text-paper-dark antialiased selection:bg-paper-accent selection:text-white">
+<body class="bg-[#fbfbf9] text-[#121316] antialiased">
 
   <!-- TOP EDITORIAL MASTHEAD BAR -->
-  <div class="border-b border-paper-border bg-paper-DEFAULT py-2.5 px-4 sm:px-6 lg:px-8 text-xs text-paper-muted">
+  <div class="border-b border-[#e5e4de] bg-[#f4f3ef] py-2.5 px-4 sm:px-6 lg:px-8 text-xs text-[#575a65]">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center space-x-3">
-        <span class="uppercase tracking-widest font-semibold text-paper-dark">Offscript Editorial</span>
-        <span class="text-paper-border">|</span>
-        <span class="hidden sm:inline font-serif italic text-sm text-paper-muted">The Asynchronous Executive Narrative Studio</span>
+        <span class="font-mono uppercase tracking-widest font-semibold text-[#121316]">Offscript Editorial</span>
+        <span class="text-[#d1cfc7]">|</span>
+        <span class="hidden sm:inline font-serif italic text-sm text-[#575a65]">The Asynchronous Executive Narrative Studio</span>
       </div>
-      <div class="flex items-center space-x-6">
-        <span class="hidden md:inline text-paper-muted">48-Hour Editorial Turnaround</span>
-        <span class="text-paper-border hidden md:inline">&bull;</span>
-        <a href="mailto:kaung@offscripteditorial.com" class="text-paper-dark hover:text-paper-accent font-medium underline underline-offset-4 transition">
-          kaung@offscripteditorial.com
-        </a>
+      <div class="flex items-center space-x-5 tabular-nums">
+        <span class="hidden md:inline text-[#92642a] font-mono text-[11px] uppercase tracking-wider font-semibold">Strictly Capped at 4 Retainer Partners</span>
+        <span class="text-[#d1cfc7] hidden md:inline">&bull;</span>
+        <a href="mailto:kaung@offscripteditorial.com" class="text-[#121316] hover:text-[#92642a] font-mono text-[11px] font-medium underline underline-offset-4 transition">kaung@offscripteditorial.com</a>
       </div>
     </div>
   </div>
 
   <!-- MAIN NAVIGATION -->
-  <header class="sticky top-0 z-40 bg-paper-light/95 backdrop-blur-md border-b border-paper-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#top" class="flex items-baseline space-x-2 group">
-        <span class="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-paper-dark group-hover:text-paper-accent transition">Offscript</span>
-        <span class="text-xs uppercase tracking-[0.2em] text-paper-muted font-semibold">Editorial</span>
+  <header class="sticky top-0 z-40 bg-[#fbfbf9]/95 backdrop-blur-md border-b border-[#e5e4de]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center space-x-3 group">
+        <!-- Monogram Mark (36px circular #141618 emblem) -->
+        <div class="h-9 w-9 rounded-full bg-[#141618] flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform duration-200">
+          <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2236%2036%20168%20168%22%3E%3Cpath%20d%3D%22M96%2C71L91%2C76L86%2C86L84%2C92L84%2C95L83%2C96L85%2C102L88%2C107L94%2C113L100%2C117L104%2C118L109%2C121L128%2C127L135%2C131L142%2C138L146%2C148L146%2C159L145%2C160L144%2C166L141%2C170L142%2C170L150%2C160L154%2C151L155%2C145L156%2C144L156%2C140L157%2C139L157%2C129L151%2C120L146%2C116L134%2C110L112%2C103L103%2C98L97%2C92L94%2C85L94%2C75ZM152%2C58L149%2C61L142%2C61L125%2C55L104%2C57L86%2C65L66%2C85L58%2C104L57%2C130L66%2C154L81%2C171L81%2C181L85%2C177L91%2C177L113%2C184L136%2C182L160%2C169L173%2C154L181%2C135L182%2C109L173%2C85L158%2C69L158%2C86L163%2C106L162%2C140L154%2C163L142%2C176L126%2C182L103%2C179L86%2C164L78%2C145L76%2C106L82%2C82L88%2C72L105%2C59L129%2C58L144%2C69L152%2C89Z%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E" alt="Offscript Editorial OS Mark" class="h-full w-full object-contain filter invert" />
+        </div>
+        <!-- Wordmark -->
+        <div class="flex flex-col">
+          <span class="font-serif text-xl font-semibold tracking-tight text-[#121316]">Offscript</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#575a65] font-semibold -mt-1">Editorial</span>
+        </div>
       </a>
 
-      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-paper-charcoal">
-        <a href="#philosophy" class="hover:text-paper-accent transition">Philosophy</a>
-        <a href="#folio" class="hover:text-paper-accent transition">Voice Calibration</a>
-        <a href="#tearsheet" class="hover:text-paper-accent transition">The Tear Sheet</a>
-        <a href="#craft" class="hover:text-paper-accent transition">Our Craft</a>
-        <a href="#engagements" class="hover:text-paper-accent transition">Engagements</a>
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-[#575a65]">
+        <a href="#protocol" class="hover:text-[#121316] transition">The Protocol</a>
+        <a href="#tearsheet" class="hover:text-[#121316] transition">The Dossier</a>
+        <a href="#folio" class="hover:text-[#121316] transition">Voice Calibration</a>
+        <a href="#impact" class="hover:text-[#121316] transition">Commercial Impact</a>
+        <a href="#engagements" class="hover:text-[#121316] transition">Engagements</a>
       </nav>
 
-      <div class="flex items-center space-x-3">
-        <button id="navContactBtn" class="bg-paper-accent hover:bg-paper-accentHover text-white px-5 py-2.5 rounded text-sm font-medium transition shadow-sm flex items-center space-x-2">
-          <span>Inquire About Representation</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </button>
-      </div>
+      <button id="navContactBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-[#f8fafc] px-5 py-2.5 rounded text-xs sm:text-sm font-medium transition shadow-sm flex items-center space-x-2">
+        <span>Inquire About Representation</span>
+        <svg class="w-4 h-4 text-[#92642a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </button>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section id="top" class="pt-16 pb-24 border-b border-paper-border bg-gradient-to-b from-paper-light to-paper-DEFAULT">
+  <section id="top" class="pt-16 pb-24 border-b border-[#e5e4de] bg-gradient-to-b from-[#fbfbf9] to-[#f4f3ef]/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        
-        <!-- Left Column: Editorial Headline & Lead -->
         <div class="lg:col-span-7 space-y-8">
-          <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-paper-warm border border-paper-border text-paper-accent text-xs font-semibold uppercase tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-paper-accent"></span>
-            <span>Bespoke B2B Executive Ghostwriting</span>
+          <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-[#fef8ee] border border-[#e5e4de] text-[#92642a] font-mono text-xs font-semibold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-[#92642a]"></span>
+            <span>Bespoke B2B Ghostwriting // Principal-Led</span>
           </div>
 
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-paper-dark leading-[1.12] tracking-tight">
-            We turn your unscripted spoken convictions into <span class="italic text-paper-accent">market-defining</span> executive essays.
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-[#121316] leading-[1.1] tracking-tight balance-text">
+            We turn your unscripted spoken convictions into <span class="italic text-[#92642a]">market-defining</span> executive memos.
           </h1>
 
-          <p class="text-lg sm:text-xl text-paper-charcoal leading-relaxed font-normal max-w-2xl">
+          <p class="text-lg sm:text-xl text-[#575a65] leading-relaxed font-normal max-w-2xl">
             B2B founders and operating executives rarely lack original perspective—they lack the quiet hours required to shape it. Offscript Editorial distills your existing podcast appearances, keynotes, and voice memos into authoritative written narratives, without adding a single meeting to your calendar.
           </p>
 
-          <!-- Key Editorial Pillars Strip -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-paper-border">
-            <div>
-              <div class="font-serif text-2xl font-medium text-paper-dark">Zero Meetings</div>
-              <div class="text-xs text-paper-muted mt-1 leading-relaxed">No weekly ghostwriter interviews. We work entirely from your recorded conversations.</div>
-            </div>
-            <div>
-              <div class="font-serif text-2xl font-medium text-paper-dark">Senior Editors Only</div>
-              <div class="text-xs text-paper-muted mt-1 leading-relaxed">Every manuscript is shaped by experienced B2B editors fluent in commercial strategy.</div>
-            </div>
-            <div>
-              <div class="font-serif text-2xl font-medium text-paper-dark">48-Hour Delivery</div>
-              <div class="text-xs text-paper-muted mt-1 leading-relaxed">From raw spoken recording to a curated folio of publication-ready executive essays.</div>
-            </div>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
+            <button id="heroContactBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-[#f8fafc] px-7 py-4 rounded text-sm font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2.5">
+              <span>Request an Editorial Teardown</span>
+              <svg class="w-4 h-4 text-[#92642a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="#tearsheet" class="border border-[#d1cfc7] bg-white hover:bg-[#f4f3ef] text-[#121316] px-6 py-4 rounded text-sm font-semibold transition flex items-center justify-center space-x-2">
+              <span>Inspect Lenny Dossier (PDF)</span>
+              <span class="text-[#92642a]">&darr;</span>
+            </a>
           </div>
 
-          <!-- Hero Actions -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-            <button id="heroContactBtn" class="bg-paper-accent hover:bg-paper-accentHover text-white px-7 py-4 rounded text-sm font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2.5">
-              <span>Start an Editorial Conversation</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-            <a href="#folio" class="border border-paper-border bg-white hover:bg-paper-warm text-paper-dark px-6 py-4 rounded text-sm font-medium transition flex items-center justify-center space-x-2">
-              <span>Explore the Reading Room</span>
-            </a>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-[#e5e4de] tabular-nums">
+            <div>
+              <div class="font-mono text-[11px] uppercase tracking-wider text-[#92642a] font-semibold mb-1">01 // Zero Calendar Drag</div>
+              <div class="font-serif text-2xl font-medium text-[#121316]">Zero Meetings</div>
+              <div class="text-xs text-[#575a65] mt-1 leading-relaxed">No weekly ghostwriter interviews. We work entirely from your recorded conversations.</div>
+            </div>
+            <div>
+              <div class="font-mono text-[11px] uppercase tracking-wider text-[#92642a] font-semibold mb-1">02 // Sole-Operator Craft</div>
+              <div class="font-serif text-2xl font-medium text-[#121316]">Principal-Led: Zero Delegation</div>
+              <div class="text-xs text-[#575a65] mt-1 leading-relaxed">Every manuscript is personally architected by our founding editor. Zero delegation to junior copywriters.</div>
+            </div>
+            <div>
+              <div class="font-mono text-[11px] uppercase tracking-wider text-[#92642a] font-semibold mb-1">03 // 48-Hour Sprint</div>
+              <div class="font-serif text-2xl font-medium text-[#121316]">48-Hour Delivery</div>
+              <div class="text-xs text-[#575a65] mt-1 leading-relaxed">From raw spoken recording to a curated folio of publication-ready executive memos.</div>
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Featured Editorial Manuscript Card -->
         <div class="lg:col-span-5">
-          <div class="bg-white border border-paper-border rounded-lg shadow-sm overflow-hidden">
-            <div class="bg-paper-warm px-6 py-4 border-b border-paper-border flex items-center justify-between">
-              <div class="flex items-center space-x-2">
-                <span class="text-xs font-semibold uppercase tracking-widest text-paper-accent">Editorial Proof // Folio No. 14</span>
-              </div>
-              <span class="font-serif italic text-xs text-paper-muted">From Spoken Transcript to Essay</span>
+          <div class="bg-white border border-[#e5e4de] rounded-lg editorial-shadow overflow-hidden">
+            <div class="bg-[#f4f3ef] px-6 py-4 border-b border-[#e5e4de] flex items-center justify-between">
+              <span class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a]">Case OE-2026-81 // Folio No. 14</span>
+              <span class="font-serif italic text-xs text-[#575a65]">From Spoken Transcript to Executive Memo</span>
             </div>
-
             <div class="p-6 sm:p-8 space-y-6">
-              <!-- Source Spoken Excerpt -->
-              <div class="bg-paper-DEFAULT p-4 rounded border-l-2 border-paper-gold">
-                <div class="flex items-center justify-between text-xs text-paper-muted mb-1.5">
-                  <span class="font-semibold uppercase tracking-wider text-paper-charcoal">Spoken Podcast Excerpt</span>
-                  <span class="font-serif italic">Minute 01:30</span>
+              <div class="bg-[#fbfbf9] p-4 rounded border border-[#e5e4de]">
+                <div class="flex items-center justify-between text-xs text-[#8a8d98] mb-1.5 tabular-nums">
+                  <span class="font-mono font-semibold uppercase tracking-wider text-[#121316]">Spoken Podcast Excerpt (Jen Abel)</span>
+                  <span class="font-mono">00:01:30</span>
                 </div>
-                <p class="font-serif italic text-sm text-paper-charcoal leading-relaxed">
+                <p class="font-serif italic text-sm text-[#575a65] leading-relaxed">
                   "The win rate for enterprise is usually around 30 to 35%. If your win rate is higher than that, your price is too low... The worst thing you can do is charge somebody's friend 50 and somebody else 500k. They talk, especially at the corporate executive level."
                 </p>
               </div>
-
-              <!-- Arrow Divider -->
-              <div class="flex items-center space-x-3 text-xs text-paper-muted uppercase tracking-widest">
-                <div class="flex-1 border-t border-paper-border"></div>
-                <span class="font-serif italic text-paper-accent lowercase text-sm">distilled into executive prose</span>
-                <div class="flex-1 border-t border-paper-border"></div>
+              <div class="flex items-center space-x-3 text-xs text-[#8a8d98] uppercase tracking-widest">
+                <div class="flex-1 border-t border-[#e5e4de]"></div>
+                <span class="font-serif italic text-[#92642a] lowercase text-sm">calibrated into boardroom brief</span>
+                <div class="flex-1 border-t border-[#e5e4de]"></div>
               </div>
-
-              <!-- Published Manuscript Excerpt -->
               <div class="space-y-3">
-                <div class="text-xs font-semibold uppercase tracking-wider text-paper-accent">Finished Executive Column</div>
-                <h3 class="font-serif text-xl font-medium text-paper-dark leading-snug">
-                  Why a 60% Enterprise Win Rate Is a Pricing Liability, Not a Victory
-                </h3>
-                <p class="text-sm text-paper-charcoal leading-relaxed">
-                  Early-stage founders often celebrate a 60% enterprise close rate as proof of product-market fit. In reality, closing six out of ten enterprise deals rarely means your product is irresistible. It means you are surrendering six-figure value at discount margins.
-                </p>
-                <p class="text-sm text-paper-charcoal leading-relaxed">
-                  Healthy enterprise close rates sit between 25% and 35%. If seven out of ten prospects are not pushing back on contract size, you are not discovering your market ceiling—you are subsidizing buyers who had the budget to pay triple.
-                </p>
+                <div class="font-mono text-xs font-semibold uppercase tracking-wider text-[#047857]">Finished Operator Perspective</div>
+                <h3 class="font-serif text-xl font-medium text-[#121316] leading-snug">Why a 60% Enterprise Win Rate Is a Pricing Liability, Not a Victory</h3>
+                <p class="text-sm text-[#575a65] leading-relaxed">Early-stage founders often celebrate a 60% enterprise close rate as proof of product-market fit. In reality, closing six out of ten enterprise deals rarely means your product is irresistible. It means you are surrendering six-figure value at discount margins.</p>
+                <p class="text-sm text-[#575a65] leading-relaxed">Healthy enterprise close rates sit between 25% and 35%. If seven out of ten prospects are not pushing back on contract size, you are not discovering your market ceiling—you are subsidizing buyers who had the budget to pay triple.</p>
               </div>
-
-              <div class="pt-4 border-t border-paper-border flex items-center justify-between text-xs text-paper-muted">
-                <span>Thesis: Commercial Margin Defense</span>
-                <a href="#folio" class="text-paper-accent font-semibold hover:underline">Read Full Folio &rarr;</a>
+              <div class="pt-4 border-t border-[#e5e4de] flex items-center justify-between text-xs text-[#575a65]">
+                <span class="font-mono text-[11px]">THESIS: MARGIN DEFENSE</span>
+                <a href="#tearsheet" class="text-[#92642a] font-semibold hover:underline">Inspect Full 5-Page Dossier &rarr;</a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- SECTION 01: EDITORIAL PHILOSOPHY -->
-  <section id="philosophy" class="py-24 border-b border-paper-border bg-white">
+  <!-- SECTION 01: THE PHILOSOPHY (#protocol) -->
+  <section id="protocol" class="py-24 border-b border-[#e5e4de] bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        <div class="lg:col-span-4">
-          <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-3">01 // Our Philosophy</div>
-          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-paper-dark leading-tight">
+        <div class="lg:col-span-5">
+          <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-3">01 // The Protocol</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#121316] leading-tight balance-text">
             Thought leadership should read like a boardroom memo, not a marketing brochure.
           </h2>
         </div>
-
-        <div class="lg:col-span-8 space-y-6 text-base sm:text-lg text-paper-charcoal leading-relaxed">
-          <p class="drop-cap">
-            Most executive ghostwriting fails because it confuses volume with authority. When busy founders hand their voice over to conventional content agencies, their hard-won operational lessons get flattened into cheerful listicles, generic industry summaries, and breathless platitudes that alienate sophisticated enterprise buyers.
-          </p>
-          <p>
-            Inspired by the editorial standards of premier B2B narrative studios, Offscript Editorial was built on a simpler premise: <strong>your sharpest thinking already happens out loud.</strong> When you debate a peer on a podcast, walk your leadership team through a post-mortem, or record a voice note after a customer call, you speak with candor, nuance, and conviction.
-          </p>
-          <p>
-            Our role is not to invent opinions for you. Our role is to listen with an editor's ear—isolating your most defensible commercial insights, structuring them into cohesive arguments, and polishing every sentence until it carries the unmistakable cadence of your leadership.
-          </p>
+        <div class="lg:col-span-7 space-y-6 text-base sm:text-lg text-[#575a65] leading-relaxed">
+          <p class="drop-cap">Most executive ghostwriting fails because agencies confuse volume with authority. When busy founders hand their voice over to conventional content shops, their hard-won operational lessons get flattened into cheerful listicles, breathless platitudes, and generic AI summaries.</p>
+          <p class="text-[#121316] font-medium">Our role is to listen with an editor's ear: isolating your commercial friction, eliminating conversational filler, and preserving your authentic cadence.</p>
+          <p>Through <strong>Direct Principal Engagement: Led by Founding Editorial Director</strong>, every recorded keynote, podcast dialogue, or voice note is distilled directly by our founding editor—turning your unscripted convictions into boardroom briefs that command peer and buyer respect.</p>
         </div>
       </div>
 
-      <!-- Three Editorial Standards Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-paper-border">
-        <div class="bg-paper-light border border-paper-border p-8 rounded-lg">
-          <div class="font-serif text-sm italic text-paper-accent mb-2">Principle I</div>
-          <h3 class="font-serif text-2xl font-medium text-paper-dark mb-3">Asynchronous by Design</h3>
-          <p class="text-sm text-paper-charcoal leading-relaxed">
-            Your calendar is your scarcest asset. We never ask you to sit through recurring 60-minute interview calls. Send us a podcast link, a recorded webinar, or a five-minute voice memo; our editorial desk handles the rest.
-          </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-[#e5e4de]">
+        <div class="bg-[#fbfbf9] border border-[#e5e4de] p-8 rounded-lg editorial-shadow">
+          <div class="font-serif text-sm italic text-[#92642a] mb-2">Principle I</div>
+          <h3 class="font-serif text-2xl font-medium text-[#121316] mb-3">Asynchronous by Design</h3>
+          <p class="text-sm text-[#575a65] leading-relaxed">Your calendar is your scarcest asset. We never ask you to sit through recurring 60-minute interview calls. Send us a podcast link, a recorded webinar, or a five-minute voice memo; our founding desk handles the rest.</p>
         </div>
-
-        <div class="bg-paper-light border border-paper-border p-8 rounded-lg">
-          <div class="font-serif text-sm italic text-paper-accent mb-2">Principle II</div>
-          <h3 class="font-serif text-2xl font-medium text-paper-dark mb-3">Thesis-Driven Rigor</h3>
-          <p class="text-sm text-paper-charcoal leading-relaxed">
-            We do not write surface-level recaps. Every piece is anchored in a clear commercial thesis—examining unit economics, architectural trade-offs, organizational design, or contrarian market truths that earn peer respect.
-          </p>
+        <div class="bg-[#fbfbf9] border border-[#e5e4de] p-8 rounded-lg editorial-shadow">
+          <div class="font-serif text-sm italic text-[#92642a] mb-2">Principle II</div>
+          <h3 class="font-serif text-2xl font-medium text-[#121316] mb-3">Thesis-Driven Rigor</h3>
+          <p class="text-sm text-[#575a65] leading-relaxed">We do not write surface-level recaps. Every executive memo is anchored in a clear commercial thesis—examining unit economics, architectural trade-offs, organizational design, or contrarian market truths.</p>
         </div>
-
-        <div class="bg-paper-light border border-paper-border p-8 rounded-lg">
-          <div class="font-serif text-sm italic text-paper-accent mb-2">Principle III</div>
-          <h3 class="font-serif text-2xl font-medium text-paper-dark mb-3">Uncompromising Restraint</h3>
-          <p class="text-sm text-paper-charcoal leading-relaxed">
-            True executive authority never begs for attention. We write clean, muscular prose free of gimmicks, engagement bait, or artificial clichés—ensuring your public presence reflects the caliber of your company.
-          </p>
+        <div class="bg-[#fbfbf9] border border-[#e5e4de] p-8 rounded-lg editorial-shadow">
+          <div class="font-serif text-sm italic text-[#92642a] mb-2">Principle III</div>
+          <h3 class="font-serif text-2xl font-medium text-[#121316] mb-3">Uncompromising Restraint</h3>
+          <p class="text-sm text-[#575a65] leading-relaxed">Zero emojis. Zero hashtags. Zero breathless engagement bait. We write clean, muscular prose free of gimmicks—ensuring your public presence reflects the institutional caliber of your company.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 02: THE READING ROOM (INTERACTIVE VOICE & CADENCE CALIBRATION) -->
-  <section id="folio" class="py-24 border-b border-paper-border bg-paper-DEFAULT">
+  <!-- SECTION 02: THE EDITORIAL TEAR SHEET (#tearsheet) -->
+  <section id="tearsheet" class="py-24 border-b border-[#e5e4de] bg-[#fbfbf9]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-12">
-        <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-3">02 // The Reading Room</div>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-paper-dark leading-tight">
-          Voice &amp; Cadence Calibration: How We Adapt to Your Executive Temperament
-        </h2>
-        <p class="text-paper-charcoal mt-4 text-base leading-relaxed">
-          No two leaders think or speak alike. A decisive revenue leader speaks in crisp, direct declaratives; a technical founder builds layered architectural arguments; a category creator leads with narrative tension. Select a spoken conversation and an editorial voice below to see how our editors calibrate tone while preserving the speaker's core conviction.
-        </p>
+      <div class="max-w-3xl mb-8">
+        <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-3">02 // The Editorial Tear Sheet &bull; Case Ref: OE-2026-81</div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#121316] leading-tight balance-text">The Voice Extraction Protocol: Jen Abel on Lenny's Podcast</h2>
+        <p class="text-[#575a65] mt-4 text-base sm:text-lg leading-relaxed">Converting 90 seconds of raw operator audio into an institutional executive asset.</p>
       </div>
 
-      <!-- Interactive Controls Bar -->
-      <div class="bg-white border border-paper-border rounded-lg p-6 mb-8 shadow-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          
-          <!-- Step 1: Select Spoken Source -->
+      <!-- TOP NATIVE STATIC PDF DOWNLOAD BANNER -->
+      <div class="mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 bg-[#f4f3ef] border border-[#e5e4de] rounded-lg editorial-shadow">
+        <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+          <div class="w-10 h-10 rounded bg-[#141618] text-white flex items-center justify-center font-mono text-xs font-bold shrink-0">PDF</div>
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-paper-muted mb-3">
-              1. Select Spoken Conversation Source
-            </label>
+            <h4 class="text-sm font-semibold text-[#121316]">Case Dossier OE-2026-81: Complete 5-Page Teardown</h4>
+            <p class="text-xs text-[#575a65]">Jen Abel on Lenny's Podcast // Voice Extraction &amp; Anti-Discounting Thesis</p>
+          </div>
+        </div>
+        <a href="/assets/Offscript_Editorial_Teardown_01_Master.pdf" download="Offscript_Editorial_Teardown_01_Master.pdf" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-[#141618] hover:bg-[#25282c] text-white text-xs uppercase tracking-wider font-semibold rounded transition shadow-sm shrink-0">
+          <span>Download Master Dossier (PDF)</span>
+          <svg class="ml-2 w-4 h-4 text-[#92642a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        </a>
+      </div>
+
+      <!-- MODULAR TABBED TOGGLE BAR -->
+      <div class="bg-white border border-[#e5e4de] rounded-lg p-3 mb-8 flex flex-wrap items-center justify-between gap-2 editorial-shadow">
+        <div class="flex flex-wrap items-center gap-2" role="tablist">
+          <button type="button" data-dossier-tab="all" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">All 3 Stages (Full View)</button>
+          <button type="button" data-dossier-tab="panel1" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 01 // Raw Audio</button>
+          <button type="button" data-dossier-tab="panel2" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 02 // Translation Trap</button>
+          <button type="button" data-dossier-tab="panel3" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 03 // Calibrated Asset</button>
+        </div>
+        <span class="font-mono text-[11px] text-[#8a8d98] px-2 hidden xl:inline tabular-nums">SOURCE: LENNY'S PODCAST @ 00:01:30</span>
+      </div>
+
+      <div class="space-y-8">
+        <!-- PANEL 1 -->
+        <div id="dossierPanel1" class="dossier-stage-panel bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-[#e5e4de] tabular-nums">
+            <div class="flex items-center space-x-3">
+              <span class="px-2.5 py-1 rounded bg-[#fef8ee] border border-[#e5e4de] font-mono text-xs font-semibold text-[#92642a]">PANEL 01 // RAW OPERATOR INTAKE</span>
+              <span class="font-mono text-xs text-[#575a65]">LENNY'S PODCAST // TIMESTAMP: 00:01:30</span>
+            </div>
+            <span class="font-mono text-xs text-[#8a8d98]">DOSSIER PAGE 02 OF 05</span>
+          </div>
+          <blockquote class="p-6 rounded bg-[#f4f3ef] border border-[#e5e4de] font-serif italic text-lg sm:text-xl text-[#121316] leading-relaxed mb-6">
+            "What are the benchmarks for how often you get through each of these stages? The win rate for enterprise is usually around 30 to 35%. If your win rate is higher than that, your price is too low. There's a lot of part of the market that's just not in a maturity perspective to take you on. And that's healthy... The worst thing you can do is charge somebody's friend 50 and somebody else 500k. They talk... Especially at the corporate executive level."
+          </blockquote>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded p-4">
+              <span class="font-mono text-xs uppercase tracking-wider font-semibold text-[#92642a] block mb-1">Audio Artifacts:</span>
+              <span class="text-sm text-[#575a65]">Syntax drift &amp; fragmented conversational pacing</span>
+            </div>
+            <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded p-4">
+              <span class="font-mono text-xs uppercase tracking-wider font-semibold text-[#047857] block mb-1">Extracted Signal:</span>
+              <span class="text-sm text-[#121316] font-medium">Margin erosion via vanity win-rates &amp; executive backchannel price anchoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 2 -->
+        <div id="dossierPanel2" class="dossier-stage-panel bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-[#e5e4de] tabular-nums">
+            <div class="flex items-center space-x-3">
+              <span class="px-2.5 py-1 rounded bg-[#fef8ee] border border-[#e5e4de] font-mono text-xs font-semibold text-[#92642a]">PANEL 02 // THE TRANSLATION TRAP</span>
+              <span class="font-mono text-xs text-[#575a65]">COMPARATIVE EDITORIAL AUDIT</span>
+            </div>
+            <span class="font-mono text-xs text-[#8a8d98]">DOSSIER PAGE 03 OF 05</span>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            <div class="bg-[#fbfbf9] border border-[#b91c1c] rounded-lg p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-[#e5e4de]">
+                  <div>
+                    <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#b91c1c] block">The Amateur Mistake // The Summarizer</span>
+                    <h3 class="font-serif text-xl font-medium text-[#121316] mt-0.5">Surface-Level Podcast Recap</h3>
+                  </div>
+                  <span class="font-mono text-[11px] font-semibold px-2.5 py-1 rounded bg-red-50 text-[#b91c1c] border border-red-200">REJECTED &bull; DILUTES AUTHORITY</span>
+                </div>
+                <div class="bg-white border border-[#e5e4de] p-5 rounded text-sm text-[#575a65] italic leading-relaxed mb-5">
+                  "Key Takeaways from Jen Abel: Enterprise sales win rates average 30%! If your win rate is over 35%, raise your prices immediately and stop discounting!"
+                </div>
+              </div>
+              <div class="pt-4 border-t border-[#e5e4de] space-y-1.5">
+                <div class="font-mono text-xs font-semibold uppercase tracking-wider text-[#b91c1c]">Audit Verdict:</div>
+                <p class="text-xs text-[#575a65] leading-relaxed font-medium">Zero Commercial Risk &bull; Polite Platitudes &bull; Reads like an unpaid intern summarizing someone else's wisdom.</p>
+              </div>
+            </div>
+
+            <div class="bg-[#f4f3ef] border border-[#047857] rounded-lg p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-[#d1cfc7]">
+                  <div>
+                    <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#047857] block">The Editorial Filter // Voice Extraction</span>
+                    <h3 class="font-serif text-xl font-medium text-[#121316] mt-0.5">Thesis-Driven Executive Memo</h3>
+                  </div>
+                  <span class="font-mono text-[11px] font-semibold px-2.5 py-1 rounded bg-[#047857] text-white">VALIDATED &bull; PEER-TO-PEER GRAVITAS</span>
+                </div>
+                <div class="bg-white border border-[#d1cfc7] p-5 rounded text-sm sm:text-base text-[#121316] font-medium leading-relaxed mb-5 shadow-sm">
+                  "If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken. You are subsidizing buyers who should be paying triple."
+                </div>
+              </div>
+              <div class="pt-4 border-t border-[#d1cfc7] space-y-1.5">
+                <div class="font-mono text-xs font-semibold uppercase tracking-wider text-[#047857]">Validation Points:</div>
+                <p class="text-xs text-[#121316] leading-relaxed font-medium">Active Commercial Threat &bull; Asymmetrical Rhythm &bull; Fluff-Stripped operator prose.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 3 -->
+        <div id="dossierPanel3" class="dossier-stage-panel bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-[#e5e4de] tabular-nums">
+            <div class="flex items-center space-x-3">
+              <span class="px-2.5 py-1 rounded bg-[#fef8ee] border border-[#e5e4de] font-mono text-xs font-semibold text-[#047857]">PANEL 03 // THE ASYNCHRONOUS ASSET</span>
+              <span class="font-mono text-xs text-[#575a65]">LINKEDIN EXECUTIVE FORMAT // 45-SEC READ</span>
+            </div>
+            <button id="copyTearsheetMemoBtn" type="button" class="border border-[#d1cfc7] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] px-3.5 py-1.5 rounded font-mono text-xs font-semibold transition">Copy Executive Memo</button>
+          </div>
+          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-6 sm:p-8 space-y-4 text-base text-[#121316] leading-relaxed mb-8">
+            <p class="font-serif text-xl sm:text-2xl font-medium text-[#121316]">If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.</p>
+            <p class="text-[#575a65]">Early-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate doesn’t mean your product is irresistible. It means you are giving away six-figure value at discount margins.</p>
+            <p class="font-mono text-xs sm:text-sm font-semibold text-[#92642a] bg-[#fef8ee] px-4 py-2.5 rounded border border-[#e5e4de] inline-block tabular-nums">Target Close Rate: 25% to 35% &nbsp;|&nbsp; Disqualification Floor: 65% to 75%</p>
+            <p class="text-[#575a65]">If 7 out of 10 prospects aren’t balking at contract size, you aren't testing market ceiling. Worse: corporate buyers talk in private networks.</p>
+            <p class="text-[#121316] font-medium">Discounting a $150k deal down to $50k permanently anchors your price ceiling across the industry.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 tabular-nums">
+            <div class="bg-[#f4f3ef] border border-[#e5e4de] rounded-lg p-5">
+              <div class="font-serif text-3xl font-medium text-[#92642a] mb-1">25% to 35%</div>
+              <div class="text-sm font-semibold text-[#121316]">Healthy Enterprise Close</div>
+              <div class="text-xs text-[#575a65] mt-1">Any higher signals chronic underpricing</div>
+            </div>
+            <div class="bg-[#f4f3ef] border border-[#e5e4de] rounded-lg p-5">
+              <div class="font-serif text-3xl font-medium text-[#92642a] mb-1">65% to 75%</div>
+              <div class="text-sm font-semibold text-[#121316]">Disqualification Floor</div>
+              <div class="text-xs text-[#575a65] mt-1">Natural friction required for margins</div>
+            </div>
+            <div class="bg-[#f4f3ef] border border-[#e5e4de] rounded-lg p-5">
+              <div class="font-serif text-3xl font-medium text-[#92642a] mb-1">100%</div>
+              <div class="text-sm font-semibold text-[#121316]">Backchannel Risk Exposure</div>
+              <div class="text-xs text-[#575a65] mt-1">Buyers compare vendor sizes in private groups</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM NATIVE STATIC PDF DOWNLOAD BANNER -->
+      <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 bg-[#f4f3ef] border border-[#e5e4de] rounded-lg editorial-shadow">
+        <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+          <div class="w-10 h-10 rounded bg-[#141618] text-white flex items-center justify-center font-mono text-xs font-bold shrink-0">PDF</div>
+          <div>
+            <h4 class="text-sm font-semibold text-[#121316]">Case Dossier OE-2026-81: Complete 5-Page Teardown</h4>
+            <p class="text-xs text-[#575a65]">Jen Abel on Lenny's Podcast // Voice Extraction &amp; Anti-Discounting Thesis</p>
+          </div>
+        </div>
+        <a href="/assets/Offscript_Editorial_Teardown_01_Master.pdf" download="Offscript_Editorial_Teardown_01_Master.pdf" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-[#141618] hover:bg-[#25282c] text-white text-xs uppercase tracking-wider font-semibold rounded transition shadow-sm shrink-0">
+          <span>Download Master Dossier (PDF)</span>
+          <svg class="ml-2 w-4 h-4 text-[#92642a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02B: THE READING ROOM (#folio) -->
+  <section id="folio" class="py-24 border-b border-[#e5e4de] bg-[#f4f3ef]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-3">02B // The Reading Room</div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#121316] leading-tight balance-text">Voice &amp; Cadence Calibration: Adapting to Your Executive Temperament</h2>
+        <p class="text-[#575a65] mt-4 text-base leading-relaxed">Select a spoken conversation and an executive voice below to inspect how our founding editor calibrates tone while preserving your core conviction.</p>
+      </div>
+
+      <div class="bg-white border border-[#e5e4de] rounded-lg p-6 mb-8 editorial-shadow">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <label class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#575a65] mb-3">1. Select Spoken Conversation Source</label>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="caseSelectorGroup">
-              <button class="case-btn text-left p-3 rounded border border-paper-accent bg-paper-accent text-white transition" data-case="pricing">
+              <button type="button" class="case-btn text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-case="pricing">
                 <div class="font-serif font-medium text-base">Enterprise Pricing</div>
                 <div class="text-xs opacity-80 mt-0.5">Margin &amp; Deal Discipline</div>
               </button>
-              <button class="case-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-case="revops">
+              <button type="button" class="case-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="revops">
                 <div class="font-serif font-medium text-base">Revenue Architecture</div>
-                <div class="text-xs text-paper-muted mt-0.5">Systems vs. Ad-Hoc Tickets</div>
+                <div class="text-xs text-[#575a65] mt-0.5">Systems vs. Ad-Hoc Tickets</div>
               </button>
-              <button class="case-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-case="engineering">
+              <button type="button" class="case-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="engineering">
                 <div class="font-serif font-medium text-base">Engineering Resilience</div>
-                <div class="text-xs text-paper-muted mt-0.5">Velocity vs. Recovery</div>
+                <div class="text-xs text-[#575a65] mt-0.5">Velocity vs. Recovery</div>
               </button>
             </div>
           </div>
-
-          <!-- Step 2: Select Editorial Voice -->
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-paper-muted mb-3">
-              2. Select Executive Editorial Voice
-            </label>
+            <label class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#575a65] mb-3">2. Select Calibrated Executive Voice</label>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="voiceSelectorGroup">
-              <button class="voice-btn text-left p-3 rounded border border-paper-accent bg-paper-accent text-white transition" data-voice="operator">
+              <button type="button" class="voice-btn text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-voice="operator">
                 <div class="font-serif font-medium text-base">The Direct Operator</div>
                 <div class="text-xs opacity-80 mt-0.5">Crisp, decisive &amp; punchy</div>
               </button>
-              <button class="voice-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-voice="strategist">
+              <button type="button" class="voice-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="strategist">
                 <div class="font-serif font-medium text-base">The Systems Strategist</div>
-                <div class="text-xs text-paper-muted mt-0.5">Analytical &amp; boardroom-ready</div>
+                <div class="text-xs text-[#575a65] mt-0.5">Analytical &amp; boardroom-ready</div>
               </button>
-              <button class="voice-btn text-left p-3 rounded border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark transition" data-voice="essayist">
-                <div class="font-serif font-medium text-base">The Narrative Essayist</div>
-                <div class="text-xs text-paper-muted mt-0.5">Reflective &amp; story-driven</div>
+              <button type="button" class="voice-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="founder">
+                <div class="font-serif font-medium text-base">The Narrative Founder</div>
+                <div class="text-xs text-[#575a65] mt-0.5">Reflective &amp; story-driven</div>
               </button>
             </div>
           </div>
-
         </div>
       </div>
 
-      <!-- Split Comparison Display -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- Left: Raw Transcript & Editorial Notes -->
         <div class="lg:col-span-5 space-y-6">
-          <div class="bg-white border border-paper-border rounded-lg p-6 sm:p-8 shadow-sm">
-            <div class="flex items-center justify-between border-b border-paper-border pb-4 mb-5">
+          <div class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
+            <div class="flex items-center justify-between border-b border-[#e5e4de] pb-4 mb-5 tabular-nums">
               <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-paper-muted block">Unscripted Source Material</span>
-                <h3 class="font-serif text-xl font-medium text-paper-dark mt-0.5" id="folioSpeakerTitle">Enterprise GTM Podcast</h3>
+                <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#8a8d98] block">Unscripted Source Material</span>
+                <h3 class="font-serif text-xl font-medium text-[#121316] mt-0.5" id="folioSpeakerTitle">Enterprise GTM Podcast</h3>
               </div>
-              <span class="text-xs font-serif italic bg-paper-warm px-3 py-1 rounded text-paper-charcoal border border-paper-border" id="folioTimecode">
-                Excerpt @ 01:30
-              </span>
+              <span class="font-mono text-xs bg-[#f4f3ef] px-3 py-1 rounded text-[#121316] border border-[#e5e4de]" id="folioTimecode">Excerpt @ 01:30</span>
             </div>
-
             <div class="space-y-4">
-              <div class="text-xs font-semibold uppercase tracking-wider text-paper-accent">Verbatim Spoken Transcript:</div>
-              <blockquote class="p-4 bg-paper-light rounded border-l-2 border-paper-accent font-serif italic text-base text-paper-charcoal leading-relaxed" id="folioRawTranscript">
-                "What are the benchmarks for how often you get through each of these stages? The win rate for enterprise is usually around 30 to 35%. If your win rate is higher than that, your price is too low. There's a lot of part of the market that's just not in a maturity perspective to take you on. And that's healthy... The worst thing you can do is charge somebody's friend 50 and somebody else 500k. They talk... Especially at the corporate executive level."
-              </blockquote>
+              <div class="font-mono text-xs font-semibold uppercase tracking-wider text-[#92642a]">Verbatim Spoken Transcript:</div>
+              <blockquote class="p-4 bg-[#fbfbf9] rounded border border-[#e5e4de] font-serif italic text-base text-[#121316] leading-relaxed" id="folioRawTranscript"></blockquote>
             </div>
-
-            <div class="mt-6 pt-5 border-t border-paper-border space-y-3 text-sm">
+            <div class="mt-6 pt-5 border-t border-[#e5e4de] space-y-3 text-sm">
               <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-paper-muted block">Editorial Angle Selected:</span>
-                <span class="font-medium text-paper-dark" id="folioEditorialAngle">Unit Economics &amp; Price Ceiling Integrity</span>
+                <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#8a8d98] block">Commercial Angle Selected:</span>
+                <span class="font-medium text-[#121316]" id="folioEditorialAngle"></span>
               </div>
               <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-paper-muted block">Core Executive Thesis:</span>
-                <span class="text-paper-charcoal" id="folioCoreThesis">An abnormally high enterprise close rate signals chronic underpricing, while inconsistent discounting erodes credibility across executive backchannels.</span>
+                <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#8a8d98] block">Core Executive Thesis:</span>
+                <span class="text-[#575a65]" id="folioCoreThesis"></span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Finished Executive Essay -->
         <div class="lg:col-span-7">
-          <div class="bg-white border border-paper-border rounded-lg p-6 sm:p-10 shadow-sm">
-            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-paper-border pb-4 mb-6">
+          <div class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-10 editorial-shadow">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e5e4de] pb-4 mb-6">
               <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-paper-accent block" id="folioVoiceLabel">VOICE CALIBRATION // THE DIRECT OPERATOR</span>
-                <span class="font-serif italic text-sm text-paper-muted" id="folioCadenceNote">Cadence: Decisive declarative sentences with high commercial urgency</span>
+                <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#92642a] block" id="folioVoiceLabel">VOICE CALIBRATION // THE DIRECT OPERATOR</span>
+                <span class="font-serif italic text-sm text-[#575a65]" id="folioCadenceNote">Cadence: Decisive declarative sentences with high commercial urgency</span>
               </div>
-              <button id="copyManuscriptBtn" class="border border-paper-border bg-paper-light hover:bg-paper-warm text-paper-dark px-3.5 py-1.5 rounded text-xs font-semibold transition flex items-center space-x-1.5">
-                <svg class="w-3.5 h-3.5 text-paper-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                <span>Copy Essay</span>
+              <button id="copyManuscriptBtn" type="button" class="border border-[#d1cfc7] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] px-3.5 py-1.5 rounded text-xs font-semibold transition flex items-center space-x-1.5">
+                <span>Copy Executive Memo</span>
               </button>
             </div>
-
-            <h4 class="font-serif text-2xl sm:text-3xl font-normal text-paper-dark mb-6 leading-snug" id="folioEssayHeadline">
-              If Your Enterprise Win Rate Is Sitting at 60%, Your Pricing Is Broken
-            </h4>
-
-            <div class="space-y-4 text-base text-paper-charcoal leading-relaxed whitespace-pre-line font-sans" id="folioEssayBody"></div>
-
-            <div class="mt-8 pt-5 border-t border-paper-border flex flex-wrap items-center justify-between text-xs text-paper-muted gap-2">
-              <span class="font-serif italic text-sm text-paper-charcoal">Prepared by the Offscript Editorial Desk</span>
-              <span>Publication-Ready LinkedIn &amp; Executive Column Format</span>
+            <h4 class="font-serif text-2xl sm:text-3xl font-normal text-[#121316] mb-6 leading-snug" id="folioMemoHeadline"></h4>
+            <div class="space-y-4 text-base text-[#575a65] leading-relaxed whitespace-pre-line font-sans" id="folioMemoBody"></div>
+            <div class="mt-8 pt-5 border-t border-[#e5e4de] flex flex-wrap items-center justify-between text-xs text-[#8a8d98] gap-2">
+              <span class="font-serif italic text-sm text-[#121316]">Direct Principal Engagement: Led by Founding Editorial Director</span>
+              <span class="font-mono text-[11px] uppercase">Publication-Ready Executive Memo &amp; Boardroom Brief</span>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- SECTION 03: THE EDITORIAL TEAR SHEET (BEFORE & AFTER COMPARISON) -->
-  <section id="tearsheet" class="py-24 border-b border-paper-border bg-white">
+  <!-- SECTION 03: THE COMMERCIAL IMPACT & PAIN POINTS LAYER (#impact) -->
+  <section id="impact" class="py-24 border-b border-[#e5e4de] bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <div class="text-[#92642a] font-mono text-xs uppercase tracking-[0.2em] font-semibold mb-3">03 // Commercial Architecture</div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#121316] leading-tight balance-text">Executive narrative is a revenue function, not a content project.</h2>
+        <p class="text-[#575a65] mt-4 text-base sm:text-lg leading-relaxed">How high-growth B2B founders turn unscripted convictions into enterprise pipeline and pricing defense.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+        <!-- Card 1: Pipeline Velocity -->
+        <div class="p-8 bg-white border border-[#e5e4de] rounded-lg shadow-sm">
+          <div class="text-[#92642a] font-mono text-xs uppercase tracking-widest font-semibold mb-3">01 // Pipeline Velocity</div>
+          <h3 class="font-serif text-xl font-semibold text-[#121316] mb-3">Compressing Enterprise Sales Cycles</h3>
+          <p class="text-sm text-[#575a65] leading-relaxed">In enterprise B2B, buying committees backchannel your reputation before they accept a demo. Publishing authoritative operational perspectives pre-sells prospects on your competence, eliminating weeks of introductory discovery posturing.</p>
+        </div>
+        <!-- Card 2: Pricing Power -->
+        <div class="p-8 bg-white border border-[#e5e4de] rounded-lg shadow-sm">
+          <div class="text-[#92642a] font-mono text-xs uppercase tracking-widest font-semibold mb-3">02 // Margin Defense</div>
+          <h3 class="font-serif text-xl font-semibold text-[#121316] mb-3">Defending Enterprise Contract Ceilings</h3>
+          <p class="text-sm text-[#575a65] leading-relaxed">When founders stay silent, their product gets evaluated as a commodity software line item. Uncompromising thought leadership establishes category authority, enabling you to defend 6-figure ACVs and refuse procurement discounting.</p>
+        </div>
+        <!-- Card 3: Calendar Defense -->
+        <div class="p-8 bg-white border border-[#e5e4de] rounded-lg shadow-sm">
+          <div class="text-[#92642a] font-mono text-xs uppercase tracking-widest font-semibold mb-3">03 // Zero Calendar Drag</div>
+          <h3 class="font-serif text-xl font-semibold text-[#121316] mb-3">Eliminating the Blank-Page Tax</h3>
+          <p class="text-sm text-[#575a65] leading-relaxed">Founders know they need to publish, but spend hours staring at blank Google Docs or rewriting lifeless agency copy. We extract 100% of your public presence from conversations you are already having.</p>
+        </div>
+      </div>
+
+      <!-- Modular Tabbed Commercial Diagnostic -->
+      <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-[#e5e4de]">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-wider font-semibold text-[#92642a] block">Interactive Commercial Diagnostic</span>
+            <h3 class="font-serif text-2xl font-normal text-[#121316] mt-0.5">Inspect How Executive Memos Solve Boardroom Bottlenecks</h3>
+          </div>
+          <div class="flex flex-wrap gap-2" role="tablist">
+            <button type="button" data-impact-tab="velocity" class="impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">01. Pipeline Velocity</button>
+            <button type="button" data-impact-tab="pricing" class="impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">02. Pricing Defense</button>
+            <button type="button" data-impact-tab="calendar" class="impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">03. Calendar Protection</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-5 bg-white border border-[#e5e4de] rounded p-5">
+            <div class="font-mono text-xs uppercase tracking-wider text-[#b91c1c] font-semibold mb-2" id="impactBeforeLabel">THE SILENT FOUNDER PENALTY</div>
+            <p class="text-sm text-[#575a65] leading-relaxed" id="impactBeforeBody">Prospects enter discovery calls skeptical, treating your account executives like commodity vendors and demanding 4-month proof-of-concept trials before involving the economic buyer.</p>
+          </div>
+          <div class="lg:col-span-7 bg-[#f4f3ef] border border-[#d1cfc7] rounded p-6">
+            <div class="font-mono text-xs uppercase tracking-wider text-[#047857] font-semibold mb-2" id="impactAfterLabel">THE OFFSCRIPT COMMERCIAL ADVANTAGE</div>
+            <h4 class="font-serif text-xl font-medium text-[#121316] mb-2" id="impactAfterTitle">Champion Forwarding Inside Private Slack Channels</h4>
+            <p class="text-sm text-[#121316] leading-relaxed" id="impactAfterBody">When you publish sharp operator perspectives on unit economics and systems architecture, VP-level champions screenshot your memos and share them inside internal buying channels—bringing economic buyers to the table pre-aligned with your worldview.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04: CAPACITY-CONSTRAINED ENGAGEMENTS (#engagements) -->
+  <section id="engagements" class="py-24 border-b border-[#e5e4de] bg-[#fbfbf9]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mb-14">
-        <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-3">03 // The Editorial Tear Sheet</div>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-paper-dark leading-tight">
-          The Difference Between Content Recapping and Executive Authorship
-        </h2>
-        <p class="text-paper-charcoal mt-4 text-base leading-relaxed">
-          When an executive appears on a podcast, most agencies hand the recording to a junior copywriter who summarizes the transcript into a generic social post. Below is how a standard agency recap compares to an Offscript Editorial manuscript drawn from the exact same conversation.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-        
-        <!-- Left: Standard Agency Recap -->
-        <div class="bg-paper-light border border-paper-border rounded-lg p-6 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between border-b border-paper-border pb-4 mb-6">
-              <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-paper-terra block">Conventional Agency Approach</span>
-                <h3 class="font-serif text-xl font-medium text-paper-dark mt-0.5">The Surface-Level Podcast Recap</h3>
-              </div>
-              <span class="text-xs font-medium px-2.5 py-1 rounded bg-red-50 text-paper-terra border border-red-200">
-                Dilutes Authority
-              </span>
-            </div>
-
-            <div class="bg-white border border-paper-border p-5 rounded text-sm text-paper-muted space-y-3 leading-relaxed mb-6">
-              <p class="font-semibold text-paper-charcoal">
-                🚀 Key Takeaways from Our Recent Podcast on Enterprise Sales! 🎙️
-              </p>
-              <p>
-                Did you know enterprise sales win rates average around 30%? In today's fast-paced B2B environment, if your win rate is over 35%, it's time to raise your prices immediately! 💡
-              </p>
-              <p>
-                Here are 3 reasons why discounting hurts your SaaS business:
-              </p>
-              <p class="pl-3">
-                1. You leave money on the table 💰<br>
-                2. Buyers talk to each other in private networks 🤫<br>
-                3. Higher prices attract better clients 🎯
-              </p>
-              <p>
-                Stop underpricing yourself! Start charging what you're worth! Agree or disagree? Drop your thoughts in the comments below! 👇
-              </p>
-              <p class="text-xs text-slate-400">
-                #SaaS #Sales #Entrepreneurship #ThoughtLeadership #B2B
-              </p>
-            </div>
-          </div>
-
-          <div class="border-t border-paper-border pt-5 space-y-2.5 text-sm">
-            <div class="text-xs font-semibold uppercase tracking-wider text-paper-terra">Editorial Critique:</div>
-            <p class="text-paper-charcoal text-xs leading-relaxed">
-              <strong>1. Sounds like a spectator, not the author:</strong> Opening with "Key takeaways from our podcast" positions the executive as a social media intern summarizing someone else's wisdom.
-            </p>
-            <p class="text-paper-charcoal text-xs leading-relaxed">
-              <strong>2. Superficial listicle structure:</strong> Reducing a nuanced commercial argument about enterprise backchannels into three generic bullet points strips away all intellectual weight.
-            </p>
-            <p class="text-paper-charcoal text-xs leading-relaxed">
-              <strong>3.Performative clutter:</strong> Novelty icons, exclamation marks, and needy comment prompts signal insecurity rather than C-suite gravitas.
-            </p>
-          </div>
-        </div>
-
-        <!-- Right: Offscript Editorial Manuscript -->
-        <div class="bg-paper-DEFAULT border-2 border-paper-accent rounded-lg p-6 sm:p-8 flex flex-col justify-between shadow-sm">
-          <div>
-            <div class="flex items-center justify-between border-b border-paper-border pb-4 mb-6">
-              <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-paper-accent block">The Offscript Standard</span>
-                <h3 class="font-serif text-xl font-medium text-paper-dark mt-0.5">Thesis-Driven Executive Essay</h3>
-              </div>
-              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-paper-accent text-white">
-                Institutional Gravitas
-              </span>
-            </div>
-
-            <div class="bg-white border border-paper-border p-6 rounded text-sm text-paper-dark space-y-3.5 leading-relaxed mb-6 shadow-sm">
-              <p class="font-serif text-lg font-medium text-paper-dark">
-                If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.
-              </p>
-              <p class="text-paper-charcoal">
-                Early-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.
-              </p>
-              <p class="text-paper-charcoal">
-                Healthy enterprise close rates hover between 25% and 35%. If seven out of ten prospects are not balking at contract size, you are not discovering your market ceiling. You are subsidizing buyers who had the corporate budget to pay triple.
-              </p>
-              <p class="text-paper-charcoal">
-                Worse: enterprise buyers compare notes in private backchannels. Discounting a $150k agreement down to $50k to close a quarter permanently anchors your price ceiling across executive peer groups.
-              </p>
-            </div>
-          </div>
-
-          <div class="border-t border-paper-border pt-5 space-y-2.5 text-sm">
-            <div class="text-xs font-semibold uppercase tracking-wider text-paper-accent">Why It Commands Attention:</div>
-            <p class="text-paper-charcoal text-xs leading-relaxed">
-              <strong>1. Immediate intellectual tension:</strong> Challenges a conventional founder assumption in the opening sentence, earning the attention of fellow operators and investors.
-            </p>
-            <p class="text-paper-charcoal text-xs leading-relaxed">
-              <strong>2. Grounded in real commercial mechanics:</strong> Preserves the speaker's specific benchmark (25%–35%) and explains <em>why</em> arbitrary discounting damages long-term enterprise positioning.
-            </p>
-            <p class="text-paper-charcoal text-xs leading-relaxed">
-              <strong>3. Clean, confident finish:</strong> Ends on a decisive operational principle without pleading for likes or comments.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 04: OUR EDITORIAL CRAFT (4-STAGE PROCESS) -->
-  <section id="craft" class="py-24 border-b border-paper-border bg-paper-DEFAULT">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-16">
-        <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-3">04 // Our Editorial Craft</div>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-paper-dark leading-tight">
-          How We Transform Unscripted Audio into a Cohesive Body of Work
-        </h2>
-        <p class="text-paper-charcoal mt-4 text-base leading-relaxed">
-          We operate like a private literary and commercial press for B2B leaders. Our four-stage editorial process is designed to extract maximum intellectual value from your existing spoken recordings while requiring zero preparation from you.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Stage I -->
-        <div class="bg-white border border-paper-border rounded-lg p-7 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="font-serif text-3xl font-normal text-paper-accent">I.</span>
-              <span class="text-xs uppercase tracking-widest text-paper-muted font-semibold">Ingestion</span>
-            </div>
-            <h3 class="font-serif text-xl font-medium text-paper-dark mb-3">Spoken Archive Curation</h3>
-            <p class="text-sm text-paper-charcoal leading-relaxed">
-              You share a recent podcast appearance, panel recording, keynote, or raw voice memo. Our editors review the full conversation, separating your substantive commercial insights from host banter and conversational filler.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-paper-border text-xs text-paper-muted font-serif italic">
-            Your time commitment: 0 minutes
-          </div>
-        </div>
-
-        <!-- Stage II -->
-        <div class="bg-white border border-paper-border rounded-lg p-7 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="font-serif text-3xl font-normal text-paper-accent">II.</span>
-              <span class="text-xs uppercase tracking-widest text-paper-muted font-semibold">Thesis Mapping</span>
-            </div>
-            <h3 class="font-serif text-xl font-medium text-paper-dark mb-3">Seven-Lens Angle Development</h3>
-            <p class="text-sm text-paper-charcoal leading-relaxed">
-              A single thirty-minute conversation contains multiple distinct essays. We map your spoken ideas across seven editorial lenses—including Contrarian Truths, Operating Architecture, Unit Economics, and Category Shifts.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-paper-border text-xs text-paper-muted font-serif italic">
-            Anchored in your exact spoken words
-          </div>
-        </div>
-
-        <!-- Stage III -->
-        <div class="bg-white border border-paper-border rounded-lg p-7 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="font-serif text-3xl font-normal text-paper-accent">III.</span>
-              <span class="text-xs uppercase tracking-widest text-paper-muted font-semibold">Composition</span>
-            </div>
-            <h3 class="font-serif text-xl font-medium text-paper-dark mb-3">Voice &amp; Rhythm Calibration</h3>
-            <p class="text-sm text-paper-charcoal leading-relaxed">
-              Our senior editors draft each piece to mirror your natural speaking rhythm, vocabulary, and intellectual temperament. We structure openings for immediate clarity and build arguments that hold up under C-suite scrutiny.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-paper-border text-xs text-paper-muted font-serif italic">
-            Crafted by senior B2B editors
-          </div>
-        </div>
-
-        <!-- Stage IV -->
-        <div class="bg-white border border-paper-border rounded-lg p-7 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="font-serif text-3xl font-normal text-paper-accent">IV.</span>
-              <span class="text-xs uppercase tracking-widest text-paper-muted font-semibold">Publication</span>
-            </div>
-            <h3 class="font-serif text-xl font-medium text-paper-dark mb-3">Editorial Polish &amp; Delivery</h3>
-            <p class="text-sm text-paper-charcoal leading-relaxed">
-              Every manuscript undergoes a rigorous line edit to eliminate fluff, clichés, and synthetic phrasing. Within 48 hours, you receive a clean, organized folio of essays ready for immediate publication on LinkedIn or your company journal.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-paper-border text-xs text-paper-muted font-serif italic">
-            Delivered within 48 hours
-          </div>
-        </div>
-      </div>
-
-      <!-- The 7 Editorial Lenses Showcase -->
-      <div class="mt-12 bg-white border border-paper-border rounded-lg p-8">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-paper-border pb-6 mb-6">
-          <div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-paper-accent">The Offscript Editorial Framework</span>
-            <h3 class="font-serif text-2xl font-normal text-paper-dark mt-1">Seven Lenses for Extracting Executive Perspective</h3>
-          </div>
-          <p class="text-xs text-paper-muted max-w-md leading-relaxed">
-            Rather than repeating the same talking point ten times, we refract a single recorded conversation through seven distinct strategic lenses to build a well-rounded body of work.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-          <div class="p-4 bg-paper-light rounded border border-paper-border">
-            <div class="font-serif font-medium text-paper-dark">01. The Contrarian Truth</div>
-            <p class="text-xs text-paper-muted mt-1">Challenging a widely accepted industry dogma with hard operational evidence.</p>
-          </div>
-          <div class="p-4 bg-paper-light rounded border border-paper-border">
-            <div class="font-serif font-medium text-paper-dark">02. Operating Architecture</div>
-            <p class="text-xs text-paper-muted mt-1">How your team structures systems, workflows, and decision-making at scale.</p>
-          </div>
-          <div class="p-4 bg-paper-light rounded border border-paper-border">
-            <div class="font-serif font-medium text-paper-dark">03. The Failure Post-Mortem</div>
-            <p class="text-xs text-paper-muted mt-1">Candid lessons from costly strategic missteps and how you corrected course.</p>
-          </div>
-          <div class="p-4 bg-paper-light rounded border border-paper-border">
-            <div class="font-serif font-medium text-paper-dark">04. Category Paradigm Shift</div>
-            <p class="text-xs text-paper-muted mt-1">Why legacy playbooks are expiring and where the market is moving next.</p>
-          </div>
-          <div class="p-4 bg-paper-light rounded border border-paper-border">
-            <div class="font-serif font-medium text-paper-dark">05. Unit Economics &amp; Margin</div>
-            <p class="text-xs text-paper-muted mt-1">The financial realities behind pricing, retention, and capital efficiency.</p>
-          </div>
-          <div class="p-4 bg-paper-light rounded border border-paper-border">
-            <div class="font-serif font-medium text-paper-dark">06. Buyer Behavioral Friction</div>
-            <p class="text-xs text-paper-muted mt-1">The unspoken political and psychological dynamics inside enterprise deals.</p>
-          </div>
-          <div class="p-4 bg-paper-light rounded border border-paper-border sm:col-span-2">
-            <div class="font-serif font-medium text-paper-dark">07. The Unconventional Playbook</div>
-            <p class="text-xs text-paper-muted mt-1">Specific, repeatable frameworks your leadership team uses to solve high-stakes problems.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 05: ENGAGEMENT MODELS (NO EXPLICIT PRICING, DIRECT CONTACT ONLY) -->
-  <section id="engagements" class="py-24 border-b border-paper-border bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-14">
-        <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-3">05 // Working Together</div>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-paper-dark leading-tight">
-          Editorial Engagements Tailored to Your Publishing Cadence
-        </h2>
-        <p class="text-paper-charcoal mt-4 text-base leading-relaxed">
-          We partner with a select roster of B2B founders, CEOs, and operating executives. Every partnership begins with a single conversation or an initial editorial commission—with no long-term lock-ins.
-        </p>
+        <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-3">04 // Working Together</div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#121316] leading-tight balance-text">Capacity-Constrained Studio Representation</h2>
+        <p class="text-[#575a65] mt-4 text-base sm:text-lg leading-relaxed">We work with a maximum of 4 founding executives per quarter to ensure uncompromised principal craft.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl">
-        
-        <!-- Model 1: The Editorial Pilot Commission -->
-        <div class="bg-paper-light border border-paper-border rounded-lg p-8 sm:p-10 flex flex-col justify-between">
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-8 sm:p-10 flex flex-col justify-between editorial-shadow">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-semibold uppercase tracking-widest text-paper-accent">Initial Commission</span>
-              <span class="text-xs font-serif italic text-paper-muted">48-Hour Turnaround</span>
+            <div class="flex items-center justify-between mb-4 tabular-nums">
+              <span class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a]">Initial Commission</span>
+              <span class="font-serif italic text-xs text-[#575a65]">48-Hour Turnaround</span>
             </div>
-            <h3 class="font-serif text-3xl font-normal text-paper-dark">The 10-Essay Editorial Folio</h3>
-            <p class="text-sm text-paper-charcoal mt-4 leading-relaxed">
-              Ideal for executives who want to experience our editorial craft firsthand, or leaders looking to turn a recent flagship podcast interview or keynote into a month of high-authority written publishing.
-            </p>
-
-            <div class="mt-8 pt-6 border-t border-paper-border space-y-3.5 text-sm text-paper-charcoal">
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>Ten Bespoke Executive Essays</strong> distilled from a single unscripted podcast, webinar, or recorded conversation</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>Full Voice &amp; Cadence Calibration</strong> tailored to your executive persona and leadership style</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>Seven-Lens Thesis Mapping</strong> with exact timestamp references to your original spoken remarks</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>100% Asynchronous Workflow</strong> requiring zero interviews or calendar coordination</span>
-              </div>
+            <h3 class="font-serif text-3xl font-normal text-[#121316]">The 10-Memo Executive Folio</h3>
+            <p class="text-sm text-[#575a65] mt-4 leading-relaxed">Designed for founders and operating executives who want to experience our principal-led craft firsthand by turning a single flagship podcast appearance or keynote into a month of authoritative executive publishing.</p>
+            <div class="mt-8 pt-6 border-t border-[#e5e4de] space-y-3.5 text-sm text-[#575a65]">
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">Ten Bespoke Executive Memos</strong> distilled from a single unscripted podcast, webinar, or recorded conversation</span></div>
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">Direct Principal Engagement: Led by Founding Editorial Director</strong> with zero delegation to junior copywriters</span></div>
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">Seven-Lens Thesis Mapping</strong> with exact timestamp references to your original spoken remarks</span></div>
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">100% Asynchronous Workflow</strong> requiring zero interviews or calendar coordination</span></div>
             </div>
           </div>
-
-          <div class="mt-10 pt-6 border-t border-paper-border">
-            <button data-engagement="10-Essay Editorial Folio" class="open-inquiry-btn w-full bg-paper-accent hover:bg-paper-accentHover text-white py-4 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2">
-              <span>Commission an Editorial Folio</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <div class="mt-10 pt-6 border-t border-[#e5e4de]">
+            <button type="button" data-engagement="The 10-Memo Executive Folio" class="open-inquiry-btn w-full bg-white hover:bg-[#f4f3ef] text-[#121316] border border-[#141618] py-4 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2">
+              <span>Commission an Executive Folio</span>
+              <span class="text-[#92642a]">&rarr;</span>
             </button>
           </div>
         </div>
 
-        <!-- Model 2: The Ongoing Executive Desk -->
-        <div class="bg-paper-DEFAULT border-2 border-paper-accent rounded-lg p-8 sm:p-10 flex flex-col justify-between relative shadow-sm">
-          <div class="absolute -top-3.5 right-8 bg-paper-accent text-white text-[11px] font-semibold uppercase tracking-widest px-3.5 py-1 rounded">
-            Ongoing Representation
-          </div>
+        <div class="bg-[#f4f3ef] border-2 border-[#141618] rounded-lg p-8 sm:p-10 flex flex-col justify-between relative editorial-shadow">
+          <div class="absolute -top-3.5 right-8 bg-[#141618] text-white font-mono text-[11px] font-semibold uppercase tracking-widest px-3.5 py-1 rounded">Strictly Capped at 4 Retainer Partners</div>
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-semibold uppercase tracking-widest text-paper-accent">Dedicated Retainer</span>
-              <span class="text-xs font-serif italic text-paper-muted">Limited Roster Capacity</span>
+            <div class="flex items-center justify-between mb-4 tabular-nums">
+              <span class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a]">Bespoke Retainer</span>
+              <span class="font-serif italic text-xs text-[#575a65]">Direct Principal Engagement</span>
             </div>
-            <h3 class="font-serif text-3xl font-normal text-paper-dark">The Executive Editorial Desk</h3>
-            <p class="text-sm text-paper-charcoal mt-4 leading-relaxed">
-              Continuous narrative representation for founders and VPs on active speaking tours, hosting podcasts, or sharing regular asynchronous voice notes with our editorial team.
-            </p>
-
-            <div class="mt-8 pt-6 border-t border-paper-border space-y-3.5 text-sm text-paper-charcoal">
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>Continuous Weekly Publishing Folio</strong> (20+ executive essays and long-form columns per month)</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>Direct Voice-Note Dispatch</strong> via private WhatsApp, Telegram, or Slack channel whenever an idea strikes</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>Multi-Source Synthesis</strong> across your podcasts, internal town halls, investor letters, and customer calls</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <span class="text-paper-accent font-bold">&bull;</span>
-                <span><strong>Dedicated Senior Managing Editor</strong> who stewards your long-term category narrative</span>
-              </div>
+            <h3 class="font-serif text-3xl font-normal text-[#121316]">The Executive Editorial Desk</h3>
+            <p class="text-sm text-[#575a65] mt-4 leading-relaxed">Ongoing narrative representation for B2B founders and CEOs converting weekly operating friction, keynotes, and voice notes into category-defining market perspectives.</p>
+            <div class="mt-8 pt-6 border-t border-[#d1cfc7] space-y-3.5 text-sm text-[#575a65]">
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">Direct Principal Access (Founding Editor)</strong> — Zero agency intermediaries</span></div>
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">8 to 12 Publication-Ready Strategic Executive Memos per Month</strong> (up to 20+ strategic executive memos &amp; market perspectives for active speakers)</span></div>
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">Asynchronous Audio Intake</strong> (Podcasts, keynotes, Loom briefs, WhatsApp voice notes)</span></div>
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">48-Hour Delivery Turnaround</strong> to private Google Docs / Notion workspace</span></div>
+              <div class="flex items-start space-x-3"><span class="text-[#92642a] font-bold">&bull;</span><span><strong class="text-[#121316]">Continuous Voice Calibration</strong> and commercial thesis development</span></div>
             </div>
           </div>
-
-          <div class="mt-10 pt-6 border-t border-paper-border">
-            <button data-engagement="The Executive Editorial Desk (Ongoing Retainer)" class="open-inquiry-btn w-full bg-paper-dark hover:bg-paper-charcoal text-white py-4 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2">
+          <div class="mt-10 pt-6 border-t border-[#d1cfc7]">
+            <button type="button" data-engagement="The Executive Editorial Desk (Ongoing Retainer)" class="open-inquiry-btn w-full bg-[#141618] hover:bg-[#25282c] text-white py-4 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2 shadow-sm">
               <span>Inquire About Retainer Availability</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <span class="text-[#92642a]">&rarr;</span>
             </button>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- LETTER FROM THE EDITORIAL DIRECTOR -->
-  <section class="py-20 border-b border-paper-border bg-paper-warm/60">
+  <!-- SECTION 05: NOTE FROM THE DESK & SIGNATURE BLOCK HIERARCHY -->
+  <section class="py-20 border-b border-[#e5e4de] bg-[#f4f3ef]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white border border-paper-border rounded-lg p-8 sm:p-12 shadow-sm">
-        <div class="text-xs font-semibold uppercase tracking-[0.2em] text-paper-accent mb-4">A Note from the Desk</div>
-        
-        <blockquote class="font-serif text-xl sm:text-2xl text-paper-dark leading-relaxed italic space-y-4">
-          <p>
-            "Every week, brilliant B2B founders dilute their own reputation online by publishing generic, ghostwritten clichés that sound nothing like the person who built the company.
-          </p>
-          <p>
-            We founded Offscript Editorial because executive writing should never feel like a chore—and it should never read like filler. Your unscripted spoken conversations already contain the stories, numbers, and hard-won convictions that move markets. Our craft is simply to bring those convictions to the page with the clarity and permanence they deserve."
-          </p>
+      <div class="bg-white border border-[#e5e4de] rounded-lg p-8 sm:p-12 editorial-shadow">
+        <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-4">05 // A Note from the Desk</div>
+        <blockquote class="font-serif text-xl sm:text-2xl text-[#121316] leading-relaxed italic space-y-4">
+          <p>"Every week, brilliant B2B founders dilute their own reputation online by publishing generic, ghostwritten clichés that sound nothing like the operator who built the company.</p>
+          <p>We founded Offscript Editorial because executive writing should never feel like a chore—and it should never read like filler. Your unscripted spoken conversations already contain the stories, unit economics, and hard-won convictions that move markets. Our craft is simply to bring those convictions to the page with the clarity and permanence they deserve."</p>
         </blockquote>
 
-        <div class="mt-8 pt-6 border-t border-paper-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="border-t border-[#e5e4de] pt-6 mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <!-- Author Name & Title Block -->
           <div>
-            <div class="font-serif text-xl font-medium text-paper-dark">Kaung Sithu</div>
-            <div class="text-xs uppercase tracking-widest text-paper-muted font-semibold mt-0.5">Founder &amp; Editorial Director, Offscript Editorial</div>
+            <div class="font-serif text-lg font-bold text-[#121316] tracking-tight">Kaung Sithu</div>
+            <div class="text-[11px] uppercase tracking-[0.2em] font-semibold text-[#575a65] mt-1">
+              Founder &amp; Editorial Director
+            </div>
+            <div class="text-[10px] uppercase tracking-[0.25em] font-bold text-[#92642a] mt-0.5">
+              Offscript Editorial
+            </div>
           </div>
-          <a href="mailto:kaung@offscripteditorial.com" class="inline-flex items-center space-x-2 text-sm font-medium text-paper-accent hover:underline">
-            <span>Write directly to Kaung: kaung@offscripteditorial.com</span>
-            <span>&rarr;</span>
-          </a>
+          <!-- Direct Asynchronous Contact -->
+          <div>
+            <a href="mailto:kaung@offscripteditorial.com" class="text-xs font-mono font-medium text-[#121316] hover:text-[#92642a] transition">
+              Direct Desk Inquiries: kaung@offscripteditorial.com &rarr;
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DIRECT CONTACT & EDITORIAL INQUIRY MODAL -->
-  <div id="contactModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-paper-light border border-paper-border rounded-lg max-w-xl w-full p-6 sm:p-10 shadow-2xl relative">
-      <button id="closeModalBtn" class="absolute top-5 right-5 text-paper-muted hover:text-paper-dark text-2xl leading-none transition" aria-label="Close modal">
-        &times;
-      </button>
-
+  <!-- INTAKE MODAL -->
+  <div id="contactModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg max-w-xl w-full p-6 sm:p-10 shadow-2xl relative max-h-[92vh] overflow-y-auto">
+      <button id="closeModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close modal">&times;</button>
       <div id="modalFormContainer">
         <div class="mb-6">
-          <span class="text-xs font-semibold uppercase tracking-widest text-paper-accent block mb-1">Editorial Desk Inquiry</span>
-          <h3 class="font-serif text-2xl sm:text-3xl font-normal text-paper-dark">Initiate an Editorial Conversation</h3>
-          <p class="text-xs text-paper-muted mt-1.5 leading-relaxed">
-            Share your details and an optional link to a recent podcast or recording. Our Editorial Director will respond personally within one business day.
-          </p>
+          <span class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] block mb-1">Direct Principal Desk Inquiry</span>
+          <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Inquire About Representation</h3>
+          <p class="text-xs text-[#575a65] mt-1.5 leading-relaxed">Drop a link to a recent talk, podcast appearance, or raw voice note. Our founding editor will review your dialogue personally and respond within one business day.</p>
         </div>
-
         <form id="editorialInquiryForm" class="space-y-4 text-sm">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-semibold uppercase tracking-wider text-paper-charcoal mb-1.5">Your Name &amp; Title *</label>
-              <input type="text" id="inquiryName" required class="w-full bg-white border border-paper-border rounded px-3.5 py-2.5 text-paper-dark focus:outline-none focus:border-paper-accent text-sm" placeholder="Elena Rostova, CEO">
+              <label for="inquiryName" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Full Name &amp; Title *</label>
+              <input type="text" id="inquiryName" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm" placeholder="e.g. Sarah Chen, Co-founder &amp; CEO">
             </div>
             <div>
-              <label class="block text-xs font-semibold uppercase tracking-wider text-paper-charcoal mb-1.5">Work Email *</label>
-              <input type="email" id="inquiryEmail" required class="w-full bg-white border border-paper-border rounded px-3.5 py-2.5 text-paper-dark focus:outline-none focus:border-paper-accent text-sm" placeholder="elena@company.com">
+              <label for="inquiryEmail" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Work Email *</label>
+              <input type="email" id="inquiryEmail" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm" placeholder="sarah@company.com">
             </div>
           </div>
-
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-paper-charcoal mb-1.5">Engagement Interest</label>
-            <select id="inquiryEngagement" class="w-full bg-white border border-paper-border rounded px-3.5 py-2.5 text-paper-dark focus:outline-none focus:border-paper-accent text-sm">
-              <option value="10-Essay Editorial Folio">The 10-Essay Editorial Folio (Initial Commission)</option>
-              <option value="The Executive Editorial Desk (Ongoing Retainer)">The Executive Editorial Desk (Ongoing Monthly Representation)</option>
-              <option value="General Editorial Consultation">General Editorial Inquiry</option>
+            <label for="inquiryLinkedin" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">LinkedIn Profile URL *</label>
+            <input type="url" id="inquiryLinkedin" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm" placeholder="https://linkedin.com/in/sarahchen">
+          </div>
+          <div>
+            <label for="inquiryAudioUrl" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Link to Unscripted Audio / Talk *</label>
+            <input type="url" id="inquiryAudioUrl" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm" placeholder="YouTube, Spotify, Loom, or Drive link">
+          </div>
+          <div>
+            <label for="inquiryEngagement" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Engagement Interest</label>
+            <select id="inquiryEngagement" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm">
+              <option value="The Executive Editorial Desk (Ongoing Retainer)">The Executive Editorial Desk (Ongoing Retainer — Capped at 4 Partners)</option>
+              <option value="The 10-Memo Executive Folio">The 10-Memo Executive Folio (48-Hour Initial Commission)</option>
+              <option value="On-Spec Editorial Teardown">Request an Editorial Teardown</option>
             </select>
           </div>
-
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-paper-charcoal mb-1.5">Spoken Recording Link (Optional — YouTube, Podcast, or Audio)</label>
-            <input type="url" id="inquiryAudioUrl" class="w-full bg-white border border-paper-border rounded px-3.5 py-2.5 text-paper-dark focus:outline-none focus:border-paper-accent text-sm" placeholder="https://www.youtube.com/watch?v=...">
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-paper-charcoal mb-1.5">Editorial Goals or Notes (Optional)</label>
-            <textarea id="inquiryNotes" rows="3" class="w-full bg-white border border-paper-border rounded px-3.5 py-2.5 text-paper-dark focus:outline-none focus:border-paper-accent text-sm" placeholder="Tell us about your company, audience, or the themes you want to own..."></textarea>
-          </div>
-
-          <div class="pt-2">
-            <button type="submit" class="w-full bg-paper-accent hover:bg-paper-accentHover text-white py-3.5 rounded font-semibold text-sm tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
-              <span>Send Note to the Editorial Desk</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-          </div>
+          <button type="submit" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-3.5 rounded font-semibold text-sm tracking-wide transition shadow-sm">Submit Audio for 48-Hour Review &rarr;</button>
+          <p class="text-xs text-[#575a65] text-center pt-2 border-t border-[#e5e4de]"><strong class="text-[#121316]">Zero-Risk Commercial Guarantee:</strong> If the voice calibration doesn't match your boardroom standard, you owe nothing.</p>
         </form>
       </div>
 
-      <!-- Confirmation View -->
       <div id="modalConfirmationView" class="hidden text-center py-6 space-y-5">
-        <div class="w-12 h-12 rounded-full bg-paper-warm border border-paper-border text-paper-accent mx-auto flex items-center justify-center">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        </div>
-        <h4 class="font-serif text-2xl text-paper-dark">Your Note Has Reached the Desk</h4>
-        <p class="text-sm text-paper-charcoal max-w-md mx-auto leading-relaxed">
-          Thank you for reaching out to Offscript Editorial. We have prepared your inquiry for <span class="font-semibold" id="confirmEmailSpan"></span> and opened your email client for direct dispatch, or you can email us directly anytime at <a href="mailto:kaung@offscripteditorial.com" class="text-paper-accent underline">kaung@offscripteditorial.com</a>.
-        </p>
-        <div class="pt-2">
-          <button id="closeConfirmBtn" class="bg-paper-dark hover:bg-paper-charcoal text-white px-6 py-2.5 rounded text-xs font-semibold uppercase tracking-wider transition">
-            Return to Reading Room
-          </button>
-        </div>
+        <h4 class="font-serif text-2xl text-[#121316]">Audio Received by the Founding Desk</h4>
+        <p class="text-sm text-[#575a65] max-w-md mx-auto leading-relaxed">Thank you for reaching out to Offscript Editorial. Kaung is reviewing your submission for <span class="font-semibold text-[#121316]" id="confirmEmailSpan"></span>, or you can write directly to <a href="mailto:kaung@offscripteditorial.com" class="text-[#92642a] underline">kaung@offscripteditorial.com</a>.</p>
+        <button id="closeConfirmBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-white px-6 py-2.5 rounded text-xs font-mono font-semibold uppercase tracking-wider transition">Return to Dossier</button>
       </div>
     </div>
   </div>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toastBanner" class="fixed bottom-6 right-6 bg-paper-dark text-white px-5 py-3 rounded shadow-xl text-xs font-medium flex items-center space-x-2.5 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
-    <span class="w-2 h-2 rounded-full bg-paper-gold"></span>
-    <span id="toastText">Manuscript copied to clipboard</span>
+  <div id="toastBanner" class="fixed bottom-6 right-6 bg-[#141618] text-[#f8fafc] px-5 py-3 rounded shadow-xl text-xs font-mono flex items-center space-x-2.5 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+    <span class="w-2 h-2 rounded-full bg-[#92642a]"></span>
+    <span id="toastText">Executive memo copied to clipboard</span>
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-paper-dark text-paper-warm py-16 text-sm">
+  <footer class="bg-[#141618] text-[#f8fafc] py-16 text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
-        <div class="md:col-span-6 space-y-3">
-          <div class="flex items-baseline space-x-2">
-            <span class="font-serif text-2xl font-normal text-white">Offscript</span>
-            <span class="text-xs uppercase tracking-[0.2em] text-paper-gold font-semibold">Editorial</span>
+        <div class="md:col-span-6 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="h-9 w-9 rounded-full bg-white/10 border border-white/15 flex items-center justify-center p-1.5">
+              <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2236%2036%20168%20168%22%3E%3Cpath%20d%3D%22M96%2C71L91%2C76L86%2C86L84%2C92L84%2C95L83%2C96L85%2C102L88%2C107L94%2C113L100%2C117L104%2C118L109%2C121L128%2C127L135%2C131L142%2C138L146%2C148L146%2C159L145%2C160L144%2C166L141%2C170L142%2C170L150%2C160L154%2C151L155%2C145L156%2C144L156%2C140L157%2C139L157%2C129L151%2C120L146%2C116L134%2C110L112%2C103L103%2C98L97%2C92L94%2C85L94%2C75ZM152%2C58L149%2C61L142%2C61L125%2C55L104%2C57L86%2C65L66%2C85L58%2C104L57%2C130L66%2C154L81%2C171L81%2C181L85%2C177L91%2C177L113%2C184L136%2C182L160%2C169L173%2C154L181%2C135L182%2C109L173%2C85L158%2C69L158%2C86L163%2C106L162%2C140L154%2C163L142%2C176L126%2C182L103%2C179L86%2C164L78%2C145L76%2C106L82%2C82L88%2C72L105%2C59L129%2C58L144%2C69L152%2C89Z%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E" alt="Offscript Editorial OS Mark" class="h-full w-full object-contain filter invert" />
+            </div>
+            <div class="flex flex-col">
+              <span class="font-serif text-xl font-semibold tracking-tight text-white">Offscript</span>
+              <span class="text-[9px] uppercase tracking-[0.25em] text-[#92642a] font-semibold -mt-1">Editorial</span>
+            </div>
           </div>
-          <p class="text-xs text-stone-400 max-w-sm leading-relaxed">
-            Bespoke executive ghostwriting and asynchronous narrative extraction for B2B founders, CEOs, and operating leaders.
-          </p>
+          <p class="text-xs text-stone-400 max-w-sm leading-relaxed">Direct Principal Engagement: Bespoke executive ghostwriting and asynchronous narrative extraction for B2B founders, CEOs, and operating leaders.</p>
         </div>
-
         <div class="md:col-span-3 space-y-2 text-xs">
-          <div class="uppercase tracking-widest text-paper-gold font-semibold mb-3">Navigation</div>
-          <div><a href="#philosophy" class="text-stone-300 hover:text-white transition">Philosophy</a></div>
-          <div><a href="#folio" class="text-stone-300 hover:text-white transition">The Reading Room</a></div>
-          <div><a href="#tearsheet" class="text-stone-300 hover:text-white transition">The Tear Sheet</a></div>
-          <div><a href="#craft" class="text-stone-300 hover:text-white transition">Our Editorial Craft</a></div>
+          <div class="font-mono uppercase tracking-widest text-[#92642a] font-semibold mb-3">Architecture</div>
+          <div><a href="#protocol" class="text-stone-300 hover:text-white transition">01 // The Protocol</a></div>
+          <div><a href="#tearsheet" class="text-stone-300 hover:text-white transition">02 // The Lenny Dossier</a></div>
+          <div><a href="#folio" class="text-stone-300 hover:text-white transition">02B // Voice Calibration</a></div>
+          <div><a href="#impact" class="text-stone-300 hover:text-white transition">03 // Commercial Impact</a></div>
+          <div><a href="#engagements" class="text-stone-300 hover:text-white transition">04 // Retainer Terms</a></div>
         </div>
-
         <div class="md:col-span-3 space-y-2 text-xs">
-          <div class="uppercase tracking-widest text-paper-gold font-semibold mb-3">Direct Contact</div>
-          <div class="text-stone-300">Kaung Sithu, Editorial Director</div>
-          <div>
-            <a href="mailto:kaung@offscripteditorial.com" class="text-white hover:text-paper-gold underline underline-offset-4 transition">
-              kaung@offscripteditorial.com
-            </a>
-          </div>
-          <div class="pt-2">
-            <button id="footerContactBtn" class="text-paper-gold hover:underline font-medium">
-              Open Inquiry Form &rarr;
-            </button>
-          </div>
+          <div class="font-mono uppercase tracking-widest text-[#92642a] font-semibold mb-3">Direct Principal Desk</div>
+          <div class="text-stone-200 font-medium">Kaung Sithu</div>
+          <div class="text-stone-400 text-[11px]">Founder &amp; Editorial Director</div>
+          <div class="text-[#92642a] font-mono text-[10px] uppercase tracking-widest font-semibold">Offscript Editorial</div>
+          <div><a href="mailto:kaung@offscripteditorial.com" class="text-white hover:text-[#92642a] font-mono text-[11px] underline underline-offset-4 transition">kaung@offscripteditorial.com</a></div>
+          <div class="pt-1"><button id="footerContactBtn" type="button" class="text-[#92642a] hover:underline font-medium">Open Representation Inquiry &rarr;</button></div>
         </div>
       </div>
-
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
         <div>&copy; 2026 Offscript Editorial. All rights reserved.</div>
         <div class="font-serif italic text-stone-400">Crafted for leaders who out-think the market.</div>
@@ -890,11 +751,10 @@
     </div>
   </footer>
 
-  <!-- INTERACTIVE READING ROOM & MODAL SCRIPT -->
   <script>
     const editorialFolioData = {
       pricing: {
-        speakerTitle: "Enterprise GTM Podcast // Partner & Advisor",
+        speakerTitle: "Jen Abel // Lenny's Podcast (Enterprise GTM)",
         timecode: "Excerpt @ 01:30",
         rawTranscript: `"What are the benchmarks for how often you get through each of these stages? The win rate for enterprise is usually around 30 to 35%. If your win rate is higher than that, your price is too low. There's a lot of part of the market that's just not in a maturity perspective to take you on. And that's healthy... The worst thing you can do is charge somebody's friend 50 and somebody else 500k. They talk... Especially at the corporate executive level."`,
         angle: "Unit Economics & Price Ceiling Integrity",
@@ -904,43 +764,19 @@
             label: "VOICE CALIBRATION // THE DIRECT OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "If Your Enterprise Win Rate Is Sitting at 60%, Your Pricing Is Broken",
-            body: `If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.
-
-Early-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.
-
-Healthy enterprise close rates hover between 25% and 35%.
-
-If seven out of ten prospects are not balking at your contract size, you are not discovering your market ceiling. You are subsidizing buyers who had the corporate budget to pay triple.
-
-Worse: enterprise buyers talk in private backchannels.
-
-Discounting a $150k agreement down to $50k to close a quarter does not just hurt immediate gross margin. It permanently anchors your valuation across executive peer groups.
-
-Raise your pricing until your pipeline naturally disqualifies the bottom two-thirds.`
+            body: `If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.\n\nEarly-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.\n\nHealthy enterprise close rates hover between 25% and 35%.\n\nIf seven out of ten prospects are not balking at your contract size, you are not discovering your market ceiling. You are subsidizing buyers who had the corporate budget to pay triple.\n\nWorse: enterprise buyers talk in private backchannels. Discounting a $150k agreement down to $50k permanently anchors your valuation across executive peer groups.`
           },
           strategist: {
             label: "VOICE CALIBRATION // THE SYSTEMS STRATEGIST",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "The Win-Rate Paradox: Why High Close Rates Erode Enterprise Valuation",
-            body: `Enterprise sales benchmarks reveal a structural paradox that growth-stage leadership teams routinely misread: abnormally high close rates signal margin erosion rather than superior product-market fit.
-
-When an enterprise sales organization closes more than 35% of qualified opportunities, commercial leadership is failing to discover the upper boundary of buyer willingness to pay. A healthy enterprise closing distribution sits between 25% and 35%. That friction is a feature, not a flaw—it filters for organizational maturity while protecting gross margin.
-
-Just as critical is price consistency across the customer base. Enterprise procurement leaders and operating executives compare vendor terms inside private peer networks. Offering steep, ad-hoc discounts to close a single quarter introduces permanent price-ceiling compression across the entire category.
-
-Disciplined revenue architecture requires setting a price floor that intentionally turns away under-capitalized accounts.`
+            body: `Enterprise sales benchmarks reveal a structural paradox that growth-stage leadership teams routinely misread: abnormally high close rates signal margin erosion rather than superior product-market fit.\n\nWhen an enterprise sales organization closes more than 35% of qualified opportunities, commercial leadership is failing to discover the upper boundary of buyer willingness to pay. A healthy enterprise closing distribution sits between 25% and 35%.\n\nJust as critical is price consistency across the customer base. Enterprise procurement leaders and operating executives compare vendor terms inside private peer networks.`
           },
-          essayist: {
-            label: "VOICE CALIBRATION // THE NARRATIVE ESSAYIST",
-            note: "Cadence: Reflective storytelling that builds from a boardroom realization to a lasting principle",
+          founder: {
+            label: "VOICE CALIBRATION // THE NARRATIVE FOUNDER",
+            note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "The Quiet Cost of the Quarter-End Discount",
-            body: `In the early days of selling into the enterprise, closing six out of ten deals feels like vindication. The sales floor rings the gong, the board praises pipeline velocity, and every signed logo feels like momentum.
-
-It often takes three quarters to realize you have been subsidizing customers who were prepared to pay three times as much.
-
-The turning point usually happens out of sight—at an industry dinner where two executives compare notes on what they paid for your software. When one buyer learns their peer secured the same deployment for a fraction of the contract value, trust evaporates overnight.
-
-In enterprise software, a 30% win rate is a sign of health. It means your pricing commands respect, qualifies serious buyers, and protects the integrity of every relationship you sign.`
+            body: `In the early days of selling into the enterprise, closing six out of ten deals feels like vindication. The sales floor rings the gong, the board praises pipeline velocity, and every signed logo feels like momentum.\n\nIt often takes three quarters to realize you have been subsidizing customers who were prepared to pay three times as much.\n\nIn enterprise software, a 30% win rate is a sign of health. It means your pricing commands respect, qualifies serious buyers, and protects the integrity of every relationship you sign.`
           }
         }
       },
@@ -955,41 +791,19 @@ In enterprise software, a 30% win rate is a sign of health. It means your pricin
             label: "VOICE CALIBRATION // THE DIRECT OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "Your Revenue Operations Team Is Not an Internal Help Desk",
-            body: `Most founders treat Revenue Operations like internal IT support.
-
-A sales rep breaks a workflow, files an urgent request, and demands an immediate patch. Your highest-paid operations architect spends sixty hours a week resetting permissions and building one-off dashboard views.
-
-That reactive loop quietly stalls revenue growth. When operations exists solely to put out daily fires, nobody is designing the systems that scale pipeline.
-
-The fix is structural: run RevOps like a software engineering team.
-
-Treat your CRM as the core product. Treat frontline account executives as your daily active users. Operate on two-week sprints with strict backlog prioritization, and require every change request to prove measurable revenue impact before a single workflow is built.
-
-Stop running a ticketing queue. Start shipping a revenue product.`
+            body: `Most founders treat Revenue Operations like internal IT support.\n\nA sales rep breaks a workflow, files an urgent request, and demands an immediate patch. Your highest-paid operations architect spends sixty hours a week resetting permissions and building one-off dashboard views.\n\nThe fix is structural: run RevOps like a software engineering team. Treat your CRM as the core product, operate on two-week sprints, and require every change request to prove measurable revenue impact.`
           },
           strategist: {
             label: "VOICE CALIBRATION // THE SYSTEMS STRATEGIST",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "Architecting Revenue Operations as an Internal Product Organization",
-            body: `Revenue Operations frequently fails to deliver strategic leverage for one reason: executive leadership allows reactive administration to crowd out systems architecture.
-
-In many scaling B2B organizations, the operations function devolves into an unprioritized service desk. Frontline managers submit competing ad-hoc requests, resulting in brittle CRM schemas, contradictory reporting definitions, and fragmented territory design.
-
-High-performing commercial organizations govern RevOps through software product management principles. The underlying data infrastructure is managed as a versioned product, frontline sellers are treated as internal customers, and capacity is allocated across two-week engineering sprints.
-
-By requiring every proposed workflow modification to demonstrate clear revenue impact prior to sprint allocation, leadership transforms operations from a cost center into a compounding growth engine.`
+            body: `Revenue Operations frequently fails to deliver strategic leverage for one reason: executive leadership allows reactive administration to crowd out systems architecture.\n\nHigh-performing commercial organizations govern RevOps through software product management principles. The underlying data infrastructure is managed as a versioned product and capacity is allocated across two-week engineering sprints.`
           },
-          essayist: {
-            label: "VOICE CALIBRATION // THE NARRATIVE ESSAYIST",
-            note: "Cadence: Reflective storytelling that builds from a boardroom realization to a lasting principle",
+          founder: {
+            label: "VOICE CALIBRATION // THE NARRATIVE FOUNDER",
+            note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "How We Stopped Answering Tickets and Rebuilt Our Revenue Engine",
-            body: `Three years ago, our revenue operations team was closing nearly two hundred internal requests a week. They were working late every evening, yet our board forecasts were still unreliable and our CRM had ballooned into hundreds of conflicting custom fields.
-
-We were confusing activity with progress. Every hour spent patching an urgent request for a single rep was an hour stolen from the architecture of the business.
-
-Everything changed the week we retired the ticketing queue and adopted an engineering sprint model. We introduced two-week release cycles, appointed a product owner for our revenue stack, and asked a simple question of every new request: how does this move net revenue retention or pipeline velocity?
-
-Within a single quarter, the noise subsided—and our operations team finally had the room to build systems that lasted.`
+            body: `Three years ago, our revenue operations team was closing nearly two hundred internal requests a week, yet our board forecasts were still unreliable.\n\nEverything changed the week we retired the ticketing queue and adopted an engineering sprint model. Within a single quarter, the noise subsided—and our operations team finally had the room to build systems that lasted.`
           }
         }
       },
@@ -1004,37 +818,19 @@ Within a single quarter, the noise subsided—and our operations team finally ha
             label: "VOICE CALIBRATION // THE DIRECT OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "Shipping Code Thirty Times a Day Is a Vanity Metric",
-            body: `Engineering leaders love boasting about deployment frequency.
-
-They share charts showing thirty production pushes a day and three-minute build pipelines. Meanwhile, their recovery plan for a bad release is four senior engineers panicking in a Slack channel at 2:00 AM.
-
-Speed without rollback certainty is operational recklessness.
-
-If reversing a flawed release takes longer than shipping it, your delivery infrastructure is liabilities dressed up as velocity. A failed schema change should never require manual database surgery under pressure.
-
-True engineering maturity is not measured by how fast you push code to production. It is measured by how calmly your system recovers when a release inevitably fails.`
+            body: `Engineering leaders love boasting about deployment frequency. Meanwhile, their recovery plan for a bad release is four senior engineers panicking in a Slack channel at 2:00 AM.\n\nSpeed without rollback certainty is operational recklessness. True engineering maturity is measured by how calmly your system recovers when a release inevitably fails.`
           },
           strategist: {
             label: "VOICE CALIBRATION // THE SYSTEMS STRATEGIST",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "Why Mean Time to Recovery Matters More Than Deployment Velocity",
-            body: `Modern software engineering organizations frequently over-index on deployment frequency while neglecting the architectural invariants required for safe state recovery.
-
-High-velocity continuous delivery is only an asset when paired with symmetrical rollback capability. In distributed systems, the primary risk is rarely the stateless application layer; it is stateful database schema evolution during partial rollouts.
-
-Resilient engineering organizations decouple code deployment from feature activation and enforce strict backward-compatible migration standards. Every release is engineered with a verified, automated reversal path before it reaches production traffic.
-
-Executive technical leadership should evaluate platform health not by how many times a team deploys on a Tuesday, but by how predictably the system restores equilibrium under failure.`
+            body: `Modern software engineering organizations frequently over-index on deployment frequency while neglecting the architectural invariants required for safe state recovery.\n\nResilient engineering organizations decouple code deployment from feature activation and enforce strict backward-compatible migration standards before reaching production traffic.`
           },
-          essayist: {
-            label: "VOICE CALIBRATION // THE NARRATIVE ESSAYIST",
-            note: "Cadence: Reflective storytelling that builds from a boardroom realization to a lasting principle",
+          founder: {
+            label: "VOICE CALIBRATION // THE NARRATIVE FOUNDER",
+            note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "The Four-Minute Deploy That Took Nineteen Hours to Undo",
-            body: `Early in my career as a technical founder, we treated daily deployment counts as a badge of honor. Reaching forty production releases a day made us feel nimble, modern, and unstoppable.
-
-That illusion lasted until a routine database migration subtly corrupted three hours of enterprise customer transactions. The deployment itself had taken four minutes. Untangling the state and restoring customer confidence took nineteen hours of all-hands escalation.
-
-That night permanently changed how I evaluate engineering teams. Speed is easy to celebrate when the sun is shining, but enterprise trust is won or lost in the ten minutes after a release goes wrong. Today, we never ask how fast a feature can ship until we have proven how cleanly it can be undone.`
+            body: `Early in my career as a technical founder, we treated daily deployment counts as a badge of honor—until a routine database migration subtly corrupted three hours of enterprise transactions.\n\nToday, we never ask how fast a feature can ship until we have proven how cleanly it can be undone.`
           }
         }
       }
@@ -1042,10 +838,8 @@ That night permanently changed how I evaluate engineering teams. Speed is easy t
 
     let activeCase = 'pricing';
     let activeVoice = 'operator';
-
     const caseBtns = document.querySelectorAll('.case-btn');
     const voiceBtns = document.querySelectorAll('.voice-btn');
-
     const folioSpeakerTitle = document.getElementById('folioSpeakerTitle');
     const folioTimecode = document.getElementById('folioTimecode');
     const folioRawTranscript = document.getElementById('folioRawTranscript');
@@ -1053,155 +847,140 @@ That night permanently changed how I evaluate engineering teams. Speed is easy t
     const folioCoreThesis = document.getElementById('folioCoreThesis');
     const folioVoiceLabel = document.getElementById('folioVoiceLabel');
     const folioCadenceNote = document.getElementById('folioCadenceNote');
-    const folioEssayHeadline = document.getElementById('folioEssayHeadline');
-    const folioEssayBody = document.getElementById('folioEssayBody');
+    const folioMemoHeadline = document.getElementById('folioMemoHeadline');
+    const folioMemoBody = document.getElementById('folioMemoBody');
 
     function renderFolio() {
-      const caseItem = editorialFolioData[activeCase];
-      const voiceItem = caseItem.voices[activeVoice];
-
-      folioSpeakerTitle.textContent = caseItem.speakerTitle;
-      folioTimecode.textContent = caseItem.timecode;
-      folioRawTranscript.textContent = caseItem.rawTranscript;
-      folioEditorialAngle.textContent = caseItem.angle;
-      folioCoreThesis.textContent = caseItem.thesis;
-
-      folioVoiceLabel.textContent = voiceItem.label;
-      folioCadenceNote.textContent = voiceItem.note;
-      folioEssayHeadline.textContent = voiceItem.headline;
-      folioEssayBody.textContent = voiceItem.body;
+      const c = editorialFolioData[activeCase];
+      const v = c.voices[activeVoice];
+      folioSpeakerTitle.textContent = c.speakerTitle;
+      folioTimecode.textContent = c.timecode;
+      folioRawTranscript.textContent = c.rawTranscript;
+      folioEditorialAngle.textContent = c.angle;
+      folioCoreThesis.textContent = c.thesis;
+      folioVoiceLabel.textContent = v.label;
+      folioCadenceNote.textContent = v.note;
+      folioMemoHeadline.textContent = v.headline;
+      folioMemoBody.textContent = v.body;
     }
 
-    function updateButtonGroupStyles(buttons, activeBtn) {
-      buttons.forEach(b => {
-        b.classList.remove('border-paper-accent', 'bg-paper-accent', 'text-white');
-        b.classList.add('border-paper-border', 'bg-paper-light', 'text-paper-dark');
-        const sub = b.querySelector('div:last-child');
-        if (sub) {
-          sub.classList.remove('opacity-80');
-          sub.classList.add('text-paper-muted');
-        }
+    function updateGroup(btns, active) {
+      btns.forEach(b => {
+        b.classList.remove('border-[#141618]', 'bg-[#141618]', 'text-white');
+        b.classList.add('border-[#e5e4de]', 'bg-[#fbfbf9]', 'text-[#121316]');
       });
-      activeBtn.classList.remove('border-paper-border', 'bg-paper-light', 'text-paper-dark');
-      activeBtn.classList.add('border-paper-accent', 'bg-paper-accent', 'text-white');
-      const activeSub = activeBtn.querySelector('div:last-child');
-      if (activeSub) {
-        activeSub.classList.remove('text-paper-muted');
-        activeSub.classList.add('opacity-80');
+      active.classList.remove('border-[#e5e4de]', 'bg-[#fbfbf9]', 'text-[#121316]');
+      active.classList.add('border-[#141618]', 'bg-[#141618]', 'text-white');
+    }
+
+    caseBtns.forEach(b => b.addEventListener('click', () => { activeCase = b.dataset.case; updateGroup(caseBtns, b); renderFolio(); }));
+    voiceBtns.forEach(b => b.addEventListener('click', () => { activeVoice = b.dataset.voice; updateGroup(voiceBtns, b); renderFolio(); }));
+
+    // Section 02 Dossier Stage Tabs
+    const dossierStageTabs = document.querySelectorAll('.dossier-stage-tab');
+    const p1 = document.getElementById('dossierPanel1');
+    const p2 = document.getElementById('dossierPanel2');
+    const p3 = document.getElementById('dossierPanel3');
+    dossierStageTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.dossierTab;
+        dossierStageTabs.forEach(t => t.className = 'dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
+        tab.className = 'dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
+        p1.classList.toggle('hidden', target !== 'all' && target !== 'panel1');
+        p2.classList.toggle('hidden', target !== 'all' && target !== 'panel2');
+        p3.classList.toggle('hidden', target !== 'all' && target !== 'panel3');
+      });
+    });
+
+    // Section 03 Commercial Impact Tabs
+    const impactData = {
+      velocity: {
+        bL: "THE SILENT FOUNDER PENALTY // SALES VELOCITY",
+        bB: "Prospects enter discovery calls skeptical, treating your account executives like commodity vendors and demanding 4-month proof-of-concept trials before involving the economic buyer.",
+        aL: "THE OFFSCRIPT COMMERCIAL ADVANTAGE // PIPELINE VELOCITY",
+        aT: "Champion Forwarding Inside Private Slack Channels",
+        aB: "When you publish sharp operator perspectives on unit economics and systems architecture, VP-level champions screenshot your memos and share them inside internal buying channels—bringing economic buyers to the table pre-aligned with your worldview."
+      },
+      pricing: {
+        bL: "THE SILENT FOUNDER PENALTY // MARGIN COMPRESSION",
+        bB: "Without visible category authority, enterprise procurement pits you against lower-tier competitors on a feature spreadsheet, forcing quarter-end 40% discounts just to close the logo.",
+        aL: "THE OFFSCRIPT COMMERCIAL ADVANTAGE // PRICING DEFENSE",
+        aT: "Anchoring Six-Figure ACVs Before Procurement Intervenes",
+        aB: "Consistent boardroom briefs establish why legacy alternatives fail at scale. Buyers enter commercial negotiations already convinced that your architectural approach commands a premium price floor."
+      },
+      calendar: {
+        bL: "THE SILENT FOUNDER PENALTY // EXECUTIVE BANDWIDTH",
+        bB: "Founders block out Sunday afternoons to stare at a blank cursor, or waste two hours a week interviewing junior agency copywriters who still miss the commercial nuance.",
+        aL: "THE OFFSCRIPT COMMERCIAL ADVANTAGE // ZERO CALENDAR DRAG",
+        aT: "100% Extraction from Existing Spoken Bandwidth",
+        aB: "You never sit for a content interview. Drop a podcast link, recorded town hall, or 4-minute voice note after a customer call; our founding editor delivers calibrated executive memos within 48 hours."
       }
-    }
-
-    caseBtns.forEach(btn => {
+    };
+    const impactTabBtns = document.querySelectorAll('.impact-tab-btn');
+    impactTabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        activeCase = btn.dataset.case;
-        updateButtonGroupStyles(caseBtns, btn);
-        renderFolio();
+        const d = impactData[btn.dataset.impactTab];
+        if (!d) return;
+        impactTabBtns.forEach(b => b.className = 'impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
+        btn.className = 'impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
+        document.getElementById('impactBeforeLabel').textContent = d.bL;
+        document.getElementById('impactBeforeBody').textContent = d.bB;
+        document.getElementById('impactAfterLabel').textContent = d.aL;
+        document.getElementById('impactAfterTitle').textContent = d.aT;
+        document.getElementById('impactAfterBody').textContent = d.aB;
       });
     });
 
-    voiceBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        activeVoice = btn.dataset.voice;
-        updateButtonGroupStyles(voiceBtns, btn);
-        renderFolio();
-      });
-    });
-
-    // Copy Manuscript Button
-    const copyManuscriptBtn = document.getElementById('copyManuscriptBtn');
+    // Copy & Toast
     const toastBanner = document.getElementById('toastBanner');
     const toastText = document.getElementById('toastText');
     let toastTimer;
-
-    function triggerToast(message) {
-      toastText.textContent = message;
+    function triggerToast(msg) {
+      toastText.textContent = msg;
       toastBanner.classList.remove('translate-y-20', 'opacity-0');
       clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => {
-        toastBanner.classList.add('translate-y-20', 'opacity-0');
-      }, 3200);
+      toastTimer = setTimeout(() => toastBanner.classList.add('translate-y-20', 'opacity-0'), 3200);
     }
+    function copyText(text, msg) {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).catch(() => {});
+      triggerToast(msg);
+    }
+    document.getElementById('copyManuscriptBtn').addEventListener('click', () => copyText(`${folioMemoHeadline.textContent}\n\n${folioMemoBody.textContent}`, 'Executive memo copied to clipboard'));
+    document.getElementById('copyTearsheetMemoBtn').addEventListener('click', () => copyText(`If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.\n\nTarget Close Rate: 25% to 35% | Disqualification Floor: 65% to 75%\n\nDiscounting a $150k deal down to $50k permanently anchors your price ceiling across the industry.`, 'Case OE-2026-81 executive memo copied'));
 
-    copyManuscriptBtn.addEventListener('click', () => {
-      const fullText = `${folioEssayHeadline.textContent}\n\n${folioEssayBody.textContent}`;
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(fullText);
-      }
-      triggerToast('Executive manuscript copied to clipboard');
-    });
-
-    // Contact Modal Logic
+    // Contact Modal
     const contactModal = document.getElementById('contactModal');
     const modalFormContainer = document.getElementById('modalFormContainer');
     const modalConfirmationView = document.getElementById('modalConfirmationView');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const closeConfirmBtn = document.getElementById('closeConfirmBtn');
-    const navContactBtn = document.getElementById('navContactBtn');
-    const heroContactBtn = document.getElementById('heroContactBtn');
-    const footerContactBtn = document.getElementById('footerContactBtn');
-    const openInquiryBtns = document.querySelectorAll('.open-inquiry-btn');
     const inquiryEngagement = document.getElementById('inquiryEngagement');
-    const editorialInquiryForm = document.getElementById('editorialInquiryForm');
-    const confirmEmailSpan = document.getElementById('confirmEmailSpan');
-
-    function openContactModal(defaultEngagement) {
-      if (defaultEngagement && inquiryEngagement) {
-        inquiryEngagement.value = defaultEngagement;
-      }
+    function openContactModal(eng) {
+      if (eng && inquiryEngagement) inquiryEngagement.value = eng;
       modalFormContainer.classList.remove('hidden');
       modalConfirmationView.classList.add('hidden');
       contactModal.classList.remove('hidden');
     }
+    function closeContactModal() { contactModal.classList.add('hidden'); }
+    ['navContactBtn', 'heroContactBtn', 'footerContactBtn'].forEach(id => document.getElementById(id).addEventListener('click', () => openContactModal()));
+    document.querySelectorAll('.open-inquiry-btn').forEach(b => b.addEventListener('click', () => openContactModal(b.dataset.engagement)));
+    document.getElementById('closeModalBtn').addEventListener('click', closeContactModal);
+    document.getElementById('closeConfirmBtn').addEventListener('click', closeContactModal);
+    contactModal.addEventListener('click', e => { if (e.target === contactModal) closeContactModal(); });
 
-    function closeContactModal() {
-      contactModal.classList.add('hidden');
-    }
-
-    [navContactBtn, heroContactBtn, footerContactBtn].forEach(btn => {
-      if (btn) btn.addEventListener('click', () => openContactModal());
-    });
-
-    openInquiryBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        openContactModal(btn.dataset.engagement);
-      });
-    });
-
-    closeModalBtn.addEventListener('click', closeContactModal);
-    closeConfirmBtn.addEventListener('click', closeContactModal);
-
-    contactModal.addEventListener('click', (e) => {
-      if (e.target === contactModal) closeContactModal();
-    });
-
-    editorialInquiryForm.addEventListener('submit', (e) => {
+    document.getElementById('editorialInquiryForm').addEventListener('submit', e => {
       e.preventDefault();
       const name = document.getElementById('inquiryName').value.trim();
       const email = document.getElementById('inquiryEmail').value.trim();
-      const engagement = document.getElementById('inquiryEngagement').value;
+      const linkedin = document.getElementById('inquiryLinkedin').value.trim();
       const audioUrl = document.getElementById('inquiryAudioUrl').value.trim();
-      const notes = document.getElementById('inquiryNotes').value.trim();
-
-      confirmEmailSpan.textContent = email;
-
-      const subject = encodeURIComponent(`Editorial Inquiry: ${engagement} — ${name}`);
-      const bodyLines = [
-        `Name & Title: ${name}`,
-        `Work Email: ${email}`,
-        `Engagement Model: ${engagement}`,
-        audioUrl ? `Spoken Recording Link: ${audioUrl}` : null,
-        notes ? `\nEditorial Notes:\n${notes}` : null
-      ].filter(Boolean).join('\n');
-
-      const mailtoUrl = `mailto:kaung@offscripteditorial.com?subject=${subject}&body=${encodeURIComponent(bodyLines)}`;
-      window.location.href = mailtoUrl;
-
+      const eng = inquiryEngagement.value;
+      document.getElementById('confirmEmailSpan').textContent = email;
+      const body = `Full Name & Title: ${name}\nWork Email: ${email}\nLinkedIn: ${linkedin}\nAudio Link: ${audioUrl}\nEngagement: ${eng}`;
+      window.location.href = `mailto:kaung@offscripteditorial.com?subject=${encodeURIComponent('Representation Inquiry — ' + name)}&body=${encodeURIComponent(body)}`;
       modalFormContainer.classList.add('hidden');
       modalConfirmationView.classList.remove('hidden');
-      triggerToast('Editorial inquiry prepared');
+      triggerToast('Representation inquiry prepared');
     });
 
-    // Initialize Reading Room
     renderFolio();
   </script>
 </body>
