@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -92,6 +93,7 @@
 
   <!-- MAIN NAVIGATION -->
     <!-- MAIN NAVIGATION -->
+    <!-- MAIN NAVIGATION -->
   <header class="sticky top-0 z-40 bg-[#fbfbf9]/95 backdrop-blur-md border-b border-[#e5e4de]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       <a href="#top" class="flex items-center space-x-3 group shrink-0">
@@ -106,7 +108,7 @@
         </div>
       </a>
 
-      <!-- Desktop & Tablet Navigation Bar (Clearly visible from md: 768px up) -->
+      <!-- Desktop Navigation Bar (Visible on tablets & desktop from md: 768px up) -->
       <nav class="hidden md:flex items-center space-x-5 lg:space-x-8 text-xs lg:text-sm font-medium text-[#575a65]">
         <a href="#protocol" class="hover:text-[#121316] transition">The Protocol</a>
         <a href="#tearsheet" class="hover:text-[#121316] transition">The Dossier</a>
@@ -122,64 +124,54 @@
           <svg class="w-4 h-4 text-[#92642a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </button>
 
-        <!-- Mobile Menu Button (Clearly visible on all screens <768px) -->
-        <button id="mobileMenuBtn" type="button" class="md:hidden inline-flex items-center space-x-1.5 px-3 py-2 border border-[#d1cfc7] bg-white text-[#121316] rounded text-xs font-mono font-semibold uppercase tracking-wider hover:bg-[#f4f3ef] transition shadow-xs focus:outline-none" aria-label="Toggle Navigation Menu">
+        <!-- Mobile Menu Button (Visible on screens <768px) -->
+        <button id="mobileMenuBtn" type="button" class="md:hidden inline-flex items-center space-x-1.5 px-3.5 py-2 border border-[#d1cfc7] bg-white text-[#121316] rounded text-xs font-mono font-semibold uppercase tracking-wider hover:bg-[#f4f3ef] transition shadow-xs focus:outline-none" aria-label="Toggle Navigation Menu">
           <svg class="w-4 h-4 text-[#121316]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <span>Menu</span>
         </button>
       </div>
     </div>
+  </header>
 
-    <!-- Mobile Navigation Drawer Overlay (FletchPMM-style full-screen slide-out) -->
-    <div id="mobileDrawer" class="fixed inset-0 bg-[#fbfbf9] z-50 flex flex-col justify-between p-6 sm:p-8 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
-      <div>
-        <div class="flex items-center justify-between pb-6 border-b border-[#e5e4de]">
-          <div class="flex items-center space-x-2.5">
-            <div class="h-8 w-8 rounded-full bg-[#141618] flex items-center justify-center p-1.5 shadow-sm">
-              <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2236%2036%20168%20168%22%3E%3Cpath%20d%3D%22M96%2C71L91%2C76L86%2C86L84%2C92L84%2C95L83%2C96L85%2C102L88%2C107L94%2C113L100%2C117L104%2C118L109%2C121L128%2C127L135%2C131L142%2C138L146%2C148L146%2C159L145%2C160L144%2C166L141%2C170L142%2C170L150%2C160L154%2C151L155%2C145L156%2C144L156%2C140L157%2C139L157%2C129L151%2C120L146%2C116L134%2C110L112%2C103L103%2C98L97%2C92L94%2C85L94%2C75ZM152%2C58L149%2C61L142%2C61L125%2C55L104%2C57L86%2C65L66%2C85L58%2C104L57%2C130L66%2C154L81%2C171L81%2C181L85%2C177L91%2C177L113%2C184L136%2C182L160%2C169L173%2C154L181%2C135L182%2C109L173%2C85L158%2C69L158%2C86L163%2C106L162%2C140L154%2C163L142%2C176L126%2C182L103%2C179L86%2C164L78%2C145L76%2C106L82%2C82L88%2C72L105%2C59L129%2C58L144%2C69L152%2C89Z%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E" alt="Offscript OS Mark" class="h-full w-full object-contain filter invert" />
-            </div>
-            <div class="flex flex-col">
-              <span class="font-serif text-2xl font-bold tracking-tight text-[#121316]">Offscript</span>
-              <span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#92642a] -mt-1">Editorial</span>
-            </div>
-          </div>
-          <button id="closeDrawerBtn" type="button" class="p-2 text-[#121316] text-3xl font-light hover:text-[#92642a] leading-none" aria-label="Close navigation menu">&times;</button>
+  <!-- FULL-SCREEN MOBILE NAVIGATION DRAWER (FletchPMM pattern) -->
+  <div id="mobileDrawer" class="fixed inset-0 w-screen h-screen min-h-[100dvh] bg-[#fbfbf9] z-[100] flex flex-col justify-between p-6 sm:p-10 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
+    <!-- Top Bar: Logo on left, Close button on right -->
+    <div class="flex items-center justify-between pb-6 border-b border-[#e5e4de] shrink-0">
+      <div class="flex items-center space-x-3">
+        <div class="h-9 w-9 rounded-full bg-[#141618] flex items-center justify-center p-1.5 shadow-sm">
+          <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2236%2036%20168%20168%22%3E%3Cpath%20d%3D%22M96%2C71L91%2C76L86%2C86L84%2C92L84%2C95L83%2C96L85%2C102L88%2C107L94%2C113L100%2C117L104%2C118L109%2C121L128%2C127L135%2C131L142%2C138L146%2C148L146%2C159L145%2C160L144%2C166L141%2C170L142%2C170L150%2C160L154%2C151L155%2C145L156%2C144L156%2C140L157%2C139L157%2C129L151%2C120L146%2C116L134%2C110L112%2C103L103%2C98L97%2C92L94%2C85L94%2C75ZM152%2C58L149%2C61L142%2C61L125%2C55L104%2C57L86%2C65L66%2C85L58%2C104L57%2C130L66%2C154L81%2C171L81%2C181L85%2C177L91%2C177L113%2C184L136%2C182L160%2C169L173%2C154L181%2C135L182%2C109L173%2C85L158%2C69L158%2C86L163%2C106L162%2C140L154%2C163L142%2C176L126%2C182L103%2C179L86%2C164L78%2C145L76%2C106L82%2C82L88%2C72L105%2C59L129%2C58L144%2C69L152%2C89Z%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E" alt="Offscript Editorial OS Mark" class="h-full w-full object-contain filter invert" />
         </div>
-        <nav class="flex flex-col space-y-6 pt-8 text-xl font-serif text-[#121316]">
-          <a href="#protocol" class="mobile-nav-link hover:text-[#92642a] transition flex items-center justify-between pb-3 border-b border-[#e5e4de]/60">
-            <span>01 // The Protocol</span>
-            <span class="font-mono text-xs text-[#8a8d98]">&rarr;</span>
-          </a>
-          <a href="#tearsheet" class="mobile-nav-link hover:text-[#92642a] transition flex items-center justify-between pb-3 border-b border-[#e5e4de]/60">
-            <span>02 // The Dossier (Lenny Case)</span>
-            <span class="font-mono text-xs text-[#8a8d98]">&rarr;</span>
-          </a>
-          <a href="#folio" class="mobile-nav-link hover:text-[#92642a] transition flex items-center justify-between pb-3 border-b border-[#e5e4de]/60">
-            <span>02B // Voice Calibration</span>
-            <span class="font-mono text-xs text-[#8a8d98]">&rarr;</span>
-          </a>
-          <a href="#impact" class="mobile-nav-link hover:text-[#92642a] transition flex items-center justify-between pb-3 border-b border-[#e5e4de]/60">
-            <span>03 // Commercial Impact</span>
-            <span class="font-mono text-xs text-[#8a8d98]">&rarr;</span>
-          </a>
-          <a href="#engagements" class="mobile-nav-link hover:text-[#92642a] transition flex items-center justify-between pb-3 border-b border-[#e5e4de]/60">
-            <span>04 // Retainer Terms</span>
-            <span class="font-mono text-xs text-[#8a8d98]">&rarr;</span>
-          </a>
-        </nav>
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl font-bold tracking-tight text-[#121316]">Offscript</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#92642a] -mt-1">Editorial</span>
+        </div>
       </div>
-      <div class="pt-8 border-t border-[#e5e4de] space-y-4">
-        <button id="mobileDrawerInquireBtn" type="button" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-4 rounded text-sm font-semibold tracking-wide shadow-sm flex items-center justify-center space-x-2 transition">
-          <span>Inquire About Representation</span>
-          <span class="text-[#92642a]">&rarr;</span>
-        </button>
-        <div class="flex items-center justify-between text-xs font-mono text-[#575a65]">
-          <span>Retainer Capped at 4 Partners</span>
-          <a href="mailto:kaung@offscripteditorial.com" class="text-[#121316] hover:text-[#92642a] underline">kaung@offscripteditorial.com</a>
-        </div>
+      <button id="closeDrawerBtn" type="button" class="p-2 text-[#121316] hover:text-[#92642a] focus:outline-none" aria-label="Close navigation menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Center Navigation Links (Large, spacious, centered like FletchPMM) -->
+    <nav class="flex flex-col space-y-7 py-8 my-auto text-center font-serif text-2xl sm:text-3xl font-medium text-[#121316]">
+      <a href="#protocol" class="mobile-nav-link hover:text-[#92642a] transition">The Protocol</a>
+      <a href="#tearsheet" class="mobile-nav-link hover:text-[#92642a] transition">The Dossier (Lenny Case)</a>
+      <a href="#folio" class="mobile-nav-link hover:text-[#92642a] transition">Voice Calibration</a>
+      <a href="#impact" class="mobile-nav-link hover:text-[#92642a] transition">Commercial Impact</a>
+      <a href="#engagements" class="mobile-nav-link hover:text-[#92642a] transition">Retainer Terms</a>
+    </nav>
+
+    <!-- Bottom Action Button (Big, bold like FletchPMM's Work with FletchPMM) -->
+    <div class="pt-6 border-t border-[#e5e4de] space-y-4 shrink-0">
+      <button id="mobileDrawerInquireBtn" type="button" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-4 px-6 rounded-md text-base font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
+        <span>Inquire About Representation</span>
+        <span class="text-[#92642a]">&rarr;</span>
+      </button>
+      <div class="flex items-center justify-between text-xs font-mono text-[#575a65]">
+        <span>Retainer Capped at 4 Partners</span>
+        <a href="mailto:kaung@offscripteditorial.com" class="text-[#121316] hover:text-[#92642a] underline">kaung@offscripteditorial.com</a>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- HERO SECTION -->
   <section id="top" class="pt-16 pb-24 border-b border-[#e5e4de] bg-gradient-to-b from-[#fbfbf9] to-[#f4f3ef]/60">
@@ -934,64 +926,8 @@
       active.classList.add('border-[#141618]', 'bg-[#141618]', 'text-white');
     }
 
-    caseBtns.forEach(b => b.addEventListener('click', () => { activeCase = b.dataset.case; updateGroup(caseBtns, b);     // Mobile Drawer Navigation (FletchPMM-style full-screen drawer)
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
-    const mobileDrawer = document.getElementById('mobileDrawer');
-    const mobileDrawerInquireBtn = document.getElementById('mobileDrawerInquireBtn');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-    function toggleMobileDrawer(open) {
-      if (!mobileDrawer) return;
-      if (open) {
-        mobileDrawer.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden';
-      } else {
-        mobileDrawer.classList.add('translate-x-full');
-        document.body.style.overflow = '';
-      }
-    }
-
-    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', () => toggleMobileDrawer(true));
-    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', () => toggleMobileDrawer(false));
-    mobileNavLinks.forEach(link => link.addEventListener('click', () => toggleMobileDrawer(false)));
-    if (mobileDrawerInquireBtn) {
-      mobileDrawerInquireBtn.addEventListener('click', () => {
-        toggleMobileDrawer(false);
-        openContactModal();
-      });
-    }
-
-    renderFolio(); }));
-    voiceBtns.forEach(b => b.addEventListener('click', () => { activeVoice = b.dataset.voice; updateGroup(voiceBtns, b);     // Mobile Drawer Navigation (FletchPMM-style full-screen drawer)
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
-    const mobileDrawer = document.getElementById('mobileDrawer');
-    const mobileDrawerInquireBtn = document.getElementById('mobileDrawerInquireBtn');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-    function toggleMobileDrawer(open) {
-      if (!mobileDrawer) return;
-      if (open) {
-        mobileDrawer.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden';
-      } else {
-        mobileDrawer.classList.add('translate-x-full');
-        document.body.style.overflow = '';
-      }
-    }
-
-    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', () => toggleMobileDrawer(true));
-    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', () => toggleMobileDrawer(false));
-    mobileNavLinks.forEach(link => link.addEventListener('click', () => toggleMobileDrawer(false)));
-    if (mobileDrawerInquireBtn) {
-      mobileDrawerInquireBtn.addEventListener('click', () => {
-        toggleMobileDrawer(false);
-        openContactModal();
-      });
-    }
-
-    renderFolio(); }));
+    caseBtns.forEach(b => b.addEventListener('click', () => { activeCase = b.dataset.case; updateGroup(caseBtns, b); renderFolio(); }));
+    voiceBtns.forEach(b => b.addEventListener('click', () => { activeVoice = b.dataset.voice; updateGroup(voiceBtns, b); renderFolio(); }));
 
     // Section 02 Dossier Stage Tabs
     const dossierStageTabs = document.querySelectorAll('.dossier-stage-tab');
@@ -1077,7 +1013,10 @@
       contactModal.classList.remove('hidden');
     }
     function closeContactModal() { contactModal.classList.add('hidden'); }
-    ['navContactBtn', 'heroContactBtn', 'footerContactBtn'].forEach(id => document.getElementById(id).addEventListener('click', () => openContactModal()));
+    ['navContactBtn', 'heroContactBtn', 'footerContactBtn'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('click', () => openContactModal());
+    });
     document.querySelectorAll('.open-inquiry-btn').forEach(b => b.addEventListener('click', () => openContactModal(b.dataset.engagement)));
     document.getElementById('closeModalBtn').addEventListener('click', closeContactModal);
     document.getElementById('closeConfirmBtn').addEventListener('click', closeContactModal);
@@ -1098,7 +1037,7 @@
       triggerToast('Representation inquiry prepared');
     });
 
-        // Mobile Drawer Navigation (FletchPMM-style full-screen drawer)
+    // Mobile Drawer Navigation (FletchPMM-style full-screen overlay)
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeDrawerBtn = document.getElementById('closeDrawerBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
@@ -1109,16 +1048,30 @@
       if (!mobileDrawer) return;
       if (open) {
         mobileDrawer.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('overflow-hidden');
       } else {
         mobileDrawer.classList.add('translate-x-full');
-        document.body.style.overflow = '';
+        document.body.classList.remove('overflow-hidden');
       }
     }
 
-    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', () => toggleMobileDrawer(true));
-    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', () => toggleMobileDrawer(false));
-    mobileNavLinks.forEach(link => link.addEventListener('click', () => toggleMobileDrawer(false)));
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileDrawer(true);
+      });
+    }
+    if (closeDrawerBtn) {
+      closeDrawerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileDrawer(false);
+      });
+    }
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        toggleMobileDrawer(false);
+      });
+    });
     if (mobileDrawerInquireBtn) {
       mobileDrawerInquireBtn.addEventListener('click', () => {
         toggleMobileDrawer(false);
@@ -1130,3 +1083,4 @@
   </script>
 </body>
 </html>
+```
