@@ -150,13 +150,28 @@
       </button>
     </div>
 
-    <!-- Center Navigation Links (Large, spacious, centered like FletchPMM) -->
-    <nav class="flex flex-col space-y-7 py-8 my-auto text-center font-serif text-2xl sm:text-3xl font-medium text-[#121316]">
-      <a href="#protocol" class="mobile-nav-link hover:text-[#92642a] transition">The Protocol</a>
-      <a href="#tearsheet" class="mobile-nav-link hover:text-[#92642a] transition">The Dossier (Lenny Case)</a>
-      <a href="#folio" class="mobile-nav-link hover:text-[#92642a] transition">Voice Calibration</a>
-      <a href="#impact" class="mobile-nav-link hover:text-[#92642a] transition">Commercial Impact</a>
-      <a href="#engagements" class="mobile-nav-link hover:text-[#92642a] transition">Retainer Terms</a>
+    <!-- Center Navigation Links (Synchronized 6-Section Hierarchy) -->
+    <nav class="py-8 my-auto">
+      <div class="flex flex-col space-y-6">
+        <a href="#protocol" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">01 //</span>The Protocol
+        </a>
+        <a href="#tearsheet" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">02 //</span>The Dossier
+        </a>
+        <a href="#folio" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">02B //</span>The Reading Room
+        </a>
+        <a href="#impact" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">03 //</span>Commercial Architecture
+        </a>
+        <a href="#engagements" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">04 //</span>Pricing & Retainer Terms
+        </a>
+        <a href="#faq" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">05 //</span>Frequently Asked Questions
+        </a>
+      </div>
     </nav>
 
     <!-- Bottom Action Button (Big, bold like FletchPMM's Work with FletchPMM) -->
@@ -322,11 +337,11 @@
 
       <!-- MODULAR TABBED TOGGLE BAR -->
       <div class="bg-white border border-[#e5e4de] rounded-lg p-3 mb-8 flex flex-wrap items-center justify-between gap-2 editorial-shadow">
-        <div class="flex flex-wrap items-center gap-2" role="tablist">
-          <button type="button" data-dossier-tab="all" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">All 3 Stages (Full View)</button>
-          <button type="button" data-dossier-tab="panel1" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 01 // Raw Audio</button>
-          <button type="button" data-dossier-tab="panel2" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 02 // Translation Trap</button>
-          <button type="button" data-dossier-tab="panel3" class="dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 03 // Calibrated Asset</button>
+        <div class="flex overflow-x-auto sm:flex-wrap items-center gap-2 py-1 max-w-full no-scrollbar" role="tablist">
+          <button type="button" data-dossier-tab="all" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">All 3 Stages (Full View)</button>
+          <button type="button" data-dossier-tab="panel1" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 01 // Raw Audio</button>
+          <button type="button" data-dossier-tab="panel2" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 02 // Translation Trap</button>
+          <button type="button" data-dossier-tab="panel3" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 03 // Calibrated Asset</button>
         </div>
         <span class="font-mono text-[11px] text-[#8a8d98] px-2 hidden xl:inline tabular-nums">SOURCE: LENNY'S PODCAST @ 00:01:30</span>
       </div>
@@ -472,16 +487,16 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
             <label class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#575a65] mb-3">1. Select Spoken Conversation Source</label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="caseSelectorGroup">
-              <button type="button" class="case-btn text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-case="pricing">
+            <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-2.5 pb-2 sm:pb-0 no-scrollbar" id="caseSelectorGroup">
+              <button type="button" role="tab" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-case="pricing">
                 <div class="font-serif font-medium text-base">Enterprise Pricing</div>
                 <div class="text-xs opacity-80 mt-0.5">Margin &amp; Deal Discipline</div>
               </button>
-              <button type="button" class="case-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="revops">
+              <button type="button" role="tab" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="revops">
                 <div class="font-serif font-medium text-base">Revenue Architecture</div>
                 <div class="text-xs text-[#575a65] mt-0.5">Systems vs. Ad-Hoc Tickets</div>
               </button>
-              <button type="button" class="case-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="engineering">
+              <button type="button" role="tab" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="engineering">
                 <div class="font-serif font-medium text-base">Engineering Resilience</div>
                 <div class="text-xs text-[#575a65] mt-0.5">Velocity vs. Recovery</div>
               </button>
@@ -489,18 +504,18 @@
           </div>
           <div>
             <label class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#575a65] mb-3">2. Select Calibrated Executive Voice</label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="voiceSelectorGroup">
-              <button type="button" class="voice-btn text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-voice="operator">
-                <div class="font-serif font-medium text-base">The Direct Operator</div>
-                <div class="text-xs opacity-80 mt-0.5">Crisp, decisive &amp; punchy</div>
+            <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-2.5 pb-2 sm:pb-0 no-scrollbar" id="voiceSelectorGroup">
+              <button type="button" role="tab" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-voice="operator">
+                <div class="font-serif font-medium text-base">Aggressive Operator</div>
+                <div class="text-xs opacity-80 mt-0.5">Punchy tempo, high-velocity convictions</div>
               </button>
-              <button type="button" class="voice-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="strategist">
-                <div class="font-serif font-medium text-base">The Systems Strategist</div>
-                <div class="text-xs text-[#575a65] mt-0.5">Analytical &amp; boardroom-ready</div>
+              <button type="button" role="tab" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="strategist">
+                <div class="font-serif font-medium text-base">Analytical Architect</div>
+                <div class="text-xs text-[#575a65] mt-0.5">Boardroom-ready, structural systems logic</div>
               </button>
-              <button type="button" class="voice-btn text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="founder">
-                <div class="font-serif font-medium text-base">The Narrative Founder</div>
-                <div class="text-xs text-[#575a65] mt-0.5">Reflective &amp; story-driven</div>
+              <button type="button" role="tab" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="founder">
+                <div class="font-serif font-medium text-base">Storyteller / Visionary</div>
+                <div class="text-xs text-[#575a65] mt-0.5">Reflective, chronological founder narrative</div>
               </button>
             </div>
           </div>
@@ -538,7 +553,7 @@
           <div class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-10 editorial-shadow">
             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e5e4de] pb-4 mb-6">
               <div>
-                <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#92642a] block" id="folioVoiceLabel">VOICE CALIBRATION // THE DIRECT OPERATOR</span>
+                <span class="font-mono text-xs font-semibold uppercase tracking-wider text-[#92642a] block" id="folioVoiceLabel">VOICE CALIBRATION // AGGRESSIVE OPERATOR</span>
                 <span class="font-serif italic text-sm text-[#575a65]" id="folioCadenceNote">Cadence: Decisive declarative sentences with high commercial urgency</span>
               </div>
               <button id="copyManuscriptBtn" type="button" class="border border-[#d1cfc7] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] px-3.5 py-1.5 rounded text-xs font-semibold transition flex items-center space-x-1.5">
@@ -595,9 +610,9 @@
             <h3 class="font-serif text-2xl font-normal text-[#121316] mt-0.5">Inspect How Executive Memos Solve Boardroom Bottlenecks</h3>
           </div>
           <div class="flex flex-wrap gap-2" role="tablist">
-            <button type="button" data-impact-tab="velocity" class="impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">01. Pipeline Velocity</button>
-            <button type="button" data-impact-tab="pricing" class="impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">02. Pricing Defense</button>
-            <button type="button" data-impact-tab="calendar" class="impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">03. Calendar Protection</button>
+            <button type="button" data-impact-tab="velocity" role="tab" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">01. Pipeline Velocity</button>
+            <button type="button" data-impact-tab="pricing" role="tab" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">02. Pricing Defense</button>
+            <button type="button" data-impact-tab="calendar" role="tab" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">03. Calendar Protection</button>
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
@@ -823,7 +838,7 @@
   <section class="py-16 border-t border-[#1a1a1a] bg-[#080808]"> <div class="max-w-5xl mx-auto px-6"> <div class="flex items-center gap-2 mb-6"> <span class="h-2 w-2 rounded-full bg-[#39FF14] animate-pulse"></span> <h3 class="font-mono text-xs tracking-widest text-[#888888] uppercase">Operational Timezone Coverage</h3> </div> <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs border border-[#1a1a1a] p-6 bg-[#0c0c0c]"> <div> <div class="text-[#555555] uppercase">US Pacific</div> <div class="text-white text-sm mt-1">PST (UTC-8)</div> <div class="text-[#777777] mt-1">San Francisco • Seattle</div> </div> <div> <div class="text-[#555555] uppercase">US Eastern</div> <div class="text-white text-sm mt-1">EST (UTC-5)</div> <div class="text-[#777777] mt-1">New York • Boston</div> </div> <div> <div class="text-[#555555] uppercase">UK &amp; Europe</div> <div class="text-white text-sm mt-1">GMT / CET (UTC+0/+1)</div> <div class="text-[#777777] mt-1">London • Berlin • Paris</div> </div> <div> <div class="text-[#555555] uppercase">Asia-Pacific</div> <div class="text-white text-sm mt-1">SGT / AEST (UTC+8 / UTC+10)</div> <div class="text-[#777777] mt-1">Singapore • Sydney • Tokyo</div> </div> </div> <p class="text-sm text-[#777777] mt-6 leading-relaxed"> Engineered for timezone-asymmetric velocity. Executives record unscripted audio during their local workday; our asynchronous assembly line extracts conviction and executes deterministic linting overnight. Your publication-ready folio is delivered within 48 hours with zero scheduling drag. </p> </div> </section>
 
     <!-- SECTION: FREQUENTLY AUDITED QUESTIONS (#faq) -->
-  <section id="faq" class="py-20 border-t border-[#1a1a1a] bg-[#050505]"> <div class="max-w-4xl mx-auto px-6"> <div class="flex items-center gap-2 mb-8"> <span class="font-mono text-xs text-[#888888] tracking-widest uppercase">05 // OPERATIONAL MECHANICS</span> </div> <h2 class="text-2xl font-mono text-white mb-12">Frequently Audited Questions</h2> <div class="space-y-6"> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">How can you capture my authentic voice if we never meet on Zoom?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Offscript operates on an extraction model using existing unscripted recordings like podcasts, keynotes, and voice notes. We isolate your dialogue and map your convictions into publication-ready executive memos without requiring calendar time. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">What audio recordings qualify for the 48-hour sprint intake?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> We ingest unscripted guest appearances on industry podcasts, webinars, keynotes, or voice notes where you speak freely on commercial and operational topics. We do not accept scripted PR videos. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">How does the consolidated calibration round work?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Every sprint includes one consolidated calibration round within a 7-day review window. You review your 14-day queue of one Category Manifesto and four Supporting Memos in a private Google Doc, and all revisions are completed within 24 hours. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">Why does Offscript settle in USDC via Request Finance?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Engagements are priced in US Dollars ($950 for the sprint, $3,500 per month for the retainer) and settled in USDC via Request Finance to eliminate international banking wire delays, FX haircuts, and processor holds, ensuring instant settlement aligned with our 48-hour SLA. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">Who owns the intellectual property of the published assets?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> You retain 100% irrevocable ownership of all extracted intellectual property, frameworks, and text upon confirmed settlement. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">What is the difference between the 48-hour sprint and the ongoing desk retainer?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> The $950 sprint is a one-time diagnostic delivering 1 Category Manifesto and 4 Supporting Executive Memos (a 14-day queue) in 48 hours. The $3,500 monthly retainer provides ongoing narrative representation capped at 4 partners. </p> </div> </div> </div> </section>
+  <section id="faq" class="py-20 border-t border-[#1a1a1a] bg-[#050505]"> <div class="max-w-4xl mx-auto px-6"> <div class="flex items-center gap-2 mb-8"> <span class="font-mono text-xs text-[#888888] tracking-widest uppercase">05 // OPERATIONAL MECHANICS</span> </div> <h2 class="text-2xl font-serif text-white mb-12">Frequently Asked Questions</h2> <div class="space-y-6"> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">How can you capture my authentic voice if we never meet on Zoom?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Offscript operates on an extraction model using existing unscripted recordings like podcasts, keynotes, and voice notes. We isolate your dialogue and map your convictions into publication-ready executive memos without requiring calendar time. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">What audio recordings qualify for the 48-hour sprint intake?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> We ingest unscripted guest appearances on industry podcasts, webinars, keynotes, or voice notes where you speak freely on commercial and operational topics. We do not accept scripted PR videos. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">How does the consolidated calibration round work?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Every sprint includes one consolidated calibration round within a 7-day review window. You review your 14-day queue of one Category Manifesto and four Supporting Memos in a private Google Doc, and all revisions are completed within 24 hours. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">Why does Offscript settle in USDC via Request Finance?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Engagements are priced in US Dollars ($950 for the sprint, $3,500 per month for the retainer) and settled in USDC via Request Finance to eliminate international banking wire delays, FX haircuts, and processor holds, ensuring instant settlement aligned with our 48-hour SLA. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">Who owns the intellectual property of the published assets?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> You retain 100% irrevocable ownership of all extracted intellectual property, frameworks, and text upon confirmed settlement. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">What is the difference between the 48-hour sprint and the ongoing desk retainer?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> The $950 sprint is a one-time diagnostic delivering 1 Category Manifesto and 4 Supporting Executive Memos (a 14-day queue) in 48 hours. The $3,500 monthly retainer provides ongoing narrative representation capped at 4 partners. </p> </div> </div> </div> </section>
 
   <!-- FOOTER -->
   <footer class="bg-[#141618] text-[#f8fafc] py-16 text-sm">
@@ -848,7 +863,7 @@
           <div><a href="#folio" class="text-stone-300 hover:text-white transition">02B // Voice Calibration</a></div>
           <div><a href="#impact" class="text-stone-300 hover:text-white transition">03 // Commercial Impact</a></div>
           <div><a href="#engagements" class="text-stone-300 hover:text-white transition">04 // Product Ladder</a></div>
-          <div><a href="#faq" class="text-stone-300 hover:text-white transition">05 // Frequently Audited Questions</a></div>
+          <div><a href="#faq" class="text-stone-300 hover:text-white transition">05 // Frequently Asked Questions</a></div>
         </div>
         <div class="md:col-span-3 space-y-2 text-xs">
           <div class="font-mono uppercase tracking-widest text-[#92642a] font-semibold mb-3">Direct Editorial Desk</div>
@@ -876,19 +891,19 @@
         thesis: "An abnormally high enterprise close rate signals chronic underpricing, while inconsistent discounting erodes credibility across executive backchannels.",
         voices: {
           operator: {
-            label: "VOICE CALIBRATION // THE DIRECT OPERATOR",
+            label: "VOICE CALIBRATION // AGGRESSIVE OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "If Your Enterprise Win Rate Is Sitting at 60%, Your Pricing Is Broken",
             body: `If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.\n\nEarly-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.\n\nHealthy enterprise close rates hover between 25% and 35%.\n\nIf seven out of ten prospects are not balking at your contract size, you are not discovering your market ceiling. You are subsidizing buyers who had the corporate budget to pay triple.\n\nWorse: enterprise buyers talk in private backchannels. Discounting a $150k agreement down to $50k permanently anchors your valuation across executive peer groups.`
           },
           strategist: {
-            label: "VOICE CALIBRATION // THE SYSTEMS STRATEGIST",
+            label: "VOICE CALIBRATION // ANALYTICAL ARCHITECT",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "The Win-Rate Paradox: Why High Close Rates Erode Enterprise Valuation",
             body: `Enterprise sales benchmarks reveal a structural paradox that growth-stage leadership teams routinely misread: abnormally high close rates signal margin erosion rather than superior product-market fit.\n\nWhen an enterprise sales organization closes more than 35% of qualified opportunities, commercial leadership is failing to discover the upper boundary of buyer willingness to pay. A healthy enterprise closing distribution sits between 25% and 35%.\n\nJust as critical is price consistency across the customer base. Enterprise procurement leaders and operating executives compare vendor terms inside private peer networks.`
           },
           founder: {
-            label: "VOICE CALIBRATION // THE NARRATIVE FOUNDER",
+            label: "VOICE CALIBRATION // STORYTELLER / VISIONARY",
             note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "The Quiet Cost of the Quarter-End Discount",
             body: `In the early days of selling into the enterprise, closing six out of ten deals feels like vindication. The sales floor rings the gong, the board praises pipeline velocity, and every signed logo feels like momentum.\n\nIt often takes three quarters to realize you have been subsidizing customers who were prepared to pay three times as much.\n\nIn enterprise software, a 30% win rate is a sign of health. It means your pricing commands respect, qualifies serious buyers, and protects the integrity of every relationship you sign.`
@@ -903,19 +918,19 @@
         thesis: "Treating Revenue Operations as a reactive help desk destroys strategic leverage; high-growth companies run RevOps like an engineering product team.",
         voices: {
           operator: {
-            label: "VOICE CALIBRATION // THE DIRECT OPERATOR",
+            label: "VOICE CALIBRATION // AGGRESSIVE OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "Your Revenue Operations Team Is Not an Internal Help Desk",
             body: `Most founders treat Revenue Operations like internal IT support.\n\nA sales rep breaks a workflow, files an urgent request, and demands an immediate patch. Your highest-paid operations architect spends sixty hours a week resetting permissions and building one-off dashboard views.\n\nThe fix is structural: run RevOps like a software engineering team. Treat your CRM as the core product, operate on two-week sprints, and require every change request to prove measurable revenue impact.`
           },
           strategist: {
-            label: "VOICE CALIBRATION // THE SYSTEMS STRATEGIST",
+            label: "VOICE CALIBRATION // ANALYTICAL ARCHITECT",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "Architecting Revenue Operations as an Internal Product Organization",
             body: `Revenue Operations frequently fails to deliver strategic leverage for one reason: executive leadership allows reactive administration to crowd out systems architecture.\n\nHigh-performing commercial organizations govern RevOps through software product management principles. The underlying data infrastructure is managed as a versioned product and capacity is allocated across two-week engineering sprints.`
           },
           founder: {
-            label: "VOICE CALIBRATION // THE NARRATIVE FOUNDER",
+            label: "VOICE CALIBRATION // STORYTELLER / VISIONARY",
             note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "How We Stopped Answering Tickets and Rebuilt Our Revenue Engine",
             body: `Three years ago, our revenue operations team was closing nearly two hundred internal requests a week, yet our board forecasts were still unreliable.\n\nEverything changed the week we retired the ticketing queue and adopted an engineering sprint model. Within a single quarter, the noise subsided—and our operations team finally had the room to build systems that lasted.`
@@ -930,19 +945,19 @@
         thesis: "Celebrating deployment frequency without deterministic rollback recovery is operational recklessness.",
         voices: {
           operator: {
-            label: "VOICE CALIBRATION // THE DIRECT OPERATOR",
+            label: "VOICE CALIBRATION // AGGRESSIVE OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "Shipping Code Thirty Times a Day Is a Vanity Metric",
             body: `Engineering leaders love boasting about deployment frequency. Meanwhile, their recovery plan for a bad release is four senior engineers panicking in a Slack channel at 2:00 AM.\n\nSpeed without rollback certainty is operational recklessness. True engineering maturity is measured by how calmly your system recovers when a release inevitably fails.`
           },
           strategist: {
-            label: "VOICE CALIBRATION // THE SYSTEMS STRATEGIST",
+            label: "VOICE CALIBRATION // ANALYTICAL ARCHITECT",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "Why Mean Time to Recovery Matters More Than Deployment Velocity",
             body: `Modern software engineering organizations frequently over-index on deployment frequency while neglecting the architectural invariants required for safe state recovery.\n\nResilient engineering organizations decouple code deployment from feature activation and enforce strict backward-compatible migration standards before reaching production traffic.`
           },
           founder: {
-            label: "VOICE CALIBRATION // THE NARRATIVE FOUNDER",
+            label: "VOICE CALIBRATION // STORYTELLER / VISIONARY",
             note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "The Four-Minute Deploy That Took Nineteen Hours to Undo",
             body: `Early in my career as a technical founder, we treated daily deployment counts as a badge of honor—until a routine database migration subtly corrupted three hours of enterprise transactions.\n\nToday, we never ask how fast a feature can ship until we have proven how cleanly it can be undone.`
@@ -999,8 +1014,8 @@
     dossierStageTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = tab.dataset.dossierTab;
-        dossierStageTabs.forEach(t => t.className = 'dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
-        tab.className = 'dossier-stage-tab px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
+        dossierStageTabs.forEach(t => t.className = 'dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
+        tab.className = 'dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
         p1.classList.toggle('hidden', target !== 'all' && target !== 'panel1');
         p2.classList.toggle('hidden', target !== 'all' && target !== 'panel2');
         p3.classList.toggle('hidden', target !== 'all' && target !== 'panel3');
@@ -1036,8 +1051,8 @@
       btn.addEventListener('click', () => {
         const d = impactData[btn.dataset.impactTab];
         if (!d) return;
-        impactTabBtns.forEach(b => b.className = 'impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
-        btn.className = 'impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
+        impactTabBtns.forEach(b => b.className = 'tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
+        btn.className = 'tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
         document.getElementById('impactBeforeLabel').textContent = d.bL;
         document.getElementById('impactBeforeBody').textContent = d.bB;
         document.getElementById('impactAfterLabel').textContent = d.aL;
@@ -1174,6 +1189,18 @@
         document.body.classList.remove('overflow-hidden');
       }
     }
+
+    function toggleMobileMenu() {
+      toggleMobileDrawer(false);
+    }
+    window.toggleMobileMenu = toggleMobileMenu;
+
+    // Auto-Center Active Tabs on Mobile Click
+    document.querySelectorAll('.tab-btn, [role="tab"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+    });
 
     if (mobileMenuBtn) {
       mobileMenuBtn.addEventListener('click', (e) => {
