@@ -750,7 +750,7 @@
         <div class="mb-6">
           <span class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] block mb-1">Direct Operational Routing &bull; Desk 1 Intake</span>
           <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Request Sprint Invoice</h3>
-          <p id="modalSubtitle" class="text-xs text-[#575a65] mt-1.5 leading-relaxed">
+          <p id="modal-subtitle" class="text-xs text-[#575a65] mt-1.5 leading-relaxed">
             Route submissions directly to Desk 1 and generate a formal 950 USDC invoice via Request Finance. Production begins upon on-chain settlement.
           </p>
         </div>
@@ -758,7 +758,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label for="inquiryName" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Full Name &amp; Title *</label>
-              <input type="text" id="inquiryName" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="e.g. Sarah Chen, Co-founder &amp; CEO">
+              <input type="text" id="inquiryName" name="full_name" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="e.g. Sarah Chen, Co-founder & CEO">
             </div>
             <div>
               <label for="inquiryEmail" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Work Email *</label>
@@ -783,12 +783,12 @@
           </div>
           <div>
             <label for="inquiryEngagement" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Commercial Tier</label>
-            <select id="inquiryEngagement" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]">
+            <select id="commercial-tier-select" name="engagement" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]">
               <option value="The 48-Hour Narrative Architecture ($950 Flat // 950 USDC)">The 48-Hour Narrative Architecture ($950 Flat // 950 USDC via Request Finance)</option>
               <option value="The Executive Narrative Desk ($3,500 Flat/mo // 3,500 USDC)">The Executive Narrative Desk ($3,500 Flat per Month // 3,500 USDC)</option>
             </select>
           </div>
-          <button type="submit" id="modalSubmitBtn" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-3.5 rounded font-semibold text-sm tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
+          <button type="submit" id="modal-submit-btn" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-3.5 rounded font-semibold text-sm tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
             <span>Route to Desk 1 &amp; Generate 950 USDC Invoice</span>
             <span class="text-[#92642a]">&rarr;</span>
           </button>
@@ -820,7 +820,10 @@
   </div>
 
     <!-- OPERATIONAL TIMEZONE COVERAGE BLOCK -->
-  <section class="py-16 border-t border-[#1a1a1a] bg-[#080808]"> <div class="max-w-5xl mx-auto px-6"> <div class="flex items-center gap-2 mb-6"> <span class="h-2 w-2 rounded-full bg-[#39FF14] animate-pulse"></span> <h3 class="font-mono text-xs tracking-widest text-[#888888] uppercase">Operational Timezone Coverage</h3> </div> <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs border border-[#1a1a1a] p-6 bg-[#0c0c0c]"> <div> <div class="text-[#555555] uppercase">US Pacific</div> <div class="text-white text-sm mt-1">PST (UTC-8)</div> <div class="text-[#777777] mt-1">San Francisco • Seattle</div> </div> <div> <div class="text-[#555555] uppercase">US Eastern</div> <div class="text-white text-sm mt-1">EST (UTC-5)</div> <div class="text-[#777777] mt-1">New York • Boston</div> </div> <div> <div class="text-[#555555] uppercase">UK &amp; Europe</div> <div class="text-white text-sm mt-1">GMT / CET (UTC+0/+1)</div> <div class="text-[#777777] mt-1">London • Berlin • Paris</div> </div> <div> <div class="text-[#555555] uppercase">Asia-Pacific</div> <div class="text-white text-sm mt-1">SGT / MMT (UTC+8/+6:30)</div> <div class="text-[#777777] mt-1">Singapore • Regional Hubs</div> </div> </div> <p class="text-sm text-[#777777] mt-6 leading-relaxed"> Engineered for timezone-asymmetric velocity. Executives record unscripted audio during their local workday; our asynchronous assembly line extracts conviction and executes deterministic linting overnight. Your publication-ready folio is delivered within 48 hours with zero scheduling drag. </p> </div> </section>
+  <section class="py-16 border-t border-[#1a1a1a] bg-[#080808]"> <div class="max-w-5xl mx-auto px-6"> <div class="flex items-center gap-2 mb-6"> <span class="h-2 w-2 rounded-full bg-[#39FF14] animate-pulse"></span> <h3 class="font-mono text-xs tracking-widest text-[#888888] uppercase">Operational Timezone Coverage</h3> </div> <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs border border-[#1a1a1a] p-6 bg-[#0c0c0c]"> <div> <div class="text-[#555555] uppercase">US Pacific</div> <div class="text-white text-sm mt-1">PST (UTC-8)</div> <div class="text-[#777777] mt-1">San Francisco • Seattle</div> </div> <div> <div class="text-[#555555] uppercase">US Eastern</div> <div class="text-white text-sm mt-1">EST (UTC-5)</div> <div class="text-[#777777] mt-1">New York • Boston</div> </div> <div> <div class="text-[#555555] uppercase">UK &amp; Europe</div> <div class="text-white text-sm mt-1">GMT / CET (UTC+0/+1)</div> <div class="text-[#777777] mt-1">London • Berlin • Paris</div> </div> <div> <div class="text-[#555555] uppercase">Asia-Pacific</div> <div class="text-white text-sm mt-1">SGT / AEST (UTC+8 / UTC+10)</div> <div class="text-[#777777] mt-1">Singapore • Sydney • Tokyo</div> </div> </div> <p class="text-sm text-[#777777] mt-6 leading-relaxed"> Engineered for timezone-asymmetric velocity. Executives record unscripted audio during their local workday; our asynchronous assembly line extracts conviction and executes deterministic linting overnight. Your publication-ready folio is delivered within 48 hours with zero scheduling drag. </p> </div> </section>
+
+    <!-- SECTION: FREQUENTLY AUDITED QUESTIONS (#faq) -->
+  <section id="faq" class="py-20 border-t border-[#1a1a1a] bg-[#050505]"> <div class="max-w-4xl mx-auto px-6"> <div class="flex items-center gap-2 mb-8"> <span class="font-mono text-xs text-[#888888] tracking-widest uppercase">05 // OPERATIONAL MECHANICS</span> </div> <h2 class="text-2xl font-mono text-white mb-12">Frequently Audited Questions</h2> <div class="space-y-6"> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">How can you capture my authentic voice if we never meet on Zoom?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Offscript operates on an extraction model using existing unscripted recordings like podcasts, keynotes, and voice notes. We isolate your dialogue and map your convictions into publication-ready executive memos without requiring calendar time. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">What audio recordings qualify for the 48-hour sprint intake?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> We ingest unscripted guest appearances on industry podcasts, webinars, keynotes, or voice notes where you speak freely on commercial and operational topics. We do not accept scripted PR videos. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">How does the consolidated calibration round work?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Every sprint includes one consolidated calibration round within a 7-day review window. You review your 14-day queue of one Category Manifesto and four Supporting Memos in a private Google Doc, and all revisions are completed within 24 hours. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">Why does Offscript settle in USDC via Request Finance?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> Engagements are priced in US Dollars ($950 for the sprint, $3,500 per month for the retainer) and settled in USDC via Request Finance to eliminate international banking wire delays, FX haircuts, and processor holds, ensuring instant settlement aligned with our 48-hour SLA. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">Who owns the intellectual property of the published assets?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> You retain 100% irrevocable ownership of all extracted intellectual property, frameworks, and text upon confirmed settlement. </p> </div> <div class="border border-[#1a1a1a] p-6 bg-[#0a0a0a]"> <h3 class="font-mono text-sm text-white font-semibold">What is the difference between the 48-hour sprint and the ongoing desk retainer?</h3> <p class="text-sm text-[#888888] mt-3 leading-relaxed"> The $950 sprint is a one-time diagnostic delivering 1 Category Manifesto and 4 Supporting Executive Memos (a 14-day queue) in 48 hours. The $3,500 monthly retainer provides ongoing narrative representation capped at 4 partners. </p> </div> </div> </div> </section>
 
   <!-- FOOTER -->
   <footer class="bg-[#141618] text-[#f8fafc] py-16 text-sm">
@@ -845,6 +848,7 @@
           <div><a href="#folio" class="text-stone-300 hover:text-white transition">02B // Voice Calibration</a></div>
           <div><a href="#impact" class="text-stone-300 hover:text-white transition">03 // Commercial Impact</a></div>
           <div><a href="#engagements" class="text-stone-300 hover:text-white transition">04 // Product Ladder</a></div>
+          <div><a href="#faq" class="text-stone-300 hover:text-white transition">05 // Frequently Audited Questions</a></div>
         </div>
         <div class="md:col-span-3 space-y-2 text-xs">
           <div class="font-mono uppercase tracking-widest text-[#92642a] font-semibold mb-3">Direct Editorial Desk</div>
@@ -1065,10 +1069,27 @@
     const contactModal = document.getElementById('contactModal');
     const modalFormContainer = document.getElementById('modalFormContainer');
     const modalConfirmationView = document.getElementById('modalConfirmationView');
-    const inquiryEngagement = document.getElementById('inquiryEngagement');
+    const tierSelect = document.getElementById('commercial-tier-select') || document.getElementById('inquiryEngagement');
+    const inquiryEngagement = tierSelect;
     const modalTitle = document.getElementById('modalTitle');
-    const modalSubtitle = document.getElementById('modalSubtitle');
-    const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+    const modalSubtitle = document.getElementById('modal-subtitle') || document.getElementById('modalSubtitle');
+    const modalSubmitBtn = document.getElementById('modal-submit-btn') || document.getElementById('modalSubmitBtn');
+
+    if (tierSelect && modalSubmitBtn) {
+      tierSelect.addEventListener('change', (e) => {
+        if (e.target.value.includes('3,500')) {
+          modalSubmitBtn.textContent = 'Route to Desk 1 & Inquire About Retainer ->';
+          if (modalSubtitle) {
+            modalSubtitle.textContent = 'Route submissions directly to Desk 1 to evaluate retainer capacity. Retainers are strictly capped at 4 partners.';
+          }
+        } else {
+          modalSubmitBtn.textContent = 'Route to Desk 1 & Generate 950 USDC Invoice ->';
+          if (modalSubtitle) {
+            modalSubtitle.textContent = 'Route submissions directly to Desk 1 and generate a formal 950 USDC invoice via Request Finance. Production begins upon on-chain settlement.';
+          }
+        }
+      });
+    }
 
     function openContactModal(eng) {
       if (modalFormContainer) modalFormContainer.classList.remove('hidden');
@@ -1077,13 +1098,13 @@
       if (eng && eng.includes('48-Hour Narrative Architecture')) {
         if (modalTitle) modalTitle.textContent = 'Request Sprint Invoice';
         if (modalSubtitle) modalSubtitle.textContent = 'Route submissions directly to Desk 1 and generate a formal 950 USDC invoice via Request Finance. Production begins upon on-chain settlement.';
-        if (modalSubmitBtn) modalSubmitBtn.innerHTML = '<span>Route to Desk 1 &amp; Generate 950 USDC Invoice</span><span class="text-[#92642a]">&rarr;</span>';
-        if (inquiryEngagement) inquiryEngagement.value = 'The 48-Hour Narrative Architecture ($950 Flat // 950 USDC)';
+        if (modalSubmitBtn) modalSubmitBtn.textContent = 'Route to Desk 1 & Generate 950 USDC Invoice ->';
+        if (tierSelect) tierSelect.value = 'The 48-Hour Narrative Architecture ($950 Flat // 950 USDC)';
       } else {
         if (modalTitle) modalTitle.textContent = 'Inquire About Representation';
-        if (modalSubtitle) modalSubtitle.textContent = 'Direct asynchronous inquiry to Founding Editorial Director Kaung Sithu. Capacity is strictly guarded at 4 executive partners per quarter.';
-        if (modalSubmitBtn) modalSubmitBtn.innerHTML = '<span>Submit Confidential Executive Inquiry</span><span class="text-[#92642a]">&rarr;</span>';
-        if (inquiryEngagement && eng) inquiryEngagement.value = eng;
+        if (modalSubtitle) modalSubtitle.textContent = 'Route submissions directly to Desk 1 to evaluate retainer capacity. Retainers are strictly capped at 4 partners.';
+        if (modalSubmitBtn) modalSubmitBtn.textContent = 'Route to Desk 1 & Inquire About Retainer ->';
+        if (tierSelect && eng) tierSelect.value = eng;
       }
       
       contactModal.classList.remove('hidden');
@@ -1105,19 +1126,19 @@
 
     document.getElementById('editorialInquiryForm').addEventListener('submit', e => {
       e.preventDefault();
-      const name = document.getElementById('inquiryName').value.trim();
+      const name = (document.getElementById('inquiryName') || document.querySelector('[name="full_name"]')).value.trim();
       const email = document.getElementById('inquiryEmail').value.trim();
       const linkedin = document.getElementById('inquiryLinkedin').value.trim();
       const audioUrl = document.getElementById('inquiryAudioUrl').value.trim();
       const cadence = document.getElementById('inquiryCadence').value;
-      const eng = inquiryEngagement.value;
+      const eng = tierSelect.value;
       
       document.getElementById('confirmEmailSpan').textContent = email;
       
       const isSprint = eng.includes('48-Hour Narrative Architecture');
       const subject = isSprint 
         ? `Sprint Invoice Request [Desk 1] — ${name}`
-        : `Executive Representation Inquiry — ${name}`;
+        : `Executive Retainer Representation Inquiry — ${name}`;
         
       const body = `OPERATIONAL DIRECTIVE // ROUTED TO DESK 1\n\n` +
         `Executive: ${name}\n` +
@@ -1126,14 +1147,14 @@
         `Audio Anchor: ${audioUrl}\n` +
         `Target Cadence: ${cadence}\n` +
         `Commercial Tier: ${eng}\n` +
-        `Settlement Rail: Request Finance (950 USDC Net-0)\n` +
+        `Settlement Rail: Request Finance (USDC Net-0)\n` +
         `SLA Clock: 48 Hours from Settlement`;
 
       window.location.href = `mailto:kaung@offscripteditorial.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       
       modalFormContainer.classList.add('hidden');
       modalConfirmationView.classList.remove('hidden');
-      triggerToast(isSprint ? 'Sprint invoice directive routed to Desk 1' : 'Representation inquiry prepared');
+      triggerToast(isSprint ? 'Sprint invoice directive routed to Desk 1' : 'Retainer inquiry routed to Desk 1');
     });
 
     // Mobile Drawer Navigation (FletchPMM-style full-screen overlay)
