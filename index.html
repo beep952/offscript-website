@@ -221,13 +221,15 @@
       </a>
 
       <!-- Desktop Navigation Bar (Visible on tablets & desktop from md: 768px up) -->
-      <nav class="hidden md:flex items-center space-x-5 lg:space-x-8 text-xs lg:text-sm font-medium text-[#575a65]">
+      <nav class="hidden md:flex items-center space-x-3.5 lg:space-x-5 text-xs lg:text-sm font-medium text-[#575a65]">
         <a href="#protocol" class="hover:text-[#121316] transition">The Protocol</a>
+        <a href="#benchmark" class="hover:text-[#121316] transition">Economic Benchmark</a>
         <a href="#tearsheet" class="hover:text-[#121316] transition">The Dossier</a>
         <a href="#folio" class="hover:text-[#121316] transition">Voice Calibration</a>
-        <a href="#impact" class="hover:text-[#121316] transition">Commercial Impact</a>
-        <a href="#engagements" class="hover:text-[#121316] transition">Retainer Terms</a>
-        <a href="#governance" class="hover:text-[#121316] transition">Governance &amp; Terms</a>
+        <a href="#impact" class="hover:text-[#121316] transition">Impact</a>
+        <a href="#engagements" class="hover:text-[#121316] transition">Pricing</a>
+        <a href="#governance" class="hover:text-[#121316] transition">Governance</a>
+        <a href="#faq" class="hover:text-[#121316] transition">FAQ</a>
       </nav>
 
       <!-- Action Area: Desktop Button + Mobile Hamburger Toggle -->
@@ -264,29 +266,32 @@
       </button>
     </div>
 
-    <!-- Center Navigation Links (Synchronized 6-Section Hierarchy) -->
-    <nav class="py-8 my-auto">
-      <div class="flex flex-col space-y-6">
-        <a href="#protocol" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+    <!-- Center Navigation Links (Synchronized 8-Section Hierarchy) -->
+    <nav class="py-6 my-auto">
+      <div class="flex flex-col space-y-4">
+        <a href="#protocol" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
           <span class="font-mono text-xs text-[#888] mr-2">01 //</span>The Protocol
         </a>
-        <a href="#tearsheet" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+        <a href="#benchmark" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">01B //</span>Economic Benchmark
+        </a>
+        <a href="#tearsheet" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
           <span class="font-mono text-xs text-[#888] mr-2">02 //</span>The Dossier
         </a>
-        <a href="#folio" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+        <a href="#folio" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
           <span class="font-mono text-xs text-[#888] mr-2">02B //</span>The Reading Room
         </a>
-        <a href="#impact" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+        <a href="#impact" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
           <span class="font-mono text-xs text-[#888] mr-2">03 //</span>Commercial Architecture
         </a>
-        <a href="#engagements" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
-          <span class="font-mono text-xs text-[#888] mr-2">04 //</span>Pricing & Retainer Terms
+        <a href="#engagements" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">04 //</span>Pricing &amp; Retainer Terms
         </a>
-        <a href="#faq" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
-          <span class="font-mono text-xs text-[#888] mr-2">05 //</span>Frequently Asked Questions
+        <a href="#governance" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">05 //</span>Governance &amp; SOW Terms
         </a>
-        <a href="#governance" onclick="toggleMobileMenu()" class="text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
-          <span class="font-mono text-xs text-[#888] mr-2">06 //</span>Governance &amp; SOW Terms
+        <a href="#faq" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">06 //</span>Frequently Asked Questions
         </a>
       </div>
     </nav>
@@ -433,72 +438,89 @@
   </section>
 
   
-      <!-- 4-WAY CHALLENGER COMPARISON TABLE (LOADED COST & CALENDAR DRAG) -->
-      <div class="mt-20 pt-12 border-t border-[#e5e4de]">
-        <div class="max-w-3xl mb-8">
-          <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-2">Economic Benchmark</div>
-          <h3 class="font-serif text-3xl font-normal text-[#121316]">Loaded Cost vs. Calendar Drag Architecture</h3>
-          <p class="text-sm text-[#575a65] mt-2 leading-relaxed">Why technical B2B founders reject in-house overhead, agency lock-in, and freelancer brief-writing in favor of asynchronous extraction.</p>
+        <!-- SECTION 01B: ECONOMIC BENCHMARK (#benchmark) -->
+  <section id="benchmark" class="py-24 border-b border-[#e5e4de] bg-[#fbfbf9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="max-w-3xl">
+          <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-3">01B // Economic Benchmark</div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#121316] leading-tight balance-text">
+            Loaded Cost vs. Calendar Drag Architecture
+          </h2>
+          <p class="text-sm sm:text-base text-[#575a65] mt-4 leading-relaxed">
+            Why technical B2B founders reject in-house overhead, agency lock-in, and freelancer brief-writing in favor of asynchronous extraction.
+          </p>
         </div>
-        
-        <div class="overflow-x-auto rounded-lg border border-[#e5e4de] bg-white editorial-shadow no-scrollbar">
-          <table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[760px]">
-            <thead>
-              <tr class="bg-[#141618] text-white font-mono text-xs uppercase tracking-wider">
-                <th class="p-4 border-b border-[#25282c]">Operating Dimension</th>
-                <th class="p-4 border-b border-[#25282c]">In-House Content Lead</th>
-                <th class="p-4 border-b border-[#25282c]">Traditional B2B Agency</th>
-                <th class="p-4 border-b border-[#25282c]">Senior B2B Freelancer</th>
-                <th class="p-4 border-b border-[#25282c] bg-[#92642a] text-white">Offscript Editorial</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[#e5e4de] text-[#121316]">
-              <tr class="hover:bg-[#fbfbf9] transition-colors">
-                <td class="p-4 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Fully Loaded Cost</td>
-                <td class="p-4 text-xs sm:text-sm">$165,000 to $180,000/year<br><span class="text-xs text-[#575a65]">($130k base + taxes, benefits, equity, recruiting)</span></td>
-                <td class="p-4 text-xs sm:text-sm">$72,000 to $120,000/year<br><span class="text-xs text-[#575a65]">($6k to $10k/month flat)</span></td>
-                <td class="p-4 text-xs sm:text-sm">$45,000 to $90,000/year<br><span class="text-xs text-[#575a65]">($350 to $650 per post, billed ad-hoc)</span></td>
-                <td class="p-4 text-xs sm:text-sm font-semibold bg-[#fef8ee]/40 text-[#92642a]">$950 Sprint entry / $42,000/year ongoing<br><span class="text-xs text-[#121316] font-normal">($3,500/month flat)</span></td>
-              </tr>
-              <tr class="hover:bg-[#fbfbf9] transition-colors">
-                <td class="p-4 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Calendar Demand</td>
-                <td class="p-4 text-xs sm:text-sm">2 to 3 hours/week of onboarding, brief writing, and management</td>
-                <td class="p-4 text-xs sm:text-sm text-[#b91c1c] font-medium">Mandatory 60-minute weekly Zoom interview calls</td>
-                <td class="p-4 text-xs sm:text-sm">2 to 4 hours/week of topic ideation, brief creation, and Slack back-and-forth</td>
-                <td class="p-4 text-xs sm:text-sm font-semibold bg-[#fef8ee]/40 text-[#047857]">Zero Meetings. 100% Asynchronous from unscripted audio.</td>
-              </tr>
-              <tr class="hover:bg-[#fbfbf9] transition-colors">
-                <td class="p-4 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Ramp Time to Value</td>
-                <td class="p-4 text-xs sm:text-sm">90-day ramp before tone and technical accuracy stabilize</td>
-                <td class="p-4 text-xs sm:text-sm">3 to 4 weeks of strategy decks and agency onboarding delays</td>
-                <td class="p-4 text-xs sm:text-sm">Ad-hoc delivery; tone resets every time a new writer is swapped</td>
-                <td class="p-4 text-xs sm:text-sm font-semibold bg-[#fef8ee]/40 text-[#121316]">First 3 assets and Master Voice Brief delivered in 48 hours.</td>
-              </tr>
-              <tr class="hover:bg-[#fbfbf9] transition-colors">
-                <td class="p-4 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Commitment Terms</td>
-                <td class="p-4 text-xs sm:text-sm">Full-time W2 salary, benefits overhead, and severance risk</td>
-                <td class="p-4 text-xs sm:text-sm text-[#b91c1c]">3 to 6-month rigid contract lock-in</td>
-                <td class="p-4 text-xs sm:text-sm">Pay-per-project, but high turnover and zero delivery guarantees</td>
-                <td class="p-4 text-xs sm:text-sm font-semibold bg-[#fef8ee]/40 text-[#121316]">Month-to-month flexibility. Cancel anytime with 14 days' notice.</td>
-              </tr>
-              <tr class="hover:bg-[#fbfbf9] transition-colors">
-                <td class="p-4 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Tone &amp; Voice Fidelity</td>
-                <td class="p-4 text-xs sm:text-sm">Generic marketing copy; often misses technical nuance</td>
-                <td class="p-4 text-xs sm:text-sm">Outsourced junior copywriters smoothing voice into corporate PR fluff</td>
-                <td class="p-4 text-xs sm:text-sm">Inconsistent; dependent on the individual writer's daily bandwidth</td>
-                <td class="p-4 text-xs sm:text-sm font-semibold bg-[#fef8ee]/40 text-[#121316]">Direct Principal craft. Bespoke vocal cadence matching.</td>
-              </tr>
-              <tr class="hover:bg-[#fbfbf9] transition-colors">
-                <td class="p-4 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Commercial Risk</td>
-                <td class="p-4 text-xs sm:text-sm">Sunk payroll and recruiting expense regardless of performance</td>
-                <td class="p-4 text-xs sm:text-sm text-[#b91c1c]">Thousands committed upfront before reviewing a single line</td>
-                <td class="p-4 text-xs sm:text-sm">Unreliable capacity, missed deadlines, and sudden project abandonment</td>
-                <td class="p-4 text-xs sm:text-sm font-semibold bg-[#fef8ee]/40 text-[#92642a]">100% of $950 Sprint fee credited toward Month 1 retainer.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="shrink-0 flex items-center space-x-3 bg-white p-3 rounded-lg border border-[#e5e4de] editorial-shadow text-xs font-mono">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#047857] animate-pulse"></span>
+          <span class="text-[#121316] font-semibold">Zero Sunk Payroll Risk</span>
+          <span class="text-[#d1cfc7]">|</span>
+          <span class="text-[#92642a] font-semibold">100% 7-Day Roll-In</span>
         </div>
       </div>
+      
+      <div class="overflow-x-auto rounded-xl border border-[#e5e4de] bg-white editorial-shadow no-scrollbar">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[780px]">
+          <thead>
+            <tr class="bg-[#141618] text-white font-mono text-xs uppercase tracking-wider">
+              <th class="p-5 border-b border-[#25282c] w-1/5">Operating Dimension</th>
+              <th class="p-5 border-b border-[#25282c] w-1/5">In-House Content Lead</th>
+              <th class="p-5 border-b border-[#25282c] w-1/5">Traditional B2B Agency</th>
+              <th class="p-5 border-b border-[#25282c] w-1/5">Senior B2B Freelancer</th>
+              <th class="p-5 border-b border-[#25282c] w-1/5 bg-[#92642a] text-white relative">
+                <span class="block font-semibold">Offscript Editorial</span>
+                <span class="text-[10px] text-amber-200 tracking-normal font-sans font-normal block mt-0.5">Recommended // Async Wedge</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#e5e4de] text-[#121316]">
+            <tr class="hover:bg-[#fbfbf9] transition-colors">
+              <td class="p-5 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Fully Loaded Cost</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">$165,000 to $180,000/yr<br><span class="text-xs text-[#575a65]">($130k base + taxes, benefits, equity, recruiting)</span></td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">$72,000 to $120,000/yr<br><span class="text-xs text-[#575a65]">($6k to $10k/month flat)</span></td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">$45,000 to $90,000/yr<br><span class="text-xs text-[#575a65]">($350 to $650 per post, billed ad-hoc)</span></td>
+              <td class="p-5 text-xs sm:text-sm font-semibold bg-[#fef8ee]/50 text-[#92642a] leading-snug">$950 Sprint entry / $42,000/yr ongoing<br><span class="text-xs text-[#121316] font-normal">($3,500/month flat)</span></td>
+            </tr>
+            <tr class="hover:bg-[#fbfbf9] transition-colors">
+              <td class="p-5 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Calendar Demand</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">2 to 3 hours/week of onboarding, brief writing, and management</td>
+              <td class="p-5 text-xs sm:text-sm text-[#b91c1c] font-medium leading-snug">Mandatory 60-minute weekly Zoom interview calls</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">2 to 4 hours/week of topic ideation, brief creation, and Slack back-and-forth</td>
+              <td class="p-5 text-xs sm:text-sm font-semibold bg-[#fef8ee]/50 text-[#047857] leading-snug">Zero Meetings. 100% Asynchronous from unscripted audio.</td>
+            </tr>
+            <tr class="hover:bg-[#fbfbf9] transition-colors">
+              <td class="p-5 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Ramp Time to Value</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">90-day ramp before tone and technical accuracy stabilize</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">3 to 4 weeks of strategy decks and agency onboarding delays</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Ad-hoc delivery; tone resets every time a new writer is swapped</td>
+              <td class="p-5 text-xs sm:text-sm font-semibold bg-[#fef8ee]/50 text-[#121316] leading-snug">First 3 assets and Master Voice Brief delivered in 48 hours.</td>
+            </tr>
+            <tr class="hover:bg-[#fbfbf9] transition-colors">
+              <td class="p-5 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Commitment Terms</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Full-time W2 salary, benefits overhead, and severance risk</td>
+              <td class="p-5 text-xs sm:text-sm text-[#b91c1c] leading-snug">3 to 6-month rigid contract lock-in</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Pay-per-project, but high turnover and zero delivery guarantees</td>
+              <td class="p-5 text-xs sm:text-sm font-semibold bg-[#fef8ee]/50 text-[#121316] leading-snug">Month-to-month flexibility. Cancel anytime with 14 days' notice.</td>
+            </tr>
+            <tr class="hover:bg-[#fbfbf9] transition-colors">
+              <td class="p-5 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Tone &amp; Voice Fidelity</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Generic marketing copy; often misses technical nuance</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Outsourced junior copywriters smoothing voice into corporate PR fluff</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Inconsistent; dependent on the individual writer's daily bandwidth</td>
+              <td class="p-5 text-xs sm:text-sm font-semibold bg-[#fef8ee]/50 text-[#121316] leading-snug">Direct Principal craft. Bespoke vocal cadence matching.</td>
+            </tr>
+            <tr class="hover:bg-[#fbfbf9] transition-colors">
+              <td class="p-5 font-mono font-semibold text-xs text-[#575a65] bg-[#fbfbf9]/60">Commercial Risk</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Sunk payroll and recruiting expense regardless of performance</td>
+              <td class="p-5 text-xs sm:text-sm text-[#b91c1c] leading-snug">Thousands committed upfront before reviewing a single line</td>
+              <td class="p-5 text-xs sm:text-sm leading-snug">Unreliable capacity, missed deadlines, and sudden project abandonment</td>
+              <td class="p-5 text-xs sm:text-sm font-semibold bg-[#fef8ee]/50 text-[#92642a] leading-snug">100% of $950 Sprint fee credited toward Month 1 retainer.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
   <!-- SECTION 02: THE EDITORIAL TEAR SHEET (#tearsheet) -->
   <section id="tearsheet" class="py-24 border-b border-[#e5e4de] bg-[#fbfbf9]">
@@ -926,9 +948,10 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white border border-[#e5e4de] rounded-lg p-8 sm:p-12 editorial-shadow">
         <div class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#92642a] mb-4">05 // A Note from the Desk</div>
-        <blockquote class="font-serif text-xl sm:text-2xl text-[#121316] leading-relaxed italic space-y-4">
-          <p>"Every week, brilliant B2B founders dilute their own reputation online by publishing generic, ghostwritten clichés that sound nothing like the operator who built the company.</p>
-          <p>We founded Offscript Editorial because executive writing should never feel like a chore; and it should never read like filler. Your unscripted spoken conversations already contain the stories, unit economics, and hard-won convictions that move markets. Our craft is simply to bring those convictions to the page with the clarity and permanence they deserve."</p>
+        <blockquote class="font-serif text-xl sm:text-2xl text-[#121316] leading-relaxed italic space-y-5">
+          <p>"Enterprise buyers backchannel your personal LinkedIn before signing six-figure contracts, but turning your operational thinking into consistent executive writing takes hours you don't have.</p>
+          <p>The economic cost is immediate: brilliant founders spend hours recording high-signal podcasts and conference keynotes, only for that commercial conviction to sit stranded at 200 views while prospective buyers evaluate them as commodity software vendors. Meanwhile, traditional agencies demand five hours of monthly Zoom interviews that pull you directly out of sales cycles: only to deliver generic PR fluff that dilutes your reputation.</p>
+          <p>The personality cost is even heavier: staring at a blank cursor on Sunday afternoons or fighting with junior copywriters who miss your unit economics. We founded Offscript Editorial to eliminate both costs. Your unscripted conversations already contain the frameworks, trade-offs, and hard-won scar tissue that move markets. Our craft is simply to extract that conviction into boardroom-grade prose with zero meetings, zero calendar drag, and zero compromise on voice fidelity."</p>
         </blockquote>
 
         <div class="border-t border-[#e5e4de] pt-6 mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -1007,17 +1030,8 @@
             <input type="url" id="inquiryAudioUrl" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="YouTube, Spotify, Loom, Google Drive, or podcast episode link">
           </div>
 
-          <!-- Path B Specific Controls -->
+          <!-- Path B Specific Controls (Personalized Voice Architecture - Zero Arbitrary Personas) -->
           <div id="pathBFields" class="hidden space-y-4">
-            <div>
-              <label for="inquiryCadence" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Target Persona Cadence</label>
-              <select id="inquiryCadence" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]">
-                <option value="Aggressive Operator">Aggressive Operator (High-velocity staccato statements, punchy tempo)</option>
-                <option value="Analytical Architect">Analytical Architect (Methodical, structured logical systems memos)</option>
-                <option value="Storyteller / Visionary">Storyteller / Visionary (Chronological narrative arc, founder scar tissue)</option>
-              </select>
-            </div>
-
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label for="commercial-tier-select" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Commercial Tier</label>
@@ -1033,6 +1047,10 @@
                   <option value="Request Finance (USDC On-Chain)">Request Finance (USDC On-Chain)</option>
                 </select>
               </div>
+            </div>
+            <div>
+              <label for="inquiryFocus" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Core Narrative Goal / Focus (Optional)</label>
+              <input type="text" id="inquiryFocus" name="narrative_focus" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="e.g. Defending enterprise contract pricing, RevOps architecture, category manifesto">
             </div>
           </div>
 
@@ -1201,6 +1219,7 @@
         <div class="md:col-span-3 space-y-2 text-xs">
           <div class="font-mono uppercase tracking-widest text-[#92642a] font-semibold mb-3">Architecture</div>
           <div><a href="#protocol" class="text-stone-300 hover:text-white transition">01 // The Protocol</a></div>
+          <div><a href="#benchmark" class="text-stone-300 hover:text-white transition">01B // Economic Benchmark</a></div>
           <div><a href="#tearsheet" class="text-stone-300 hover:text-white transition">02 // The Lenny Dossier</a></div>
           <div><a href="#folio" class="text-stone-300 hover:text-white transition">02B // Voice Calibration</a></div>
           <div><a href="#impact" class="text-stone-300 hover:text-white transition">03 // Commercial Impact</a></div>
@@ -1476,13 +1495,13 @@
         modalRollInCallout.classList.add('hidden');
         modalTitle.textContent = 'Inquire About Retainer Representation';
         modalSubtitle.textContent = 'Route submissions directly to Desk 1 to evaluate ongoing capacity. Strictly capped at 6 partner seats with direct Founding Editorial Director craft.';
-        modalSubmitBtnText.textContent = 'Route to Desk 1 & Inquire About Retainer';
+        modalSubmitBtnText.textContent = 'Dispatch Checkout Link & Terms';
         modalDisclaimerText.textContent = 'Month-to-Month Flexibility: Invoiced on the 1st of each month via Stripe or USDC; 14-day cancellation window.';
       } else {
         modalRollInCallout.classList.remove('hidden');
         modalTitle.textContent = 'Initiate 48-Hour Executive Sprint';
         modalSubtitle.textContent = 'Turn up to 60 minutes of audio into 3 publication-ready cornerstone posts, your Master Voice Brief, and a 7-day queue with a 48-hour delivery guarantee.';
-        modalSubmitBtnText.textContent = 'Dispatch $950 Sprint Checkout Link & Terms';
+        modalSubmitBtnText.textContent = 'Dispatch Checkout Link & Terms';
         modalDisclaimerText.textContent = 'Zero Procurement Red Tape: $950 Flat, settled via 1-click Stripe (Card/ACH) or USDC; 100% async; delivery in 48 hours.';
       }
     }
@@ -1557,7 +1576,8 @@
         document.getElementById('confirmStatus').textContent = 'Stage 0 Complimentary ($0)';
         document.getElementById('confirmTicket').textContent = '#OE-STAGE0-' + Date.now().toString().slice(-4);
       } else {
-        const cadence = document.getElementById('inquiryCadence').value;
+        const focusField = document.getElementById('inquiryFocus');
+        const focus = focusField ? focusField.value.trim() : 'Bespoke Executive Voice';
         const tier = tierSelect.value;
         const rail = settlementRailSelect.value;
         const isSprint = tier.includes('950');
@@ -1571,7 +1591,7 @@
           `Corporate Email: ${email}\n` +
           `LinkedIn: ${linkedin}\n` +
           `Audio Anchor: ${audioUrl}\n` +
-          `Target Cadence: ${cadence}\n` +
+          `Strategic Focus: ${focus}\n` +
           `Commercial Tier: ${tier}\n` +
           `Settlement Rail: ${rail}\n` +
           `Roll-In Credit: 7-Day 100% Sprint Credit Active\n` +
