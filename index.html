@@ -244,10 +244,10 @@
 
       <!-- Action Area: Desktop Button + Mobile Hamburger Toggle -->
       <div class="flex items-center space-x-3">
-        <a href="#engagements" class="hidden sm:flex bg-[#141618] hover:bg-[#25282c] text-[#f8fafc] px-4 lg:px-5 py-2.5 rounded text-xs lg:text-sm font-medium transition shadow-sm items-center space-x-2">
+        <button id="navContactBtn" type="button" data-engagement="Cadence Calibration Test ($250 Flat)" class="open-inquiry-btn hidden sm:flex bg-[#141618] hover:bg-[#25282c] text-[#f8fafc] px-4 lg:px-5 py-2.5 rounded text-xs lg:text-sm font-medium transition shadow-sm items-center space-x-2">
           <span>Initiate Calibration Test ($250)</span>
           <svg class="w-4 h-4 text-[#92642a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
+        </button>
 
         <!-- Mobile Menu Button (Visible on screens <768px) -->
         <button id="mobileMenuBtn" type="button" class="md:hidden inline-flex items-center space-x-1.5 px-3.5 py-2 border border-[#d1cfc7] bg-white text-[#121316] rounded text-xs font-mono font-semibold uppercase tracking-wider hover:bg-[#f4f3ef] transition shadow-xs focus:outline-none" aria-label="Toggle Navigation Menu">
@@ -308,10 +308,10 @@
 
     <!-- Bottom Action Button (Big, bold like FletchPMM's Work with FletchPMM) -->
     <div class="pt-6 border-t border-[#e5e4de] space-y-4 shrink-0">
-      <a href="#engagements" onclick="toggleMobileMenu()" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-4 px-6 rounded-md text-base font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
+      <button id="mobileDrawerInquireBtn" type="button" data-engagement="Cadence Calibration Test ($250 Flat)" class="open-inquiry-btn w-full bg-[#141618] hover:bg-[#25282c] text-white py-4 px-6 rounded-md text-base font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
         <span>Initiate Calibration Test ($250)</span>
         <span class="text-[#92642a]">&rarr;</span>
-      </a>
+      </button>
       <div class="flex items-center justify-between text-xs font-mono text-[#575a65]">
         <span>Retainer Capped at 6 Partners</span>
         <a href="mailto:inquiry@offscripteditorial.com" class="text-[#121316] hover:text-[#92642a] underline">inquiry@offscripteditorial.com</a>
@@ -339,10 +339,10 @@
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
-            <a href="https://buy.stripe.com/offscript-calibration-250" target="_blank" rel="noopener noreferrer" class="bg-[#141618] hover:bg-[#25282c] text-[#f8fafc] px-7 py-4 rounded text-sm font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2.5">
+            <button id="heroContactBtn" type="button" data-engagement="Cadence Calibration Test ($250 Flat)" class="open-inquiry-btn bg-[#141618] hover:bg-[#25282c] text-[#f8fafc] px-7 py-4 rounded text-sm font-semibold tracking-wide transition shadow-sm flex items-center justify-center space-x-2.5">
               <span>Initiate Calibration Test ($250)</span>
               <svg class="w-4 h-4 text-[#92642a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
+            </button>
             <a href="#tearsheet" class="border border-[#d1cfc7] bg-white hover:bg-[#f4f3ef] text-[#121316] px-6 py-4 rounded text-sm font-semibold transition flex items-center justify-center space-x-2">
               <span>Inspect Case Dossier</span>
               <span class="text-[#92642a]">&darr;</span>
@@ -881,7 +881,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         
-        <!-- TIER 1: CADENCE CALIBRATION TEST -->
+        <!-- TIER 1: CADENCE CALIBRATION TEST ($250) -->
         <div class="bg-white border border-[#e5e4de] rounded-lg p-7 sm:p-9 flex flex-col justify-between editorial-shadow">
           <div>
             <div class="flex items-center justify-between mb-4 tabular-nums">
@@ -914,25 +914,25 @@
               </div>
               <div class="flex items-start space-x-3">
                 <span class="text-[#92642a] font-bold">&bull;</span>
-                <span><strong class="text-[#121316]">Settlement:</strong> Direct 1-click Stripe Checkout or on-chain USDC via Request Finance.</span>
+                <span><strong class="text-[#121316]">Settlement:</strong> Settled via 1-click Stripe (Card/ACH) or USDC via Request Finance.</span>
               </div>
             </div>
           </div>
           <div class="mt-8 pt-6 border-t border-[#e5e4de] space-y-2.5">
-            <a href="https://buy.stripe.com/offscript-calibration-250" target="_blank" rel="noopener noreferrer" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-3.5 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2 shadow-sm">
+            <button type="button" data-engagement="Cadence Calibration Test ($250 Flat)" class="open-inquiry-btn w-full bg-[#141618] hover:bg-[#25282c] text-white py-4 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2 shadow-sm">
               <span>Initiate Calibration Test ($250)</span>
               <span class="text-[#92642a]">&rarr;</span>
-            </a>
-            <div class="text-center">
-              <a href="https://pay.request.finance/offscript-calibration-250" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-[#575a65] hover:text-[#92642a] underline underline-offset-2 transition">Pay $250 via USDC (Request Finance) &rarr;</a>
+            </button>
+            <div class="text-center text-xs font-mono text-[#575a65] pt-1">
+              Settlement via 1-Click Stripe (Card/ACH) or USDC
             </div>
-            <div class="pt-2 text-center text-[10px] font-mono text-[#8a8d98]">
+            <div class="text-center text-[10px] font-mono text-[#8a8d98]">
               Affirmative acceptance of <a href="/terms" class="underline hover:text-[#121316]">Schedule B Terms</a> (100% async, 48h SLA).
             </div>
           </div>
         </div>
 
-        <!-- TIER 2: ON-DEMAND EVENT SPRINT -->
+        <!-- TIER 2: ON-DEMAND EVENT SPRINT ($950) -->
         <div class="bg-white border border-[#e5e4de] rounded-lg p-7 sm:p-9 flex flex-col justify-between editorial-shadow">
           <div>
             <div class="flex items-center justify-between mb-4 tabular-nums">
@@ -961,29 +961,29 @@
               </div>
               <div class="flex items-start space-x-3">
                 <span class="text-[#92642a] font-bold">&bull;</span>
-                <span><strong class="text-[#121316]">Use Case:</strong> Ingests up to 60 minutes of unscripted keynote, panel, or podcast audio into an unassailable week of market authority.</span>
+                <span><strong class="text-[#121316]">Use Case:</strong> Ingests up to 60 minutes of unscripted keynote or podcast audio into an unassailable week of market authority.</span>
               </div>
               <div class="flex items-start space-x-3">
                 <span class="text-[#92642a] font-bold">&bull;</span>
-                <span><strong class="text-[#121316]">Settlement:</strong> Direct 1-click Stripe Checkout or on-chain USDC via Request Finance.</span>
+                <span><strong class="text-[#121316]">Settlement:</strong> Settled via 1-click Stripe (Card/ACH) or USDC via Request Finance.</span>
               </div>
             </div>
           </div>
           <div class="mt-8 pt-6 border-t border-[#e5e4de] space-y-2.5">
-            <a href="https://buy.stripe.com/offscript-sprint-950" target="_blank" rel="noopener noreferrer" class="w-full bg-white hover:bg-[#f4f3ef] text-[#121316] border border-[#141618] py-3.5 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2 shadow-sm">
+            <button type="button" data-engagement="On-Demand Event Sprint ($950 Flat)" class="open-inquiry-btn w-full bg-white hover:bg-[#f4f3ef] text-[#121316] border border-[#141618] py-4 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2 shadow-sm">
               <span>Book On-Demand Sprint ($950)</span>
               <span class="text-[#92642a]">&rarr;</span>
-            </a>
-            <div class="text-center">
-              <a href="https://pay.request.finance/offscript-sprint-950" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-[#575a65] hover:text-[#92642a] underline underline-offset-2 transition">Pay $950 via USDC (Request Finance) &rarr;</a>
+            </button>
+            <div class="text-center text-xs font-mono text-[#575a65] pt-1">
+              Settlement via 1-Click Stripe (Card/ACH) or USDC
             </div>
-            <div class="pt-2 text-center text-[10px] font-mono text-[#8a8d98]">
+            <div class="text-center text-[10px] font-mono text-[#8a8d98]">
               Affirmative acceptance of <a href="/terms" class="underline hover:text-[#121316]">Schedule B Terms</a> (100% async, 48h SLA).
             </div>
           </div>
         </div>
 
-        <!-- TIER 3: THE RETAINER DESK -->
+        <!-- TIER 3: THE RETAINER DESK ($3,500/MO) -->
         <div class="bg-[#f4f3ef] border-2 border-[#141618] rounded-lg p-7 sm:p-9 flex flex-col justify-between relative editorial-shadow">
           <div class="absolute -top-3.5 right-6 sm:right-8 bg-[#141618] text-white font-mono text-[11px] font-semibold uppercase tracking-widest px-3.5 py-1 rounded">Guarded Capacity &bull; Strictly Capped at 6 Desks</div>
           <div>
@@ -1022,13 +1022,13 @@
             </div>
           </div>
           <div class="mt-8 pt-6 border-t border-[#d1cfc7] space-y-2.5">
-            <a href="mailto:inquiry@offscripteditorial.com?subject=Retainer%20Representation%20Inquiry%20-%20The%20Executive%20Narrative%20Desk" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-3.5 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2 shadow-sm">
+            <button type="button" data-engagement="The Retainer Desk ($3,500/Month)" class="open-inquiry-btn w-full bg-[#141618] hover:bg-[#25282c] text-white py-4 px-6 rounded text-sm font-semibold tracking-wide transition flex items-center justify-center space-x-2 shadow-sm">
               <span>Inquire for Availability &rarr;</span>
-            </a>
-            <div class="text-center">
-              <a href="mailto:inquiry@offscripteditorial.com" class="text-xs font-mono text-[#575a65] hover:text-[#92642a] underline underline-offset-2 transition">Direct Desk Inquiries: inquiry@offscripteditorial.com &rarr;</a>
+            </button>
+            <div class="text-center text-xs font-mono text-[#575a65] pt-1">
+              Recurring monthly settlement via Stripe or USDC
             </div>
-            <div class="pt-2 text-center text-[10px] font-mono text-[#8a8d98]">
+            <div class="text-center text-[10px] font-mono text-[#8a8d98]">
               Month-to-month flexibility. Affirmative terms governed by <a href="/terms" class="underline hover:text-[#121316]">Schedule B</a>.
             </div>
           </div>
@@ -1045,34 +1045,23 @@
       <button id="closeModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close modal">&times;</button>
       
       <div id="modalFormContainer">
-        <!-- Dual Tabs: Audio Intake vs Retainer Inquiry -->
-        <div class="flex items-center rounded-lg bg-[#f4f3ef] p-1 border border-[#e5e4de] mb-6" role="tablist">
-          <button type="button" id="tabPathIntake" role="tab" class="flex-1 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded transition text-center bg-[#141618] text-white shadow-xs">
-            Audio Intake Terminal
-          </button>
-          <button type="button" id="tabPathRetainer" role="tab" class="flex-1 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded transition text-center text-[#575a65] hover:text-[#121316]">
-            Retainer Desk Inquiry
-          </button>
-        </div>
-
-        <!-- Header Block -->
         <div class="mb-6">
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#fef8ee] border border-[#e5e4de] text-[#92642a] font-mono text-[11px] font-semibold uppercase tracking-wider mb-2.5">
-            <span class="w-2 h-2 rounded-full bg-[#047857] animate-pulse"></span>
-            <span id="modalDeskRoutingLabel">Payment Confirmed &bull; Desk 1 Ingestion Active</span>
-          </div>
-          <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Payment Confirmed. Drop Audio Anchor</h3>
+          <span class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] block mb-1" id="modalDeskRoutingLabel">Direct Operational Routing &bull; Desk 1 Intake</span>
+          <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Initiate Cadence Calibration Test ($250)</h3>
           <p id="modalSubtitle" class="text-xs text-[#575a65] mt-1.5 leading-relaxed">
-            Drop your unscripted podcast link, YouTube URL, or raw audio file below. Your 48-hour delivery countdown begins upon receipt.
+            Drop your unscripted podcast link, YouTube URL, or raw audio file below. We dispatch your 1-click checkout link and terms. 48-hour delivery countdown begins upon settlement.
           </p>
         </div>
 
-        <form id="editorialInquiryForm" class="space-y-4 text-sm">
-          <input type="hidden" id="selectedIntakePath" name="intake_path" value="intake">
+        <!-- Dynamic Roll-In Notice Box -->
+        <div id="modalRollInCallout" class="p-3 bg-[#fef8ee] border border-[#e5e4de] rounded text-xs font-mono text-[#92642a] font-semibold mb-5">
+          100% RETAINER ROLL-IN CREDIT: 100% of your $250 fee is credited toward Month 1 of your Retainer ($3,250 net balance) if initiated within 14 days.
+        </div>
 
+        <form id="editorialInquiryForm" class="space-y-4 text-sm">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label for="inquiryName" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Executive Name &amp; Title *</label>
+              <label for="inquiryName" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Full Name &amp; Title *</label>
               <input type="text" id="inquiryName" name="full_name" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="e.g. Sarah Chen, Co-founder &amp; CEO">
             </div>
             <div>
@@ -1091,36 +1080,52 @@
             <input type="url" id="inquiryAudioUrl" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="YouTube, Spotify, Loom, Google Drive, or podcast episode link">
           </div>
 
-          <div>
-            <label for="inquiryFocus" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Launch Context / Core Thematic Focus (Optional)</label>
-            <input type="text" id="inquiryFocus" name="narrative_focus" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="e.g. Keynote launch, Series B pricing defense, RevOps architecture">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="commercial-tier-select" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Commercial Tier</label>
+              <select id="commercial-tier-select" name="engagement" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]">
+                <option value="Cadence Calibration Test ($250 Flat)">Cadence Calibration Test ($250 Flat)</option>
+                <option value="On-Demand Event Sprint ($950 Flat)">On-Demand Event Sprint ($950 Flat)</option>
+                <option value="The Retainer Desk ($3,500/Month)">The Retainer Desk ($3,500/Month)</option>
+              </select>
+            </div>
+            <div>
+              <label for="settlementRailSelect" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Settlement Rail</label>
+              <select id="settlementRailSelect" name="settlement_rail" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]">
+                <option value="Stripe (Corporate Card / ACH)">Stripe (Corporate Card / ACH)</option>
+                <option value="Request Finance (USDC On-Chain)">Request Finance (USDC On-Chain)</option>
+              </select>
+            </div>
           </div>
 
-          <div class="pt-2">
-            <button type="submit" id="modalSubmitBtn" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-3.5 rounded font-semibold text-sm tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
-              <span id="modalSubmitBtnText">Dispatch Audio to Desk 1 &amp; Start 48h Countdown</span>
-              <span class="text-[#92642a]">&rarr;</span>
-            </button>
+          <div>
+            <label for="inquiryFocus" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Core Narrative Goal / Focus (Optional)</label>
+            <input type="text" id="inquiryFocus" name="narrative_focus" class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="e.g. Defending enterprise contract pricing, RevOps architecture, launch keynote">
           </div>
+
+          <button type="submit" id="modalSubmitBtn" class="w-full bg-[#141618] hover:bg-[#25282c] text-white py-3.5 rounded font-semibold text-sm tracking-wide transition shadow-sm flex items-center justify-center space-x-2">
+            <span id="modalSubmitBtnText">Dispatch Checkout Link &amp; Terms</span>
+            <span class="text-[#92642a]">&rarr;</span>
+          </button>
           
-          <p id="modalDisclaimerText" class="text-[11px] text-[#666666] font-mono text-center pt-2">
-            Affirmative adherence to Schedule B Terms: 100% async, zero Zoom calls, 48-hour delivery guarantee.
+          <p id="modalDisclaimerText" class="text-xs text-[#666666] font-mono mt-4 text-center">
+            Zero Procurement Red Tape: 1-click checkout link dispatched; 100% async; delivery in 48 hours.
           </p>
         </form>
       </div>
 
-      <!-- Confirmation Card -->
       <div id="modalConfirmationView" class="hidden text-center py-6 space-y-5">
         <div class="w-12 h-12 rounded-full bg-[#fef8ee] border border-[#e5e4de] flex items-center justify-center mx-auto text-[#047857] text-xl font-bold">&check;</div>
-        <h4 class="font-serif text-2xl text-[#121316]" id="confirmTitle">Audio Ingestion Dispatched to Desk 1</h4>
+        <h4 class="font-serif text-2xl text-[#121316]" id="confirmTitle">Directive Dispatched to Desk 1</h4>
         <p class="text-sm text-[#575a65] max-w-md mx-auto leading-relaxed" id="confirmBody">
-          Your audio anchor has been confirmed and routed directly to <strong class="text-[#121316]">Desk 1 (Founding Editorial Architecture)</strong>. Your 48-hour countdown has begun. Finished memos will be delivered directly to <span class="font-semibold text-[#121316]" id="confirmEmailSpan"></span>.
+          Your audio anchor has been routed directly to <strong class="text-[#121316]">Desk 1 (Editorial &amp; Outbound)</strong>. Your checkout link and extraction package are being prepared and will be delivered directly to <span class="font-semibold text-[#121316]" id="confirmEmailSpan"></span>.
         </p>
         <div class="bg-white border border-[#e5e4de] rounded p-4 text-xs font-mono text-[#575a65] max-w-sm mx-auto text-left space-y-1" id="confirmDetailsBox">
-          <div>PIPELINE TICKET: <strong class="text-[#121316]" id="confirmTicket">#OE-INGEST-2026</strong></div>
+          <div>PIPELINE TICKET: <strong class="text-[#121316]" id="confirmTicket">#OE-CALIB-250</strong></div>
           <div>ROUTING DESTINATION: <strong class="text-[#121316]">Desk 1 &bull; Lead Editorial Architect</strong></div>
-          <div>DELIVERY STATUS: <strong class="text-[#047857]" id="confirmStatus">Active 48-Hour Countdown</strong></div>
-          <div>GOVERNANCE: <strong class="text-[#92642a]">Schedule B Terms Assented</strong></div>
+          <div>COMMERCIAL STATUS: <strong class="text-[#047857]" id="confirmStatus">Cadence Calibration Test ($250 Flat)</strong></div>
+          <div>DELIVERY SLA: <strong class="text-[#92642a]">48 Hours Guaranteed</strong></div>
+          <div>SETTLEMENT RAIL: <strong class="text-[#121316]" id="confirmRail">Stripe (Corporate Card / ACH)</strong></div>
         </div>
         <button id="closeConfirmBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-white px-6 py-2.5 rounded text-xs font-mono font-semibold uppercase tracking-wider transition">Return to Main Studio</button>
       </div>
@@ -1560,50 +1565,68 @@ renderFolio();
     document.getElementById('copyTearsheetMemoBtn').addEventListener('click', () => copyText(`If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.\n\nTarget Close Rate: 25% to 35% | Disqualification Floor: 65% to 75%\n\nDiscounting a $150k deal down to $50k permanently anchors your price ceiling across the industry.`, 'Case OE-2026-81 executive memo copied'));
 
     // ==========================================
-    // INSTANT POST-PAYMENT INTAKE & INQUIRY MODAL (OCT 31 RE-ARCHITECTURE)
+    // SEAMLESS FORM FILLING MODAL WORKFLOW
     // ==========================================
     const contactModal = document.getElementById('contactModal');
     const modalFormContainer = document.getElementById('modalFormContainer');
     const modalConfirmationView = document.getElementById('modalConfirmationView');
-    const tabPathIntake = document.getElementById('tabPathIntake');
-    const tabPathRetainer = document.getElementById('tabPathRetainer');
-    const selectedIntakePath = document.getElementById('selectedIntakePath');
+    const modalRollInCallout = document.getElementById('modalRollInCallout');
     const modalTitle = document.getElementById('modalTitle');
     const modalSubtitle = document.getElementById('modalSubtitle');
     const modalSubmitBtn = document.getElementById('modalSubmitBtn');
     const modalSubmitBtnText = document.getElementById('modalSubmitBtnText');
-    const modalDeskRoutingLabel = document.getElementById('modalDeskRoutingLabel');
+    const modalDisclaimerText = document.getElementById('modalDisclaimerText');
+    const tierSelect = document.getElementById('commercial-tier-select');
+    const settlementRailSelect = document.getElementById('settlementRailSelect');
 
-    let currentModalMode = 'intake';
-
-    function setModalMode(mode) {
-      currentModalMode = mode;
-      if (selectedIntakePath) selectedIntakePath.value = mode;
-
-      if (mode === 'intake') {
-        tabPathIntake.className = 'flex-1 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded transition text-center bg-[#141618] text-white shadow-xs';
-        tabPathRetainer.className = 'flex-1 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded transition text-center text-[#575a65] hover:text-[#121316]';
-        modalDeskRoutingLabel.textContent = 'Payment Confirmed · Desk 1 Ingestion Active';
-        modalTitle.textContent = 'Payment Confirmed. Drop Audio Anchor';
-        modalSubtitle.textContent = 'Drop your unscripted podcast link, YouTube URL, or raw audio file below. Your 48-hour delivery countdown begins upon receipt.';
-        modalSubmitBtnText.textContent = 'Dispatch Audio to Desk 1 & Start 48h Countdown';
+    function updateTierUI() {
+      const val = tierSelect ? tierSelect.value : '';
+      if (val.includes('250')) {
+        if (modalRollInCallout) {
+          modalRollInCallout.classList.remove('hidden');
+          modalRollInCallout.textContent = '100% RETAINER ROLL-IN CREDIT: 100% of your $250 fee is credited toward Month 1 of your Retainer ($3,250 net balance) if initiated within 14 days.';
+        }
+        modalTitle.textContent = 'Initiate Cadence Calibration Test ($250)';
+        modalSubtitle.textContent = 'Drop your unscripted podcast link, YouTube URL, or raw audio file below. We dispatch your 1-click checkout link and terms. 48-hour delivery begins upon settlement.';
+        modalSubmitBtnText.textContent = 'Dispatch Checkout Link & Terms';
+        modalDisclaimerText.textContent = 'Zero Procurement Red Tape: $250 Flat, settled via 1-click Stripe (Card/ACH) or USDC; 100% async; delivery in 48 hours.';
+      } else if (val.includes('950')) {
+        if (modalRollInCallout) {
+          modalRollInCallout.classList.remove('hidden');
+          modalRollInCallout.textContent = '100% RETAINER ROLL-IN CREDIT: 100% of your $950 fee is credited toward Month 1 of your Retainer ($2,550 net balance) if initiated within 14 days.';
+        }
+        modalTitle.textContent = 'Book On-Demand Event Sprint ($950)';
+        modalSubtitle.textContent = 'Submit up to 60 minutes of unscripted keynote, panel, or interview audio. We dispatch your 1-click checkout link and terms. 48-hour delivery begins upon settlement.';
+        modalSubmitBtnText.textContent = 'Dispatch Checkout Link & Terms';
+        modalDisclaimerText.textContent = 'Zero Procurement Red Tape: $950 Flat, settled via 1-click Stripe (Card/ACH) or USDC; 100% async; delivery in 48 hours.';
       } else {
-        tabPathRetainer.className = 'flex-1 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded transition text-center bg-[#141618] text-white shadow-xs';
-        tabPathIntake.className = 'flex-1 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded transition text-center text-[#575a65] hover:text-[#121316]';
-        modalDeskRoutingLabel.textContent = 'Direct Desk 1 Capacity Routing';
+        if (modalRollInCallout) {
+          modalRollInCallout.classList.remove('hidden');
+          modalRollInCallout.textContent = 'STAGGERED WEEKLY SET-DAY SLA: Dedicated weekly drop day established during onboarding (delivered by 17:00 client local time) with 24-hour revision turnaround.';
+        }
         modalTitle.textContent = 'Inquire for Retainer Availability ($3,500/mo)';
-        modalSubtitle.textContent = 'Strictly capped at 6 partner seats with direct Founding Editorial Director craft. Mutually agreed Weekly Set-Day SLA with zero meetings.';
+        modalSubtitle.textContent = 'Route submissions directly to Desk 1 to evaluate ongoing capacity. Strictly capped at 6 partner seats with direct Founding Editorial Director craft.';
         modalSubmitBtnText.textContent = 'Dispatch Retainer Inquiry to Desk 1';
+        modalDisclaimerText.textContent = 'Month-to-Month Flexibility: Invoiced on the 1st of each month via Stripe or USDC; 14-day cancellation window.';
       }
     }
 
-    if (tabPathIntake) tabPathIntake.addEventListener('click', () => setModalMode('intake'));
-    if (tabPathRetainer) tabPathRetainer.addEventListener('click', () => setModalMode('retainer'));
+    if (tierSelect) tierSelect.addEventListener('change', updateTierUI);
 
-    function openModalWithMode(mode = 'intake') {
+    function openContactModal(tierName = 'Cadence Calibration Test ($250 Flat)') {
       if (modalFormContainer) modalFormContainer.classList.remove('hidden');
       if (modalConfirmationView) modalConfirmationView.classList.add('hidden');
-      setModalMode(mode);
+      
+      if (tierSelect) {
+        if (tierName.includes('250')) {
+          tierSelect.value = 'Cadence Calibration Test ($250 Flat)';
+        } else if (tierName.includes('950')) {
+          tierSelect.value = 'On-Demand Event Sprint ($950 Flat)';
+        } else {
+          tierSelect.value = 'The Retainer Desk ($3,500/Month)';
+        }
+      }
+      updateTierUI();
       if (contactModal) contactModal.classList.remove('hidden');
     }
 
@@ -1622,15 +1645,14 @@ renderFolio();
       contactModal.addEventListener('click', e => { if (e.target === contactModal) closeContactModal(); });
     }
 
-    // Auto-open Post-Payment Intake Terminal on redirect (e.g. ?payment=confirmed or #intake)
-    (function checkPaymentRedirect() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const isConfirmed = urlParams.get('payment') === 'confirmed' || urlParams.get('payment') === 'success' || urlParams.get('session_id') !== null;
-      const isHashIntake = window.location.hash.toLowerCase() === '#intake';
-      if (isConfirmed || isHashIntake) {
-        openModalWithMode('intake');
-      }
-    })();
+    // Connect all .open-inquiry-btn buttons
+    document.querySelectorAll('.open-inquiry-btn').forEach(b => {
+      b.addEventListener('click', (e) => {
+        e.preventDefault();
+        const eng = b.dataset.engagement || 'Cadence Calibration Test ($250 Flat)';
+        openContactModal(eng);
+      });
+    });
 
     // Handle Form Submission
     const inquiryForm = document.getElementById('editorialInquiryForm');
@@ -1642,48 +1664,64 @@ renderFolio();
         const linkedin = document.getElementById('inquiryLinkedin').value.trim();
         const audioUrl = document.getElementById('inquiryAudioUrl').value.trim();
         const focusField = document.getElementById('inquiryFocus');
-        const focus = focusField ? focusField.value.trim() : 'Executive Authority';
+        const focus = focusField && focusField.value.trim() ? focusField.value.trim() : 'Bespoke Executive Voice';
+        const tier = tierSelect ? tierSelect.value : 'Cadence Calibration Test ($250 Flat)';
+        const rail = settlementRailSelect ? settlementRailSelect.value : 'Stripe (Corporate Card / ACH)';
 
         document.getElementById('confirmEmailSpan').textContent = email;
+        const confirmRailEl = document.getElementById('confirmRail');
+        if (confirmRailEl) confirmRailEl.textContent = rail;
 
         let subject = '';
-        let body = '';
+        let ticketId = '';
+        let rollInText = '';
 
-        if (currentModalMode === 'intake') {
-          subject = `[PAID INTAKE] Audio Anchor Submission (48h SLA) - ${name}`;
-          body = `POST-PAYMENT INTAKE DIRECTIVE // ROUTED TO DESK 1\n\n` +
-            `Executive: ${name}\n` +
-            `Corporate Work Email: ${email}\n` +
-            `LinkedIn Profile: ${linkedin}\n` +
-            `Unscripted Audio URL: ${audioUrl}\n` +
-            `Strategic / Launch Focus: ${focus}\n` +
-            `Terms Acceptance: Schedule B Affirmative Assent Verified\n` +
-            `SLA Window: 48-Hour Delivery Guarantee Active`;
-
-          document.getElementById('confirmTitle').textContent = 'Audio Ingestion Dispatched to Desk 1';
-          document.getElementById('confirmStatus').textContent = 'Active 48-Hour Countdown';
-          document.getElementById('confirmTicket').textContent = '#OE-INGEST-' + Date.now().toString().slice(-4);
+        if (tier.includes('250')) {
+          subject = `[CALIBRATION TEST] Cadence Pilot Order [Desk 1] - ${name}`;
+          ticketId = '#OE-CALIB-250';
+          rollInText = '100% Roll-In Credit Active ($3,250 net balance on Month 1 Retainer within 14 days)';
+        } else if (tier.includes('950')) {
+          subject = `[EVENT SPRINT] On-Demand Sprint Order [Desk 1] - ${name}`;
+          ticketId = '#OE-SPRINT-950';
+          rollInText = '100% Roll-In Credit Active ($2,550 net balance on Month 1 Retainer within 14 days)';
         } else {
-          subject = `Retainer Representation Inquiry - ${name}`;
-          body = `RETAINER CAPACITY DIRECTIVE // ROUTED TO DESK 1\n\n` +
-            `Executive: ${name}\n` +
-            `Corporate Work Email: ${email}\n` +
-            `LinkedIn Profile: ${linkedin}\n` +
-            `Unscripted Audio URL: ${audioUrl}\n` +
-            `Commercial Tier: The Retainer Desk ($3,500/Month)\n` +
-            `Delivery SLA: Mutually Agreed Recurring Weekly Set-Day (17:00 client local time)\n` +
-            `Capacity Target: Desk Capping Strictly 6 Partners`;
-
-          document.getElementById('confirmTitle').textContent = 'Retainer Inquiry Dispatched to Desk 1';
-          document.getElementById('confirmStatus').textContent = 'Retainer Desk Evaluation';
-          document.getElementById('confirmTicket').textContent = '#OE-RETAINER-3500';
+          subject = `[RETAINER INQUIRY] Desk Capacity Request - ${name}`;
+          ticketId = '#OE-RETAINER-3500';
+          rollInText = 'Staggered Weekly Set-Day SLA (17:00 client local time)';
         }
+
+        const body = `OPERATIONAL DIRECTIVE // ROUTED TO DESK 1
+
+` +
+          `Executive: ${name}
+` +
+          `Corporate Email: ${email}
+` +
+          `LinkedIn Profile: ${linkedin}
+` +
+          `Audio Anchor URL: ${audioUrl}
+` +
+          `Commercial Tier: ${tier}
+` +
+          `Settlement Rail: ${rail}
+` +
+          `Strategic Focus: ${focus}
+` +
+          `Terms Assent: Schedule B Affirmative Acceptance
+` +
+          `Governance Note: ${rollInText}
+` +
+          `Delivery SLA: 48 Hours Post-Settlement`;
+
+        document.getElementById('confirmTitle').textContent = 'Directive Dispatched to Desk 1';
+        document.getElementById('confirmStatus').textContent = tier;
+        document.getElementById('confirmTicket').textContent = ticketId;
 
         window.location.href = `mailto:inquiry@offscripteditorial.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         modalFormContainer.classList.add('hidden');
         modalConfirmationView.classList.remove('hidden');
-        triggerToast(currentModalMode === 'intake' ? 'Audio anchor dispatched to Desk 1' : 'Retainer inquiry dispatched to Desk 1');
+        triggerToast('Order directive dispatched to Desk 1');
       });
     }
 
