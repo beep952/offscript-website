@@ -239,7 +239,7 @@
         <a href="#impact" class="hover:text-[#121316] transition">Impact</a>
         <a href="#engagements" class="hover:text-[#121316] transition">Pricing</a>
         <a href="#faq" class="hover:text-[#121316] transition">FAQ</a>
-        <a href="#terms" class="hover:text-[#121316] transition">Terms &amp; Standards</a>
+        <a href="#governance" class="hover:text-[#121316] transition">Institutional Standards</a>
       </nav>
 
       <!-- Action Area: Desktop Button + Mobile Hamburger Toggle -->
@@ -300,8 +300,8 @@
         <a href="#faq" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
           <span class="font-mono text-xs text-[#888] mr-2">05 //</span>Frequently Asked Questions
         </a>
-        <a href="#terms" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
-          <span class="font-mono text-xs text-[#888] mr-2">06 //</span>Terms &amp; Standards of Service
+        <a href="#governance" onclick="toggleMobileMenu()" class="text-lg sm:text-xl font-serif text-[#141618] hover:text-[#555] transition-colors">
+          <span class="font-mono text-xs text-[#888] mr-2">06 //</span>Institutional Standards &amp; Covenants
         </a>
       </div>
     </nav>
@@ -927,7 +927,7 @@
               Settlement via 1-Click Stripe (Card/ACH) or USDC
             </div>
             <div class="text-center text-[10px] font-mono text-[#8a8d98]">
-              Affirmative acceptance of <a href="#terms" class="underline hover:text-[#121316]">Schedule B Terms</a> (100% async, 48h SLA).
+              Affirmative acceptance of <button type="button" class="open-terms-btn underline hover:text-[#121316]">Terms of Service</button> (100% async, 48h SLA).
             </div>
           </div>
         </div>
@@ -978,7 +978,7 @@
               Settlement via 1-Click Stripe (Card/ACH) or USDC
             </div>
             <div class="text-center text-[10px] font-mono text-[#8a8d98]">
-              Affirmative acceptance of <a href="#terms" class="underline hover:text-[#121316]">Schedule B Terms</a> (100% async, 48h SLA).
+              Affirmative acceptance of <button type="button" class="open-terms-btn underline hover:text-[#121316]">Terms of Service</button> (100% async, 48h SLA).
             </div>
           </div>
         </div>
@@ -1029,7 +1029,7 @@
               Recurring monthly settlement via Stripe or USDC
             </div>
             <div class="text-center text-[10px] font-mono text-[#8a8d98]">
-              Month-to-month flexibility. Affirmative terms governed by <a href="#terms" class="underline hover:text-[#121316]">Schedule B Terms</a>.
+              Month-to-month flexibility. Governed by <button type="button" class="open-terms-btn underline hover:text-[#121316]">Terms of Service</button>.
             </div>
           </div>
         </div>
@@ -1038,8 +1038,190 @@
     </div>
   </section>
 
-  <!-- INTAKE MODAL (ENTERPRISE SPRINT INVOICE & RETAINER) -->
-  <!-- INTAKE MODAL (DECOUPLED TWO-PATH INTAKE FLOW) -->
+  <!-- TERMS OF SERVICE MODAL OVERLAY (ONLY SHOWN WHEN VISITOR CLICKS TERMS OF SERVICE) -->
+  <div id="termsModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
+    <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg max-w-3xl w-full p-6 sm:p-10 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button id="closeTermsModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close Terms of Service modal">&times;</button>
+      
+      <div class="pb-6 border-b border-[#e5e4de] mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#fef8ee] border border-[#e5e4de] text-[#92642a] font-mono text-[11px] font-semibold uppercase tracking-wider mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#92642a]"></span>
+            <span>Client Terms of Service</span>
+          </div>
+          <h3 id="termsModalTitle" class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Offscript Editorial // Terms of Service</h3>
+          <div class="flex flex-wrap items-center gap-3 mt-2 text-xs font-mono text-[#575a65]">
+            <div>EFFECTIVE DATE: <span class="text-[#121316] font-semibold">October 27, 2026</span></div>
+            <div>&bull;</div>
+            <div>STATUS: <span class="text-[#047857] font-semibold">Affirmative Binding</span></div>
+          </div>
+        </div>
+        <div class="text-xs font-mono text-[#575a65] sm:text-right">
+          <a href="mailto:inquiry@offscripteditorial.com" class="text-[#92642a] underline hover:text-[#121316]">inquiry@offscripteditorial.com</a>
+        </div>
+      </div>
+
+      <p class="text-xs sm:text-sm text-[#575a65] mb-6 leading-relaxed bg-white border border-[#e5e4de] p-4 rounded">
+        By completing payment via any authorized studio invoice, checkout link, or digital settlement rail, Client ("Client") agrees to these binding terms with Offscript Editorial ("Studio"):
+      </p>
+
+      <!-- The 8 Formal Legal Clauses -->
+      <div class="space-y-4 text-xs sm:text-sm leading-relaxed text-[#575a65]">
+        
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 01</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">1. Asynchronous Operating Model</h4>
+          <p>Studio operates 100% asynchronously. Engagements require zero onboarding, discovery, or recurring status Zoom calls. All narrative assets are derived from submitted unscripted audio or voice notes.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 02</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">2. Settlement &amp; Non-Refundable Policy</h4>
+          <p>Fees for the Cadence Calibration Test ($250), the On-Demand Event Sprint ($950), and The Executive Narrative Desk ($3,500/mo) are billed 100% upfront. Due to immediate, bespoke principal editorial allocation, all fees are non-refundable once audio ingestion and extraction have commenced.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 03</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">3. 14-Day Sprint &amp; Calibration Roll-In Credit</h4>
+          <p>If Client transitions from the $250 Calibration Test ($3,250 net balance) or $950 Event Sprint ($2,550 net balance) to the Executive Narrative Desk within fourteen (14) days of delivery, a 100% credit is applied toward the Month 1 retainer invoice.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 04</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">4. Intellectual Property Assignment</h4>
+          <p>Upon confirmed payment clearance, 100% of all copyright, title, and ownership in final delivered written memos transfer irrevocably to Client. Studio retains ownership of its underlying extraction frameworks, prompts, linting software, and Master Voice Ledger architectures.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 05</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">5. Content Approvals &amp; Publishing Indemnity</h4>
+          <p>Final review, factual verification, and publication to third-party platforms (including LinkedIn) remain the sole responsibility of Client. Studio does not hold client credentials or execute live publishing.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 06</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">6. Enterprise Data Privacy</h4>
+          <p>All audio processing and transcription pipelines utilize enterprise commercial APIs whose binding terms strictly prohibit customer data from being used in public model training datasets.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 07</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">7. Structured Revision SLAs</h4>
+          <p>Diagnostic tests and Sprints include one (1) consolidated calibration round submitted within 7 days of delivery. Retainers include one consolidated revision round per weekly batch submitted within 72 hours of delivery (returned within 24 hours).</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 08</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">8. Limitation of Liability &amp; Governing Law</h4>
+          <p>Studio's total aggregate liability arising under any engagement shall not exceed the total fees paid by Client in the thirty (30) days preceding the claim. Governed by the laws of the clearing merchant domicile.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-[#e5e4de] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-xs font-mono text-[#575a65]">
+          Clearance Domicile: Clearing Merchant Rails
+        </div>
+        <button id="closeTermsBottomBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-white px-6 py-2.5 rounded text-xs font-mono font-semibold uppercase tracking-wider transition">
+          Close Terms
+        </button>
+      </div>
+    </div>
+  </div>
+
+    <!-- INTAKE MODAL (ENTERPRISE SPRINT INVOICE & RETAINER) -->
+  <!-- TERMS OF SERVICE MODAL OVERLAY (ONLY SHOWN WHEN VISITOR CLICKS TERMS OF SERVICE) -->
+  <div id="termsModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
+    <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg max-w-3xl w-full p-6 sm:p-10 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button id="closeTermsModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close Terms of Service modal">&times;</button>
+      
+      <div class="pb-6 border-b border-[#e5e4de] mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#fef8ee] border border-[#e5e4de] text-[#92642a] font-mono text-[11px] font-semibold uppercase tracking-wider mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#92642a]"></span>
+            <span>Client Terms of Service</span>
+          </div>
+          <h3 id="termsModalTitle" class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Offscript Editorial // Terms of Service</h3>
+          <div class="flex flex-wrap items-center gap-3 mt-2 text-xs font-mono text-[#575a65]">
+            <div>EFFECTIVE DATE: <span class="text-[#121316] font-semibold">October 27, 2026</span></div>
+            <div>&bull;</div>
+            <div>STATUS: <span class="text-[#047857] font-semibold">Affirmative Binding</span></div>
+          </div>
+        </div>
+        <div class="text-xs font-mono text-[#575a65] sm:text-right">
+          <a href="mailto:inquiry@offscripteditorial.com" class="text-[#92642a] underline hover:text-[#121316]">inquiry@offscripteditorial.com</a>
+        </div>
+      </div>
+
+      <p class="text-xs sm:text-sm text-[#575a65] mb-6 leading-relaxed bg-white border border-[#e5e4de] p-4 rounded">
+        By completing payment via any authorized studio invoice, checkout link, or digital settlement rail, Client ("Client") agrees to these binding terms with Offscript Editorial ("Studio"):
+      </p>
+
+      <!-- The 8 Formal Legal Clauses -->
+      <div class="space-y-4 text-xs sm:text-sm leading-relaxed text-[#575a65]">
+        
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 01</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">1. Asynchronous Operating Model</h4>
+          <p>Studio operates 100% asynchronously. Engagements require zero onboarding, discovery, or recurring status Zoom calls. All narrative assets are derived from submitted unscripted audio or voice notes.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 02</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">2. Settlement &amp; Non-Refundable Policy</h4>
+          <p>Fees for the Cadence Calibration Test ($250), the On-Demand Event Sprint ($950), and The Executive Narrative Desk ($3,500/mo) are billed 100% upfront. Due to immediate, bespoke principal editorial allocation, all fees are non-refundable once audio ingestion and extraction have commenced.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 03</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">3. 14-Day Sprint &amp; Calibration Roll-In Credit</h4>
+          <p>If Client transitions from the $250 Calibration Test ($3,250 net balance) or $950 Event Sprint ($2,550 net balance) to the Executive Narrative Desk within fourteen (14) days of delivery, a 100% credit is applied toward the Month 1 retainer invoice.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 04</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">4. Intellectual Property Assignment</h4>
+          <p>Upon confirmed payment clearance, 100% of all copyright, title, and ownership in final delivered written memos transfer irrevocably to Client. Studio retains ownership of its underlying extraction frameworks, prompts, linting software, and Master Voice Ledger architectures.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 05</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">5. Content Approvals &amp; Publishing Indemnity</h4>
+          <p>Final review, factual verification, and publication to third-party platforms (including LinkedIn) remain the sole responsibility of Client. Studio does not hold client credentials or execute live publishing.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 06</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">6. Enterprise Data Privacy</h4>
+          <p>All audio processing and transcription pipelines utilize enterprise commercial APIs whose binding terms strictly prohibit customer data from being used in public model training datasets.</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 07</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">7. Structured Revision SLAs</h4>
+          <p>Diagnostic tests and Sprints include one (1) consolidated calibration round submitted within 7 days of delivery. Retainers include one consolidated revision round per weekly batch submitted within 72 hours of delivery (returned within 24 hours).</p>
+        </div>
+
+        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
+          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 08</div>
+          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">8. Limitation of Liability &amp; Governing Law</h4>
+          <p>Studio's total aggregate liability arising under any engagement shall not exceed the total fees paid by Client in the thirty (30) days preceding the claim. Governed by the laws of the clearing merchant domicile.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-[#e5e4de] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-xs font-mono text-[#575a65]">
+          Clearance Domicile: Clearing Merchant Rails
+        </div>
+        <button id="closeTermsBottomBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-white px-6 py-2.5 rounded text-xs font-mono font-semibold uppercase tracking-wider transition">
+          Close Terms
+        </button>
+      </div>
+    </div>
+  </div>
+
+    <!-- INTAKE MODAL (DECOUPLED TWO-PATH INTAKE FLOW) -->
   <div id="contactModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg max-w-xl w-full p-6 sm:p-10 shadow-2xl relative max-h-[92vh] overflow-y-auto">
       <button id="closeModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close modal">&times;</button>
@@ -1239,18 +1421,17 @@
   </section>
 
   
-  <!-- SECTION 06: INSTITUTIONAL STANDARDS & TERMS OF SERVICE (#governance / #terms) -->
-  <a id="terms" class="scroll-mt-24"></a>
+  <!-- SECTION 06: INSTITUTIONAL STANDARDS & OPERATING COVENANTS (#governance) -->
   <section id="governance" class="py-24 border-b border-[#e5e4de] bg-[#f4f3ef] text-[#121316]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="flex items-center gap-2 mb-3">
-        <span class="font-mono text-xs text-[#92642a] tracking-widest uppercase font-semibold">06 // INSTITUTIONAL STANDARDS &amp; TERMS OF SERVICE (SCHEDULE B)</span>
+        <span class="font-mono text-xs text-[#92642a] tracking-widest uppercase font-semibold">06 // INSTITUTIONAL STANDARDS &amp; OPERATING COVENANTS</span>
       </div>
-      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#121316] mb-3">Master Operating Principles &amp; Binding Legal Terms</h2>
-      <p class="text-sm sm:text-base text-[#575a65] max-w-3xl mb-12 leading-relaxed">
-        Clear, binding operational covenants and legal terms governing every diagnostic engagement, sprint, and ongoing retainer. Institutional transparency with zero procurement ambiguity.
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#121316] mb-3">Master Operating Principles &amp; Scope Integrity</h2>
+      <p class="text-sm sm:text-base text-[#575a65] max-w-2xl mb-12 leading-relaxed">
+        Clear, binding operational covenants governing every sprint and ongoing retainer. Institutional transparency with zero procurement ambiguity.
       </p>
 
       <!-- 6 Executive Operating Covenants Cards -->
@@ -1287,99 +1468,10 @@
         </div>
       </div>
 
-      <!-- Compliance Baseline Strip -->
-      <div class="mt-8 pt-6 border-t border-[#d1cfc7] text-[11px] font-mono text-[#575a65] flex flex-col md:flex-row justify-between gap-3">
-        <span>BINDING COVENANTS: Payment completion via any authorized invoice, checkout link, or digital settlement rail constitutes affirmative acceptance of these Terms.</span>
-        <span>LIABILITY &amp; INDEMNITY: Total aggregate liability capped strictly at fees paid in preceding 30 days. Client retains sole publication authority and platform indemnity.</span>
-      </div>
-
-      <!-- FULL SCHEDULE B LEGAL TERMS REPOSITORY (DIRECTLY EMBEDDED) -->
-      <div class="mt-12 bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-10 editorial-shadow">
-        <div class="pb-6 border-b border-[#e5e4de] mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#fef8ee] border border-[#e5e4de] text-[#92642a] font-mono text-[11px] font-semibold uppercase tracking-wider mb-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#92642a]"></span>
-              <span>Canonical Legal Repository // Schedule B Master Terms</span>
-            </div>
-            <h3 class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Offscript Editorial // Terms of Service (Schedule B)</h3>
-            <div class="flex flex-wrap items-center gap-3 mt-2 text-xs font-mono text-[#575a65]">
-              <div>EFFECTIVE DATE: <span class="text-[#121316] font-semibold">October 27, 2026</span></div>
-              <div>&bull;</div>
-              <div>DOCUMENT REF: <span class="text-[#121316] font-semibold">#OE-TOS-SCHED-B</span></div>
-              <div>&bull;</div>
-              <div>STATUS: <span class="text-[#047857] font-semibold">Affirmative Binding</span></div>
-            </div>
-          </div>
-          <div class="text-xs font-mono text-[#575a65] sm:text-right">
-            <span>Clearance Domicile: Clearing Merchant Rails</span><br>
-            <a href="mailto:inquiry@offscripteditorial.com" class="text-[#92642a] underline hover:text-[#121316]">inquiry@offscripteditorial.com</a>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-[#575a65] mb-8 leading-relaxed bg-[#fbfbf9] border border-[#e5e4de] p-4 rounded">
-          By completing payment via any authorized studio invoice, Stripe checkout link, or digital settlement rail, Client ("Client") agrees to these binding terms with Offscript Editorial ("Studio"):
-        </p>
-
-        <!-- The 8 Formal Clauses Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm leading-relaxed text-[#575a65]">
-          
-          <!-- Clause 1 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 01</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">1. Asynchronous Operating Model</h4>
-            <p>Studio operates 100% asynchronously. Engagements require zero onboarding, discovery, or recurring status Zoom calls. All narrative assets are derived from submitted unscripted audio or voice notes.</p>
-          </div>
-
-          <!-- Clause 2 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 02</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">2. Settlement &amp; Non-Refundable Policy</h4>
-            <p>Fees for the Cadence Calibration Test ($250), the On-Demand Event Sprint ($950), and The Executive Narrative Desk ($3,500/mo) are billed 100% upfront. Due to immediate, bespoke principal editorial allocation, all fees are non-refundable once audio ingestion and extraction have commenced.</p>
-          </div>
-
-          <!-- Clause 3 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 03</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">3. 14-Day Sprint &amp; Calibration Roll-In Credit</h4>
-            <p>If Client transitions from the $250 Calibration Test ($3,250 net balance) or $950 Event Sprint ($2,550 net balance) to the Executive Narrative Desk within fourteen (14) days of delivery, a 100% credit is applied toward the Month 1 retainer invoice.</p>
-          </div>
-
-          <!-- Clause 4 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 04</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">4. Intellectual Property Assignment</h4>
-            <p>Upon confirmed payment clearance, 100% of all copyright, title, and ownership in final delivered written memos transfer irrevocably to Client. Studio retains ownership of its underlying extraction frameworks, prompts, linting software, and Master Voice Ledger architectures.</p>
-          </div>
-
-          <!-- Clause 5 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 05</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">5. Content Approvals &amp; Publishing Indemnity</h4>
-            <p>Final review, factual verification, and publication to third-party platforms (including LinkedIn) remain the sole responsibility of Client. Studio does not hold client credentials or execute live publishing.</p>
-          </div>
-
-          <!-- Clause 6 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 06</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">6. Enterprise Data Privacy</h4>
-            <p>All audio processing and transcription pipelines utilize enterprise commercial APIs whose binding terms strictly prohibit customer data from being used in public model training datasets.</p>
-          </div>
-
-          <!-- Clause 7 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 07</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">7. Structured Revision SLAs</h4>
-            <p>Diagnostic tests and Sprints include one (1) consolidated calibration round submitted within 7 days of delivery. Retainers include one consolidated revision round per weekly batch submitted within 72 hours of delivery (returned within 24 hours).</p>
-          </div>
-
-          <!-- Clause 8 -->
-          <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg p-5">
-            <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1.5">Clause 08</div>
-            <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">8. Limitation of Liability &amp; Governing Law</h4>
-            <p>Studio's total aggregate liability arising under any engagement shall not exceed the total fees paid by Client in the thirty (30) days preceding the claim. Governed by the laws of the clearing merchant domicile.</p>
-          </div>
-
-        </div>
+      <div class="mt-8 text-center sm:text-left">
+        <button type="button" class="open-terms-btn inline-flex items-center space-x-2 text-xs font-mono font-semibold text-[#121316] hover:text-[#92642a] underline underline-offset-4 transition">
+          <span>Read Full Client Terms of Service &rarr;</span>
+        </button>
       </div>
 
     </div>
@@ -1442,8 +1534,8 @@
           <div><a href="#impact" class="text-stone-300 hover:text-white transition">03 // Commercial Impact</a></div>
           <div><a href="#engagements" class="text-stone-300 hover:text-white transition">04 // Product Ladder</a></div>
           <div><a href="#faq" class="text-stone-300 hover:text-white transition">05 // Frequently Asked Questions</a></div>
-          <div><a href="#terms" class="text-stone-300 hover:text-white transition">06 // Terms &amp; Standards</a></div>
-          <div><a href="#terms" class="text-stone-300 hover:text-white transition">Terms of Service (Schedule B)</a></div>
+          <div><a href="#governance" class="text-stone-300 hover:text-white transition">06 // Institutional Standards</a></div>
+          <div><button type="button" class="open-terms-btn text-stone-300 hover:text-white transition text-left">Terms of Service</button></div>
         </div>
         <div class="md:col-span-3 space-y-2 text-xs">
           <div class="font-mono uppercase tracking-widest text-[#92642a] font-semibold mb-3">Direct Editorial Desk</div>
@@ -1458,7 +1550,7 @@
         <div class="flex items-center space-x-3">
           <span>&copy; 2026 Offscript Editorial</span>
           <span>&bull;</span>
-          <a href="#terms" class="text-stone-400 hover:text-white underline underline-offset-2 transition">Terms of Service (Schedule B)</a>
+          <button type="button" class="open-terms-btn text-stone-400 hover:text-white underline underline-offset-2 transition">Terms of Service</button>
         </div>
         <div class="font-serif italic text-stone-400">Crafted for leaders who out-think the market.</div>
       </div>
@@ -1806,7 +1898,7 @@ renderFolio();
 ` +
           `Strategic Focus: ${focus}
 ` +
-          `Terms Assent: Schedule B Affirmative Acceptance
+          `Terms Assent: Affirmative Acceptance of Terms of Service
 ` +
           `Governance Note: ${rollInText}
 ` +
@@ -1824,17 +1916,43 @@ renderFolio();
       });
     }
 
-        // Smooth-scroll navigation for Terms & Standards
-    (function handleTermsRouting() {
-      const p = window.location.pathname.toLowerCase();
+            // ==========================================
+    // TERMS OF SERVICE MODAL CONTROLS
+    // ==========================================
+    const termsModal = document.getElementById('termsModal');
+    const closeTermsModalBtn = document.getElementById('closeTermsModalBtn');
+    const closeTermsBottomBtn = document.getElementById('closeTermsBottomBtn');
+
+    function openTermsModal() {
+      if (termsModal) termsModal.classList.remove('hidden');
+    }
+
+    function closeTermsModal() {
+      if (termsModal) termsModal.classList.add('hidden');
+    }
+
+    if (closeTermsModalBtn) closeTermsModalBtn.addEventListener('click', closeTermsModal);
+    if (closeTermsBottomBtn) closeTermsBottomBtn.addEventListener('click', closeTermsModal);
+    if (termsModal) {
+      termsModal.addEventListener('click', e => { if (e.target === termsModal) closeTermsModal(); });
+    }
+
+    // Connect all .open-terms-btn buttons to open the Terms modal
+    document.querySelectorAll('.open-terms-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openTermsModal();
+      });
+    });
+
+    // Auto-open terms modal if URL has #terms or #tos
+    (function checkTermsHash() {
       const h = window.location.hash.toLowerCase();
-      if (p.endsWith('/terms') || p.endsWith('/terms/') || p.endsWith('/tos') || p.endsWith('/tos/') || h === '#terms' || h === '#tos' || h === '#governance') {
-        setTimeout(() => {
-          const el = document.getElementById('terms') || document.getElementById('governance');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 150);
+      if (h === '#terms' || h === '#tos') {
+        openTermsModal();
       }
     })();
+
 
     // Mobile Drawer Navigation
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
