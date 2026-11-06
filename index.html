@@ -187,7 +187,7 @@
     ::-webkit-scrollbar-track { background: var(--bg-card-warm); }
     ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; border: 2px solid var(--bg-card-warm); }
     ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
-    :focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+    :focus-visible { outline: 2px solid var(--accent-gold) !important; outline-offset: 3px !important; border-radius: 2px !important; }
     .font-serif { font-family: 'Newsreader', Georgia, serif; }
     .tabular-nums { font-variant-numeric: tabular-nums; }
     .balance-text { text-wrap: balance; }
@@ -214,8 +214,6 @@
   </div>
 
   <!-- MAIN NAVIGATION -->
-    <!-- MAIN NAVIGATION -->
-    <!-- MAIN NAVIGATION -->
   <header class="sticky top-0 z-40 bg-[#fbfbf9]/95 backdrop-blur-md border-b border-[#e5e4de]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       <a href="#top" class="flex items-center space-x-3 group shrink-0">
@@ -271,7 +269,7 @@
           <span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#92642a] -mt-1">Editorial</span>
         </div>
       </div>
-      <button id="closeDrawerBtn" type="button" class="p-2 text-[#121316] hover:text-[#92642a] focus:outline-none" aria-label="Close navigation menu">
+      <button id="closeDrawerBtn" type="button" class="w-11 h-11 flex items-center justify-center p-2 text-[#121316] hover:text-[#92642a] focus:outline-none" aria-label="Close navigation menu">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -447,8 +445,7 @@
     </div>
   </section>
 
-  
-        <!-- SECTION 01B: ECONOMIC BENCHMARK (#benchmark) -->
+  <!-- SECTION 01B: ECONOMIC BENCHMARK (#benchmark) -->
   <section id="benchmark" class="py-24 border-b border-[#e5e4de] bg-[#fbfbf9]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -574,11 +571,11 @@
 
       <!-- MODULAR TABBED TOGGLE BAR -->
       <div class="bg-white border border-[#e5e4de] rounded-lg p-3 mb-8 flex flex-wrap items-center justify-between gap-2 editorial-shadow">
-        <div class="flex overflow-x-auto sm:flex-wrap items-center gap-2 py-1 max-w-full no-scrollbar" role="tablist">
-          <button type="button" data-dossier-tab="all" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">All 3 Stages (Full View)</button>
-          <button type="button" data-dossier-tab="panel1" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 01 // Raw Audio</button>
-          <button type="button" data-dossier-tab="panel2" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 02 // Translation Trap</button>
-          <button type="button" data-dossier-tab="panel3" role="tab" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 03 // Calibrated Asset</button>
+        <div class="flex overflow-x-auto sm:flex-wrap items-center gap-2 py-1 max-w-full no-scrollbar" role="tablist" aria-label="Dossier Teardown Stages">
+          <button type="button" data-dossier-tab="all" role="tab" aria-selected="true" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">All 3 Stages (Full View)</button>
+          <button type="button" data-dossier-tab="panel1" role="tab" aria-selected="false" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 01 // Raw Audio</button>
+          <button type="button" data-dossier-tab="panel2" role="tab" aria-selected="false" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 02 // Translation Trap</button>
+          <button type="button" data-dossier-tab="panel3" role="tab" aria-selected="false" class="tab-btn dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">Stage 03 // Calibrated Asset</button>
         </div>
         <span class="font-mono text-[11px] text-[#8a8d98] px-2 hidden xl:inline tabular-nums">SOURCE: LENNY'S PODCAST @ 00:01:30</span>
       </div>
@@ -724,35 +721,35 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
             <label class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#575a65] mb-3">1. Select Spoken Conversation Source</label>
-            <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-2.5 pb-2 sm:pb-0 no-scrollbar" id="caseSelectorGroup">
-              <button type="button" role="tab" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-case="pricing">
+            <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-2.5 pb-2 sm:pb-0 no-scrollbar" id="caseSelectorGroup" role="tablist" aria-label="Spoken Conversation Source">
+              <button type="button" role="tab" aria-selected="true" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-case="pricing">
                 <div class="font-serif font-medium text-base">Enterprise Pricing</div>
-                <div class="text-xs opacity-80 mt-0.5">Margin &amp; Deal Discipline</div>
+                <div class="text-xs text-current opacity-75 mt-0.5">Margin &amp; Deal Discipline</div>
               </button>
-              <button type="button" role="tab" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="revops">
+              <button type="button" role="tab" aria-selected="false" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="revops">
                 <div class="font-serif font-medium text-base">Revenue Architecture</div>
-                <div class="text-xs text-[#575a65] mt-0.5">Systems vs. Ad-Hoc Tickets</div>
+                <div class="text-xs text-current opacity-75 mt-0.5">Systems vs. Ad-Hoc Tickets</div>
               </button>
-              <button type="button" role="tab" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="engineering">
+              <button type="button" role="tab" aria-selected="false" class="tab-btn case-btn shrink-0 min-w-[200px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-case="engineering">
                 <div class="font-serif font-medium text-base">Engineering Resilience</div>
-                <div class="text-xs text-[#575a65] mt-0.5">Velocity vs. Recovery</div>
+                <div class="text-xs text-current opacity-75 mt-0.5">Velocity vs. Recovery</div>
               </button>
             </div>
           </div>
           <div>
             <label class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#575a65] mb-3">2. Select Calibrated Executive Voice</label>
-            <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-2.5 pb-2 sm:pb-0 no-scrollbar" id="voiceSelectorGroup">
-              <button type="button" role="tab" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-voice="operator">
+            <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-2.5 pb-2 sm:pb-0 no-scrollbar" id="voiceSelectorGroup" role="tablist" aria-label="Calibrated Executive Voice Archetype">
+              <button type="button" role="tab" aria-selected="true" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#141618] bg-[#141618] text-white transition" data-voice="operator">
                 <div class="font-serif font-medium text-base">Aggressive Operator</div>
-                <div class="text-xs opacity-80 mt-0.5">Punchy tempo, high-velocity convictions</div>
+                <div class="text-xs text-current opacity-75 mt-0.5">Punchy tempo, high-velocity convictions</div>
               </button>
-              <button type="button" role="tab" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="strategist">
+              <button type="button" role="tab" aria-selected="false" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="strategist">
                 <div class="font-serif font-medium text-base">Analytical Architect</div>
-                <div class="text-xs text-[#575a65] mt-0.5">Boardroom-ready, structural systems logic</div>
+                <div class="text-xs text-current opacity-75 mt-0.5">Boardroom-ready, structural systems logic</div>
               </button>
-              <button type="button" role="tab" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="founder">
+              <button type="button" role="tab" aria-selected="false" class="tab-btn voice-btn shrink-0 min-w-[220px] sm:min-w-0 text-left p-3 rounded border border-[#e5e4de] bg-[#fbfbf9] hover:bg-[#f4f3ef] text-[#121316] transition" data-voice="founder">
                 <div class="font-serif font-medium text-base">Storyteller / Visionary</div>
-                <div class="text-xs text-[#575a65] mt-0.5">Reflective, chronological founder narrative</div>
+                <div class="text-xs text-current opacity-75 mt-0.5">Reflective, chronological founder narrative</div>
               </button>
             </div>
           </div>
@@ -846,10 +843,10 @@
             <span class="font-mono text-xs uppercase tracking-wider font-semibold text-[#92642a] block">Interactive Commercial Diagnostic</span>
             <h3 class="font-serif text-2xl font-normal text-[#121316] mt-0.5">Inspect How Executive Memos Solve Boardroom Bottlenecks</h3>
           </div>
-          <div class="flex flex-wrap gap-2" role="tablist">
-            <button type="button" data-impact-tab="velocity" role="tab" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">01. Pipeline Velocity</button>
-            <button type="button" data-impact-tab="pricing" role="tab" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">02. Pricing Defense</button>
-            <button type="button" data-impact-tab="calendar" role="tab" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">03. Calendar Protection</button>
+          <div class="flex flex-wrap gap-2" role="tablist" aria-label="Commercial Diagnostic Dimensions">
+            <button type="button" data-impact-tab="velocity" role="tab" aria-selected="true" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition">01. Pipeline Velocity</button>
+            <button type="button" data-impact-tab="pricing" role="tab" aria-selected="false" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">02. Pricing Defense</button>
+            <button type="button" data-impact-tab="calendar" role="tab" aria-selected="false" class="tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition">03. Calendar Protection</button>
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
@@ -867,7 +864,6 @@
     </div>
   </section>
 
-  
   <!-- SECTION 04: CAPACITY-CONSTRAINED ENGAGEMENTS (#engagements) -->
   <section id="engagements" class="py-24 border-b border-[#e5e4de] bg-[#fbfbf9]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1038,10 +1034,10 @@
     </div>
   </section>
 
-  <!-- TERMS OF SERVICE MODAL OVERLAY (ONLY SHOWN WHEN VISITOR CLICKS TERMS OF SERVICE) -->
+  <!-- TERMS OF SERVICE MODAL OVERLAY -->
   <div id="termsModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
     <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg max-w-3xl w-full p-6 sm:p-10 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button id="closeTermsModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close Terms of Service modal">&times;</button>
+      <button id="closeTermsModalBtn" type="button" class="absolute top-4 right-4 w-11 h-11 flex items-center justify-center p-2 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition rounded focus:outline-none" aria-label="Close Terms of Service modal">&times;</button>
       
       <div class="pb-6 border-b border-[#e5e4de] mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -1129,102 +1125,10 @@
     </div>
   </div>
 
-    <!-- INTAKE MODAL (ENTERPRISE SPRINT INVOICE & RETAINER) -->
-  <!-- TERMS OF SERVICE MODAL OVERLAY (ONLY SHOWN WHEN VISITOR CLICKS TERMS OF SERVICE) -->
-  <div id="termsModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
-    <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg max-w-3xl w-full p-6 sm:p-10 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button id="closeTermsModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close Terms of Service modal">&times;</button>
-      
-      <div class="pb-6 border-b border-[#e5e4de] mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#fef8ee] border border-[#e5e4de] text-[#92642a] font-mono text-[11px] font-semibold uppercase tracking-wider mb-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#92642a]"></span>
-            <span>Client Terms of Service</span>
-          </div>
-          <h3 id="termsModalTitle" class="font-serif text-2xl sm:text-3xl font-normal text-[#121316]">Offscript Editorial // Terms of Service</h3>
-          <div class="flex flex-wrap items-center gap-3 mt-2 text-xs font-mono text-[#575a65]">
-            <div>EFFECTIVE DATE: <span class="text-[#121316] font-semibold">October 27, 2026</span></div>
-            <div>&bull;</div>
-            <div>STATUS: <span class="text-[#047857] font-semibold">Affirmative Binding</span></div>
-          </div>
-        </div>
-        <div class="text-xs font-mono text-[#575a65] sm:text-right">
-          <a href="mailto:inquiry@offscripteditorial.com" class="text-[#92642a] underline hover:text-[#121316]">inquiry@offscripteditorial.com</a>
-        </div>
-      </div>
-
-      <p class="text-xs sm:text-sm text-[#575a65] mb-6 leading-relaxed bg-white border border-[#e5e4de] p-4 rounded">
-        By completing payment via any authorized studio invoice, checkout link, or digital settlement rail, Client ("Client") agrees to these binding terms with Offscript Editorial ("Studio"):
-      </p>
-
-      <!-- The 8 Formal Legal Clauses -->
-      <div class="space-y-4 text-xs sm:text-sm leading-relaxed text-[#575a65]">
-        
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 01</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">1. Asynchronous Operating Model</h4>
-          <p>Studio operates 100% asynchronously. Engagements require zero onboarding, discovery, or recurring status Zoom calls. All narrative assets are derived from submitted unscripted audio or voice notes.</p>
-        </div>
-
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 02</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">2. Settlement &amp; Non-Refundable Policy</h4>
-          <p>Fees for the Cadence Calibration Test ($250), the On-Demand Event Sprint ($950), and The Executive Narrative Desk ($3,500/mo) are billed 100% upfront. Due to immediate, bespoke principal editorial allocation, all fees are non-refundable once audio ingestion and extraction have commenced.</p>
-        </div>
-
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 03</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">3. 14-Day Sprint &amp; Calibration Roll-In Credit</h4>
-          <p>If Client transitions from the $250 Calibration Test ($3,250 net balance) or $950 Event Sprint ($2,550 net balance) to the Executive Narrative Desk within fourteen (14) days of delivery, a 100% credit is applied toward the Month 1 retainer invoice.</p>
-        </div>
-
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 04</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">4. Intellectual Property Assignment</h4>
-          <p>Upon confirmed payment clearance, 100% of all copyright, title, and ownership in final delivered written memos transfer irrevocably to Client. Studio retains ownership of its underlying extraction frameworks, prompts, linting software, and Master Voice Ledger architectures.</p>
-        </div>
-
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 05</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">5. Content Approvals &amp; Publishing Indemnity</h4>
-          <p>Final review, factual verification, and publication to third-party platforms (including LinkedIn) remain the sole responsibility of Client. Studio does not hold client credentials or execute live publishing.</p>
-        </div>
-
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 06</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">6. Enterprise Data Privacy</h4>
-          <p>All audio processing and transcription pipelines utilize enterprise commercial APIs whose binding terms strictly prohibit customer data from being used in public model training datasets.</p>
-        </div>
-
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 07</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">7. Structured Revision SLAs</h4>
-          <p>Diagnostic tests and Sprints include one (1) consolidated calibration round submitted within 7 days of delivery. Retainers include one consolidated revision round per weekly batch submitted within 72 hours of delivery (returned within 24 hours).</p>
-        </div>
-
-        <div class="bg-white border border-[#e5e4de] rounded-lg p-5">
-          <div class="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#92642a] mb-1">Clause 08</div>
-          <h4 class="font-serif text-base font-semibold text-[#121316] mb-2">8. Limitation of Liability &amp; Governing Law</h4>
-          <p>Studio's total aggregate liability arising under any engagement shall not exceed the total fees paid by Client in the thirty (30) days preceding the claim. Governed by the laws of the clearing merchant domicile.</p>
-        </div>
-
-      </div>
-
-      <div class="mt-8 pt-6 border-t border-[#e5e4de] flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="text-xs font-mono text-[#575a65]">
-          Clearance Domicile: Clearing Merchant Rails
-        </div>
-        <button id="closeTermsBottomBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-white px-6 py-2.5 rounded text-xs font-mono font-semibold uppercase tracking-wider transition">
-          Close Terms
-        </button>
-      </div>
-    </div>
-  </div>
-
-    <!-- INTAKE MODAL (DECOUPLED TWO-PATH INTAKE FLOW) -->
+  <!-- INTAKE MODAL (DECOUPLED TWO-PATH INTAKE FLOW) -->
   <div id="contactModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="bg-[#fbfbf9] border border-[#e5e4de] rounded-lg max-w-xl w-full p-6 sm:p-10 shadow-2xl relative max-h-[92vh] overflow-y-auto">
-      <button id="closeModalBtn" type="button" class="absolute top-5 right-5 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition" aria-label="Close modal">&times;</button>
+      <button id="closeModalBtn" type="button" class="absolute top-4 right-4 w-11 h-11 flex items-center justify-center p-2 text-[#575a65] hover:text-[#121316] text-2xl leading-none transition rounded focus:outline-none" aria-label="Close modal">&times;</button>
       
       <div id="modalFormContainer">
         <div class="mb-6">
@@ -1240,26 +1144,30 @@
           100% RETAINER ROLL-IN CREDIT: 100% of your $250 fee is credited toward Month 1 of your Retainer ($3,250 net balance) if initiated within 14 days.
         </div>
 
-        <form id="editorialInquiryForm" class="space-y-4 text-sm">
+        <form id="editorialInquiryForm" class="space-y-4 text-sm" novalidate>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label for="inquiryName" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Full Name &amp; Title *</label>
-              <input type="text" id="inquiryName" name="full_name" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="e.g. Sarah Chen, Co-founder &amp; CEO">
+              <input type="text" id="inquiryName" name="full_name" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none transition focus:border-[#92642a]" placeholder="e.g. Sarah Chen, Co-founder &amp; CEO">
+              <span id="nameError" class="text-[11px] text-red-600 hidden mt-1">Please enter your full name and title.</span>
             </div>
             <div>
               <label for="inquiryEmail" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Corporate Work Email *</label>
-              <input type="email" id="inquiryEmail" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="sarah@company.com">
+              <input type="email" id="inquiryEmail" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none transition focus:border-[#92642a]" placeholder="sarah@company.com">
+              <span id="emailError" class="text-[11px] text-red-600 hidden mt-1">Please enter a valid work email address.</span>
             </div>
           </div>
 
           <div>
             <label for="inquiryLinkedin" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">LinkedIn Profile URL *</label>
-            <input type="url" id="inquiryLinkedin" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="https://linkedin.com/in/sarahchen">
+            <input type="url" id="inquiryLinkedin" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none transition focus:border-[#92642a]" placeholder="https://linkedin.com/in/sarahchen">
+            <span id="linkedinError" class="text-[11px] text-red-600 hidden mt-1">Please provide your LinkedIn profile URL.</span>
           </div>
 
           <div>
             <label for="inquiryAudioUrl" class="block font-mono text-xs font-semibold uppercase tracking-wider text-[#121316] mb-1.5">Link to Unscripted Audio / Talk / Podcast URL *</label>
-            <input type="url" id="inquiryAudioUrl" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none focus:border-[#92642a]" placeholder="YouTube, Spotify, Loom, Google Drive, or podcast episode link">
+            <input type="url" id="inquiryAudioUrl" required class="w-full bg-white border border-[#d1cfc7] rounded px-3.5 py-2.5 text-[#121316] text-sm outline-none transition focus:border-[#92642a]" placeholder="YouTube, Spotify, Loom, Google Drive, or podcast episode link">
+            <span id="audioUrlError" class="text-[11px] text-red-600 hidden mt-1">Please provide a valid audio link or talk recording URL.</span>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1309,7 +1217,14 @@
           <div>DELIVERY SLA: <strong class="text-[#92642a]">48 Hours Guaranteed</strong></div>
           <div>SETTLEMENT RAIL: <strong class="text-[#121316]" id="confirmRail">Stripe (Corporate Card / ACH)</strong></div>
         </div>
-        <button id="closeConfirmBtn" type="button" class="bg-[#141618] hover:bg-[#25282c] text-white px-6 py-2.5 rounded text-xs font-mono font-semibold uppercase tracking-wider transition">Return to Main Studio</button>
+        
+        <!-- UI/UX Pro Max: Clipboard fallback for mailto failures -->
+        <button id="copyDirectiveBtn" type="button" class="mt-3 w-full border border-[#141618] text-[#121316] hover:bg-[#141618] hover:text-white px-4 py-2.5 text-xs font-mono font-medium transition rounded flex items-center justify-center gap-2">
+          <span>📋</span>
+          <span id="copyDirectiveLabel">Copy Order Directive to Clipboard</span>
+        </button>
+
+        <button id="closeConfirmBtn" type="button" class="w-full bg-[#141618] hover:bg-[#25282c] text-white px-6 py-2.5 rounded text-xs font-mono font-semibold uppercase tracking-wider transition">Return to Main Studio</button>
       </div>
     </div>
   </div>
@@ -1320,7 +1235,7 @@
     <span id="toastText">Executive memo copied to clipboard</span>
   </div>
 
-    <!-- OPERATIONAL TIMEZONE COVERAGE BLOCK -->
+  <!-- OPERATIONAL TIMEZONE COVERAGE BLOCK -->
   <section class="py-16 border-b border-[#e5e4de] bg-[#f4f3ef]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between gap-4 mb-6">
@@ -1358,7 +1273,7 @@
     </div>
   </section>
 
-    <!-- SECTION: FREQUENTLY AUDITED QUESTIONS (#faq) -->
+  <!-- SECTION: FREQUENTLY AUDITED QUESTIONS (#faq) -->
   <section id="faq" class="py-24 border-b border-[#e5e4de] bg-[#fbfbf9]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center gap-2 mb-4">
@@ -1420,7 +1335,6 @@
     </div>
   </section>
 
-  
   <!-- SECTION 06: INSTITUTIONAL STANDARDS & OPERATING COVENANTS (#governance) -->
   <section id="governance" class="py-24 border-b border-[#e5e4de] bg-[#f4f3ef] text-[#121316]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1570,19 +1484,35 @@
             label: "VOICE CALIBRATION // AGGRESSIVE OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "If Your Enterprise Win Rate Is Sitting at 60%, Your Pricing Is Broken",
-            body: `If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.\n\nEarly-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.\n\nHealthy enterprise close rates hover between 25% and 35%.\n\nIf seven out of ten prospects are not balking at your contract size, you are not discovering your market ceiling. You are subsidizing buyers who had the corporate budget to pay triple.\n\nWorse: enterprise buyers talk in private backchannels. Discounting a $150k agreement down to $50k permanently anchors your valuation across executive peer groups.`
+            body: `If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.
+
+Early-stage founders treat high closing rates like proof of product-market fit. In enterprise B2B, a 60% win rate does not mean your product is irresistible. It means you are giving away six-figure value at discount margins.
+
+Healthy enterprise close rates hover between 25% and 35%.
+
+If seven out of ten prospects are not balking at your contract size, you are not discovering your market ceiling. You are subsidizing buyers who had the corporate budget to pay triple.
+
+Worse: enterprise buyers talk in private backchannels. Discounting a $150k agreement down to $50k permanently anchors your valuation across executive peer groups.`
           },
           strategist: {
             label: "VOICE CALIBRATION // ANALYTICAL ARCHITECT",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "The Win-Rate Paradox: Why High Close Rates Erode Enterprise Valuation",
-            body: `Enterprise sales benchmarks reveal a structural paradox that growth-stage leadership teams routinely misread: abnormally high close rates signal margin erosion rather than superior product-market fit.\n\nWhen an enterprise sales organization closes more than 35% of qualified opportunities, commercial leadership is failing to discover the upper boundary of buyer willingness to pay. A healthy enterprise closing distribution sits between 25% and 35%.\n\nJust as critical is price consistency across the customer base. Enterprise procurement leaders and operating executives compare vendor terms inside private peer networks.`
+            body: `Enterprise sales benchmarks reveal a structural paradox that growth-stage leadership teams routinely misread: abnormally high close rates signal margin erosion rather than superior product-market fit.
+
+When an enterprise sales organization closes more than 35% of qualified opportunities, commercial leadership is failing to discover the upper boundary of buyer willingness to pay. A healthy enterprise closing distribution sits between 25% and 35%.
+
+Just as critical is price consistency across the customer base. Enterprise procurement leaders and operating executives compare vendor terms inside private peer networks.`
           },
           founder: {
             label: "VOICE CALIBRATION // STORYTELLER / VISIONARY",
             note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "The Quiet Cost of the Quarter-End Discount",
-            body: `In the early days of selling into the enterprise, closing six out of ten deals feels like vindication. The sales floor rings the gong, the board praises pipeline velocity, and every signed logo feels like momentum.\n\nIt often takes three quarters to realize you have been subsidizing customers who were prepared to pay three times as much.\n\nIn enterprise software, a 30% win rate is a sign of health. It means your pricing commands respect, qualifies serious buyers, and protects the integrity of every relationship you sign.`
+            body: `In the early days of selling into the enterprise, closing six out of ten deals feels like vindication. The sales floor rings the gong, the board praises pipeline velocity, and every signed logo feels like momentum.
+
+It often takes three quarters to realize you have been subsidizing customers who were prepared to pay three times as much.
+
+In enterprise software, a 30% win rate is a sign of health. It means your pricing commands respect, qualifies serious buyers, and protects the integrity of every relationship you sign.`
           }
         }
       },
@@ -1597,19 +1527,27 @@
             label: "VOICE CALIBRATION // AGGRESSIVE OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "Your Revenue Operations Team Is Not an Internal Help Desk",
-            body: `Most founders treat Revenue Operations like internal IT support.\n\nA sales rep breaks a workflow, files an urgent request, and demands an immediate patch. Your highest-paid operations architect spends sixty hours a week resetting permissions and building one-off dashboard views.\n\nThe fix is structural: run RevOps like a software engineering team. Treat your CRM as the core product, operate on two-week sprints, and require every change request to prove measurable revenue impact.`
+            body: `Most founders treat Revenue Operations like internal IT support.
+
+A sales rep breaks a workflow, files an urgent request, and demands an immediate patch. Your highest-paid operations architect spends sixty hours a week resetting permissions and building one-off dashboard views.
+
+The fix is structural: run RevOps like a software engineering team. Treat your CRM as the core product, operate on two-week sprints, and require every change request to prove measurable revenue impact.`
           },
           strategist: {
             label: "VOICE CALIBRATION // ANALYTICAL ARCHITECT",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "Architecting Revenue Operations as an Internal Product Organization",
-            body: `Revenue Operations frequently fails to deliver strategic leverage for one reason: executive leadership allows reactive administration to crowd out systems architecture.\n\nHigh-performing commercial organizations govern RevOps through software product management principles. The underlying data infrastructure is managed as a versioned product and capacity is allocated across two-week engineering sprints.`
+            body: `Revenue Operations frequently fails to deliver strategic leverage for one reason: executive leadership allows reactive administration to crowd out systems architecture.
+
+High-performing commercial organizations govern RevOps through software product management principles. The underlying data infrastructure is managed as a versioned product and capacity is allocated across two-week engineering sprints.`
           },
           founder: {
             label: "VOICE CALIBRATION // STORYTELLER / VISIONARY",
             note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "How We Stopped Answering Tickets and Rebuilt Our Revenue Engine",
-            body: `Three years ago, our revenue operations team was closing nearly two hundred internal requests a week, yet our board forecasts were still unreliable.\n\nEverything changed the week we retired the ticketing queue and adopted an engineering sprint model. Within a single quarter, the noise subsided, and our operations team finally had the room to build systems that lasted.`
+            body: `Three years ago, our revenue operations team was closing nearly two hundred internal requests a week, yet our board forecasts were still unreliable.
+
+Everything changed the week we retired the ticketing queue and adopted an engineering sprint model. Within a single quarter, the noise subsided, and our operations team finally had the room to build systems that lasted.`
           }
         }
       },
@@ -1624,19 +1562,25 @@
             label: "VOICE CALIBRATION // AGGRESSIVE OPERATOR",
             note: "Cadence: Crisp declarative sentences with high commercial urgency",
             headline: "Shipping Code Thirty Times a Day Is a Vanity Metric",
-            body: `Engineering leaders love boasting about deployment frequency. Meanwhile, their recovery plan for a bad release is four senior engineers panicking in a Slack channel at 2:00 AM.\n\nSpeed without rollback certainty is operational recklessness. True engineering maturity is measured by how calmly your system recovers when a release inevitably fails.`
+            body: `Engineering leaders love boasting about deployment frequency. Meanwhile, their recovery plan for a bad release is four senior engineers panicking in a Slack channel at 2:00 AM.
+
+Speed without rollback certainty is operational recklessness. True engineering maturity is measured by how calmly your system recovers when a release inevitably fails.`
           },
           strategist: {
             label: "VOICE CALIBRATION // ANALYTICAL ARCHITECT",
             note: "Cadence: Analytical, structured boardroom prose focused on market mechanics",
             headline: "Why Mean Time to Recovery Matters More Than Deployment Velocity",
-            body: `Modern software engineering organizations frequently over-index on deployment frequency while neglecting the architectural invariants required for safe state recovery.\n\nResilient engineering organizations decouple code deployment from feature activation and enforce strict backward-compatible migration standards before reaching production traffic.`
+            body: `Modern software engineering organizations frequently over-index on deployment frequency while neglecting the architectural invariants required for safe state recovery.
+
+Resilient engineering organizations decouple code deployment from feature activation and enforce strict backward-compatible migration standards before reaching production traffic.`
           },
           founder: {
             label: "VOICE CALIBRATION // STORYTELLER / VISIONARY",
             note: "Cadence: Reflective operator perspective building from a boardroom realization to a lasting principle",
             headline: "The Four-Minute Deploy That Took Nineteen Hours to Undo",
-            body: `Early in my career as a technical founder, we treated daily deployment counts as a badge of honor, until a routine database migration subtly corrupted three hours of enterprise transactions.\n\nToday, we never ask how fast a feature can ship until we have proven how cleanly it can be undone.`
+            body: `Early in my career as a technical founder, we treated daily deployment counts as a badge of honor, until a routine database migration subtly corrupted three hours of enterprise transactions.
+
+Today, we never ask how fast a feature can ship until we have proven how cleanly it can be undone.`
           }
         }
       }
@@ -1674,14 +1618,16 @@
       btns.forEach(b => {
         b.classList.remove('border-[#141618]', 'bg-[#141618]', 'text-white');
         b.classList.add('border-[#e5e4de]', 'bg-[#fbfbf9]', 'text-[#121316]');
+        b.setAttribute('aria-selected', 'false');
       });
       active.classList.remove('border-[#e5e4de]', 'bg-[#fbfbf9]', 'text-[#121316]');
       active.classList.add('border-[#141618]', 'bg-[#141618]', 'text-white');
+      active.setAttribute('aria-selected', 'true');
     }
 
     caseBtns.forEach(b => b.addEventListener('click', () => { activeCase = b.dataset.case; updateGroup(caseBtns, b); renderFolio(); }));
     voiceBtns.forEach(b => b.addEventListener('click', () => { activeVoice = b.dataset.voice; updateGroup(voiceBtns, b); renderFolio(); }));
-renderFolio();
+    renderFolio();
 
     // Section 02 Dossier Stage Tabs
     const dossierStageTabs = document.querySelectorAll('.dossier-stage-tab');
@@ -1691,8 +1637,12 @@ renderFolio();
     dossierStageTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = tab.dataset.dossierTab;
-        dossierStageTabs.forEach(t => t.className = 'dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
+        dossierStageTabs.forEach(t => {
+          t.className = 'dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition';
+          t.setAttribute('aria-selected', 'false');
+        });
         tab.className = 'dossier-stage-tab shrink-0 px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
+        tab.setAttribute('aria-selected', 'true');
         p1.classList.toggle('hidden', target !== 'all' && target !== 'panel1');
         p2.classList.toggle('hidden', target !== 'all' && target !== 'panel2');
         p3.classList.toggle('hidden', target !== 'all' && target !== 'panel3');
@@ -1728,8 +1678,12 @@ renderFolio();
       btn.addEventListener('click', () => {
         const d = impactData[btn.dataset.impactTab];
         if (!d) return;
-        impactTabBtns.forEach(b => b.className = 'tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition');
+        impactTabBtns.forEach(b => {
+          b.className = 'tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#f4f3ef] text-[#575a65] hover:text-[#121316] transition';
+          b.setAttribute('aria-selected', 'false');
+        });
         btn.className = 'tab-btn impact-tab-btn px-4 py-2 rounded text-xs font-mono uppercase tracking-wider font-semibold bg-[#141618] text-white transition';
+        btn.setAttribute('aria-selected', 'true');
         document.getElementById('impactBeforeLabel').textContent = d.bL;
         document.getElementById('impactBeforeBody').textContent = d.bB;
         document.getElementById('impactAfterLabel').textContent = d.aL;
@@ -1752,8 +1706,14 @@ renderFolio();
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).catch(() => {});
       triggerToast(msg);
     }
-    document.getElementById('copyManuscriptBtn').addEventListener('click', () => copyText(`${folioMemoHeadline.textContent}\n\n${folioMemoBody.textContent}`, 'Executive memo copied to clipboard'));
-    document.getElementById('copyTearsheetMemoBtn').addEventListener('click', () => copyText(`If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.\n\nTarget Close Rate: 25% to 35% | Disqualification Floor: 65% to 75%\n\nDiscounting a $150k deal down to $50k permanently anchors your price ceiling across the industry.`, 'Case OE-2026-81 executive memo copied'));
+    document.getElementById('copyManuscriptBtn').addEventListener('click', () => copyText(`${folioMemoHeadline.textContent}
+
+${folioMemoBody.textContent}`, 'Executive memo copied to clipboard'));
+    document.getElementById('copyTearsheetMemoBtn').addEventListener('click', () => copyText(`If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken.
+
+Target Close Rate: 25% to 35% | Disqualification Floor: 65% to 75%
+
+Discounting a $150k deal down to $50k permanently anchors your price ceiling across the industry.`, 'Case OE-2026-81 executive memo copied'));
 
     // ==========================================
     // SEAMLESS FORM FILLING MODAL WORKFLOW
@@ -1819,6 +1779,8 @@ renderFolio();
       }
       updateTierUI();
       if (contactModal) contactModal.classList.remove('hidden');
+      const firstInput = document.getElementById('inquiryName');
+      if (firstInput) setTimeout(() => firstInput.focus(), 50);
     }
 
     function closeContactModal() { 
@@ -1845,19 +1807,63 @@ renderFolio();
       });
     });
 
-    // Handle Form Submission
+    // Handle Form Submission with UI/UX Pro Max Inline Feedback
     const inquiryForm = document.getElementById('editorialInquiryForm');
     if (inquiryForm) {
       inquiryForm.addEventListener('submit', e => {
         e.preventDefault();
-        const name = (document.getElementById('inquiryName') || document.querySelector('[name="full_name"]')).value.trim();
-        const email = document.getElementById('inquiryEmail').value.trim();
-        const linkedin = document.getElementById('inquiryLinkedin').value.trim();
-        const audioUrl = document.getElementById('inquiryAudioUrl').value.trim();
+        const nameEl = document.getElementById('inquiryName');
+        const emailEl = document.getElementById('inquiryEmail');
+        const linkedinEl = document.getElementById('inquiryLinkedin');
+        const audioUrlEl = document.getElementById('inquiryAudioUrl');
         const focusField = document.getElementById('inquiryFocus');
+
+        const name = nameEl.value.trim();
+        const email = emailEl.value.trim();
+        const linkedin = linkedinEl.value.trim();
+        const audioUrl = audioUrlEl.value.trim();
         const focus = focusField && focusField.value.trim() ? focusField.value.trim() : 'Bespoke Executive Voice';
         const tier = tierSelect ? tierSelect.value : 'Cadence Calibration Test ($250 Flat)';
         const rail = settlementRailSelect ? settlementRailSelect.value : 'Stripe (Corporate Card / ACH)';
+
+        let hasError = false;
+
+        // Reset errors
+        [nameEl, emailEl, linkedinEl, audioUrlEl].forEach(el => {
+          el.classList.remove('border-red-500', 'bg-red-50/20');
+        });
+        document.querySelectorAll('#editorialInquiryForm span[id$="Error"]').forEach(s => s.classList.add('hidden'));
+
+        if (!name) {
+          nameEl.classList.add('border-red-500', 'bg-red-50/20');
+          document.getElementById('nameError')?.classList.remove('hidden');
+          hasError = true;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+          emailEl.classList.add('border-red-500', 'bg-red-50/20');
+          document.getElementById('emailError')?.classList.remove('hidden');
+          hasError = true;
+        }
+
+        if (!linkedin) {
+          linkedinEl.classList.add('border-red-500', 'bg-red-50/20');
+          document.getElementById('linkedinError')?.classList.remove('hidden');
+          hasError = true;
+        }
+
+        if (!audioUrl) {
+          audioUrlEl.classList.add('border-red-500', 'bg-red-50/20');
+          document.getElementById('audioUrlError')?.classList.remove('hidden');
+          hasError = true;
+        }
+
+        if (hasError) {
+          const firstTarget = !name ? nameEl : (!email || !emailRegex.test(email)) ? emailEl : !linkedin ? linkedinEl : audioUrlEl;
+          firstTarget.focus();
+          return;
+        }
 
         document.getElementById('confirmEmailSpan').textContent = email;
         const confirmRailEl = document.getElementById('confirmRail');
@@ -1881,32 +1887,36 @@ renderFolio();
           rollInText = 'Staggered Weekly Set-Day SLA (17:00 client local time)';
         }
 
-        const body = `OPERATIONAL DIRECTIVE // ROUTED TO DESK 1
-
-` +
-          `Executive: ${name}
-` +
-          `Corporate Email: ${email}
-` +
-          `LinkedIn Profile: ${linkedin}
-` +
-          `Audio Anchor URL: ${audioUrl}
-` +
-          `Commercial Tier: ${tier}
-` +
-          `Settlement Rail: ${rail}
-` +
-          `Strategic Focus: ${focus}
-` +
-          `Terms Assent: Affirmative Acceptance of Terms of Service
-` +
-          `Governance Note: ${rollInText}
-` +
+        const body = `OPERATIONAL DIRECTIVE // ROUTED TO DESK 1\n\n` +
+          `Executive: ${name}\n` +
+          `Corporate Email: ${email}\n` +
+          `LinkedIn Profile: ${linkedin}\n` +
+          `Audio Anchor URL: ${audioUrl}\n` +
+          `Commercial Tier: ${tier}\n` +
+          `Settlement Rail: ${rail}\n` +
+          `Strategic Focus: ${focus}\n` +
+          `Terms Assent: Affirmative Acceptance of Terms of Service\n` +
+          `Governance Note: ${rollInText}\n` +
           `Delivery SLA: 48 Hours Post-Settlement`;
 
         document.getElementById('confirmTitle').textContent = 'Directive Dispatched to Desk 1';
         document.getElementById('confirmStatus').textContent = tier;
         document.getElementById('confirmTicket').textContent = ticketId;
+
+        // Clipboard copy button handler
+        const copyBtn = document.getElementById('copyDirectiveBtn');
+        if (copyBtn) {
+          copyBtn.onclick = () => {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(body).then(() => {
+                const lbl = document.getElementById('copyDirectiveLabel');
+                if (lbl) lbl.textContent = 'Directive Copied to Clipboard!';
+                triggerToast('Order directive copied to clipboard');
+                setTimeout(() => { if (lbl) lbl.textContent = 'Copy Order Directive to Clipboard'; }, 3000);
+              });
+            }
+          };
+        }
 
         window.location.href = `mailto:inquiry@offscripteditorial.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
@@ -1916,7 +1926,7 @@ renderFolio();
       });
     }
 
-            // ==========================================
+    // ==========================================
     // TERMS OF SERVICE MODAL CONTROLS
     // ==========================================
     const termsModal = document.getElementById('termsModal');
@@ -1953,6 +1963,14 @@ renderFolio();
       }
     })();
 
+    // Keyboard Accessibility: Escape Key Dismissal for Modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (contactModal && !contactModal.classList.contains('hidden')) closeContactModal();
+        if (termsModal && !termsModal.classList.contains('hidden')) closeTermsModal();
+        if (mobileDrawer && !mobileDrawer.classList.contains('translate-x-full')) toggleMobileDrawer(false);
+      }
+    });
 
     // Mobile Drawer Navigation
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -2007,9 +2025,6 @@ renderFolio();
         openContactModal('sprint');
       });
     }
-renderFolio();
-
-    
 </script>
 </body>
 </html>
