@@ -1,0 +1,74 @@
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@
+ @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
++.skip-link{position:absolute;left:16px;top:8px;z-index:1000;transform:translateY(-150%);padding:12px 16px;background:var(--dark);color:#fff;border-radius:3px;text-decoration:none;font-weight:600}
++.skip-link:focus{transform:translateY(0);outline:3px solid var(--gold);outline-offset:3px}
+ </style>
+@@
+ <body>
++<a class="skip-link" href="#main-content">Skip to main content</a>
+ <div class="masthead"><div class="wrap"><strong>Offscript Editorial</strong><span class="right">Asynchronous executive narrative studio · <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a></span></div></div>
+@@
+-<nav class="navlinks" aria-label="Main navigation"><a href="#protocol">Process</a><a href="#work">What you get</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
++<nav class="navlinks" id="nav-menu" aria-label="Main navigation"><a href="#protocol">Process</a><a href="#work">What you get</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+@@
+-<main>
++<main id="main-content" tabindex="-1">
+@@
+-const nav=document.querySelector('.nav'),toggle=document.querySelector('.menu-toggle');
+-toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Close':'Menu'});
+-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu'}));
++const nav=document.querySelector('.nav'),toggle=document.querySelector('.menu-toggle');
++const closeMenu=()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu'};
++toggle.setAttribute('aria-controls','nav-menu');
++toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Close':'Menu'});
++document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',closeMenu));
++document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();toggle.focus()}});
+ document.getElementById('year').textContent=new Date().getFullYear();
+ </script>
+ </body></html>
+diff --git a/robots.txt b/robots.txt
+new file mode 100644
+--- /dev/null
++++ b/robots.txt
+@@
++User-agent: *
++Allow: /
++
++Sitemap: https://offscripteditorial.com/sitemap.xml
+diff --git a/sitemap.xml b/sitemap.xml
+new file mode 100644
+--- /dev/null
++++ b/sitemap.xml
+@@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url><loc>https://offscripteditorial.com/</loc></url>
++  <url><loc>https://offscripteditorial.com/terms</loc></url>
++</urlset>
+diff --git a/llms.txt b/llms.txt
+new file mode 100644
+--- /dev/null
++++ b/llms.txt
+@@
++# Offscript Editorial
++
++> An asynchronous executive narrative studio turning leaders' spoken thinking into clear, voice-faithful editorial assets.
++
++## What Offscript does
++- Converts podcasts, keynotes, panels, town halls, calls, and voice notes into executive memos and thought leadership.
++- Works asynchronously; no content interviews or recurring Zoom meetings are required.
++- Provides human editorial oversight, voice-first writing, and defined scopes.
++
++## Services
++- Cadence Calibration Test: $250 one-time; 3 memos and a Spoken Cadence Fingerprint.
++- On-Demand Event Sprint: $950 one-time; 5 executive memos and an Event Narrative Brief.
++- Executive Narrative Desk: $3,500/month; 12 executive posts and one 800–1,200-word flagship essay.
++- Fixed-scope commissions have a 48-hour delivery target after payment and usable source material are received; confirm scope and terms before engagement.
++
++## Official pages
++- Homepage: https://offscripteditorial.com/
++- Terms: https://offscripteditorial.com/terms
++- Contact: mailto:inquiry@offscripteditorial.com
