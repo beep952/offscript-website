@@ -20,7 +20,8 @@ Live interviews, graphic design, video editing, inbox or comment management, or 
 - AI tools are used for transcription and analysis; a human editor shapes every post; client data is excluded from model training.
 
 ## Pages
-- [Home, pricing, FAQ and terms](https://offscripteditorial.com/)
+- [Home, pricing and FAQ](https://offscripteditorial.com/)
+- [Terms of service](https://offscripteditorial.com/terms/)
 
 ## Contact
 inquiry@offscripteditorial.com
