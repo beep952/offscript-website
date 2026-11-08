@@ -1,185 +1,96 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service | Offscript Editorial</title>
-  <meta name="description" content="Binding master terms of service, settlement policies, intellectual property assignment, and revision SLAs for Offscript Editorial clients.">
-  <link rel="canonical" href="https://offscripteditorial.com/terms" />
-  <link rel="icon" type="image/png" href="/assets/os-monogram.png" />
-  <link rel="apple-touch-icon" href="/assets/os-monogram.png" />
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Newsreader"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body { background-color: #fbfbf9; color: #121316; font-family: "Plus Jakarta Sans", sans-serif; caret-color: #92642a; }
-    ::selection { background-color: #92642a; color: #ffffff; }
-    .editorial-shadow { box-shadow: 0 12px 32px -12px rgba(18, 19, 22, 0.06), 0 2px 6px -1px rgba(18, 19, 22, 0.03); }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Service | Offscript Editorial</title>
+<meta name="description" content="The terms of service for Offscript Editorial engagements: billing, refunds, ownership, confidentiality, revisions and liability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://offscripteditorial.com/terms/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FCFBF9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/offscript-app-icon-512.png" type="image/png" sizes="512x512">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap">
+<script>try{var t=localStorage.getItem('oe-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<style>
+:root{--bg:#FCFBF9;--fg:#141413;--mut:#5C5A54;--line:#D8D2C6;--pan:#F1ECE3;--acc:#92642A;--inv-bg:#141413;--inv-fg:#FCFBF9;--inv-mut:#D8D2C6;--inv-line:#3A3935;--serif:"Playfair Display",Georgia,serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141413;--fg:#FCFBF9;--mut:#B9B4A8;--line:#3A3935;--pan:#1E1D1B;--acc:#BC8F55;--inv-bg:#1E1D1B}:root:not([data-theme="light"]) .logo-l{display:none}:root:not([data-theme="light"]) .logo-d{display:block}}
+:root[data-theme="dark"]{--bg:#141413;--fg:#FCFBF9;--mut:#B9B4A8;--line:#3A3935;--pan:#1E1D1B;--acc:#BC8F55;--inv-bg:#1E1D1B}
+:root[data-theme="dark"] .logo-l{display:none}:root[data-theme="dark"] .logo-d{display:block}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}img{display:block;max-width:100%;height:auto}
+.wrap{width:min(760px,calc(100% - 40px));margin-inline:auto}
+header{border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header .in{display:flex;justify-content:space-between;align-items:center;min-height:68px;gap:16px}
+header img{width:168px;height:42px}.logo-d{display:none}
+header a.back{font-size:.9375rem;color:var(--mut);text-decoration:none;padding:12px 0}
+header a.back:hover{color:var(--fg)}
+h1,h2{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(2rem,5vw,2.75rem);line-height:1.12;margin:56px 0 12px}
+h2{font-size:1.375rem;line-height:1.25;margin:40px 0 8px}
+p{margin:0 0 1em;color:var(--mut)}
+.meta{font-size:.875rem}
+.lede{font-size:1.125rem}
+section{padding:0}
+main{padding-bottom:80px}
+ul{color:var(--mut);padding-left:20px}li{margin:0 0 6px}
+footer{background:var(--inv-bg);color:var(--inv-mut);padding:32px 0 calc(32px + env(safe-area-inset-bottom,0px));font-size:.875rem;border-top:1px solid var(--inv-line)}
+footer .in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--inv-fg)}
+a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+</style>
 </head>
-<body class="bg-[#fbfbf9] text-[#121316] antialiased min-h-screen flex flex-col justify-between">
+<body>
+<header><div class="wrap in">
+  <a href="/" aria-label="Offscript Editorial home"><img class="logo-l" src="/assets/offscript-logo-horizontal.svg" width="168" height="42" alt="Offscript Editorial"><img class="logo-d" src="/assets/offscript-logo-horizontal-reversed.png" width="168" height="42" alt="Offscript Editorial" loading="lazy"></a>
+  <a class="back" href="/">Back to the homepage</a>
+</div></header>
 
-  <!-- TOP MASTHEAD -->
-  <header class="border-b border-[#e5e4de] bg-[#fbfbf9]/95 backdrop-blur-md sticky top-0 z-30">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-      <a href="/" class="flex items-center space-x-3 group shrink-0">
-        <div class="h-9 w-9 rounded-full bg-[#141618] flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform duration-200">
-          <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2236%2036%20168%20168%22%3E%3Cpath%20d%3D%22M96%2C71L91%2C76L86%2C86L84%2C92L84%2C95L83%2C96L85%2C102L88%2C107L94%2C113L100%2C117L104%2C118L109%2C121L128%2C127L135%2C131L142%2C138L146%2C148L146%2C159L145%2C160L144%2C166L141%2C170L142%2C170L150%2C160L154%2C151L155%2C145L156%2C144L156%2C140L157%2C139L157%2C129L151%2C120L146%2C116L134%2C110L112%2C103L103%2C98L97%2C92L94%2C85L94%2C75ZM152%2C58L149%2C61L142%2C61L125%2C55L104%2C57L86%2C65L66%2C85L58%2C104L57%2C130L66%2C154L81%2C171L81%2C181L85%2C177L91%2C177L113%2C184L136%2C182L160%2C169L173%2C154L181%2C135L182%2C109L173%2C85L158%2C69L158%2C86L163%2C106L162%2C140L154%2C163L142%2C176L126%2C182L103%2C179L86%2C164L78%2C145L76%2C106L82%2C82L88%2C72L105%2C59L129%2C58L144%2C69L152%2C89Z%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E" alt="Offscript Editorial OS Mark" class="h-full w-full object-contain filter invert" />
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif text-xl font-semibold tracking-tight text-[#121316]">Offscript</span>
-          <span class="text-[9px] uppercase tracking-[0.25em] text-[#575a65] font-semibold -mt-1">Editorial</span>
-        </div>
-      </a>
+<main><div class="wrap">
+  <h1>Terms of service</h1>
+  <p class="meta">Last updated November 8, 2026. These terms apply to every Offscript Editorial engagement purchased through our Stripe checkout.</p>
+  <p class="lede">Offscript Editorial is an asynchronous writing desk. These terms explain what you buy, how billing works, who owns the writing, and how we protect your material. Questions before you buy: <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a>.</p>
 
-      <div class="flex items-center space-x-4">
-        <a href="/" class="text-xs font-mono font-medium text-[#575a65] hover:text-[#121316] transition flex items-center space-x-1.5">
-          <span>&larr;</span>
-          <span>Return to Studio Desk</span>
-        </a>
-      </div>
-    </div>
-  </header>
+  <h2 id="engagements">1. Engagements</h2>
+  <p>We offer three engagements: the 48-Hour Cadence Calibration Test ($250, one per executive), the On-Demand Event Sprint ($950 per sprint, repeatable), and the Executive Narrative Desk ($3,500 per month, month-to-month, capped at 6 partner desks). Deliverables for each are described on our homepage at the time of purchase.</p>
 
-  <!-- MAIN DOCUMENT BODY -->
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 flex-1">
-    <!-- Document Header -->
-    <div class="pb-10 border-b border-[#e5e4de] mb-12">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#fef8ee] border border-[#e5e4de] text-[#92642a] font-mono text-[11px] font-semibold uppercase tracking-wider mb-4">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#92642a]"></span>
-        <span>Canonical Legal Repository // Stripe Point-of-Sale Underwriting</span>
-      </div>
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#121316] tracking-tight leading-tight">
-        Offscript Editorial // Terms of Service
-      </h1>
-      <div class="flex flex-wrap items-center gap-4 mt-4 text-xs font-mono text-[#575a65]">
-        <div>EFFECTIVE DATE: <span class="text-[#121316] font-semibold">October 27, 2026</span></div>
-        <div>&bull;</div>
-        <div>DOCUMENT REF: <span class="text-[#121316] font-semibold">#OE-TOS-MASTER</span></div>
-        <div>&bull;</div>
-        <div>STATUS: <span class="text-[#047857] font-semibold">Affirmative Binding</span></div>
-      </div>
-      <p class="text-sm sm:text-base text-[#575a65] mt-6 leading-relaxed bg-[#f4f3ef] border border-[#e5e4de] p-5 rounded-lg">
-        By completing payment via any authorized studio invoice, Stripe checkout link, or digital settlement rail, Client ("Client") agrees to these binding terms with Offscript Editorial ("Studio"):
-      </p>
-    </div>
+  <h2 id="async">2. Asynchronous model</h2>
+  <p>Offscript works asynchronously. We do not hold live onboarding, discovery or status calls. You provide audio and feedback in writing.</p>
 
-    <!-- The 8 Numbered Clauses -->
-    <div class="space-y-8 text-sm sm:text-base leading-relaxed text-[#575a65]">
-      
-      <!-- Clause 1 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 01</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">1. Asynchronous Operating Model</h2>
-        <p>
-          Studio operates 100% asynchronously. Engagements require zero onboarding, discovery, or recurring status Zoom calls. All narrative assets are derived from submitted unscripted audio or voice notes.
-        </p>
-      </section>
+  <h2 id="billing">3. Billing and cancellation</h2>
+  <p>Services are billed 100% upfront in US dollars. Delivery timing starts when payment clears and we hold usable audio. The Desk renews monthly. You can cancel with 14 days&rsquo; written notice before the next billing date.</p>
 
-      <!-- Clause 2 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 02</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">2. Settlement &amp; Non-Refundable Policy</h2>
-        <p>
-          Fees for the 48-Hour Narrative Architecture Sprint ($950) and The Executive Narrative Desk ($3,500/mo) are billed 100% upfront. Due to immediate, bespoke principal editorial allocation, all fees are non-refundable once audio ingestion and extraction have commenced.
-        </p>
-      </section>
+  <h2 id="refunds">4. Refunds</h2>
+  <p>Fees are non-refundable once work has commenced.</p>
 
-      <!-- Clause 3 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 03</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">3. 14-Day Sprint Roll-In Credit</h2>
-        <p>
-          If Client transitions from the $950 Sprint to the Executive Narrative Desk within fourteen (14) days of Sprint delivery, a 100% credit ($950.00) is applied toward the Month 1 retainer invoice.
-        </p>
-      </section>
+  <h2 id="credit">5. 14-day credit</h2>
+  <p>If you move from the Calibration Test or an Event Sprint to the Desk within 14 days of delivery, the fee you paid is credited toward month one of the Desk.</p>
 
-      <!-- Clause 4 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 04</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">4. Intellectual Property Assignment</h2>
-        <p>
-          Upon confirmed payment clearance, 100% of all copyright, title, and ownership in final delivered written memos transfer irrevocably to Client. Studio retains ownership of its underlying extraction frameworks, prompts, linting software, and Master Voice Ledger architectures.
-        </p>
-      </section>
+  <h2 id="ownership">6. Ownership</h2>
+  <p>On full payment, we assign to you all rights in the delivered final written works. Offscript retains ownership of its underlying frameworks, prompts, systems and voice ledger templates.</p>
 
-      <!-- Clause 5 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 05</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">5. Content Approvals &amp; Publishing Indemnity</h2>
-        <p>
-          Final review, factual verification, and publication to third-party platforms (including LinkedIn) remain the sole responsibility of Client. Studio does not hold client credentials or execute live publishing.
-        </p>
-      </section>
+  <h2 id="confidentiality">7. Confidentiality and AI tooling</h2>
+  <p>Non-public audio and strategy discussions stay confidential. We use AI tools to transcribe and analyze audio, and a human editor shapes every post. The API tooling we use for processing excludes client data from public model training. Share only material you are authorized to provide.</p>
 
-      <!-- Clause 6 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 06</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">6. Enterprise Data Privacy</h2>
-        <p>
-          All audio processing and transcription pipelines utilize enterprise commercial APIs whose binding terms strictly prohibit customer data from being used in public model training datasets.
-        </p>
-      </section>
+  <h2 id="intake">8. Intake details</h2>
+  <p>The details you submit before checkout (name, work email, position, audio link, chosen engagement and how you heard about us) are used to review your audio and match your payment. We do not sell them. They are handled by our form provider and by Stripe, which processes your payment. We never see your card details.</p>
 
-      <!-- Clause 7 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 07</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">7. Structured Revision SLAs</h2>
-        <p>
-          Diagnostic tests and Sprints include one (1) consolidated calibration round submitted within 7 days of delivery. Retainers include one consolidated revision round per weekly batch submitted within 72 hours of delivery (returned within 24 hours).
-        </p>
-      </section>
+  <h2 id="revisions">9. Revisions</h2>
+  <p>Desk batches include 1 revision round when feedback arrives within 72 hours of delivery. Revisions are returned within 24 to 48 hours. The Event Sprint includes 1 consolidated revision round within 7 days of delivery.</p>
 
-      <!-- Clause 8 -->
-      <section class="bg-white border border-[#e5e4de] rounded-lg p-6 sm:p-8 editorial-shadow">
-        <div class="font-mono text-xs font-semibold uppercase tracking-widest text-[#92642a] mb-2">Clause 08</div>
-        <h2 class="font-serif text-xl sm:text-2xl font-medium text-[#121316] mb-3">8. Limitation of Liability &amp; Governing Law</h2>
-        <p>
-          Studio's total aggregate liability arising under any engagement shall not exceed the total fees paid by Client in the thirty (30) days preceding the claim. Governed by the laws of the clearing merchant domicile.
-        </p>
-      </section>
+  <h2 id="publishing">10. Publishing and approval</h2>
+  <p>You are responsible for final approval and for publishing on third-party platforms. Offscript does not access your accounts and never asks for your credentials.</p>
 
-    </div>
+  <h2 id="liability">11. Liability and governing law</h2>
+  <p>Offscript&rsquo;s total liability is limited to the amount you paid in the 30 days before a claim. These terms are governed by the laws of the jurisdiction of Offscript&rsquo;s clearing merchant entity.</p>
 
-    <!-- Bottom Affirmation Box -->
-    <div class="mt-12 p-6 sm:p-8 rounded-lg bg-[#f4f3ef] border border-[#e5e4de] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-      <div>
-        <div class="font-serif text-lg font-bold text-[#121316]">Offscript Editorial Legal &amp; Compliance Desk</div>
-        <div class="text-xs font-mono text-[#575a65] mt-1">Direct inquiries: <a href="mailto:inquiry@offscripteditorial.com" class="underline hover:text-[#92642a]">inquiry@offscripteditorial.com</a></div>
-      </div>
-      <a href="/" class="bg-[#141618] hover:bg-[#25282c] text-white px-6 py-3 rounded text-xs font-semibold tracking-wide transition shadow-sm shrink-0">
-        Return to Main Studio
-      </a>
-    </div>
-  </main>
+  <h2 id="contact">12. Contact</h2>
+  <p><a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a></p>
+</div></main>
 
-  <!-- MINIMAL FOOTER -->
-  <footer class="bg-[#141618] text-[#f8fafc] py-10 text-xs">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center space-x-3">
-        <span>&copy; 2026 Offscript Editorial</span>
-        <span>&bull;</span>
-        <span class="text-stone-400">Terms of Service</span>
-      </div>
-      <div class="text-stone-400">
-        Asynchronous Executive Narrative Infrastructure for Technical Founders
-      </div>
-    </div>
-  </footer>
-
+<footer><div class="wrap in"><span>&copy; 2026 Offscript Editorial</span><span><a href="/">Home</a> &middot; <a href="mailto:inquiry@offscripteditorial.com">Contact</a></span></div></footer>
 </body>
 </html>
