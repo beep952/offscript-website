@@ -37,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap">
 
-<script>try{var t=localStorage.getItem('oe-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('oe-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 
 <style>
 :root{
@@ -256,6 +256,59 @@ footer img{width:168px;height:42px}
 footer a{color:var(--inv-fg)}
 footer nav{display:flex;gap:22px;flex-wrap:wrap}
 
+/* Polish */
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+.price,.val,.facts b{font-variant-numeric:tabular-nums}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media print{.rv{opacity:1!important;transform:none!important}}
+.step{position:relative}
+.step .ic{position:absolute;right:28px;top:24px;width:40px;height:40px;color:var(--acc)}
+.step:first-child .ic{right:28px}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* LinkedIn-style post card */
+.feed{margin-top:2px;border:1px solid var(--line);background:var(--bg);padding:18px 20px}
+.feed .who{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.feed .av{width:44px;height:44px;border-radius:50%;background:var(--pan);border:1px solid var(--line);display:grid;place-items:center;font:600 .9375rem var(--serif);color:var(--acc);flex:none}
+.feed .who b{display:block;font-size:.9375rem;font-weight:500;line-height:1.3}
+.feed .who small{color:var(--mut);font-size:.8125rem}
+.feed p{margin:0;font:400 1rem/1.55 var(--sans);color:var(--fg)}
+.ex.win .why{margin-top:16px}
+
+/* Fingerprint preview */
+.fp{margin-top:24px;border:1px solid var(--line);background:var(--bg);padding:26px 28px}
+.fp h3{margin-bottom:4px}
+.fp .sub{margin:0 0 18px;font-size:.875rem;color:var(--mut)}
+.fp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--fg)}
+.fp-grid div{padding:16px 18px 4px 0}
+.fp-grid div+div{padding-left:18px;border-left:1px solid var(--line)}
+.fp-grid b{display:block;font:500 .8125rem var(--sans);color:var(--acc);margin-bottom:4px}
+.fp-grid span{font-size:.9375rem}
+
+/* After-pay list, summary, trust */
+.after{margin:28px 0 0;padding:0;list-style:none;counter-reset:a;border-top:1px solid var(--line)}
+.after li{counter-increment:a;display:grid;grid-template-columns:34px 1fr;gap:6px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.9375rem;color:var(--mut)}
+.after li::before{content:counter(a);font:600 1.25rem/1.2 var(--serif);color:var(--acc)}
+.after b{color:var(--fg);font-weight:500}
+.sum{grid-column:1/-1;margin:0;padding:14px 16px;border:1px solid var(--line);background:var(--bg);font-size:.9375rem}
+.trust{grid-column:1/-1;margin:-6px 0 0;font-size:.8125rem;color:var(--mut);text-align:center}
+.status.ok{border-left:3px solid var(--acc);padding:12px 16px;background:var(--bg)}
+.f.bad input,.f.bad select{border-color:var(--acc);border-width:2px}
+
+/* Sticky mobile CTA */
+.sticky{display:none}
+@media(max-width:900px){
+  .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s ease}
+  .sticky.show{transform:none}
+  .sticky .btn{width:100%}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .fp-grid{grid-template-columns:1fr 1fr}
+  .fp-grid div:nth-child(3){padding-left:0;border-left:0}
+  .fp-grid div:nth-child(n+3){border-top:1px solid var(--line);margin-top:12px;padding-top:16px}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.sticky{transition:none}}
 @media(max-width:900px){
   section{padding:68px 0}
   .hero-grid,.editor,.fit,.ex-grid,.formwrap{grid-template-columns:1fr;gap:36px}
@@ -370,8 +423,8 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
 <header class="bar" id="bar">
   <div class="wrap bar-in">
     <a class="logo" href="#top" aria-label="Offscript Editorial home">
-      <img class="logo-l" src="/assets/offscript-logo-horizontal.svg" width="168" height="42" alt="Offscript Editorial">
-      <img class="logo-d" src="/assets/offscript-logo-horizontal-reversed.png" width="168" height="42" alt="Offscript Editorial">
+      <img class="logo-l" src="/assets/offscript-logo-horizontal.svg" width="168" height="42" alt="Offscript Editorial" fetchpriority="high">
+      <img class="logo-d" src="/assets/offscript-logo-horizontal-reversed.png" width="168" height="42" alt="Offscript Editorial" loading="lazy" decoding="async">
     </a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#how">How it works</a>
@@ -461,14 +514,17 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
     </div>
     <div class="steps">
       <div class="step">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M6 17v6 M11 12v16 M16 8v24 M21 14v12 M26 10v20 M31 16v8 M35 19v2"/></svg>
         <h3>Send the audio</h3>
         <p>Share a podcast, keynote, panel, town hall or voice memo. A link is enough. One strong recording is a workable start.</p>
       </div>
       <div class="step">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M6 10h28 M6 20h28 M6 30h18"/><rect x="4" y="16" width="32" height="8" rx="1" style="fill:currentColor;fill-opacity:.15;stroke:none"/></svg>
         <h3>We find the signal</h3>
         <p>We map your argument, examples, vocabulary and rhythm, then pick the angles worth publishing. Your sentences stay recognizably yours.</p>
       </div>
       <div class="step">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="5" y="6" width="30" height="28" rx="2"/><circle cx="12" cy="14" r="2.5"/><path d="M18 13h13 M10 22h21 M10 28h14"/></svg>
         <h3>Review and publish</h3>
         <p>Drafts arrive in your workspace on an agreed day. You give async feedback, approve, and post from your own account.</p>
       </div>
@@ -533,12 +589,25 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
       </div>
       <div class="ex win">
         <div class="label">The edit</div>
-        <blockquote>If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken. You are subsidizing buyers who should be paying triple.</blockquote>
+        <div class="feed">
+          <div class="who"><span class="av" aria-hidden="true">CR</span><div><b>A CRO at a B2B SaaS company</b><small>Illustrative post, anonymized</small></div></div>
+          <p>If your enterprise win rate is sitting at 60%, stop celebrating. Your pricing is broken. You are subsidizing buyers who should be paying triple.</p>
+        </div>
         <p class="why">It turns a benchmark into a decision, in the rhythm of someone who has carried a quota.</p>
       </div>
     </div>
     <div class="signal">
       <p><b>What the desk heard in the audio:</b> a high win rate is an underpricing signal, and discounting one buyer anchors your price ceiling in every executive group chat that compares contracts.</p>
+    </div>
+    <div class="fp">
+      <h3>Spoken Cadence Fingerprint</h3>
+      <p class="sub">Every engagement starts with a one-page profile of how you argue. This is an illustrative sample, not a client.</p>
+      <div class="fp-grid">
+        <div><b>Sentence length</b><span>Short and declarative, mostly 9 to 14 words</span></div>
+        <div><b>Opens with</b><span>A number or a verdict, never a warm-up</span></div>
+        <div><b>Vocabulary</b><span>Operator terms, no hedging words</span></div>
+        <div><b>Closes with</b><span>A decision the reader can act on</span></div>
+      </div>
     </div>
     <p class="note">Illustrative example built from a public clip. The speaker is anonymized, the audio is paraphrased, and the speaker has not reviewed or endorsed the edited post. This is a demonstration, not a client engagement.</p>
   </div>
@@ -597,7 +666,7 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
         <a class="btn alt" href="#start" data-tier="desk">Start a desk for $3,500 a month</a>
       </article>
     </div>
-    <p class="fine">Fees are billed upfront in USD. The 48-hour clock starts when payment clears and we hold usable audio. Checkout includes our <a href="#governance">terms of service</a>, which you accept before paying.</p>
+    <p class="fine">Fees are billed upfront in USD. The 48-hour clock starts when payment clears and we hold usable audio. Checkout includes our <a href="/terms/">terms of service</a>, which you accept before paying.</p>
   </div>
 </section>
 
@@ -607,7 +676,12 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
       <span class="tag">Get started</span>
       <h2 id="h-start">Tell us where to find your audio.</h2>
       <p class="lede">Six quick answers, then you go straight to secure checkout. We use them to review your recording before your 48-hour clock starts.</p>
-      <p class="sm mut">Prefer email? Write to <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a>.</p>
+      <ol class="after" aria-label="What happens after you pay">
+        <li><span><b>Secure checkout.</b> You pay through Stripe. We never see your card details.</span></li>
+        <li><span><b>We review your audio.</b> We confirm by email and start your 48-hour clock.</span></li>
+        <li><span><b>First batch arrives.</b> Review it when it suits you and publish from your own account.</span></li>
+      </ol>
+      <p class="sm mut" style="margin-top:20px">Prefer email? Write to <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a>.</p>
     </div>
 
     <form id="intake" novalidate>
@@ -649,9 +723,11 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
         </select>
       </div>
       <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <p class="sum" id="sum" aria-live="polite"></p>
       <button class="btn full" type="submit" style="grid-column:1/-1">Continue to secure checkout</button>
+      <p class="trust">Secure checkout by Stripe. You can review the terms before you pay.</p>
       <div class="status" id="status" role="status" aria-live="polite"></div>
-      <p class="consent">We use these details to review your audio and match your payment. We do not sell or share them. Checkout is handled by Stripe and includes our terms of service.</p>
+      <p class="consent">We use these details to review your audio and match your payment. We do not sell or share them. Checkout is handled by Stripe. Read our <a href="/terms/">terms of service</a>.</p>
       <noscript><p class="consent">JavaScript is off. Email <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a> with your details and we will send your checkout link.</p></noscript>
     </form>
   </div>
@@ -722,7 +798,7 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
     <div class="head">
       <span class="tag">Terms of service</span>
       <h2 id="h-terms">The terms behind checkout, in plain English.</h2>
-      <p class="lede">This summary reflects what you accept at Stripe checkout. Questions before you buy: <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a>.</p>
+      <p class="lede">This summary reflects what you accept at Stripe checkout. Questions before you buy: <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a>. <a href="/terms/">Read the full terms of service</a>.</p>
     </div>
     <dl>
       <dt>Asynchronous model</dt><dd>Offscript works asynchronously. We do not hold live onboarding, discovery or status calls.</dd>
@@ -757,33 +833,34 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
     <nav aria-label="Footer">
       <a href="mailto:inquiry@offscripteditorial.com">inquiry@offscripteditorial.com</a>
       <a href="https://www.linkedin.com/in/sithukaung" rel="noopener me">LinkedIn</a>
-      <a href="#governance">Terms of service</a>
+      <a href="/terms/">Terms of service</a>
       <a href="#top">Back to top</a>
     </nav>
     <span>&copy; 2026 Offscript Editorial</span>
   </div>
 </footer>
 
+<div class="sticky" id="sticky" aria-hidden="true"><a class="btn" href="#start" tabindex="-1">Get started</a></div>
+
 <script>
 (function(){
-  /* ---- CONFIG: set your Web3Forms access key (free, public key is safe in front-end code) ---- */
-  var FORM_ENDPOINT='https://api.web3forms.com/submit';
-  var ACCESS_KEY='YOUR_WEB3FORMS_ACCESS_KEY';
+  /* Intake details are emailed to inquiry@ through FormSubmit (no API key needed). Change the address or swap the provider here. */
+  var ENDPOINT='https://formsubmit.co/ajax/inquiry@offscripteditorial.com';
   var TIERS={
-    calibration:{name:'48-Hour Cadence Calibration Test ($250)',url:'https://buy.stripe.com/00w3cxboO3fPbAHgza2go01'},
-    sprint:{name:'On-Demand Event Sprint ($950 per sprint)',url:'https://buy.stripe.com/3cIaEZcsSdUt207beQ2go02'},
-    desk:{name:'Executive Narrative Desk ($3,500 per month)',url:'https://buy.stripe.com/eVq14peB003D8ovciU2go03'}
+    calibration:{name:'48-Hour Cadence Calibration Test ($250)',url:'https://buy.stripe.com/00w3cxboO3fPbAHgza2go01',sum:'Due today: $250 for the 48-Hour Cadence Calibration Test. Credited in full toward month one if you join the Desk within 14 days of delivery.'},
+    sprint:{name:'On-Demand Event Sprint ($950 per sprint)',url:'https://buy.stripe.com/3cIaEZcsSdUt207beQ2go02',sum:'Due today: $950 for one On-Demand Event Sprint. Credited in full toward month one if you join the Desk within 14 days of delivery.'},
+    desk:{name:'Executive Narrative Desk ($3,500 per month)',url:'https://buy.stripe.com/eVq14peB003D8ovciU2go03',sum:'Due today: $3,500 for month one of the Executive Narrative Desk. Cancel with 14 days\u2019 written notice.'}
   };
   var root=document.documentElement,bar=document.getElementById('bar');
 
-  /* ---- Mobile menu ---- */
+  /* Mobile menu */
   var menu=bar.querySelector('.menu');
   function setMenu(o){bar.classList.toggle('open',o);menu.setAttribute('aria-expanded',String(o));menu.textContent=o?'Close':'Menu'}
   menu.addEventListener('click',function(){setMenu(!bar.classList.contains('open'))});
   bar.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
 
-  /* ---- Theme toggle (system by default, remembered when chosen) ---- */
+  /* Theme toggle */
   var tbtn=bar.querySelector('.theme'),mq=window.matchMedia('(prefers-color-scheme: dark)');
   function isDark(){var t=root.getAttribute('data-theme');return t?t==='dark':mq.matches}
   function paint(){var d=isDark();tbtn.setAttribute('aria-pressed',String(d));tbtn.textContent=d?'Light mode':'Dark mode'}
@@ -795,61 +872,82 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
   if(mq.addEventListener)mq.addEventListener('change',paint);
   paint();
 
-  /* ---- Tier buttons preselect the form ---- */
+  /* Form basics */
+  var form=document.getElementById('intake'),status=document.getElementById('status'),sum=document.getElementById('sum');
+  function showSum(){var t=form.elements.tier.value;sum.textContent=TIERS[t].sum}
+  showSum();
+  form.addEventListener('change',function(e){if(e.target.name==='tier')showSum()});
   document.querySelectorAll('[data-tier]').forEach(function(a){
     a.addEventListener('click',function(){
       var r=document.querySelector('input[name=tier][value='+a.getAttribute('data-tier')+']');
-      if(r)r.checked=true;
+      if(r){r.checked=true;showSum()}
     });
   });
+  form.addEventListener('input',function(e){var f=e.target.closest('.f');if(f)f.classList.remove('bad')});
 
-  /* ---- Intake form -> (save details) -> Stripe checkout ---- */
-  var form=document.getElementById('intake'),status=document.getElementById('status');
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  function checkoutUrl(tier,email,ref){
-    return TIERS[tier].url+'?prefilled_email='+encodeURIComponent(email)+'&client_reference_id='+encodeURIComponent(ref);
-  }
-  function show(html,isErr){status.className='status'+(isErr?' err':'');status.innerHTML=html}
+  function show(html,cls){status.className='status'+(cls?' '+cls:'');status.innerHTML=html}
+  function checkoutUrl(tier,email,ref){return TIERS[tier].url+'?prefilled_email='+encodeURIComponent(email)+'&client_reference_id='+encodeURIComponent(ref)}
+
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var f=form.elements;
-    if(f.website.value){return}                       /* honeypot */
-    if(!form.checkValidity()){
-      var bad=form.querySelector(':invalid');
-      show('Please complete every field. Check &ldquo;'+esc(bad.labels&&bad.labels[0]?bad.labels[0].textContent:bad.name)+'&rdquo;.',true);
-      bad.focus();return;
+    if(f.website.value)return;                               /* honeypot */
+    var bad=[];
+    ['name','email','role','audio_link','source'].forEach(function(n){
+      var el=f[n],box=el.closest('.f');
+      if(!el.checkValidity()||!el.value.trim()){bad.push(el);box.classList.add('bad')}
+    });
+    if(bad.length){
+      var names=bad.map(function(el){return el.labels&&el.labels[0]?el.labels[0].textContent:el.name});
+      show('Please check: '+esc(names.join(', '))+'.','err');bad[0].focus();return;
     }
-    var d={
-      name:f.name.value.trim(),email:f.email.value.trim(),role:f.role.value.trim(),
-      audio_link:f.audio_link.value.trim(),tier:f.tier.value,source:f.source.value
-    };
+    var d={name:f.name.value.trim(),email:f.email.value.trim(),role:f.role.value.trim(),audio_link:f.audio_link.value.trim(),tier:f.tier.value,source:f.source.value};
     var ref='oe'+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
     var url=checkoutUrl(d.tier,d.email,ref);
     var btn=form.querySelector('button[type=submit]');btn.disabled=true;
-    show('Saving your details&hellip;',false);
+    show('Saving your details&hellip;','');
 
     function go(){
-      show('Thanks, '+esc(d.name.split(' ')[0])+'. Opening secure checkout for the '+esc(TIERS[d.tier].name)+'. <a href="'+esc(url)+'" rel="noopener">Continue to checkout</a>',false);
+      show('Thanks, '+esc(d.name.split(' ')[0])+'. Opening secure checkout. If nothing happens, <a href="'+esc(url)+'" rel="noopener">continue to checkout</a>.','ok');
       window.location.href=url;
     }
-    function fallback(){
+    function fail(){
       btn.disabled=false;
       var body='Name: '+d.name+'\nEmail: '+d.email+'\nPosition: '+d.role+'\nAudio: '+d.audio_link+'\nEngagement: '+TIERS[d.tier].name+'\nHeard about us: '+d.source+'\nRef: '+ref;
       var mail='mailto:inquiry@offscripteditorial.com?subject='+encodeURIComponent('Intake: '+TIERS[d.tier].name)+'&body='+encodeURIComponent(body);
-      show('We could not save your details automatically. Email them to us, then continue to checkout.<br><a class="btn alt sm" href="'+esc(mail)+'">Email my details</a><a class="btn sm" href="'+esc(url)+'" rel="noopener">Continue to checkout</a>',true);
+      show('Your details did not reach us. Send them by email, then continue to checkout.<br><a class="btn alt sm" href="'+esc(mail)+'">Email my details</a><a class="btn sm" href="'+esc(url)+'" rel="noopener">Continue to checkout</a>','err');
     }
-    if(ACCESS_KEY.indexOf('YOUR_')===0){fallback();return}
     var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){ctl&&ctl.abort()},8000);
-    fetch(FORM_ENDPOINT,{
+    fetch(ENDPOINT,{
       method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
       body:JSON.stringify({
-        access_key:ACCESS_KEY,subject:'Offscript intake: '+TIERS[d.tier].name,from_name:'Offscript website',
+        _subject:'Offscript intake: '+TIERS[d.tier].name,_template:'table',_captcha:'false',_honey:'',
         name:d.name,email:d.email,position:d.role,audio_link:d.audio_link,engagement:TIERS[d.tier].name,
         heard_about_us:d.source,client_reference_id:ref,page_url:location.href,referrer:document.referrer||'direct'
       }),signal:ctl?ctl.signal:undefined
-    }).then(function(r){return r.json()}).then(function(j){clearTimeout(timer);j&&j.success?go():fallback()})
-      .catch(function(){clearTimeout(timer);fallback()});
+    }).then(function(r){return r.json().catch(function(){return{}}).then(function(j){return{ok:r.ok,j:j}})})
+      .then(function(x){
+        clearTimeout(timer);
+        var explicitNo=x.j&&(x.j.success===false||x.j.success==='false')&&!/activat/i.test(x.j.message||'');
+        (x.ok&&!explicitNo)?go():fail();
+      })
+      .catch(function(){clearTimeout(timer);fail()});
   });
+
+  /* Sticky mobile CTA: show after the hero, hide while the form is on screen */
+  var st=document.getElementById('sticky'),heroOut=false,startIn=false;
+  function upd(){var on=heroOut&&!startIn;st.classList.toggle('show',on);st.setAttribute('aria-hidden',String(!on));st.querySelector('a').tabIndex=on?0:-1}
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){heroOut=!e[0].isIntersecting;upd()}).observe(document.getElementById('top'));
+    new IntersectionObserver(function(e){startIn=e[0].isIntersecting;upd()},{threshold:.1}).observe(document.getElementById('start'));
+
+    /* Gentle reveal */
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+      document.querySelectorAll('.card,.tier,.step,.ex,.chart,.deal,.signal,.fp').forEach(function(el){el.classList.add('rv');io.observe(el)});
+    }
+  }
 })();
 </script>
 </body>
