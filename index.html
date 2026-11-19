@@ -46,6 +46,7 @@
   --serif:"Playfair Display",Georgia,"Times New Roman",serif;
   --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --max:1120px;
+  --ease-out:cubic-bezier(.23,1,.32,1);--press:.12s;--state:.18s;
   box-sizing:border-box;
 }
 @media(prefers-color-scheme:dark){
@@ -84,18 +85,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .logo-d{display:none}
 .nav{display:flex;align-items:center;gap:26px;font-size:.9375rem;margin-left:auto}
 .nav a{text-decoration:none;color:var(--mut)}
-.nav a:hover{color:var(--fg)}
+@media(hover:hover) and (pointer:fine){.nav a:hover{color:var(--fg)}}
 .nav a.btn{color:var(--bg)}
 .ctl{display:flex;gap:8px;align-items:center}
 .ghost{background:none;border:1px solid var(--line);border-radius:2px;padding:0 14px;font:500 .875rem var(--sans);color:var(--fg);min-height:44px;cursor:pointer}
-.ghost:hover{background:var(--pan)}
+@media(hover:hover) and (pointer:fine){.ghost:hover{background:var(--pan)}}
 .menu{display:none}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;background:var(--fg);color:var(--bg);border:1px solid var(--fg);border-radius:2px;font:500 .9375rem var(--sans);text-decoration:none;text-align:center;cursor:pointer}
-.btn:hover{background:var(--btn-h);border-color:var(--btn-h)}
+@media(hover:hover) and (pointer:fine){.btn:hover{background:var(--btn-h);border-color:var(--btn-h)}}
 .btn.alt{background:transparent;color:var(--fg);border-color:var(--fg)}
-.btn.alt:hover{background:var(--pan)}
+@media(hover:hover) and (pointer:fine){.btn.alt:hover{background:var(--pan)}}
 .btn.sm{min-height:44px;padding:10px 18px}
 
 /* Sections */
@@ -246,9 +247,10 @@ details p{margin:0 0 20px;color:var(--mut);max-width:68ch}
 .cta h2{margin-bottom:16px}
 .cta p{color:var(--inv-mut);max-width:56ch}
 .cta .btn{background:var(--inv-fg);color:var(--inv-bg);border-color:var(--inv-fg)}
-.cta .btn:hover{opacity:.9}
+.cta .btn:active{opacity:.9}
+@media(hover:hover) and (pointer:fine){.cta .btn:hover{opacity:.9}}
 .cta .btn.alt{background:transparent;color:var(--inv-fg)}
-.cta .btn.alt:hover{background:rgba(252,251,249,.1)}
+@media(hover:hover) and (pointer:fine){.cta .btn.alt:hover{background:rgba(252,251,249,.1)}}
 .cta a:focus-visible,footer a:focus-visible{outline-color:var(--inv-acc)}
 footer{background:var(--inv-bg);color:var(--inv-mut);padding:36px 0 calc(36px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--inv-line);font-size:.875rem}
 footer .in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -260,7 +262,7 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
 h1,h2,h3{text-wrap:balance}
 p,li{text-wrap:pretty}
 .price,.val,.facts b{font-variant-numeric:tabular-nums}
-.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.rv{opacity:0;transform:translateY(12px);transition:opacity .42s var(--ease-out),transform .42s var(--ease-out)}
 .rv.in{opacity:1;transform:none}
 @media print{.rv{opacity:1!important;transform:none!important}}
 .step{position:relative}
@@ -300,7 +302,7 @@ p,li{text-wrap:pretty}
 /* Sticky mobile CTA */
 .sticky{display:none}
 @media(max-width:900px){
-  .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s ease}
+  .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s var(--ease-out)}
   .sticky.show{transform:none}
   .sticky .btn{width:100%}
   footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
@@ -336,6 +338,19 @@ p,li{text-wrap:pretty}
   .facts{grid-template-columns:1fr}
   .logo img,footer img{width:148px;height:37px}
 }
+/* Touch and press polish */
+html{-webkit-tap-highlight-color:transparent}
+a,button,summary,label,select,.opt{touch-action:manipulation}
+.btn,.ghost{user-select:none;-webkit-user-select:none;transition:transform var(--press) var(--ease-out),background-color var(--state) ease,border-color var(--state) ease,color var(--state) ease,opacity var(--state) ease}
+.btn:active,.ghost:active{transform:scale(.97)}
+.btn[disabled]{opacity:.6;cursor:not-allowed}
+.btn[disabled]:active{transform:none}
+.opt{transition:border-color var(--state) ease,background-color var(--state) ease}
+.opt:active{transform:scale(.99)}
+summary{-webkit-tap-highlight-color:transparent}
+input[type=text],input[type=email],select{transition:border-color var(--state) ease}
+@media(pointer:coarse){.nav a:active{color:var(--fg)}}
+.chart .row.us .lab{font-weight:500}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 
@@ -359,7 +374,7 @@ p,li{text-wrap:pretty}
       "isPartOf":{"@id":"https://offscripteditorial.com/#website"},
       "about":{"@id":"https://offscripteditorial.com/#org"},
       "primaryImageOfPage":{"@type":"ImageObject","url":"https://offscripteditorial.com/assets/og-card-offscript.jpg"},
-      "dateModified":"2026-11-07",
+      "dateModified":"2026-11-19",
       "inLanguage":"en"
     },
     {
@@ -370,7 +385,7 @@ p,li{text-wrap:pretty}
       "url":"https://offscripteditorial.com/",
       "logo":{"@type":"ImageObject","url":"https://offscripteditorial.com/assets/offscript-logo-primary.png"},
       "image":"https://offscripteditorial.com/assets/og-card-offscript.jpg",
-      "slogan":"Written off script. Right on message.",
+      "slogan":"You already said it. We put it in writing.",
       "description":"Offscript Editorial is an asynchronous executive ghostwriting and thought leadership desk for B2B SaaS founders, CEOs and CROs. It turns podcasts, keynotes and voice notes the executive has already recorded into LinkedIn posts and essays in their own voice, with no interviews and no recurring meetings.",
       "email":"inquiry@offscripteditorial.com",
       "founder":{"@id":"https://offscripteditorial.com/#kaung"},
@@ -687,19 +702,19 @@ p,li{text-wrap:pretty}
     <form id="intake" novalidate>
       <div class="f">
         <label for="f-name">Full name</label>
-        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <input id="f-name" name="name" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" required>
       </div>
       <div class="f">
         <label for="f-email">Work email</label>
-        <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="next" required>
       </div>
       <div class="f">
         <label for="f-role">Position</label>
-        <input id="f-role" name="role" type="text" autocomplete="organization-title" placeholder="Founder, CEO, CRO" required>
+        <input id="f-role" name="role" type="text" autocomplete="organization-title" autocapitalize="words" enterkeyhint="next" placeholder="Founder, CEO, CRO" required>
       </div>
       <div class="f">
         <label for="f-audio">Link to your audio</label>
-        <input id="f-audio" name="audio_link" type="text" inputmode="url" autocomplete="off" placeholder="Podcast, YouTube or shared file link" required>
+        <input id="f-audio" name="audio_link" type="text" inputmode="url" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="Podcast, YouTube or shared file link" required>
         <span class="hint">No recording yet? Type &ldquo;voice notes&rdquo;. For private files, use a view-only share link.</span>
       </div>
       <fieldset class="full">
@@ -863,7 +878,7 @@ p,li{text-wrap:pretty}
   /* Theme toggle */
   var tbtn=bar.querySelector('.theme'),mq=window.matchMedia('(prefers-color-scheme: dark)');
   function isDark(){var t=root.getAttribute('data-theme');return t?t==='dark':mq.matches}
-  function paint(){var d=isDark();tbtn.setAttribute('aria-pressed',String(d));tbtn.textContent=d?'Light mode':'Dark mode'}
+  function paint(){var d=isDark();tbtn.setAttribute('aria-pressed',String(d));tbtn.textContent=d?'Light mode':'Dark mode';document.querySelectorAll('meta[name=theme-color]').forEach(function(m){m.setAttribute('content',d?'#141413':'#FCFBF9')})}
   tbtn.addEventListener('click',function(){
     var next=isDark()?'light':'dark';root.setAttribute('data-theme',next);
     try{localStorage.setItem('oe-theme',next)}catch(e){}
@@ -934,6 +949,9 @@ p,li{text-wrap:pretty}
       })
       .catch(function(){clearTimeout(timer);fail()});
   });
+
+  /* Back from Stripe (bfcache) must not leave the submit button dead */
+  window.addEventListener('pageshow',function(e){if(e.persisted){var b=form.querySelector('button[type=submit]');if(b)b.disabled=false;status.className='status';status.textContent=''}});
 
   /* Sticky mobile CTA: show after the hero, hide while the form is on screen */
   var st=document.getElementById('sticky'),heroOut=false,startIn=false;
